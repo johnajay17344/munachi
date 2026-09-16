@@ -220,7 +220,7 @@
   <div id="quiz-screen" class="hidden">
     <div class="progress-wrap"><div class="progress-bar" id="progress-bar" style="width:0%"></div></div>
     <div class="q-meta">
-      <span class="q-count" id="q-count">Question 1 of 72</span>
+      <span class="q-count" id="q-count">Question 1 of 70</span>
       <span class="topic-badge" id="topic-badge">Topic</span>
     </div>
     <div class="q-text" id="q-text"></div>
@@ -273,6 +273,24 @@ const TOPICS = [
   "Gas Laws",
   "Thermometry & Temperature Scales",
   "Heat Transfer",
+  "Wave Motion",
+  "Sound Waves",
+  "Reflection of Light (Mirrors)",
+  "Refraction of Light & Refractive Index",
+  "Total Internal Reflection & Critical Angle",
+  "Lenses",
+  "Optical Instruments",
+  "The Human Eye & Defects of Vision",
+  "Dispersion of Light & Colour",
+  "Electrostatics",
+  "Current Electricity & Ohm's Law",
+  "Resistors in Series and Parallel",
+  "Electrical Energy & Power",
+  "Magnetism",
+  "Electromagnetism",
+  "Electromagnetic Induction",
+  "Simple A.C. Circuits",
+  "Semiconductors & Electronics",
 ];
 
 
@@ -282,558 +300,532 @@ const TOPICS = [
 
 
 
-
 const questions = [
-  // ---------------- UNITS, MEASUREMENT & ERRORS ----------------
+  // ===== 1-4: WAVE MOTION =====
   {
-    topic: "Units, Measurement & Errors",
-    q: "In order to remove the error of parallax when taking measurements with a metre rule, the eye should be focused",
-    options: ["Slantingly towards the left on the markings", "Slantingly towards the right on the markings", "Vertically (directly in line) on the markings", "Vertically upwards on the markings"],
-    correct: 2,
-    solution: "Parallax error happens when your line of sight is not perpendicular to the scale. To avoid it, your eye must look straight down, directly in line with the marking and the object being measured, not at an angle."
+    topic: "Wave Motion",
+    q: "A wave travelling with a velocity of 420 m/s has a wavelength of 42m. What is its period?",
+    options: ["1.0 s", "0.1 s", "0.5 s", "1.2 s"],
+    correct: 1,
+    solution: "Frequency f = v/λ = 420/42 = 10Hz. Period T = 1/f = 1/10 = 0.1s."
   },
   {
-    topic: "Units, Measurement & Errors",
-    q: "What is the least possible reading error when taking a measurement with an ordinary metre rule (smallest division = 1mm)?",
-    options: ["0.1 mm", "1.0 mm", "0.5 mm", "0.2 mm"],
-    correct: 2,
-    solution: "The reading error of any instrument is taken as half of its smallest division. Since a metre rule's smallest division is 1mm, the least possible error is ½ × 1mm = 0.5mm."
-  },
-  {
-    topic: "Units, Measurement & Errors",
-    q: "Which of the following instruments would give the most accurate measurement of the diameter of a thin wire?",
-    options: ["Micrometer screw gauge", "Pair of Vernier callipers", "Metre rule", "Pair of dividers"],
-    correct: 0,
-    solution: "A micrometer screw gauge can measure to the nearest 0.01mm, making it far more precise than a metre rule (1mm) or Vernier callipers (0.1mm) — ideal for something as small as a thin wire's diameter."
-  },
-
-  // ---------------- SCALARS & VECTORS ----------------
-  {
-    topic: "Scalars & Vectors",
-    q: "Two cars moving in the same direction have speeds of 100 km/h and 130 km/h. What is the velocity of the faster car as measured by an observer in the slower car?",
-    options: ["130 km/h", "230 km/h", "200 km/h", "30 km/h"],
+    topic: "Wave Motion",
+    q: "The characteristic of a vibration that determines its intensity (loudness) is the",
+    options: ["Frequency", "Overtone", "Wavelength", "Amplitude"],
     correct: 3,
-    solution: "Relative velocity = velocity of faster car − velocity of slower car (since they move in the same direction) = 130 − 100 = 30 km/h."
+    solution: "The intensity (loudness) of a vibration is determined by its amplitude — the larger the amplitude, the more energy the wave carries and the louder/more intense it is."
   },
   {
-    topic: "Scalars & Vectors",
-    q: "The resultant of two perpendicular forces is 50N. If one of the forces makes an angle of 30° with the resultant, find the magnitude of that force.",
-    options: ["100.0 N", "57.7 N", "43.3 N", "25.0 N"],
+    topic: "Wave Motion",
+    q: "A transverse wave and a longitudinal wave travelling in the same direction in a medium differ essentially in their",
+    options: ["Frequency", "Amplitude", "Direction of vibration of the particles of the medium", "Period of vibration of the particles"],
     correct: 2,
-    solution: "The component of a force along the resultant direction is F = R cos(θ). Here F = 50 × cos(30°) = 50 × 0.866 = 43.3N."
+    solution: "In a transverse wave, particles vibrate perpendicular to the direction of wave travel; in a longitudinal wave, they vibrate parallel to it. This difference in vibration direction is what fundamentally distinguishes the two."
   },
   {
-    topic: "Scalars & Vectors",
-    q: "Which pair of physical quantities are scalar only?",
-    options: ["Volume and area", "Moment and momentum", "Length and displacement", "Impulse and time"],
-    correct: 0,
-    solution: "Volume and area only have magnitude, no direction — so both are scalars. Moment, momentum, displacement and impulse are all vectors (or contain a vector one), so those pairs are mixed or fully vector."
+    topic: "Wave Motion",
+    q: "Transverse waves can be distinguished from longitudinal waves using the characteristic of",
+    options: ["Diffraction", "Reflection", "Polarization", "Refraction"],
+    correct: 2,
+    solution: "Only transverse waves can be polarized (restricted to vibrate in a single plane). Longitudinal waves, which vibrate along their direction of travel, cannot be polarized — making this a defining test between the two."
   },
 
-  // ---------------- LINEAR MOTION ----------------
+  // ===== 5-8: SOUND WAVES =====
   {
-    topic: "Linear Motion",
-    q: "A car accelerates uniformly from rest at 3 m/s². Its velocity after travelling a distance of 24m is",
-    options: ["12 m/s", "144 m/s", "72 m/s", "36 m/s"],
-    correct: 0,
-    solution: "Using v² = u² + 2as: v² = 0 + 2(3)(24) = 144, so v = √144 = 12 m/s."
+    topic: "Sound Waves",
+    q: "The sound of an electric bell inside a bell jar dies down slowly as air is pumped out from the jar because",
+    options: ["Sound cannot pass through the bottle", "Sound can pass through a vacuum", "Sound needs a material medium", "The wavelength of sound becomes greater in the bottle"],
+    correct: 2,
+    solution: "Unlike light, sound is a mechanical wave and needs particles of a material medium to travel through. As air is removed, there are fewer particles to carry the vibrations, so the sound fades until it can no longer be heard in a vacuum."
   },
   {
-    topic: "Linear Motion",
-    q: "A train with an initial velocity of 20 m/s is subjected to a uniform deceleration of 2 m/s². The time required to bring the train to a complete halt is",
-    options: ["5 s", "10 s", "20 s", "40 s"],
+    topic: "Sound Waves",
+    q: "During a thunderstorm, the sound is heard over a long time. This phenomenon is referred to as",
+    options: ["Refraction of sound", "Reverberation", "Superposition", "Diffraction of sound"],
     correct: 1,
-    solution: "Using v = u − at, at rest v = 0, so t = u/a = 20/2 = 10 seconds."
+    solution: "Reverberation is the persistence of sound due to multiple reflections (echoes) off surrounding surfaces like clouds, buildings, and the ground, which is why thunder seems to rumble on rather than end abruptly."
   },
   {
-    topic: "Linear Motion",
-    q: "A body starts from rest and accelerates uniformly at 4 m/s² for 5 seconds. Calculate the distance it covers.",
-    options: ["10 m", "20 m", "50 m", "100 m"],
-    correct: 2,
-    solution: "Using s = ut + ½at²: since u = 0, s = ½ × 4 × 5² = ½ × 4 × 25 = 50m."
-  },
-
-  // ---------------- PROJECTILE / MOTION UNDER GRAVITY ----------------
-  {
-    topic: "Projectile / Motion Under Gravity",
-    q: "A stone and a feather are dropped from the same height above the earth's surface. Ignoring air resistance, which of the following is correct?",
-    options: ["The stone and feather will both reach the ground at the same time", "The stone will reach the ground first", "The feather will reach the ground first", "The feather will be blown away by the wind while the stone drops steadily"],
-    correct: 0,
-    solution: "Without air resistance, all objects fall with the same acceleration due to gravity (g), regardless of mass. So the stone and feather hit the ground together."
-  },
-  {
-    topic: "Projectile / Motion Under Gravity",
-    q: "A ball is thrown vertically upwards with an initial velocity of 20 m/s. Calculate the maximum height reached. [g = 10 m/s²]",
-    options: ["10 m", "20 m", "40 m", "200 m"],
-    correct: 1,
-    solution: "At maximum height, final velocity v = 0. Using v² = u² − 2gh: 0 = 400 − 20h, so h = 400/20 = 20m."
-  },
-  {
-    topic: "Projectile / Motion Under Gravity",
-    q: "A stone is projected horizontally with a velocity of 15 m/s from the top of a cliff 20m high. Calculate the time taken for the stone to reach the ground. [g = 10 m/s²]",
-    options: ["1 s", "1.5 s", "2 s", "3 s"],
-    correct: 2,
-    solution: "The horizontal velocity does not affect the fall time — only the vertical motion matters. Using h = ½gt²: 20 = ½(10)t² → t² = 4 → t = 2 seconds."
-  },
-
-  // ---------------- NEWTON'S LAWS OF MOTION ----------------
-  {
-    topic: "Newton's Laws of Motion",
-    q: "An object is weighed at different locations on the earth. What will be the correct observation?",
-    options: ["Both the mass and weight vary", "The weight is constant while the mass varies", "The mass is constant while the weight varies", "Both the mass and weight are constant"],
-    correct: 2,
-    solution: "Mass is a fixed amount of matter and doesn't change with location. Weight (= mass × g) changes slightly because the value of g varies slightly from place to place on Earth."
-  },
-  {
-    topic: "Newton's Laws of Motion",
-    q: "A man standing on a lift that is descending does not feel any weight because",
-    options: ["There is no gravitational pull on the man in the lift", "The inside of the lift is airtight", "The lift is in a vacuum", "There is no reaction from the floor of the lift"],
+    topic: "Sound Waves",
+    q: "The velocity of sound in air at 16°C is 340 m/s. What will it be when the pressure is doubled and the temperature is raised to 127°C?",
+    options: ["4,000 m/s", "160,000 m/s", "8,000 m/s", "400 m/s"],
     correct: 3,
-    solution: "What we feel as 'weight' is really the normal reaction force from the floor pushing up on us. If the lift accelerates downward fast enough, that reaction force drops to zero, and we feel weightless — Newton's Third Law in action."
+    solution: "The speed of sound in a gas depends only on its absolute temperature (not pressure): v ∝ √T. Converting to Kelvin, T₁ = 289K, T₂ = 400K. v₂ = 340 × √(400/289) = 340 × (20/17) = 400 m/s."
   },
   {
-    topic: "Newton's Laws of Motion",
-    q: "Calculate the apparent weight of a 70kg man in a lift accelerating downwards at 1.5 m/s². [g = 10 m/s²]",
-    options: ["686 N", "595 N", "581 N", "1105 N"],
-    correct: 1,
-    solution: "When a lift accelerates downward, apparent weight = m(g − a) = 70 × (10 − 1.5) = 70 × 8.5 = 595N. This is what a weighing scale would read inside the lift."
-  },
-
-  // ---------------- CIRCULAR MOTION & CENTRIPETAL FORCE ----------------
-  {
-    topic: "Circular Motion & Centripetal Force",
-    q: "An object moves in a circular path of radius 0.5m with a speed of 1 m/s. What is its angular velocity?",
-    options: ["8 rad/s", "4 rad/s", "2 rad/s", "1 rad/s"],
-    correct: 2,
-    solution: "Angular velocity ω = v/r = 1/0.5 = 2 rad/s."
-  },
-  {
-    topic: "Circular Motion & Centripetal Force",
-    q: "An object of mass 2kg moves with a velocity of 10 m/s round a circle of radius 4m. Calculate the centripetal force on the object.",
-    options: ["40 N", "25 N", "100 N", "50 N"],
-    correct: 3,
-    solution: "Centripetal force F = mv²/r = (2 × 10²)/4 = 200/4 = 50N."
-  },
-  {
-    topic: "Circular Motion & Centripetal Force",
-    q: "A car of mass 1000kg moves round a circular track of radius 50m at a constant speed of 20 m/s. Calculate the centripetal force acting on the car.",
-    options: ["4000 N", "8000 N", "10000 N", "20000 N"],
-    correct: 1,
-    solution: "F = mv²/r = (1000 × 20²)/50 = (1000 × 400)/50 = 400000/50 = 8000N."
-  },
-
-  // ---------------- GRAVITATIONAL FIELD ----------------
-  {
-    topic: "Gravitational Field",
-    q: "Calculate the escape velocity of a satellite launched from the earth's surface if the radius of the earth is 6.4 × 10⁶ m. [g = 9.8 m/s²]",
-    options: ["25.3 km/s", "4.2 km/s", "4.0 km/s", "11.3 km/s"],
-    correct: 3,
-    solution: "Escape velocity v = √(2gR) = √(2 × 9.8 × 6.4×10⁶) = √(1.2544×10⁸) ≈ 11,200 m/s ≈ 11.3 km/s."
-  },
-  {
-    topic: "Gravitational Field",
-    q: "An object weighing 80N on earth is taken to a planet where the acceleration due to gravity is one-third of its value on earth. The weight of the object on the planet is",
-    options: ["48 N", "12 N", "27 N", "36 N"],
-    correct: 2,
-    solution: "Weight is directly proportional to g. New weight = 80 × (1/3) = 26.7N ≈ 27N."
-  },
-  {
-    topic: "Gravitational Field",
-    q: "When a brick is taken from the earth's surface to the moon, its mass",
-    options: ["Remains constant", "Reduces", "Increases", "Becomes zero"],
+    topic: "Sound Waves",
+    q: "A cannon is fired from town X. After how long is the sound heard at a town Y, 4.95km away? [Velocity of sound in air = 333 m/s]",
+    options: ["15 s", "0 s", "10 s", "12 s"],
     correct: 0,
-    solution: "Mass is the amount of matter in an object and does not depend on the local gravitational field, so it stays the same on the moon. Only its weight would change, because the moon's gravity is weaker."
+    solution: "Time = distance/speed = 4950/333 ≈ 14.86s ≈ 15 seconds."
   },
 
-  // ---------------- EQUILIBRIUM OF FORCES & MOMENTS ----------------
+  // ===== 9-12: REFLECTION OF LIGHT (MIRRORS) =====
   {
-    topic: "Equilibrium of Forces & Moments",
-    q: "A uniform metre rule weighing 0.5N is pivoted on a knife-edge at the 30cm mark. Where should a force of 2N be placed from the pivot to balance the rule?",
-    options: ["95 cm", "5 cm", "20 cm", "25 cm"],
+    topic: "Reflection of Light (Mirrors)",
+    q: "The magnification of an object 2cm tall, placed 10cm in front of a plane mirror, is",
+    options: ["6.0", "1.0", "0.7", "0.6"],
     correct: 1,
-    solution: "A uniform rule's weight acts at its centre (the 50cm mark), which is 20cm from the pivot at 30cm. For balance, take moments: 2N × d = 0.5N × 20cm, so d = 10/2 = 5cm from the pivot."
+    solution: "A plane mirror always forms an image the same size as the object — its magnification is always exactly 1.0, regardless of the object's distance from the mirror."
   },
   {
-    topic: "Equilibrium of Forces & Moments",
-    q: "One of the conditions necessary for an object to be in equilibrium when acted upon by a number of parallel forces is that the vector sum of the forces is",
-    options: ["Average", "Zero", "Negative", "Positive"],
-    correct: 1,
-    solution: "For equilibrium under parallel forces, the forces must balance out completely — meaning their vector sum equals zero, and the sum of clockwise moments equals the sum of anticlockwise moments."
-  },
-  {
-    topic: "Equilibrium of Forces & Moments",
-    q: "What happens when three coplanar, non-parallel forces are in equilibrium?",
-    options: ["Their lines of action are parallel", "They are represented in magnitude only", "They are represented in direction only", "Their lines of action meet at a point"],
-    correct: 3,
-    solution: "This is the 'three-force theorem': if three non-parallel coplanar forces keep a body in equilibrium, their lines of action must all pass through (meet at) a single point."
-  },
-
-  // ---------------- SIMPLE MACHINES ----------------
-  {
-    topic: "Simple Machines",
-    q: "A machine of velocity ratio 6 requires an effort of 400N to raise a load of 800N. Find the efficiency of the machine.",
-    options: ["50%", "22.2%", "33.3%", "55.6%"],
+    topic: "Reflection of Light (Mirrors)",
+    q: "Where should a man place his face to get an enlarged (magnified) image when using a concave mirror to shave?",
+    options: ["Between the centre of curvature and the principal focus", "At the principal focus", "Between the principal focus and the pole", "At the centre of curvature"],
     correct: 2,
-    solution: "Mechanical Advantage (MA) = Load/Effort = 800/400 = 2. Efficiency = (MA/VR) × 100 = (2/6) × 100 = 33.3%."
+    solution: "When an object is placed between the pole and the principal focus of a concave mirror, the mirror forms a virtual, upright, and magnified image — exactly what's needed for a shaving or makeup mirror."
   },
   {
-    topic: "Simple Machines",
-    q: "A wheel and axle is used to raise a load of 800N with an effort of 250N. If the radii of the wheel and axle are 800mm and 200mm respectively, find the efficiency of the machine.",
-    options: ["90%", "80%", "85%", "87%"],
+    topic: "Reflection of Light (Mirrors)",
+    q: "After reflection from a concave mirror, parallel rays of light from the sun converge",
+    options: ["At the radius of curvature", "At the focus", "Beyond the radius of curvature", "At the pole"],
     correct: 1,
-    solution: "Velocity Ratio = R/r = 800/200 = 4. MA = Load/Effort = 800/250 = 3.2. Efficiency = (MA/VR) × 100 = (3.2/4) × 100 = 80%."
+    solution: "By definition, a concave mirror brings all incoming parallel rays (like sunlight) to converge at a single point called the principal focus."
   },
   {
-    topic: "Simple Machines",
-    q: "A machine whose efficiency is 75% is used to lift a load of 1000N. Calculate the effort needed if the machine has a velocity ratio of 4.",
-    options: ["343.32 N", "233.33 N", "333.33 N", "334.33 N"],
+    topic: "Reflection of Light (Mirrors)",
+    q: "A concave mirror has a radius of curvature of 36cm. At what distance from the mirror should an object be placed to give a real image three times the size of the object?",
+    options: ["12 cm", "24 cm", "48 cm", "108 cm"],
+    correct: 1,
+    solution: "Focal length f = R/2 = 18cm. For a real, magnified image, magnitude of magnification |v/u| = 3, so v = 3u. Using 1/f = 1/v + 1/u = 1/(3u) + 1/u = 4/(3u), we get u = 4f/3 = 4(18)/3 = 24cm."
+  },
+
+  // ===== 13-16: REFRACTION OF LIGHT & REFRACTIVE INDEX =====
+  {
+    topic: "Refraction of Light & Refractive Index",
+    q: "The speed of light in air is 3.0 × 10⁸ m/s. What is its speed in glass having a refractive index of 1.65?",
+    options: ["1.82 × 10⁸ m/s", "3.00 × 10⁸ m/s", "4.95 × 10⁸ m/s", "1.65 × 10⁸ m/s"],
+    correct: 0,
+    solution: "Speed in medium = speed in vacuum/refractive index = (3.0×10⁸)/1.65 ≈ 1.82 × 10⁸ m/s."
+  },
+  {
+    topic: "Refraction of Light & Refractive Index",
+    q: "A glass plate 0.9cm thick has a refractive index of 1.50. How long does it take for a pulse of light to pass through the plate?",
+    options: ["3.0 × 10⁻¹⁰ s", "4.5 × 10⁻¹¹ s", "3.0 × 10⁻¹¹ s", "6.0 × 10⁻¹¹ s"],
+    correct: 1,
+    solution: "Speed of light in glass = c/n = (3×10⁸)/1.5 = 2×10⁸ m/s. Time = distance/speed = 0.009/(2×10⁸) = 4.5 × 10⁻¹¹ s."
+  },
+  {
+    topic: "Refraction of Light & Refractive Index",
+    q: "The speed of light in air is 3 × 10⁸ m/s. If the refractive index of light from air to water is 4/3, what is the speed of light in water?",
+    options: ["4 × 10⁸ m/s", "2.23 × 10⁸ m/s", "2.25 × 10⁸ m/s", "1.33 × 10⁸ m/s"],
     correct: 2,
-    solution: "Efficiency = (MA/VR) × 100, so MA = (75/100) × 4 = 3. Since MA = Load/Effort, Effort = Load/MA = 1000/3 = 333.33N."
+    solution: "Speed in water = speed in air ÷ refractive index = (3×10⁸) ÷ (4/3) = (3×10⁸) × (3/4) = 2.25 × 10⁸ m/s."
+  },
+  {
+    topic: "Refraction of Light & Refractive Index",
+    q: "A glass block of thickness 10cm (refractive index 1.5) is placed on an object. If an observer views the object vertically through the block, what is the apparent displacement of the object?",
+    options: ["3.33 cm", "5.00 cm", "6.67 cm", "8.50 cm"],
+    correct: 0,
+    solution: "Apparent displacement = t(1 − 1/n) = 10 × (1 − 1/1.5) = 10 × (1/3) = 3.33cm."
   },
 
-  // ---------------- WORK, ENERGY & POWER ----------------
+  // ===== 17-20: TOTAL INTERNAL REFLECTION & CRITICAL ANGLE =====
   {
-    topic: "Work, Energy & Power",
-    q: "A carpenter on top of a roof 20m high dropped a hammer of mass 1.5kg and it fell freely to the ground. What is the kinetic energy of the hammer just before hitting the ground? [g = 10 m/s²]",
-    options: ["450 J", "600 J", "150 J", "300 J"],
-    correct: 3,
-    solution: "By conservation of energy, all the potential energy converts to kinetic energy: KE = mgh = 1.5 × 10 × 20 = 300J."
-  },
-  {
-    topic: "Work, Energy & Power",
-    q: "An object of mass 20kg is released from a height of 10m above the ground. What is its kinetic energy just before it hits the ground? [g = 10 m/s²]",
-    options: ["200 J", "4000 J", "2000 J", "500 J"],
+    topic: "Total Internal Reflection & Critical Angle",
+    q: "I. Rays of light travel from a less dense medium to a denser medium.\nII. The angle of incidence is greater than the critical angle.\nIII. Rays of light travel from a denser medium to a less dense medium.\nWhich of the statements above are conditions for total internal reflection?",
+    options: ["I and II only", "I only", "II and III only", "II only"],
     correct: 2,
-    solution: "KE just before landing = loss in PE = mgh = 20 × 10 × 10 = 2000J."
+    solution: "Total internal reflection requires two conditions: the light must be travelling from a denser medium into a less dense one (III), AND the angle of incidence must exceed the critical angle (II). Statement I describes the wrong direction of travel."
   },
   {
-    topic: "Work, Energy & Power",
-    q: "A pump is capable of lifting 5000kg of water through a vertical height of 60m in 15 minutes. What is the power of the pump? [g = 10 m/s²]",
-    options: ["3.3 × 10³ W", "5.0 × 10³ W", "5.0 × 10⁴ W", "3.3 × 10⁴ W"],
+    topic: "Total Internal Reflection & Critical Angle",
+    q: "Total internal reflection will NOT occur when light travels from",
+    options: ["Water to air", "Water into glass", "Glass to air", "Glass into water"],
+    correct: 1,
+    solution: "Total internal reflection can only happen when light passes from a denser medium into a less dense one. Water is less dense than glass, so light travelling from water into glass is moving into a denser medium — total internal reflection is impossible here."
+  },
+  {
+    topic: "Total Internal Reflection & Critical Angle",
+    q: "A ray of light passing through the centre of curvature of a concave mirror is reflected by the mirror at",
+    options: ["0°", "45°", "90°", "180°"],
     correct: 0,
-    solution: "Work done = mgh = 5000 × 10 × 60 = 3,000,000 J. Time = 15 min = 900s. Power = Work/Time = 3,000,000/900 ≈ 3333 W ≈ 3.3 × 10³ W."
+    solution: "A ray through the centre of curvature strikes the mirror along the normal (perpendicular to the mirror surface at that point), so it is reflected straight back along its own path — an angle of incidence and reflection of 0°."
+  },
+  {
+    topic: "Total Internal Reflection & Critical Angle",
+    q: "Calculate the critical angle for a glass-air boundary if the refractive index of the glass is 1.5.",
+    options: ["30°", "42°", "48°", "60°"],
+    correct: 1,
+    solution: "sin(critical angle) = 1/n = 1/1.5 = 0.667. Critical angle = sin⁻¹(0.667) ≈ 42°."
   },
 
-  // ---------------- SIMPLE HARMONIC MOTION ----------------
+  // ===== 21-24: LENSES =====
   {
-    topic: "Simple Harmonic Motion",
-    q: "A simple pendulum of length 0.4m has a period of 2s. What is the period of a similar pendulum of length 0.8m at the same place?",
-    options: ["8 s", "4 s", "2√2 s", "√2 s"],
+    topic: "Lenses",
+    q: "An image formed in a convex lens is upright and magnified 3 times. If the focal length of the lens is 15cm, what is the object distance?",
+    options: ["14 cm", "10 cm", "25 cm", "26 cm"],
+    correct: 1,
+    solution: "An upright, magnified image from a convex lens is virtual, meaning object distance u and image distance v are related by v = 3u (same side of lens). Substituting into the lens formula gives u = 2f/3 = 2(15)/3 = 10cm."
+  },
+  {
+    topic: "Lenses",
+    q: "The use of lenses is NOT applicable in the",
+    options: ["Projector", "Human eye", "Periscope", "Telescope"],
     correct: 2,
-    solution: "Since T ∝ √L, doubling the length multiplies the period by √2. T₂ = T₁ × √(L₂/L₁) = 2 × √(0.8/0.4) = 2 × √2 = 2√2 s."
+    solution: "A periscope works using mirrors (or prisms) set at 45° to reflect light — it does not rely on lenses at all, unlike projectors, the eye, and telescopes, which all use lenses to form images."
   },
   {
-    topic: "Simple Harmonic Motion",
-    q: "For a body performing simple harmonic motion, which pair of quantities are always in phase?",
-    options: ["Displacement and velocity of the body", "Displacement and force on the body", "Velocity and acceleration of the body", "Force acting on the body and the acceleration"],
+    topic: "Lenses",
+    q: "A converging lens has a focal length of 10cm. An object is placed 30cm from the lens. Calculate the image distance.",
+    options: ["7.5 cm", "15 cm", "20 cm", "30 cm"],
+    correct: 1,
+    solution: "Using the lens formula 1/f = 1/v + 1/u: 1/v = 1/10 − 1/30 = 3/30 − 1/30 = 2/30 = 1/15, so v = 15cm."
+  },
+  {
+    topic: "Lenses",
+    q: "A diverging lens of focal length 20cm forms an image of an object placed 30cm from the lens. Find the image distance.",
+    options: ["−12 cm (virtual, same side)", "12 cm (real)", "−50 cm", "50 cm"],
+    correct: 0,
+    solution: "For a diverging lens, f is negative (−20cm) and the object distance is treated as negative (−30cm) under the Cartesian sign convention. Solving 1/v = 1/f + 1/u gives v = −12cm — a virtual image, 12cm from the lens on the same side as the object."
+  },
+
+  // ===== 25-28: OPTICAL INSTRUMENTS =====
+  {
+    topic: "Optical Instruments",
+    q: "A pinhole camera is placed 300m in front of a building so that the image is formed on a screen 5cm from the pinhole. If the image is 2.5cm high, what is the height of the building?",
+    options: ["25 m", "50 m", "100 m", "150 m"],
     correct: 3,
-    solution: "In SHM, both force and acceleration point back toward the equilibrium position and are proportional to each other at every instant (F = ma = −kx), so they are always in phase."
+    solution: "By similar triangles: image height/screen distance = object height/object distance. So building height = 300 × (2.5/5) = 300 × 0.5 = 150m."
   },
   {
-    topic: "Simple Harmonic Motion",
-    q: "The period of a simple pendulum on earth is 2s. What would its period be on a planet where g is 4 times that of earth (same length)?",
-    options: ["4 s", "2 s", "1 s", "0.5 s"],
+    topic: "Optical Instruments",
+    q: "A man 1.5m tall stands 3m in front of a pinhole camera whose distance between the hole and the screen is 0.1m. What is the height of the image of the man on the screen?",
+    options: ["0.05 m", "0.15 m", "0.30 m", "1.00 m"],
+    correct: 0,
+    solution: "By similar triangles: image height = object height × (screen distance/object distance) = 1.5 × (0.1/3) = 0.05m."
+  },
+  {
+    topic: "Optical Instruments",
+    q: "If the linear magnification of the objective and eyepiece convex lenses of a compound microscope are 4 and 7 respectively, calculate the angular magnification of the microscope.",
+    options: ["2", "3", "11", "28"],
+    correct: 3,
+    solution: "The overall angular magnification of a compound microscope is the product of the magnifications of the objective and eyepiece lenses: 4 × 7 = 28."
+  },
+  {
+    topic: "Optical Instruments",
+    q: "A magnifying glass has a focal length of 5cm. Calculate its magnifying power when the image is formed at the near point (25cm from the eye).",
+    options: ["3", "5", "6", "10"],
     correct: 2,
-    solution: "Since T ∝ 1/√g, increasing g by 4 times reduces the period by a factor of √4 = 2. New period = 2/2 = 1 second."
+    solution: "Magnifying power = 1 + D/f, where D is the near point distance (25cm). M = 1 + 25/5 = 1 + 5 = 6."
   },
 
-  // ---------------- FRICTION ----------------
+  // ===== 29-32: THE HUMAN EYE & DEFECTS OF VISION =====
   {
-    topic: "Friction",
-    q: "A body of mass 6kg rests on an inclined plane. The limiting frictional force on it is 30N. If g = 10 m/s², find the angle of inclination.",
-    options: ["15°", "60°", "45°", "30°"],
+    topic: "The Human Eye & Defects of Vision",
+    q: "In comparing the camera and the human eye, the film of the camera functions as the",
+    options: ["Iris", "Pupil", "Cornea", "Retina"],
     correct: 3,
-    solution: "At the point of sliding, the frictional force balances the component of weight along the incline: F = mg sinθ. So sinθ = 30/(6×10) = 30/60 = 0.5, giving θ = 30°."
+    solution: "The camera film (or digital sensor) captures the focused image, exactly like the retina does at the back of the human eye — both are the light-sensitive surface where the final image forms."
   },
   {
-    topic: "Friction",
-    q: "An object of mass 80kg is pulled on a horizontal rough ground by a force of 500N, just enough to make it slide. Find the coefficient of static friction. [g = 10 m/s²]",
-    options: ["0.6", "0.4", "1.0", "0.8"],
+    topic: "The Human Eye & Defects of Vision",
+    q: "Which of the following is used for the correction of short-sightedness?",
+    options: ["Concave lens", "Concave mirror", "Convex mirror", "Convex lens"],
     correct: 0,
-    solution: "At the point of sliding, F = μmg, so μ = F/(mg) = 500/(80×10) = 500/800 = 0.625 ≈ 0.6."
+    solution: "Short-sightedness (myopia) occurs because the eye focuses images in front of the retina. A diverging (concave) lens spreads the light rays out slightly before they enter the eye, pushing the focal point back onto the retina."
   },
   {
-    topic: "Friction",
-    q: "A wooden block is just about to slide down an inclined plane whose inclination to the horizontal is α. The coefficient of friction between the block and the plane is",
-    options: ["sin α", "tan α", "cot α", "cos α"],
-    correct: 1,
-    solution: "At the point where a block is just about to slide (the angle of repose), the coefficient of friction equals the tangent of the angle of inclination: μ = tan α."
-  },
-
-  // ---------------- ELASTICITY ----------------
-  {
-    topic: "Elasticity",
-    q: "A wire 30cm long is extended to 30.5cm by a force of 300N. Find the strain energy stored in the wire.",
-    options: ["7.50 J", "750.00 J", "75.00 J", "0.75 J"],
-    correct: 3,
-    solution: "Extension e = 30.5 − 30 = 0.5cm = 0.005m. Strain energy = ½Fe = ½ × 300 × 0.005 = 0.75 J."
-  },
-  {
-    topic: "Elasticity",
-    q: "A copper wire is subjected to a tensile stress of 7.7 × 10⁷ N/m². Calculate the tensile strain of the wire. [Young modulus = 1.1 × 10¹¹ N/m²]",
-    options: ["2.2 × 10⁻⁴", "2.0 × 10⁻⁵", "7.0 × 10⁻³", "7.0 × 10⁻⁴"],
-    correct: 3,
-    solution: "Young's modulus, E = stress/strain, so strain = stress/E = (7.7×10⁷)/(1.1×10¹¹) = 7.0 × 10⁻⁴."
-  },
-  {
-    topic: "Elasticity",
-    q: "A force of 500N is applied to a steel wire of cross-sectional area 0.2m². Calculate the tensile stress.",
-    options: ["2.5 × 10⁴ N/m²", "1.0 × 10² N/m²", "1.0 × 10³ N/m²", "2.5 × 10³ N/m²"],
-    correct: 3,
-    solution: "Tensile stress = Force/Area = 500/0.2 = 2500 = 2.5 × 10³ N/m²."
-  },
-    // ---------------- PRESSURE & HYDRAULICS ----------------
-  {
-    topic: "Pressure & Hydraulics",
-    q: "In a hydraulic press, the pump piston exerts a pressure of 100 Pa on the liquid. What force is exerted on the second piston of cross-sectional area 3 m²?",
-    options: ["30 N", "300 N", "3 N", "0.3 N"],
-    correct: 1,
-    solution: "By Pascal's principle, pressure is transmitted equally through the liquid. Force = Pressure × Area = 100 × 3 = 300N."
-  },
-  {
-    topic: "Pressure & Hydraulics",
-    q: "What will happen to the boiling point of pure water when it is heated in a place 30m below sea level?",
-    options: ["It will be more than 100°C", "It will be less than 100°C", "It will still be at 100°C", "It will be fluctuating"],
-    correct: 0,
-    solution: "Below sea level, atmospheric pressure is higher than at sea level. Higher pressure raises the boiling point of a liquid, so water would boil above 100°C there."
-  },
-  {
-    topic: "Pressure & Hydraulics",
-    q: "The height at which the atmosphere ceases to exist is about 80km. If atmospheric pressure decreases uniformly with height, what is the atmospheric pressure at a height of 20km above ground level? [Pressure at ground level = 760mmHg]",
-    options: ["480 mmHg", "570 mmHg", "190 mmHg", "380 mmHg"],
-    correct: 1,
-    solution: "Assuming a uniform (linear) decrease, pressure drops to zero over 80km. At 20km (1/4 of the way up), pressure = 760 × (1 − 20/80) = 760 × 0.75 = 570mmHg."
-  },
-
-  // ---------------- ARCHIMEDES' PRINCIPLE / UPTHRUST / FLOATATION ----------------
-  {
-    topic: "Archimedes' Principle / Upthrust / Floatation",
-    q: "A balloon whose volume is 300m³ is filled with hydrogen. If the density of air is 1.3 kg/m³, find the upthrust on the balloon. [g = 10 m/s²]",
-    options: ["3000 N", "3800 N", "3900 N", "4200 N"],
+    topic: "The Human Eye & Defects of Vision",
+    q: "When the human eye loses its power of accommodation (usually with age), the defect is known as",
+    options: ["Long-sightedness", "Short-sightedness", "Presbyopia", "Astigmatism"],
     correct: 2,
-    solution: "Upthrust equals the weight of air displaced: Upthrust = ρ(air) × V × g = 1.3 × 300 × 10 = 3900N."
+    solution: "Presbyopia is the age-related loss of the eye's ability to change focus (accommodate) between near and far objects, typically due to stiffening of the eye's lens."
   },
   {
-    topic: "Archimedes' Principle / Upthrust / Floatation",
-    q: "A solid weighs 10.0N in air, 6.0N when fully immersed in water, and 7.0N when fully immersed in a certain liquid X. Calculate the relative density of liquid X.",
-    options: ["3/4", "4/3", "5/3", "7/10"],
+    topic: "The Human Eye & Defects of Vision",
+    q: "Long-sightedness (hypermetropia) is corrected using a",
+    options: ["Converging (convex) lens", "Diverging (concave) lens", "Plane mirror", "Concave mirror"],
     correct: 0,
-    solution: "Relative density of a liquid = (loss of weight in liquid) / (loss of weight in water) = (10 − 7)/(10 − 6) = 3/4."
-  },
-  {
-    topic: "Archimedes' Principle / Upthrust / Floatation",
-    q: "A body floats in a liquid when",
-    options: ["The upthrust on it is greater than its weight", "The upthrust on it equals its weight", "The upthrust on it is less than its weight", "It has zero density"],
-    correct: 1,
-    solution: "A floating body is in equilibrium — the upward upthrust (weight of liquid displaced) exactly balances the downward weight of the body."
+    solution: "In long-sightedness, the eye focuses images behind the retina (often because the eyeball is too short). A converging (convex) lens bends light rays inward before they enter the eye, bringing the focus forward onto the retina."
   },
 
-  // ---------------- SURFACE TENSION & VISCOSITY ----------------
+  // ===== 33-36: DISPERSION OF LIGHT & COLOUR =====
   {
-    topic: "Surface Tension & Viscosity",
-    q: "If a beaker is filled with water, it is observed that the surface of the water is not horizontal at the glass-water interface. This behaviour is due to",
-    options: ["Friction", "Surface tension", "Viscosity", "Evaporation"],
-    correct: 1,
-    solution: "The curved surface (meniscus) forms because surface tension causes the liquid to cling to the glass, pulling the edge of the surface upward (for water) against the pull of gravity."
+    topic: "Dispersion of Light & Colour",
+    q: "The angle of deviation of light of various colours passing through a triangular prism increases in the order",
+    options: ["Red → green → blue", "Green → violet → blue", "Blue → red → green", "Blue → green → red"],
+    correct: 0,
+    solution: "Shorter wavelengths bend (deviate) more than longer wavelengths when passing through a prism. Since red has the longest visible wavelength and blue/violet the shortest, deviation increases in the order red → green → blue."
   },
   {
-    topic: "Surface Tension & Viscosity",
-    q: "The rise or fall of a liquid in a narrow tube (capillarity) is because of the",
-    options: ["Viscosity of the liquid", "Surface tension of the liquid", "Friction between the walls of the tube and the liquid", "Osmotic pressure of the liquid"],
+    topic: "Dispersion of Light & Colour",
+    q: "Which of the following pairs of colours gives the widest separation in the spectrum of white light?",
+    options: ["Green and yellow", "Red and violet", "Indigo and violet", "Orange and red"],
     correct: 1,
-    solution: "Capillary action happens because surface tension, combined with the adhesive forces between the liquid and the tube's walls, pulls the liquid up (or pushes it down, for mercury) inside a narrow tube."
+    solution: "Red and violet sit at opposite ends of the visible spectrum, with the greatest difference in wavelength (and therefore refractive index) between them — giving the widest angular separation when white light is dispersed."
   },
   {
-    topic: "Surface Tension & Viscosity",
-    q: "The property of a fluid by which it resists relative motion between its adjacent layers is called",
-    options: ["Surface tension", "Viscosity", "Elasticity", "Density"],
-    correct: 1,
-    solution: "Viscosity is a fluid's internal 'thickness' or resistance to flow — it describes how strongly adjacent layers of the fluid resist sliding past one another."
+    topic: "Dispersion of Light & Colour",
+    q: "Dispersion occurs when white light passes through a glass prism because of the",
+    options: ["Different speeds of the colours in the glass", "High density of the glass", "Defects in the glass", "Different hidden colours in the glass"],
+    correct: 0,
+    solution: "Each colour (wavelength) of light travels at a slightly different speed inside glass, causing each to refract by a different amount. This differential bending spreads white light out into its component colours."
   },
-
-  // ---------------- KINETIC THEORY OF MATTER / BROWNIAN MOTION ----------------
   {
-    topic: "Kinetic Theory of Matter / Brownian Motion",
-    q: "I. It is a rapid, constant and irregular motion of tiny particles.\nII. It gives evidence that tiny particles of matter called molecules exist.\nIII. It takes place only in gases.\nIV. It gives evidence that molecules are in a constant state of random motion.\nWhich combination of the statements above is correct about Brownian motion?",
-    options: ["I, II and III", "II, III and IV only", "I, III and IV only", "I, II and IV only"],
+    topic: "Dispersion of Light & Colour",
+    q: "Of all the colours in the visible spectrum, the one that undergoes the LEAST deviation when passing through a glass prism is",
+    options: ["Violet", "Blue", "Green", "Red"],
     correct: 3,
-    solution: "Brownian motion is indeed rapid and irregular (I), and it proves molecules exist (II) and are in constant random motion (IV). Statement III is false — Brownian motion is also observed in liquids (e.g. pollen grains jittering in water), not only in gases."
+    solution: "Red light has the longest wavelength in the visible spectrum and is refracted (bent) the least by glass, so it deviates the least when passing through a prism — it ends up at the top of the dispersed spectrum band."
   },
+
+  // ===== 37-40: ELECTROSTATICS =====
   {
-    topic: "Kinetic Theory of Matter / Brownian Motion",
-    q: "Brownian motion is best demonstrated experimentally by observing",
-    options: ["Smoke particles moving randomly in air under a microscope", "Water boiling in an open pot", "A pendulum swinging back and forth", "Iron filings aligning around a magnet"],
-    correct: 0,
-    solution: "The classic demonstration uses smoke particles suspended in air (or pollen in water), viewed under a microscope — their constant, random jittering is caused by collisions with fast-moving, invisible air (or water) molecules."
-  },
-  {
-    topic: "Kinetic Theory of Matter / Brownian Motion",
-    q: "According to the kinetic theory of matter, increasing the temperature of a gas",
-    options: ["Decreases the average kinetic energy of its molecules", "Has no effect on the motion of its molecules", "Increases the average kinetic energy of its molecules", "Stops molecular motion entirely"],
+    topic: "Electrostatics",
+    q: "When a positively charged rod is brought near the cap of a positively charged electroscope, the divergence of the leaves will",
+    options: ["Converge", "Remain constant", "Diverge (increase)", "Be induced"],
     correct: 2,
-    solution: "Temperature is a direct measure of the average kinetic energy of a substance's molecules. As temperature rises, the molecules move faster on average, so their average kinetic energy increases."
-  },
-
-  // ---------------- THERMAL EXPANSION (LINEAR, AREA, VOLUME) ----------------
-  {
-    topic: "Thermal Expansion",
-    q: "A wire of length 100m at 30°C has a linear expansivity of 2 × 10⁻⁵ K⁻¹. Calculate the length of the wire at a temperature of −10°C.",
-    options: ["100.08 m", "100.04 m", "99.96 m", "99.92 m"],
-    correct: 3,
-    solution: "Temperature change = −10 − 30 = −40°C. Change in length = L₀αΔT = 100 × 2×10⁻⁵ × (−40) = −0.08m. New length = 100 − 0.08 = 99.92m."
+    solution: "Bringing a like charge (positive) near the cap repels the positive charges already on the electroscope, pushing more of them down onto the leaves. This increases the charge (and repulsion) on the leaves, so they diverge further."
   },
   {
-    topic: "Thermal Expansion",
-    q: "Two metals P and Q are heated through the same temperature difference. If the ratio of their linear expansivities (P:Q) is 2:3 and the ratio of their original lengths (P:Q) is 3:4, find the ratio of the increase in lengths of P to Q.",
-    options: ["1:2", "2:1", "8:9", "9:8"],
-    correct: 0,
-    solution: "Increase in length ΔL = Lα(ΔT), and ΔT is the same for both. ΔL(P)/ΔL(Q) = (L(P)×α(P))/(L(Q)×α(Q)) = (3×2)/(4×3) = 6/12 = 1/2, so the ratio is 1:2."
-  },
-  {
-    topic: "Thermal Expansion",
-    q: "The linear expansivity of brass is 2 × 10⁻⁵ K⁻¹. If the volume of a piece of brass is 15.00 cm³ at 0°C, what is its volume at 100°C?",
-    options: ["16.03 cm³", "15.09 cm³", "16.00 cm³", "15.03 cm³"],
+    topic: "Electrostatics",
+    q: "A capacitor of 8μF is charged to a potential difference of 100V. Calculate the energy stored by the capacitor.",
+    options: ["1.0 × 10⁴ J", "4.0 × 10⁻² J", "1.25 × 10 J", "8.0 × 10 J"],
     correct: 1,
-    solution: "For volume expansion, the cubic expansivity γ ≈ 3α = 3 × 2×10⁻⁵ = 6×10⁻⁵ K⁻¹. Increase in volume = V₀γΔT = 15 × 6×10⁻⁵ × 100 = 0.09cm³. New volume = 15.00 + 0.09 = 15.09cm³."
+    solution: "Energy stored = ½CV² = ½ × 8×10⁻⁶ × 100² = ½ × 8×10⁻⁶ × 10,000 = 0.04J = 4.0 × 10⁻² J."
+  },
+  {
+    topic: "Electrostatics",
+    q: "Calculate the force acting on an electron of charge 1.5 × 10⁻¹⁹C placed in an electric field of intensity 10⁵ V/m.",
+    options: ["1.5 × 10⁻¹¹ N", "1.5 × 10⁻¹² N", "1.5 × 10⁻¹³ N", "1.5 × 10⁻¹⁴ N"],
+    correct: 3,
+    solution: "Force on a charge in an electric field: F = qE = 1.5×10⁻¹⁹ × 10⁵ = 1.5 × 10⁻¹⁴ N."
+  },
+  {
+    topic: "Electrostatics",
+    q: "If a force of 4N acts on a charge of 0.2 coulomb placed in an electric field, calculate the intensity of the field.",
+    options: ["0.8 N/C", "20.0 N/C", "0.05 N/C", "4.2 N/C"],
+    correct: 1,
+    solution: "Electric field intensity E = F/q = 4/0.2 = 20 N/C."
   },
 
-  // ---------------- QUANTITY OF HEAT, HEAT CAPACITY, SPECIFIC HEAT CAPACITY ----------------
+  // ===== 41-44: CURRENT ELECTRICITY & OHM'S LAW =====
   {
-    topic: "Quantity of Heat & Heat Capacity",
-    q: "The quantity of heat needed to raise the temperature of a body by 1K is the body's",
-    options: ["Heat capacity", "Internal energy", "Specific heat capacity", "Latent heat of fusion"],
-    correct: 0,
-    solution: "Heat capacity is defined as the amount of heat energy required to raise the temperature of an entire object (not per unit mass) by 1K (or 1°C)."
+    topic: "Current Electricity & Ohm's Law",
+    q: "A cell of e.m.f 12V and internal resistance 4Ω is connected to an external resistor of resistance 2Ω. Find the current flowing.",
+    options: ["4 A", "2 A", "3 A", "5 A"],
+    correct: 1,
+    solution: "Total resistance = internal resistance + external resistance = 4 + 2 = 6Ω. Current I = e.m.f/total resistance = 12/6 = 2A."
   },
   {
-    topic: "Quantity of Heat & Heat Capacity",
-    q: "Calculate the temperature change when 500J of heat is supplied to 100g of water. [Specific heat capacity of water = 4200 J/kg/K]",
-    options: ["12.1°C", "2.1°C", "1.2°C", "0.1°C"],
+    topic: "Current Electricity & Ohm's Law",
+    q: "Which of the following materials obeys Ohm's law?",
+    options: ["Electrolytes", "Metals", "Diode", "Glass"],
+    correct: 1,
+    solution: "Metals are ohmic conductors — at constant temperature, the current through them is directly proportional to the applied voltage, which is exactly what Ohm's law describes. Electrolytes, diodes, and glass do not follow this simple linear relationship."
+  },
+  {
+    topic: "Current Electricity & Ohm's Law",
+    q: "A cell of e.m.f 1.5V is connected in series with a 1Ω resistor, and a current of 0.3A flows through the resistor. Find the internal resistance of the cell.",
+    options: ["4 Ω", "3.0 Ω", "1.5 Ω", "1.00 Ω"],
+    correct: 0,
+    solution: "Using e.m.f = I(R + r): 1.5 = 0.3(1 + r) → 5 = 1 + r → r = 4Ω."
+  },
+  {
+    topic: "Current Electricity & Ohm's Law",
+    q: "To convert a galvanometer to a voltmeter, a",
+    options: ["High resistance is connected to it in series", "High resistance is connected to it in parallel", "Low resistance is connected to it in series", "Low resistance is connected to it in parallel"],
+    correct: 0,
+    solution: "A voltmeter must draw very little current from the circuit it's measuring, so a high resistance is connected in series with the galvanometer to limit current flow through it while allowing it to read larger voltages."
+  },
+
+  // ===== 45-48: RESISTORS IN SERIES AND PARALLEL =====
+  {
+    topic: "Resistors in Series and Parallel",
+    q: "Three 4Ω resistors are connected in parallel, and a potential difference of 16V is applied across them. What is the total current in the circuit?",
+    options: ["12 A", "8 A", "10 A", "14 A"],
+    correct: 0,
+    solution: "For resistors in parallel: 1/R(total) = 1/4 + 1/4 + 1/4 = 3/4, so R(total) = 4/3Ω. Total current I = V/R = 16 ÷ (4/3) = 12A."
+  },
+  {
+    topic: "Resistors in Series and Parallel",
+    q: "Three resistors, 2Ω, 4Ω, and 12Ω, are connected in parallel, and a 12V battery is connected across the combination. What is the current flowing through the 12Ω resistor?",
+    options: ["0.5 A", "1.0 A", "2.0 A", "3.2 A"],
+    correct: 1,
+    solution: "In a parallel circuit, the full 12V is applied across each branch independently. Current through the 12Ω resistor = V/R = 12/12 = 1.0A."
+  },
+  {
+    topic: "Resistors in Series and Parallel",
+    q: "Two resistors of 3Ω and 6Ω are connected in series to a 9V battery. Calculate the current flowing in the circuit.",
+    options: ["0.5 A", "1.0 A", "1.5 A", "3.0 A"],
+    correct: 1,
+    solution: "Total resistance in series = 3 + 6 = 9Ω. Current I = V/R = 9/9 = 1.0A."
+  },
+  {
+    topic: "Resistors in Series and Parallel",
+    q: "Three resistors of 2Ω, 3Ω, and 5Ω are connected in series to a 20V battery. Calculate the current in the circuit.",
+    options: ["1 A", "2 A", "4 A", "10 A"],
+    correct: 1,
+    solution: "Total resistance = 2 + 3 + 5 = 10Ω. Current I = V/R = 20/10 = 2A."
+  },
+
+  // ===== 49-52: ELECTRICAL ENERGY & POWER =====
+  {
+    topic: "Electrical Energy & Power",
+    q: "PHCN (the electricity distribution company) measures electrical energy supplied to homes in",
+    options: ["Wh", "kWh", "Wh", "J"],
+    correct: 1,
+    solution: "Electricity meters and bills measure energy consumption in kilowatt-hours (kWh) — a practical unit representing the energy used by a 1kW appliance running for one hour."
+  },
+  {
+    topic: "Electrical Energy & Power",
+    q: "What is the cost of running five 50W lamps and four 100W lamps for 10 hours if electrical energy costs 2 kobo per kWh?",
+    options: ["₦0.13", "₦0.65", "₦3.90", "₦1.30"],
+    correct: 0,
+    solution: "Total power = (5×50) + (4×100) = 250 + 400 = 650W = 0.65kW. Energy used = 0.65 × 10 = 6.5kWh. Cost = 6.5 × 2 kobo = 13 kobo = ₦0.13."
+  },
+  {
+    topic: "Electrical Energy & Power",
+    q: "A house has ten 40W bulbs and five 100W bulbs. How much will it cost to keep them lit for 10 hours if the cost of a unit (1 kWh) is ₦5?",
+    options: ["₦90", "₦50", "₦45", "₦40"],
     correct: 2,
-    solution: "Using Q = mcΔT: ΔT = Q/(mc) = 500/(0.1 × 4200) = 500/420 ≈ 1.2°C."
+    solution: "Total power = (10×40) + (5×100) = 400 + 500 = 900W = 0.9kW. Energy used = 0.9 × 10 = 9kWh. Cost = 9 × ₦5 = ₦45."
   },
   {
-    topic: "Quantity of Heat & Heat Capacity",
-    q: "Two liquids X and Y having the same mass are supplied with the same quantity of heat. If the temperature rise in X is twice that of Y, find the ratio of the specific heat capacity of X to that of Y.",
-    options: ["2:1", "1:2", "4:1", "1:4"],
+    topic: "Electrical Energy & Power",
+    q: "An electric device is rated 2000W, 250V. Calculate the maximum current it can take.",
+    options: ["9 A", "8 A", "7 A", "6 A"],
     correct: 1,
-    solution: "Since Q = mcΔT and Q and m are the same for both, c is inversely proportional to ΔT. If ΔT(X) = 2ΔT(Y), then c(X)/c(Y) = ΔT(Y)/ΔT(X) = 1/2, so the ratio is 1:2."
+    solution: "Using Power = Voltage × Current: Current = Power/Voltage = 2000/250 = 8A."
   },
 
-  // ---------------- CHANGE OF STATE & LATENT HEAT ----------------
+  // ===== 53-56: MAGNETISM =====
   {
-    topic: "Change of State & Latent Heat",
-    q: "Calculate the quantity of heat energy required to melt completely 1kg of ice at −30°C. [Latent heat of fusion of ice = 3.5 × 10⁵ J/kg, specific heat capacity of ice = 2.1 × 10³ J/kg/K]",
-    options: ["4.13 × 10⁵ J", "3.56 × 10⁴ J", "3.56 × 10² J", "3.5 × 10⁵ J"],
-    correct: 0,
-    solution: "First, warm the ice from −30°C to 0°C: Q₁ = mcΔT = 1 × 2.1×10³ × 30 = 6.3×10⁴J. Then melt it at 0°C: Q₂ = mL = 1 × 3.5×10⁵ = 3.5×10⁵J. Total = 3.5×10⁵ + 6.3×10⁴ = 4.13×10⁵J."
-  },
-  {
-    topic: "Change of State & Latent Heat",
-    q: "The melting point of a substance is equivalent to its",
-    options: ["Vapour pressure", "Solidification temperature", "Liquidification temperature", "Solidification pressure"],
-    correct: 1,
-    solution: "A pure substance melts and solidifies (freezes) at the exact same temperature — so its melting point and its solidification (freezing) temperature are the same value."
-  },
-  {
-    topic: "Change of State & Latent Heat",
-    q: "The phenomenon that shows that an increase in pressure lowers the melting point of ice can be observed in",
-    options: ["Regelation", "Sublimation", "Condensation", "Coagulation"],
-    correct: 0,
-    solution: "Regelation is the process where ice melts under high pressure (even below 0°C) and then re-freezes once the pressure is removed — this is why, for example, a wire under tension can slowly pass through a block of ice."
-  },
-
-  // ---------------- VAPOUR, HUMIDITY, EVAPORATION, BOILING ----------------
-  {
-    topic: "Vapour, Humidity, Evaporation & Boiling",
-    q: "The temperature at which the water vapour present in the air is just sufficient to saturate the air is called the",
-    options: ["Boiling point", "Ice point", "Saturation point", "Dew point"],
+    topic: "Magnetism",
+    q: "Which of the following is a property of steel (compared to iron)?",
+    options: ["It can easily be magnetized and demagnetized", "It cannot retain its magnetism longer than iron", "It can be used for making temporary magnets", "It can be used for making permanent magnets"],
     correct: 3,
-    solution: "This is the definition of dew point — the temperature at which air becomes fully saturated with water vapour, causing condensation (dew) to start forming."
+    solution: "Steel is magnetically 'hard' — it's harder to magnetize than iron but retains its magnetism much longer once magnetized, which is exactly why it's used to make permanent magnets."
   },
   {
-    topic: "Vapour, Humidity, Evaporation & Boiling",
-    q: "Which of the following is NOT a factor that can increase the rate of evaporation of water in a lake?",
-    options: ["Increase in the pressure of the atmosphere", "Rise in temperature", "Increase in the average speed of the molecules of water", "Increase in the kinetic energy of the molecules of water"],
-    correct: 0,
-    solution: "Higher atmospheric pressure actually suppresses evaporation, since it pushes down on the liquid surface and makes it harder for molecules to escape. The other three options all speed evaporation up."
+    topic: "Magnetism",
+    q: "What is the best method of demagnetizing a steel bar magnet?",
+    options: ["Hammering", "Heating it", "Rough handling it", "Solenoid method"],
+    correct: 3,
+    solution: "Placing the magnet in a solenoid carrying a gradually decreasing alternating current is the most controlled and effective way to fully demagnetize it, compared to the rougher, less reliable mechanical methods."
   },
   {
-    topic: "Vapour, Humidity, Evaporation & Boiling",
-    q: "Foods cook quicker in salt water than in pure water because of the effect of",
-    options: ["Dissolved substances on the boiling point", "Atmospheric pressure on the boiling point", "Food nutrients on the thermal energy", "Salts on the thermal conductivity of water"],
+    topic: "Magnetism",
+    q: "To protect a material from the influence of an external magnetic field, the material should be kept in a",
+    options: ["Soft iron ring", "Loop of copper wire", "Triangular zinc ring", "Square steel ring"],
     correct: 0,
-    solution: "Dissolving salt in water raises its boiling point (boiling point elevation), so the salt water can reach a higher temperature before boiling, cooking food faster."
+    solution: "Soft iron has very high magnetic permeability, so it readily conducts magnetic field lines through itself and around the enclosed region, shielding whatever is inside — this is the basis of magnetic screening."
+  },
+  {
+    topic: "Magnetism",
+    q: "Magnetizing a magnetic material by placing it inside a solenoid carrying a direct current is known as the",
+    options: ["Stroking method", "Electrical method", "Induction method", "Hammering method"],
+    correct: 1,
+    solution: "Passing a direct current through a coil (solenoid) wound around a magnetic material aligns its magnetic domains using the magnetic field the current produces — this is called the electrical method of magnetization."
   },
 
-  // ---------------- GAS LAWS ----------------
+  // ===== 57-59: ELECTROMAGNETISM =====
   {
-    topic: "Gas Laws",
-    q: "2000cm³ of a gas is collected at 27°C and 700mmHg. What is the volume of the gas at standard temperature and pressure (0°C, 760mmHg)?",
-    options: ["1896.5 cm³", "1767.3 cm³", "1676.3 cm³", "1456.5 cm³"],
+    topic: "Electromagnetism",
+    q: "A straight conductor of length 0.5m carries a current of 4A in a magnetic field of flux density 0.2T, perpendicular to the conductor. Calculate the force on the conductor.",
+    options: ["0.1 N", "0.4 N", "0.8 N", "2.0 N"],
+    correct: 1,
+    solution: "Force on a current-carrying conductor: F = BIL = 0.2 × 4 × 0.5 = 0.4N."
+  },
+  {
+    topic: "Electromagnetism",
+    q: "Which rule is used to determine the direction of the force on a current-carrying conductor placed in a magnetic field?",
+    options: ["Fleming's left-hand rule", "Fleming's right-hand rule", "Lenz's law", "Faraday's law"],
+    correct: 0,
+    solution: "Fleming's left-hand rule (used for motors) relates the directions of the magnetic field, the current, and the resulting force/motion using the thumb, first finger, and second finger of the left hand."
+  },
+  {
+    topic: "Electromagnetism",
+    q: "An electromagnet is a magnet whose magnetism is produced by",
+    options: ["Stroking a soft iron bar with a permanent magnet", "Passing an electric current through a coil wound around a soft iron core", "Heating a steel bar in a magnetic field", "Hammering a steel bar in the north-south direction"],
+    correct: 1,
+    solution: "An electromagnet works by passing current through a coil (solenoid) wrapped around a soft iron core. The current creates a magnetic field that is greatly strengthened by the iron core, and the magnetism disappears once the current is switched off."
+  },
+
+  // ===== 60-63: ELECTROMAGNETIC INDUCTION =====
+  {
+    topic: "Electromagnetic Induction",
+    q: "A conductor of length 1m moves with a velocity of 50 m/s at an angle of 30° to the direction of a uniform magnetic field of flux density 1.5Wb/m². What is the e.m.f. induced in the conductor?",
+    options: ["37.5 V", "50.5 V", "75.0 V", "80.5 V"],
+    correct: 0,
+    solution: "Induced e.m.f. = BLv sinθ = 1.5 × 1 × 50 × sin(30°) = 1.5 × 50 × 0.5 = 37.5V."
+  },
+  {
+    topic: "Electromagnetic Induction",
+    q: "Induced e.m.fs are best explained using",
+    options: ["Ohm's law", "Faraday's law", "Coulomb's law", "Lenz's law"],
+    correct: 1,
+    solution: "Faraday's law of electromagnetic induction states that the e.m.f. induced in a circuit is proportional to the rate of change of magnetic flux through it — this is the fundamental law explaining all induced e.m.fs."
+  },
+  {
+    topic: "Electromagnetic Induction",
+    q: "A magnet is moved through a coil of wire. The e.m.f. produced in the wire depends on",
+    options: ["The number of turns in the coil", "The strength of the magnet", "The speed at which the magnet is moved", "All of the above"],
+    correct: 3,
+    solution: "The induced e.m.f. increases with more coil turns, a stronger magnet, and faster movement — all three factors affect the rate of change of magnetic flux, which determines the induced e.m.f."
+  },
+  {
+    topic: "Electromagnetic Induction",
+    q: "A transformer has 300 turns of wire in the primary coil and 30 turns in the secondary coil. If the input voltage is 100V, what is the output voltage?",
+    options: ["10 volts", "5 volts", "15 volts", "20 volts"],
+    correct: 0,
+    solution: "For a transformer: Vs/Vp = Ns/Np. Vs = 100 × (30/300) = 100 × 0.1 = 10V."
+  },
+
+  // ===== 64-66: SIMPLE A.C. CIRCUITS =====
+  {
+    topic: "Simple A.C. Circuits",
+    q: "The current output of an a.c. source is given as I = 10 sin(ωt). What is the d.c. equivalent (r.m.s. value) of the current?",
+    options: ["5.0 A", "7.1 A", "10.0 A", "14.1 A"],
+    correct: 1,
+    solution: "For a sinusoidal current, r.m.s value = peak value/√2 = 10/1.414 ≈ 7.1A."
+  },
+  {
+    topic: "Simple A.C. Circuits",
+    q: "In measuring high frequency a.c., the instrument commonly used is the",
+    options: ["Hot wire ammeter", "Moving coil ammeter", "Moving iron ammeter", "Galvanometer"],
+    correct: 0,
+    solution: "A hot wire ammeter works via the heating effect of current, which depends only on the r.m.s. value regardless of frequency — making it reliable for measuring high-frequency a.c. where moving-coil instruments fail to respond correctly."
+  },
+  {
+    topic: "Simple A.C. Circuits",
+    q: "For any sinusoidal alternating current, the ratio of the r.m.s. value to the peak (maximum) value is",
+    options: ["1", "1/√2", "√2", "2"],
+    correct: 1,
+    solution: "For a sine wave, r.m.s value = peak value/√2, so the ratio of r.m.s to peak is always 1/√2 ≈ 0.707, regardless of the actual magnitude of the current."
+  },
+
+  // ===== 67-70: SEMICONDUCTORS & ELECTRONICS =====
+  {
+    topic: "Semiconductors & Electronics",
+    q: "A transistor functions mainly as a",
+    options: ["Switch and an amplifier", "Rectifier and an amplifier", "Charge storer and a switch", "Charge storer and an amplifier"],
+    correct: 0,
+    solution: "Transistors have two main roles in electronic circuits: acting as an electronic switch (turning current on/off) and as an amplifier (boosting weak signals)."
+  },
+  {
+    topic: "Semiconductors & Electronics",
+    q: "Transistors are used for the",
+    options: ["Conversion of a.c. to d.c.", "Conversion of d.c. to a.c.", "Amplification of signals", "Rectification of signals"],
     correct: 2,
-    solution: "Using the general gas equation P₁V₁/T₁ = P₂V₂/T₂ (temperatures in Kelvin: 27°C = 300K, 0°C = 273K): V₂ = (700 × 2000 × 273)/(300 × 760) ≈ 1676.3 cm³."
+    solution: "While diodes are used for rectification (a.c. to d.c. conversion), transistors are primarily valued for their ability to amplify weak electrical signals into stronger ones."
   },
   {
-    topic: "Gas Laws",
-    q: "A gas at a constant pressure of 10⁵ Pa expands from a volume of 0.6m³ to 1.2m³. Calculate the work done by the gas.",
-    options: ["7.0 × 10⁶ J", "6.0 × 10⁶ J", "6.0 × 10⁵ J", "6.0 × 10⁴ J"],
-    correct: 3,
-    solution: "At constant pressure, work done = PΔV = 10⁵ × (1.2 − 0.6) = 10⁵ × 0.6 = 6.0 × 10⁴ J."
-  },
-  {
-    topic: "Gas Laws",
-    q: "A fixed mass of gas occupies 200cm³ at a pressure of 1 × 10⁵ Pa. Calculate its new volume if the pressure is increased to 2 × 10⁵ Pa at constant temperature.",
-    options: ["50 cm³", "100 cm³", "200 cm³", "400 cm³"],
-    correct: 1,
-    solution: "By Boyle's Law, P₁V₁ = P₂V₂ (temperature constant): V₂ = P₁V₁/P₂ = (1×10⁵ × 200)/(2×10⁵) = 100cm³."
-  },
-
-  // ---------------- THERMOMETRY & TEMPERATURE SCALES ----------------
-  {
-    topic: "Thermometry & Temperature Scales",
-    q: "A platinum resistance thermometer records 3.0Ω at 0°C and 8.0Ω at 100°C. If it records 6.0Ω in a certain environment, what is the temperature of the medium?",
-    options: ["60°C", "80°C", "50°C", "30°C"],
+    topic: "Semiconductors & Electronics",
+    q: "Which of the following is a pure (elemental) semiconductor?",
+    options: ["Silicon", "Phosphorus", "Transistor", "Sodium chloride"],
     correct: 0,
-    solution: "Temperature = [(Rt − R₀)/(R₁₀₀ − R₀)] × 100 = [(6.0 − 3.0)/(8.0 − 3.0)] × 100 = (3/5) × 100 = 60°C."
+    solution: "Silicon is a naturally occurring elemental semiconductor. Phosphorus is typically used as a doping agent to modify silicon's conductivity, and a transistor is a manufactured device, not a raw material."
   },
   {
-    topic: "Thermometry & Temperature Scales",
-    q: "Clinical thermometers are examples of",
-    options: ["Pressure gas thermometer", "Resistance thermometer", "Alcohol thermometer", "Mercury-in-glass thermometer"],
-    correct: 3,
-    solution: "Clinical (medical) thermometers traditionally use mercury sealed in a thin glass tube, relying on the mercury's expansion to indicate body temperature."
-  },
-  {
-    topic: "Thermometry & Temperature Scales",
-    q: "What is the equivalent of 293K on the Celsius scale?",
-    options: ["293°C", "68°C", "36°C", "20°C"],
-    correct: 3,
-    solution: "To convert Kelvin to Celsius, subtract 273: 293 − 273 = 20°C."
-  },
-
-  // ---------------- HEAT TRANSFER (CONDUCTION, CONVECTION, RADIATION) ----------------
-  {
-    topic: "Heat Transfer",
-    q: "The mechanism of heat transfer from one point to another through the vibration of the molecules of the medium, without the molecules themselves moving from place to place, is called",
-    options: ["Convection", "Conduction", "Radiation", "Diffusion"],
-    correct: 1,
-    solution: "In conduction, heat energy passes from molecule to molecule through vibration and collisions — the molecules themselves stay roughly in place, only passing energy along, unlike convection where the fluid itself moves."
-  },
-  {
-    topic: "Heat Transfer",
-    q: "Heat transfer by convection in a liquid is mainly due to the",
-    options: ["Latent heat of vaporisation of the liquid", "Increased vibration of the molecules of the liquid about their mean position", "Variation of density of the liquid", "Expansion of the liquid as it is heated"],
-    correct: 2,
-    solution: "When a liquid is heated, the warmer, less dense liquid at the bottom rises while cooler, denser liquid sinks to take its place — this density-driven circulation (convection current) carries heat through the fluid."
-  },
-  {
-    topic: "Heat Transfer",
-    q: "Two similar kettles containing equal masses of boiling water are placed on a table. One kettle is highly polished and the other is covered with soot. Which observation is correct?",
-    options: ["The two kettles will cool down at the same rate", "The polished kettle cools down more quickly by conduction", "The kettle covered with soot cools down more quickly because it is a good radiator of heat", "The kettle covered with soot cools down more quickly by convection"],
-    correct: 2,
-    solution: "Dull, dark (sooty) surfaces are much better emitters (radiators) of heat than shiny, polished surfaces, which reflect radiant heat instead of emitting it. So the sooty kettle loses heat faster by radiation."
-  },
+    topic: "Semiconductors & Electronics",
+    q: "P-n junction diodes can act as rectifiers because they",
+    options: ["Conduct current when forward biased (and block it when reverse biased)", "Conduct current when reverse-biased", "Block current when forward biased", "Conduct current equally well in both directions"],
+    correct: 0,
+    solution: "A p-n junction diode only allows current to flow easily in one direction (forward bias) and blocks it in the other (reverse bias). This one-way behaviour is exactly what converts alternating current into a one-directional (rectified) current."
+  }
 ];
 
 let currentQ = 0;
