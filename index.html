@@ -249,584 +249,120 @@
 
 <script>
 const TOPICS = [
-  "Units, Measurement & Errors",
-  "Scalars & Vectors",
-  "Linear Motion",
-  "Projectile / Motion Under Gravity",
-  "Newton's Laws of Motion",
-  "Circular Motion & Centripetal Force",
-  "Gravitational Field",
-  "Equilibrium of Forces & Moments",
-  "Simple Machines",
-  "Work, Energy & Power",
-  "Simple Harmonic Motion",
-  "Friction",
-  "Elasticity",
-  "Pressure & Hydraulics",
-  "Archimedes' Principle / Upthrust / Floatation",
-  "Surface Tension & Viscosity",
-  "Kinetic Theory of Matter / Brownian Motion",
-  "Thermal Expansion",
-  "Quantity of Heat & Heat Capacity",
-  "Change of State & Latent Heat",
-  "Vapour, Humidity, Evaporation & Boiling",
-  "Gas Laws",
-  "Thermometry & Temperature Scales",
-  "Heat Transfer",
-  "Wave Motion",
-  "Sound Waves",
-  "Reflection of Light (Mirrors)",
-  "Refraction of Light & Refractive Index",
-  "Total Internal Reflection & Critical Angle",
-  "Lenses",
-  "Optical Instruments",
-  "The Human Eye & Defects of Vision",
-  "Dispersion of Light & Colour",
-  "Electrostatics",
-  "Current Electricity & Ohm's Law",
-  "Resistors in Series and Parallel",
-  "Electrical Energy & Power",
-  "Magnetism",
-  "Electromagnetism",
-  "Electromagnetic Induction",
-  "Simple A.C. Circuits",
-  "Semiconductors & Electronics",
+  "Number Bases",
+  "Percentages & Word Problems",
+  "Standard Form",
+  "Logarithms",
+  "Indices",
+  "Surds",
+  "Sets",
+  "Change of Subject of Formula",
+  "Variation",
+  "Linear Inequalities",
+  "Arithmetic Progression (A.P.)",
+  "Geometric Progression (G.P.)",
+  "Binary Operations",
+  "Matrices",
+  "Determinants",
+  "Polygons",
+  "Mensuration (Volume)",
+  "Locus",
+  "Coordinate Geometry",
+  "Equation of a Straight Line",
+  "Trigonometry",
+  "Differentiation",
+  "Integration",
+  "Mean, Mode & Median",
+  "Standard Deviation",
+  "Permutation & Combination",
+  "Probability",
+  "Venn Diagrams",
+  "Geometry (Angles & Lines)",
+  "Pie Charts",
 ];
-
-
-
-
-
-
-
 
 const questions = [
-  // ===== 1-4: WAVE MOTION =====
+  // ===== 1: NUMBER BASES =====
   {
-    topic: "Wave Motion",
-    q: "A wave travelling with a velocity of 420 m/s has a wavelength of 42m. What is its period?",
-    options: ["1.0 s", "0.1 s", "0.5 s", "1.2 s"],
-    correct: 1,
-    solution: "Frequency f = v/λ = 420/42 = 10Hz. Period T = 1/f = 1/10 = 0.1s."
+    topic: "Number Bases",
+    q: "Find the value of 110111₂ + 10100₂",
+    options: ["1101011₂", "1001001₂", "1001011₂", "1001111₂"],
+    correct: 2,
+    solution: "110111₂ = 55 (base 10) and 10100₂ = 20 (base 10). Sum = 75. Converting 75 back to base 2 gives 1001011₂ (64+8+2+1=75)."
   },
+
+  // ===== 2: PERCENTAGES =====
   {
-    topic: "Wave Motion",
-    q: "The characteristic of a vibration that determines its intensity (loudness) is the",
-    options: ["Frequency", "Overtone", "Wavelength", "Amplitude"],
+    topic: "Percentages & Word Problems",
+    q: "A woman bought a grinder for N60,000. She sold it at a loss of 15%. How much did she sell it?",
+    options: ["N53,000", "N52,000", "N51,000", "N50,000"],
+    correct: 2,
+    solution: "Loss = 15% of 60,000 = N9,000. Selling price = 60,000 − 9,000 = N51,000."
+  },
+
+  // ===== 3: STANDARD FORM =====
+  {
+    topic: "Standard Form",
+    q: "Express the product of 0.00043 and 2000 in standard form.",
+    options: ["8.6 × 10⁻³", "8.3 × 10⁻²", "8.6 × 10⁻¹", "8.6 × 10"],
+    correct: 2,
+    solution: "0.00043 × 2000 = (4.3×10⁻⁴) × (2×10³) = 8.6×10⁻¹."
+  },
+
+  // ===== 4: PERCENTAGES =====
+  {
+    topic: "Percentages & Word Problems",
+    q: "A man donates 10% of his monthly net earnings to his church. If it amounts to N4,500, what is his net monthly income?",
+    options: ["N40,500", "N45,000", "N52,500", "N62,000"],
+    correct: 1,
+    solution: "Let M = monthly income. 10% of M = 4500, so M = 4500 × 100/10 = N45,000."
+  },
+
+  // ===== 5: LOGARITHMS =====
+  {
+    topic: "Logarithms",
+    q: "If log7.5 = 0.8751, evaluate 2 log75 + log750",
+    options: ["6.6252", "6.6253", "66.252", "66.253"],
+    correct: 1,
+    solution: "2 log75 + log750 = 2(1.8751) + 2.8751 = 3.7502 + 2.8751 = 6.6253."
+  },
+
+  // ===== 6: INDICES =====
+  {
+    topic: "Indices",
+    q: "Solve for x in 8x⁻² = 2/25",
+    options: ["4", "6", "8", "10"],
     correct: 3,
-    solution: "The intensity (loudness) of a vibration is determined by its amplitude — the larger the amplitude, the more energy the wave carries and the louder/more intense it is."
+    solution: "x⁻² = (2/25)(1/8) = 1/100, so x² = 100 and x = 10."
   },
+
+  // ===== 7: SURDS =====
   {
-    topic: "Wave Motion",
-    q: "A transverse wave and a longitudinal wave travelling in the same direction in a medium differ essentially in their",
-    options: ["Frequency", "Amplitude", "Direction of vibration of the particles of the medium", "Period of vibration of the particles"],
+    topic: "Surds",
+    q: "Simplify (2√2 − √3)/(√2 + √3)",
+    options: ["3√6 − 7", "√6 − 7", "√6 − 1", "√6 + 1"],
+    correct: 0,
+    solution: "Rationalizing by multiplying with (√2 − √3)/(√2 − √3) gives (7 − 3√6)/(−1) = 3√6 − 7."
+  },
+
+  // ===== 8: LOGARITHMS =====
+  {
+    topic: "Logarithms",
+    q: "Evaluate Log₂8 + Log₂16 − Log₂4",
+    options: ["3", "4", "5", "6"],
     correct: 2,
-    solution: "In a transverse wave, particles vibrate perpendicular to the direction of wave travel; in a longitudinal wave, they vibrate parallel to it. This difference in vibration direction is what fundamentally distinguishes the two."
+    solution: "Log₂(8×16/4) = Log₂32 = Log₂2⁵ = 5."
   },
+
+  // ===== 9: SETS ====
   {
-    topic: "Wave Motion",
-    q: "Transverse waves can be distinguished from longitudinal waves using the characteristic of",
-    options: ["Diffraction", "Reflection", "Polarization", "Refraction"],
+    topic: "Sets",
+    q: "If P = {1,2,3,4,5} and P∪Q = {1,2,3,4,5,6,7}, list the elements in Q",
+    options: ["{6}", "{7}", "{6,7}", "{5,6}"],
     correct: 2,
-    solution: "Only transverse waves can be polarized (restricted to vibrate in a single plane). Longitudinal waves, which vibrate along their direction of travel, cannot be polarized — making this a defining test between the two."
-  },
-
-  // ===== 5-8: SOUND WAVES =====
-  {
-    topic: "Sound Waves",
-    q: "The sound of an electric bell inside a bell jar dies down slowly as air is pumped out from the jar because",
-    options: ["Sound cannot pass through the bottle", "Sound can pass through a vacuum", "Sound needs a material medium", "The wavelength of sound becomes greater in the bottle"],
-    correct: 2,
-    solution: "Unlike light, sound is a mechanical wave and needs particles of a material medium to travel through. As air is removed, there are fewer particles to carry the vibrations, so the sound fades until it can no longer be heard in a vacuum."
-  },
-  {
-    topic: "Sound Waves",
-    q: "During a thunderstorm, the sound is heard over a long time. This phenomenon is referred to as",
-    options: ["Refraction of sound", "Reverberation", "Superposition", "Diffraction of sound"],
-    correct: 1,
-    solution: "Reverberation is the persistence of sound due to multiple reflections (echoes) off surrounding surfaces like clouds, buildings, and the ground, which is why thunder seems to rumble on rather than end abruptly."
-  },
-  {
-    topic: "Sound Waves",
-    q: "The velocity of sound in air at 16°C is 340 m/s. What will it be when the pressure is doubled and the temperature is raised to 127°C?",
-    options: ["4,000 m/s", "160,000 m/s", "8,000 m/s", "400 m/s"],
-    correct: 3,
-    solution: "The speed of sound in a gas depends only on its absolute temperature (not pressure): v ∝ √T. Converting to Kelvin, T₁ = 289K, T₂ = 400K. v₂ = 340 × √(400/289) = 340 × (20/17) = 400 m/s."
-  },
-  {
-    topic: "Sound Waves",
-    q: "A cannon is fired from town X. After how long is the sound heard at a town Y, 4.95km away? [Velocity of sound in air = 333 m/s]",
-    options: ["15 s", "0 s", "10 s", "12 s"],
-    correct: 0,
-    solution: "Time = distance/speed = 4950/333 ≈ 14.86s ≈ 15 seconds."
-  },
-
-  // ===== 9-12: REFLECTION OF LIGHT (MIRRORS) =====
-  {
-    topic: "Reflection of Light (Mirrors)",
-    q: "The magnification of an object 2cm tall, placed 10cm in front of a plane mirror, is",
-    options: ["6.0", "1.0", "0.7", "0.6"],
-    correct: 1,
-    solution: "A plane mirror always forms an image the same size as the object — its magnification is always exactly 1.0, regardless of the object's distance from the mirror."
-  },
-  {
-    topic: "Reflection of Light (Mirrors)",
-    q: "Where should a man place his face to get an enlarged (magnified) image when using a concave mirror to shave?",
-    options: ["Between the centre of curvature and the principal focus", "At the principal focus", "Between the principal focus and the pole", "At the centre of curvature"],
-    correct: 2,
-    solution: "When an object is placed between the pole and the principal focus of a concave mirror, the mirror forms a virtual, upright, and magnified image — exactly what's needed for a shaving or makeup mirror."
-  },
-  {
-    topic: "Reflection of Light (Mirrors)",
-    q: "After reflection from a concave mirror, parallel rays of light from the sun converge",
-    options: ["At the radius of curvature", "At the focus", "Beyond the radius of curvature", "At the pole"],
-    correct: 1,
-    solution: "By definition, a concave mirror brings all incoming parallel rays (like sunlight) to converge at a single point called the principal focus."
-  },
-  {
-    topic: "Reflection of Light (Mirrors)",
-    q: "A concave mirror has a radius of curvature of 36cm. At what distance from the mirror should an object be placed to give a real image three times the size of the object?",
-    options: ["12 cm", "24 cm", "48 cm", "108 cm"],
-    correct: 1,
-    solution: "Focal length f = R/2 = 18cm. For a real, magnified image, magnitude of magnification |v/u| = 3, so v = 3u. Using 1/f = 1/v + 1/u = 1/(3u) + 1/u = 4/(3u), we get u = 4f/3 = 4(18)/3 = 24cm."
-  },
-
-  // ===== 13-16: REFRACTION OF LIGHT & REFRACTIVE INDEX =====
-  {
-    topic: "Refraction of Light & Refractive Index",
-    q: "The speed of light in air is 3.0 × 10⁸ m/s. What is its speed in glass having a refractive index of 1.65?",
-    options: ["1.82 × 10⁸ m/s", "3.00 × 10⁸ m/s", "4.95 × 10⁸ m/s", "1.65 × 10⁸ m/s"],
-    correct: 0,
-    solution: "Speed in medium = speed in vacuum/refractive index = (3.0×10⁸)/1.65 ≈ 1.82 × 10⁸ m/s."
-  },
-  {
-    topic: "Refraction of Light & Refractive Index",
-    q: "A glass plate 0.9cm thick has a refractive index of 1.50. How long does it take for a pulse of light to pass through the plate?",
-    options: ["3.0 × 10⁻¹⁰ s", "4.5 × 10⁻¹¹ s", "3.0 × 10⁻¹¹ s", "6.0 × 10⁻¹¹ s"],
-    correct: 1,
-    solution: "Speed of light in glass = c/n = (3×10⁸)/1.5 = 2×10⁸ m/s. Time = distance/speed = 0.009/(2×10⁸) = 4.5 × 10⁻¹¹ s."
-  },
-  {
-    topic: "Refraction of Light & Refractive Index",
-    q: "The speed of light in air is 3 × 10⁸ m/s. If the refractive index of light from air to water is 4/3, what is the speed of light in water?",
-    options: ["4 × 10⁸ m/s", "2.23 × 10⁸ m/s", "2.25 × 10⁸ m/s", "1.33 × 10⁸ m/s"],
-    correct: 2,
-    solution: "Speed in water = speed in air ÷ refractive index = (3×10⁸) ÷ (4/3) = (3×10⁸) × (3/4) = 2.25 × 10⁸ m/s."
-  },
-  {
-    topic: "Refraction of Light & Refractive Index",
-    q: "A glass block of thickness 10cm (refractive index 1.5) is placed on an object. If an observer views the object vertically through the block, what is the apparent displacement of the object?",
-    options: ["3.33 cm", "5.00 cm", "6.67 cm", "8.50 cm"],
-    correct: 0,
-    solution: "Apparent displacement = t(1 − 1/n) = 10 × (1 − 1/1.5) = 10 × (1/3) = 3.33cm."
-  },
-
-  // ===== 17-20: TOTAL INTERNAL REFLECTION & CRITICAL ANGLE =====
-  {
-    topic: "Total Internal Reflection & Critical Angle",
-    q: "I. Rays of light travel from a less dense medium to a denser medium.\nII. The angle of incidence is greater than the critical angle.\nIII. Rays of light travel from a denser medium to a less dense medium.\nWhich of the statements above are conditions for total internal reflection?",
-    options: ["I and II only", "I only", "II and III only", "II only"],
-    correct: 2,
-    solution: "Total internal reflection requires two conditions: the light must be travelling from a denser medium into a less dense one (III), AND the angle of incidence must exceed the critical angle (II). Statement I describes the wrong direction of travel."
-  },
-  {
-    topic: "Total Internal Reflection & Critical Angle",
-    q: "Total internal reflection will NOT occur when light travels from",
-    options: ["Water to air", "Water into glass", "Glass to air", "Glass into water"],
-    correct: 1,
-    solution: "Total internal reflection can only happen when light passes from a denser medium into a less dense one. Water is less dense than glass, so light travelling from water into glass is moving into a denser medium — total internal reflection is impossible here."
-  },
-  {
-    topic: "Total Internal Reflection & Critical Angle",
-    q: "A ray of light passing through the centre of curvature of a concave mirror is reflected by the mirror at",
-    options: ["0°", "45°", "90°", "180°"],
-    correct: 0,
-    solution: "A ray through the centre of curvature strikes the mirror along the normal (perpendicular to the mirror surface at that point), so it is reflected straight back along its own path — an angle of incidence and reflection of 0°."
-  },
-  {
-    topic: "Total Internal Reflection & Critical Angle",
-    q: "Calculate the critical angle for a glass-air boundary if the refractive index of the glass is 1.5.",
-    options: ["30°", "42°", "48°", "60°"],
-    correct: 1,
-    solution: "sin(critical angle) = 1/n = 1/1.5 = 0.667. Critical angle = sin⁻¹(0.667) ≈ 42°."
-  },
-
-  // ===== 21-24: LENSES =====
-  {
-    topic: "Lenses",
-    q: "An image formed in a convex lens is upright and magnified 3 times. If the focal length of the lens is 15cm, what is the object distance?",
-    options: ["14 cm", "10 cm", "25 cm", "26 cm"],
-    correct: 1,
-    solution: "An upright, magnified image from a convex lens is virtual, meaning object distance u and image distance v are related by v = 3u (same side of lens). Substituting into the lens formula gives u = 2f/3 = 2(15)/3 = 10cm."
-  },
-  {
-    topic: "Lenses",
-    q: "The use of lenses is NOT applicable in the",
-    options: ["Projector", "Human eye", "Periscope", "Telescope"],
-    correct: 2,
-    solution: "A periscope works using mirrors (or prisms) set at 45° to reflect light — it does not rely on lenses at all, unlike projectors, the eye, and telescopes, which all use lenses to form images."
-  },
-  {
-    topic: "Lenses",
-    q: "A converging lens has a focal length of 10cm. An object is placed 30cm from the lens. Calculate the image distance.",
-    options: ["7.5 cm", "15 cm", "20 cm", "30 cm"],
-    correct: 1,
-    solution: "Using the lens formula 1/f = 1/v + 1/u: 1/v = 1/10 − 1/30 = 3/30 − 1/30 = 2/30 = 1/15, so v = 15cm."
-  },
-  {
-    topic: "Lenses",
-    q: "A diverging lens of focal length 20cm forms an image of an object placed 30cm from the lens. Find the image distance.",
-    options: ["−12 cm (virtual, same side)", "12 cm (real)", "−50 cm", "50 cm"],
-    correct: 0,
-    solution: "For a diverging lens, f is negative (−20cm) and the object distance is treated as negative (−30cm) under the Cartesian sign convention. Solving 1/v = 1/f + 1/u gives v = −12cm — a virtual image, 12cm from the lens on the same side as the object."
-  },
-
-  // ===== 25-28: OPTICAL INSTRUMENTS =====
-  {
-    topic: "Optical Instruments",
-    q: "A pinhole camera is placed 300m in front of a building so that the image is formed on a screen 5cm from the pinhole. If the image is 2.5cm high, what is the height of the building?",
-    options: ["25 m", "50 m", "100 m", "150 m"],
-    correct: 3,
-    solution: "By similar triangles: image height/screen distance = object height/object distance. So building height = 300 × (2.5/5) = 300 × 0.5 = 150m."
-  },
-  {
-    topic: "Optical Instruments",
-    q: "A man 1.5m tall stands 3m in front of a pinhole camera whose distance between the hole and the screen is 0.1m. What is the height of the image of the man on the screen?",
-    options: ["0.05 m", "0.15 m", "0.30 m", "1.00 m"],
-    correct: 0,
-    solution: "By similar triangles: image height = object height × (screen distance/object distance) = 1.5 × (0.1/3) = 0.05m."
-  },
-  {
-    topic: "Optical Instruments",
-    q: "If the linear magnification of the objective and eyepiece convex lenses of a compound microscope are 4 and 7 respectively, calculate the angular magnification of the microscope.",
-    options: ["2", "3", "11", "28"],
-    correct: 3,
-    solution: "The overall angular magnification of a compound microscope is the product of the magnifications of the objective and eyepiece lenses: 4 × 7 = 28."
-  },
-  {
-    topic: "Optical Instruments",
-    q: "A magnifying glass has a focal length of 5cm. Calculate its magnifying power when the image is formed at the near point (25cm from the eye).",
-    options: ["3", "5", "6", "10"],
-    correct: 2,
-    solution: "Magnifying power = 1 + D/f, where D is the near point distance (25cm). M = 1 + 25/5 = 1 + 5 = 6."
-  },
-
-  // ===== 29-32: THE HUMAN EYE & DEFECTS OF VISION =====
-  {
-    topic: "The Human Eye & Defects of Vision",
-    q: "In comparing the camera and the human eye, the film of the camera functions as the",
-    options: ["Iris", "Pupil", "Cornea", "Retina"],
-    correct: 3,
-    solution: "The camera film (or digital sensor) captures the focused image, exactly like the retina does at the back of the human eye — both are the light-sensitive surface where the final image forms."
-  },
-  {
-    topic: "The Human Eye & Defects of Vision",
-    q: "Which of the following is used for the correction of short-sightedness?",
-    options: ["Concave lens", "Concave mirror", "Convex mirror", "Convex lens"],
-    correct: 0,
-    solution: "Short-sightedness (myopia) occurs because the eye focuses images in front of the retina. A diverging (concave) lens spreads the light rays out slightly before they enter the eye, pushing the focal point back onto the retina."
-  },
-  {
-    topic: "The Human Eye & Defects of Vision",
-    q: "When the human eye loses its power of accommodation (usually with age), the defect is known as",
-    options: ["Long-sightedness", "Short-sightedness", "Presbyopia", "Astigmatism"],
-    correct: 2,
-    solution: "Presbyopia is the age-related loss of the eye's ability to change focus (accommodate) between near and far objects, typically due to stiffening of the eye's lens."
-  },
-  {
-    topic: "The Human Eye & Defects of Vision",
-    q: "Long-sightedness (hypermetropia) is corrected using a",
-    options: ["Converging (convex) lens", "Diverging (concave) lens", "Plane mirror", "Concave mirror"],
-    correct: 0,
-    solution: "In long-sightedness, the eye focuses images behind the retina (often because the eyeball is too short). A converging (convex) lens bends light rays inward before they enter the eye, bringing the focus forward onto the retina."
-  },
-
-  // ===== 33-36: DISPERSION OF LIGHT & COLOUR =====
-  {
-    topic: "Dispersion of Light & Colour",
-    q: "The angle of deviation of light of various colours passing through a triangular prism increases in the order",
-    options: ["Red → green → blue", "Green → violet → blue", "Blue → red → green", "Blue → green → red"],
-    correct: 0,
-    solution: "Shorter wavelengths bend (deviate) more than longer wavelengths when passing through a prism. Since red has the longest visible wavelength and blue/violet the shortest, deviation increases in the order red → green → blue."
-  },
-  {
-    topic: "Dispersion of Light & Colour",
-    q: "Which of the following pairs of colours gives the widest separation in the spectrum of white light?",
-    options: ["Green and yellow", "Red and violet", "Indigo and violet", "Orange and red"],
-    correct: 1,
-    solution: "Red and violet sit at opposite ends of the visible spectrum, with the greatest difference in wavelength (and therefore refractive index) between them — giving the widest angular separation when white light is dispersed."
-  },
-  {
-    topic: "Dispersion of Light & Colour",
-    q: "Dispersion occurs when white light passes through a glass prism because of the",
-    options: ["Different speeds of the colours in the glass", "High density of the glass", "Defects in the glass", "Different hidden colours in the glass"],
-    correct: 0,
-    solution: "Each colour (wavelength) of light travels at a slightly different speed inside glass, causing each to refract by a different amount. This differential bending spreads white light out into its component colours."
-  },
-  {
-    topic: "Dispersion of Light & Colour",
-    q: "Of all the colours in the visible spectrum, the one that undergoes the LEAST deviation when passing through a glass prism is",
-    options: ["Violet", "Blue", "Green", "Red"],
-    correct: 3,
-    solution: "Red light has the longest wavelength in the visible spectrum and is refracted (bent) the least by glass, so it deviates the least when passing through a prism — it ends up at the top of the dispersed spectrum band."
-  },
-
-  // ===== 37-40: ELECTROSTATICS =====
-  {
-    topic: "Electrostatics",
-    q: "When a positively charged rod is brought near the cap of a positively charged electroscope, the divergence of the leaves will",
-    options: ["Converge", "Remain constant", "Diverge (increase)", "Be induced"],
-    correct: 2,
-    solution: "Bringing a like charge (positive) near the cap repels the positive charges already on the electroscope, pushing more of them down onto the leaves. This increases the charge (and repulsion) on the leaves, so they diverge further."
-  },
-  {
-    topic: "Electrostatics",
-    q: "A capacitor of 8μF is charged to a potential difference of 100V. Calculate the energy stored by the capacitor.",
-    options: ["1.0 × 10⁴ J", "4.0 × 10⁻² J", "1.25 × 10 J", "8.0 × 10 J"],
-    correct: 1,
-    solution: "Energy stored = ½CV² = ½ × 8×10⁻⁶ × 100² = ½ × 8×10⁻⁶ × 10,000 = 0.04J = 4.0 × 10⁻² J."
-  },
-  {
-    topic: "Electrostatics",
-    q: "Calculate the force acting on an electron of charge 1.5 × 10⁻¹⁹C placed in an electric field of intensity 10⁵ V/m.",
-    options: ["1.5 × 10⁻¹¹ N", "1.5 × 10⁻¹² N", "1.5 × 10⁻¹³ N", "1.5 × 10⁻¹⁴ N"],
-    correct: 3,
-    solution: "Force on a charge in an electric field: F = qE = 1.5×10⁻¹⁹ × 10⁵ = 1.5 × 10⁻¹⁴ N."
-  },
-  {
-    topic: "Electrostatics",
-    q: "If a force of 4N acts on a charge of 0.2 coulomb placed in an electric field, calculate the intensity of the field.",
-    options: ["0.8 N/C", "20.0 N/C", "0.05 N/C", "4.2 N/C"],
-    correct: 1,
-    solution: "Electric field intensity E = F/q = 4/0.2 = 20 N/C."
-  },
-
-  // ===== 41-44: CURRENT ELECTRICITY & OHM'S LAW =====
-  {
-    topic: "Current Electricity & Ohm's Law",
-    q: "A cell of e.m.f 12V and internal resistance 4Ω is connected to an external resistor of resistance 2Ω. Find the current flowing.",
-    options: ["4 A", "2 A", "3 A", "5 A"],
-    correct: 1,
-    solution: "Total resistance = internal resistance + external resistance = 4 + 2 = 6Ω. Current I = e.m.f/total resistance = 12/6 = 2A."
-  },
-  {
-    topic: "Current Electricity & Ohm's Law",
-    q: "Which of the following materials obeys Ohm's law?",
-    options: ["Electrolytes", "Metals", "Diode", "Glass"],
-    correct: 1,
-    solution: "Metals are ohmic conductors — at constant temperature, the current through them is directly proportional to the applied voltage, which is exactly what Ohm's law describes. Electrolytes, diodes, and glass do not follow this simple linear relationship."
-  },
-  {
-    topic: "Current Electricity & Ohm's Law",
-    q: "A cell of e.m.f 1.5V is connected in series with a 1Ω resistor, and a current of 0.3A flows through the resistor. Find the internal resistance of the cell.",
-    options: ["4 Ω", "3.0 Ω", "1.5 Ω", "1.00 Ω"],
-    correct: 0,
-    solution: "Using e.m.f = I(R + r): 1.5 = 0.3(1 + r) → 5 = 1 + r → r = 4Ω."
-  },
-  {
-    topic: "Current Electricity & Ohm's Law",
-    q: "To convert a galvanometer to a voltmeter, a",
-    options: ["High resistance is connected to it in series", "High resistance is connected to it in parallel", "Low resistance is connected to it in series", "Low resistance is connected to it in parallel"],
-    correct: 0,
-    solution: "A voltmeter must draw very little current from the circuit it's measuring, so a high resistance is connected in series with the galvanometer to limit current flow through it while allowing it to read larger voltages."
-  },
-
-  // ===== 45-48: RESISTORS IN SERIES AND PARALLEL =====
-  {
-    topic: "Resistors in Series and Parallel",
-    q: "Three 4Ω resistors are connected in parallel, and a potential difference of 16V is applied across them. What is the total current in the circuit?",
-    options: ["12 A", "8 A", "10 A", "14 A"],
-    correct: 0,
-    solution: "For resistors in parallel: 1/R(total) = 1/4 + 1/4 + 1/4 = 3/4, so R(total) = 4/3Ω. Total current I = V/R = 16 ÷ (4/3) = 12A."
-  },
-  {
-    topic: "Resistors in Series and Parallel",
-    q: "Three resistors, 2Ω, 4Ω, and 12Ω, are connected in parallel, and a 12V battery is connected across the combination. What is the current flowing through the 12Ω resistor?",
-    options: ["0.5 A", "1.0 A", "2.0 A", "3.2 A"],
-    correct: 1,
-    solution: "In a parallel circuit, the full 12V is applied across each branch independently. Current through the 12Ω resistor = V/R = 12/12 = 1.0A."
-  },
-  {
-    topic: "Resistors in Series and Parallel",
-    q: "Two resistors of 3Ω and 6Ω are connected in series to a 9V battery. Calculate the current flowing in the circuit.",
-    options: ["0.5 A", "1.0 A", "1.5 A", "3.0 A"],
-    correct: 1,
-    solution: "Total resistance in series = 3 + 6 = 9Ω. Current I = V/R = 9/9 = 1.0A."
-  },
-  {
-    topic: "Resistors in Series and Parallel",
-    q: "Three resistors of 2Ω, 3Ω, and 5Ω are connected in series to a 20V battery. Calculate the current in the circuit.",
-    options: ["1 A", "2 A", "4 A", "10 A"],
-    correct: 1,
-    solution: "Total resistance = 2 + 3 + 5 = 10Ω. Current I = V/R = 20/10 = 2A."
-  },
-
-  // ===== 49-52: ELECTRICAL ENERGY & POWER =====
-  {
-    topic: "Electrical Energy & Power",
-    q: "PHCN (the electricity distribution company) measures electrical energy supplied to homes in",
-    options: ["Wh", "kWh", "Wh", "J"],
-    correct: 1,
-    solution: "Electricity meters and bills measure energy consumption in kilowatt-hours (kWh) — a practical unit representing the energy used by a 1kW appliance running for one hour."
-  },
-  {
-    topic: "Electrical Energy & Power",
-    q: "What is the cost of running five 50W lamps and four 100W lamps for 10 hours if electrical energy costs 2 kobo per kWh?",
-    options: ["₦0.13", "₦0.65", "₦3.90", "₦1.30"],
-    correct: 0,
-    solution: "Total power = (5×50) + (4×100) = 250 + 400 = 650W = 0.65kW. Energy used = 0.65 × 10 = 6.5kWh. Cost = 6.5 × 2 kobo = 13 kobo = ₦0.13."
-  },
-  {
-    topic: "Electrical Energy & Power",
-    q: "A house has ten 40W bulbs and five 100W bulbs. How much will it cost to keep them lit for 10 hours if the cost of a unit (1 kWh) is ₦5?",
-    options: ["₦90", "₦50", "₦45", "₦40"],
-    correct: 2,
-    solution: "Total power = (10×40) + (5×100) = 400 + 500 = 900W = 0.9kW. Energy used = 0.9 × 10 = 9kWh. Cost = 9 × ₦5 = ₦45."
-  },
-  {
-    topic: "Electrical Energy & Power",
-    q: "An electric device is rated 2000W, 250V. Calculate the maximum current it can take.",
-    options: ["9 A", "8 A", "7 A", "6 A"],
-    correct: 1,
-    solution: "Using Power = Voltage × Current: Current = Power/Voltage = 2000/250 = 8A."
-  },
-
-  // ===== 53-56: MAGNETISM =====
-  {
-    topic: "Magnetism",
-    q: "Which of the following is a property of steel (compared to iron)?",
-    options: ["It can easily be magnetized and demagnetized", "It cannot retain its magnetism longer than iron", "It can be used for making temporary magnets", "It can be used for making permanent magnets"],
-    correct: 3,
-    solution: "Steel is magnetically 'hard' — it's harder to magnetize than iron but retains its magnetism much longer once magnetized, which is exactly why it's used to make permanent magnets."
-  },
-  {
-    topic: "Magnetism",
-    q: "What is the best method of demagnetizing a steel bar magnet?",
-    options: ["Hammering", "Heating it", "Rough handling it", "Solenoid method"],
-    correct: 3,
-    solution: "Placing the magnet in a solenoid carrying a gradually decreasing alternating current is the most controlled and effective way to fully demagnetize it, compared to the rougher, less reliable mechanical methods."
-  },
-  {
-    topic: "Magnetism",
-    q: "To protect a material from the influence of an external magnetic field, the material should be kept in a",
-    options: ["Soft iron ring", "Loop of copper wire", "Triangular zinc ring", "Square steel ring"],
-    correct: 0,
-    solution: "Soft iron has very high magnetic permeability, so it readily conducts magnetic field lines through itself and around the enclosed region, shielding whatever is inside — this is the basis of magnetic screening."
-  },
-  {
-    topic: "Magnetism",
-    q: "Magnetizing a magnetic material by placing it inside a solenoid carrying a direct current is known as the",
-    options: ["Stroking method", "Electrical method", "Induction method", "Hammering method"],
-    correct: 1,
-    solution: "Passing a direct current through a coil (solenoid) wound around a magnetic material aligns its magnetic domains using the magnetic field the current produces — this is called the electrical method of magnetization."
-  },
-
-  // ===== 57-59: ELECTROMAGNETISM =====
-  {
-    topic: "Electromagnetism",
-    q: "A straight conductor of length 0.5m carries a current of 4A in a magnetic field of flux density 0.2T, perpendicular to the conductor. Calculate the force on the conductor.",
-    options: ["0.1 N", "0.4 N", "0.8 N", "2.0 N"],
-    correct: 1,
-    solution: "Force on a current-carrying conductor: F = BIL = 0.2 × 4 × 0.5 = 0.4N."
-  },
-  {
-    topic: "Electromagnetism",
-    q: "Which rule is used to determine the direction of the force on a current-carrying conductor placed in a magnetic field?",
-    options: ["Fleming's left-hand rule", "Fleming's right-hand rule", "Lenz's law", "Faraday's law"],
-    correct: 0,
-    solution: "Fleming's left-hand rule (used for motors) relates the directions of the magnetic field, the current, and the resulting force/motion using the thumb, first finger, and second finger of the left hand."
-  },
-  {
-    topic: "Electromagnetism",
-    q: "An electromagnet is a magnet whose magnetism is produced by",
-    options: ["Stroking a soft iron bar with a permanent magnet", "Passing an electric current through a coil wound around a soft iron core", "Heating a steel bar in a magnetic field", "Hammering a steel bar in the north-south direction"],
-    correct: 1,
-    solution: "An electromagnet works by passing current through a coil (solenoid) wrapped around a soft iron core. The current creates a magnetic field that is greatly strengthened by the iron core, and the magnetism disappears once the current is switched off."
-  },
-
-  // ===== 60-63: ELECTROMAGNETIC INDUCTION =====
-  {
-    topic: "Electromagnetic Induction",
-    q: "A conductor of length 1m moves with a velocity of 50 m/s at an angle of 30° to the direction of a uniform magnetic field of flux density 1.5Wb/m². What is the e.m.f. induced in the conductor?",
-    options: ["37.5 V", "50.5 V", "75.0 V", "80.5 V"],
-    correct: 0,
-    solution: "Induced e.m.f. = BLv sinθ = 1.5 × 1 × 50 × sin(30°) = 1.5 × 50 × 0.5 = 37.5V."
-  },
-  {
-    topic: "Electromagnetic Induction",
-    q: "Induced e.m.fs are best explained using",
-    options: ["Ohm's law", "Faraday's law", "Coulomb's law", "Lenz's law"],
-    correct: 1,
-    solution: "Faraday's law of electromagnetic induction states that the e.m.f. induced in a circuit is proportional to the rate of change of magnetic flux through it — this is the fundamental law explaining all induced e.m.fs."
-  },
-  {
-    topic: "Electromagnetic Induction",
-    q: "A magnet is moved through a coil of wire. The e.m.f. produced in the wire depends on",
-    options: ["The number of turns in the coil", "The strength of the magnet", "The speed at which the magnet is moved", "All of the above"],
-    correct: 3,
-    solution: "The induced e.m.f. increases with more coil turns, a stronger magnet, and faster movement — all three factors affect the rate of change of magnetic flux, which determines the induced e.m.f."
-  },
-  {
-    topic: "Electromagnetic Induction",
-    q: "A transformer has 300 turns of wire in the primary coil and 30 turns in the secondary coil. If the input voltage is 100V, what is the output voltage?",
-    options: ["10 volts", "5 volts", "15 volts", "20 volts"],
-    correct: 0,
-    solution: "For a transformer: Vs/Vp = Ns/Np. Vs = 100 × (30/300) = 100 × 0.1 = 10V."
-  },
-
-  // ===== 64-66: SIMPLE A.C. CIRCUITS =====
-  {
-    topic: "Simple A.C. Circuits",
-    q: "The current output of an a.c. source is given as I = 10 sin(ωt). What is the d.c. equivalent (r.m.s. value) of the current?",
-    options: ["5.0 A", "7.1 A", "10.0 A", "14.1 A"],
-    correct: 1,
-    solution: "For a sinusoidal current, r.m.s value = peak value/√2 = 10/1.414 ≈ 7.1A."
-  },
-  {
-    topic: "Simple A.C. Circuits",
-    q: "In measuring high frequency a.c., the instrument commonly used is the",
-    options: ["Hot wire ammeter", "Moving coil ammeter", "Moving iron ammeter", "Galvanometer"],
-    correct: 0,
-    solution: "A hot wire ammeter works via the heating effect of current, which depends only on the r.m.s. value regardless of frequency — making it reliable for measuring high-frequency a.c. where moving-coil instruments fail to respond correctly."
-  },
-  {
-    topic: "Simple A.C. Circuits",
-    q: "For any sinusoidal alternating current, the ratio of the r.m.s. value to the peak (maximum) value is",
-    options: ["1", "1/√2", "√2", "2"],
-    correct: 1,
-    solution: "For a sine wave, r.m.s value = peak value/√2, so the ratio of r.m.s to peak is always 1/√2 ≈ 0.707, regardless of the actual magnitude of the current."
-  },
-
-  // ===== 67-70: SEMICONDUCTORS & ELECTRONICS =====
-  {
-    topic: "Semiconductors & Electronics",
-    q: "A transistor functions mainly as a",
-    options: ["Switch and an amplifier", "Rectifier and an amplifier", "Charge storer and a switch", "Charge storer and an amplifier"],
-    correct: 0,
-    solution: "Transistors have two main roles in electronic circuits: acting as an electronic switch (turning current on/off) and as an amplifier (boosting weak signals)."
-  },
-  {
-    topic: "Semiconductors & Electronics",
-    q: "Transistors are used for the",
-    options: ["Conversion of a.c. to d.c.", "Conversion of d.c. to a.c.", "Amplification of signals", "Rectification of signals"],
-    correct: 2,
-    solution: "While diodes are used for rectification (a.c. to d.c. conversion), transistors are primarily valued for their ability to amplify weak electrical signals into stronger ones."
-  },
-  {
-    topic: "Semiconductors & Electronics",
-    q: "Which of the following is a pure (elemental) semiconductor?",
-    options: ["Silicon", "Phosphorus", "Transistor", "Sodium chloride"],
-    correct: 0,
-    solution: "Silicon is a naturally occurring elemental semiconductor. Phosphorus is typically used as a doping agent to modify silicon's conductivity, and a transistor is a manufactured device, not a raw material."
-  },
-  {
-    topic: "Semiconductors & Electronics",
-    q: "P-n junction diodes can act as rectifiers because they",
-    options: ["Conduct current when forward biased (and block it when reverse biased)", "Conduct current when reverse-biased", "Block current when forward biased", "Conduct current equally well in both directions"],
-    correct: 0,
-    solution: "A p-n junction diode only allows current to flow easily in one direction (forward bias) and blocks it in the other (reverse bias). This one-way behaviour is exactly what converts alternating current into a one-directional (rectified) current."
-  }
-];
+    solution: "Q must contain at least the elements in P∪Q not"
+  } ]
+  
 
 let currentQ = 0;
 let score = 0;
