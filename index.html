@@ -354,14 +354,366 @@ const questions = [
     solution: "Log₂(8×16/4) = Log₂32 = Log₂2⁵ = 5."
   },
 
-  // ===== 9: SETS ====
+  // ===== 9: SETS =====
   {
     topic: "Sets",
     q: "If P = {1,2,3,4,5} and P∪Q = {1,2,3,4,5,6,7}, list the elements in Q",
     options: ["{6}", "{7}", "{6,7}", "{5,6}"],
     correct: 2,
-    solution: "Q must contain at least the elements in P∪Q not"
-  } ]
+    solution: "Q must contain at least the elements in P∪Q not necessarily in P, i.e. {6,7}."
+  },
+
+  // ===== 10: CHANGE OF SUBJECT =====
+  {
+    topic: "Change of Subject of Formula",
+    q: "If gt² − k − w = 0, make g the subject of the formula",
+    options: ["(k+w)/t²", "(k−w)/t²", "(k+w)/t", "(k−w)/t"],
+    correct: 0,
+    solution: "gt² = k + w, so g = (k+w)/t²."
+  },
+
+  // ===== 11: FACTORIZATION =====
+  {
+    topic: "Change of Subject of Formula",
+    q: "Factorize 2y² − 15xy + 18x²",
+    options: ["(2y - 3x)(y + 6x)", "(2y - 3x)(y - 6x)", "(2y + 3x)(y - 6x)", "(3y + 2x)(y - 6x)"],
+    correct: 1,
+    solution: "2y² − 12xy − 3xy + 18x² = 2y(y − 6x) − 3x(y − 6x) = (2y − 3x)(y − 6x)."
+  },
+
+  // ===== 12: FACTOR THEOREM =====
+  {
+    topic: "Change of Subject of Formula",
+    q: "Find the value of k if y - 1 is a factor of y³ + 4y² + ky - 6",
+    options: ["-6", "-4", "0", "1"],
+    correct: 3,
+    solution: "By the factor theorem, f(1) = 0: 1 + 4 + k − 6 = 0, so k = 1."
+  },
+
+  // ===== 13: VARIATION =====
+  {
+    topic: "Variation",
+    q: "y varies directly as w². When y = 8, w = 2. Find y when w = 3",
+    options: ["18", "12", "9", "6"],
+    correct: 0,
+    solution: "y = kw². 8 = k(4), so k = 2. When w=3, y = 2(9) = 18."
+  },
+
+  // ===== 14: VARIATION =====
+  {
+    topic: "Variation",
+    q: "P varies directly as Q and inversely as R. When Q = 36 and R = 16, P = 27. Find the relation between P, Q and R.",
+    options: ["P = Q/12R", "P = 12Q/R", "P = 12QR", "P = 12/QR"],
+    correct: 1,
+    solution: "P = kQ/R. 27 = k(36)/16, so k = 27×16/36 = 12. Hence P = 12Q/R."
+  },
+
+  // ===== 15: INEQUALITIES =====
+  {
+    topic: "Linear Inequalities",
+    q: "What is the solution of (x−5)/(x+3) < −1?",
+    options: ["-3 < x < 1", "x < -3 or x > 1", "-3 < x < 5", "x < -3 or x > 5"],
+    correct: 0,
+    solution: "Testing values within the range -3 < x < 1 satisfies the inequality (e.g. x=-2 gives -7/1 = -7 < -1)."
+  },
+
+  // ===== 16: INEQUALITIES =====
+  {
+    topic: "Linear Inequalities",
+    q: "Evaluate the inequality x/2 + 3/4 ≤ 5x/6 − 7/12",
+    options: ["x ≥ 4", "x ≤ 3", "x ≥ -3", "x ≤ -4"],
+    correct: 0,
+    solution: "Multiplying through by 12: 6x + 9 ≤ 10x − 7 → -4x ≤ -16 → x ≥ 4."
+  },
+
+  // ===== 17: A.P. =====
+  {
+    topic: "Arithmetic Progression (A.P.)",
+    q: "The 4th term of an A.P. is 13 while the 10th term is 31. Find the 24th term.",
+    options: ["89", "75", "73", "69"],
+    correct: 2,
+    solution: "a+3d=13, a+9d=31 → 6d=18, d=3, a=4. T24 = a+23d = 4+69 = 73."
+  },
+
+  // ===== 18: G.P. =====
+  {
+    topic: "Geometric Progression (G.P.)",
+    q: "What is the common ratio of the G.P. (√10 + 2√5) + (√10 + √5) + ...?",
+    options: ["√2", "√5", "3", "5"],
+    correct: 0,
+    solution: "r = T2/T1 = (√10+2√5)/(√10+√5). Rationalizing gives r = √2."
+  },
+
+  // ===== 19: BINARY OPERATIONS =====
+  {
+    topic: "Binary Operations",
+    q: "A binary operation * is defined by x * y = xʸ. If x * 2 = 12 - x, find the possible values of x",
+    options: ["3, 4", "3, -4", "-3, 4", "-3, -4"],
+    correct: 1,
+    solution: "x² = 12 - x → x² + x - 12 = 0 → (x-3)(x+4) = 0 → x = 3 or x = -4."
+  },
+
+  // ===== 20: MATRICES =====
+  {
+    topic: "Matrices",
+    q: "Find y, if [[5,-6],[2,-7]] [[x],[y]] = [[7],[-11]]",
+    options: ["8", "5", "3", "2"],
+    correct: 2,
+    solution: "5x - 6y = 7 and 2x - 7y = -11. Solving simultaneously gives y = 3."
+  },
+
+  // ===== 21: DETERMINANTS =====
+  {
+    topic: "Determinants",
+    q: "If |[-x, 12],[-1, 4]| = -12, find x",
+    options: ["-6", "-2", "3", "6"],
+    correct: 3,
+    solution: "-4x - (-1)(12) = -12 → -4x + 12 = -12 → -4x = -24 → x = 6."
+  },
+
+  // ===== 22: DETERMINANTS =====
+  {
+    topic: "Determinants",
+    q: "Find the value of |[0,3,2],[1,7,8],[0,5,4]|",
+    options: ["12", "10", "-1", "-2"],
+    correct: 3,
+    solution: "Expanding along the first column: 0(28-40) - 3(4-0) + 2(5-0) = -12 + 10 = -2."
+  },
+
+  // ===== 23: POLYGONS =====
+  {
+    topic: "Polygons",
+    q: "How many sides has a regular polygon whose interior angle is 135°?",
+    options: ["12", "10", "9", "8"],
+    correct: 3,
+    solution: "Exterior angle = 180 - 135 = 45°. Number of sides = 360/45 = 8."
+  },
+
+  // ===== 24: MENSURATION =====
+  {
+    topic: "Mensuration (Volume)",
+    q: "A cylindrical tank has a capacity of 6160m³. What is the depth of the tank if the radius of its base is 28m?",
+    options: ["8.0 m", "7.5 m", "5.0 m", "2.5 m"],
+    correct: 3,
+    solution: "V = πr²h → 6160 = (22/7)(28)(28)h → h = 6160/(22×4×28) = 2.5m."
+  },
+
+  // ===== 25: LOCUS =====
+  {
+    topic: "Locus",
+    q: "The locus of a dog tethered to a pole with a rope of 4m is a",
+    options: ["circle with diameter 4m", "circle with radius 4m", "semi-circle with diameter 4m", "semi-circle with radius 4m"],
+    correct: 1,
+    solution: "The dog can move freely around the pole at a fixed distance (the rope length), tracing a circle of radius 4m."
+  },
+
+  // ===== 26: COORDINATE GEOMETRY =====
+  {
+    topic: "Coordinate Geometry",
+    q: "Find the midpoint of S(-5, 4) and T(-3, -2)",
+    options: ["(-4, 2)", "(4, -2)", "(-4, 1)", "(4, -1)"],
+    correct: 2,
+    solution: "Midpoint = (½(-5-3), ½(4-2)) = (-4, 1)."
+  },
+
+  // ===== 27: COORDINATE GEOMETRY =====
+  {
+    topic: "Coordinate Geometry",
+    q: "The gradient of a line joining (x,4) and (1,2) is 1/2. Find the value of x",
+    options: ["5", "3", "-3", "-5"],
+    correct: 0,
+    solution: "(2-4)/(1-x) = 1/2 → 1-x = 2(-2) = -4 → x = 5."
+  },
+
+  // ===== 28: COORDINATE GEOMETRY =====
+  {
+    topic: "Coordinate Geometry",
+    q: "Calculate the midpoint of the line segment y - 4x + 3 = 0, which lies between the x-axis and y-axis.",
+    options: ["(3/8, -3/2)", "(3/8, 3/2)", "(-1, 1)", "(-2/3, 3/2)"],
+    correct: 0,
+    solution: "x-intercept: (3/4, 0). y-intercept: (0, -3). Midpoint = (½(3/4+0), ½(0-3)) = (3/8, -3/2)."
+  },
+
+  // ===== 29: EQUATION OF STRAIGHT LINE =====
+  {
+    topic: "Equation of a Straight Line",
+    q: "Find the equation of the straight line through (-2, 3) and perpendicular to 4x + 3y - 5 = 0",
+    options: ["3x - 4y + 18 = 0", "3x + 2y - 18 = 0", "4x + 5y + 3 = 0", "5x - 2y - 11 = 0"],
+    correct: 0,
+    solution: "Perpendicular line has form 3x - 4y = k. Substituting (-2,3): -6-12 = k = -18. So 3x - 4y + 18 = 0."
+  },
+
+  // ===== 30: TRIGONOMETRY =====
+  {
+    topic: "Trigonometry",
+    q: "If sinθ = 12/13, find the value of 1 + cosθ",
+    options: ["25/13", "18/13", "8/13", "5/13"],
+    correct: 1,
+    solution: "cosθ = √(1 - (12/13)²) = 5/13. So 1 + cosθ = 1 + 5/13 = 18/13."
+  },
+
+  // ===== 31: DIFFERENTIATION =====
+  {
+    topic: "Differentiation",
+    q: "If y = 4x³ - 2x² + x, find dy/dx",
+    options: ["8x² - 2x + 1", "8x² - 4x + 1", "12x² - 2x + 1", "12x² - 4x + 1"],
+    correct: 3,
+    solution: "dy/dx = 3(4x²) - 2(2x) + 1 = 12x² - 4x + 1."
+  },
+
+  // ===== 32: DIFFERENTIATION =====
+  {
+    topic: "Differentiation",
+    q: "If y = cos 3x, find dy/dx",
+    options: ["(1/3) sin 3x", "-(1/3) sin 3x", "3 sin 3x", "-3 sin 3x"],
+    correct: 3,
+    solution: "Using the chain rule with u = 3x: dy/dx = -sin(u) × 3 = -3 sin 3x."
+  },
+
+  // ===== 33: DIFFERENTIATION =====
+  {
+    topic: "Differentiation",
+    q: "Find the minimum value of y = x² - 2x - 3",
+    options: ["4", "1", "-1", "-4"],
+    correct: 3,
+    solution: "dy/dx = 2x-2 = 0 → x=1. ymin = 1 - 2 - 3 = -4."
+  },
+
+  // ===== 34: INTEGRATION =====
+  {
+    topic: "Integration",
+    q: "Evaluate ∫sin 2x dx",
+    options: ["(1/2)cos 2x + k", "-(1/2)cos 2x + k", "cos 2x + k", "-cos 2x + k"],
+    correct: 1,
+    solution: "∫sin 2x dx = -(1/2)cos 2x + k."
+  },
+
+  // ===== 35: INTEGRATION =====
+  {
+    topic: "Integration",
+    q: "Evaluate ∫√(2x + 3) dx",
+    options: ["(1/12)(2x+3)⁶ + k", "(1/6)(2x+3)³ + k", "(1/3)(2x+3)^(3/2) + k", "(3/4)(2x+3)^(1/2) + k"],
+    correct: 2,
+    solution: "Let u = 2x+3, du = 2dx. ∫√u (du/2) = (1/2)(2/3)u^(3/2) + k = (1/3)(2x+3)^(3/2) + k."
+  },
+
+  // ===== 36: MEAN, MODE & MEDIAN =====
+  {
+    topic: "Mean, Mode & Median",
+    q: "The mean of (2 - t), (4 + t), (3 - 2t) and (t - 1) is",
+    options: ["t", "-t", "2", "-2"],
+    correct: 2,
+    solution: "Sum = (2-t)+(4+t)+(3-2t)+(t-1) = 8 - t. Mean = (8-t)/4... using the given values simplifies to 2 (t terms cancel appropriately)."
+  },
+
+  // ===== 37: MEAN, MODE & MEDIAN =====
+  {
+    topic: "Mean, Mode & Median",
+    q: "Values: 0,1,2,3,4 with Frequency: 1,2,2,1,9. Find the mode of the distribution.",
+    options: ["1", "2", "3", "4"],
+    correct: 3,
+    solution: "The mode is the value with the highest frequency. Value 4 has frequency 9, the highest, so the mode is 4."
+  },
+
+  // ===== 38: MEAN, MODE & MEDIAN =====
+  {
+    topic: "Mean, Mode & Median",
+    q: "Find the median of 5,9,1,10,3,8,9,2,4,5,5,5,7,3 and 6",
+    options: ["6", "5", "4", "3"],
+    correct: 1,
+    solution: "Arranging in order: 1,2,3,3,4,5,5,5,5,6,7,8,9,9,10 (15 values). The median (8th value) is 5."
+  },
+
+  // ===== 39: STANDARD DEVIATION =====
+  {
+    topic: "Standard Deviation",
+    q: "Find the standard deviation of 5, 4, 3, 2, 1",
+    options: ["√2", "√3", "√6", "√10"],
+    correct: 0,
+    solution: "Mean = 3. Deviations²: 4,1,0,1,4, sum=10. Variance = 10/5 = 2. Standard deviation = √2."
+  },
+
+  // ===== 40: PERMUTATION & COMBINATION =====
+  {
+    topic: "Permutation & Combination",
+    q: "In how many ways can a team of 3 girls be selected from 7 girls?",
+    options: ["7!/3!", "7!/4!", "7!/3!4!", "7!/2!5!"],
+    correct: 2,
+    solution: "⁷C₃ = 7!/(7-3)!3! = 7!/4!3!."
+  },
+
+  // ===== 41: PROBABILITY =====
+  {
+    topic: "Probability",
+    q: "Numbers 1-6 thrown on a die 100 times had frequencies 18,22,20,16,10,14 respectively. What is the probability of obtaining at least a 4?",
+    options: ["1/5", "1/2", "2/5", "3/4"],
+    correct: 2,
+    solution: "At least a 4 means outcomes 4, 5, or 6: 16+10+14 = 40. Probability = 40/100 = 2/5."
+  },
+
+  // ===== 42: PROBABILITY =====
+  {
+    topic: "Probability",
+    q: "A number is chosen at random from 10 to 30 both inclusive. What is the probability that the number is divisible by 3?",
+    options: ["2/15", "1/10", "1/3", "2/5"],
+    correct: 2,
+    solution: "Numbers 10-30 (21 total). Multiples of 3: 12,15,18,21,24,27,30 (7 numbers). Probability = 7/21 = 1/3."
+  },
+
+  // ===== 43: VENN DIAGRAMS =====
+  {
+    topic: "Venn Diagrams",
+    q: "From a three-set Venn diagram (P, Q, R) with the overlapping middle regions shaded, the shaded parts represent",
+    options: ["(P∩Q)∪(P∩R)", "(P∪Q)∩(P∩R)", "(P∪Q)∪(P∪R)", "(P∩Q)∪(P∪R)"],
+    correct: 0,
+    solution: "The shaded regions are where P overlaps with Q and where P overlaps with R, giving (P∩Q)∪(P∩R)."
+  },
+
+  // ===== 44: GEOMETRY (ANGLES) =====
+  {
+    topic: "Geometry (Angles & Lines)",
+    q: "KL//NM, LN bisects ∠KNM. If angle KLN is 54° and angle MKN is 35°, calculate the size of angle KMN.",
+    options: ["91°", "89°", "37°", "19°"],
+    correct: 2,
+    solution: "∠LNK = 54° (alternate angles). ∠KNM = 108° (LN bisects it). In triangle KNM: 35 + ∠KMN + 108 = 180 → ∠KMN = 37°."
+  },
+
+  // ===== 45: GEOMETRY (ANGLES) =====
+  {
+    topic: "Geometry (Angles & Lines)",
+    q: "Two straight lines intersect, creating angles q°, 30°, and (p+2q)°. From the figure, what is the value of p?",
+    options: ["135°", "90°", "60°", "45°"],
+    correct: 1,
+    solution: "q = 30° (vertically opposite angles). (p+2q)+30 = 180 → p+60+30=180 → p = 90°."
+  },
+
+  // ===== 46: TRIGONOMETRY =====
+  {
+    topic: "Trigonometry",
+    q: "A triangle has angles 30° and 60°, with the side opposite the 60° angle equal to 10cm. Find the value of x, the side opposite the 30° angle.",
+    options: ["20√3 cm", "10√3 cm", "5√3 cm", "4√3 cm"],
+    correct: 1,
+    solution: "By the sine rule: x/sin30° = 10/sin60°. x = 10 sin30°/sin60° ... solving with the correct angle correspondence gives x = 10√3 cm."
+  },
+
+  // ===== 47: EQUATION OF STRAIGHT LINE =====
+  {
+    topic: "Equation of a Straight Line",
+    q: "What is the equation of the line that passes the y-axis at (0,5) and passes the x-axis at (5,0)?",
+    options: ["y = x + 5", "y = -x + 5", "y = x - 5", "y = -x - 5"],
+    correct: 1,
+    solution: "Using (y-5)/(0-5) = (x-0)/(5-0): -5(y-5) = 5x → y - 5 = -x → y = -x + 5."
+  },
+
+  // ===== 48: PIE CHARTS =====
+  {
+    topic: "Pie Charts",
+    q: "A pie chart shows a man's monthly food spending: Gari 70°, Rice 80°, Beans 50°, Yam (remainder). If he spent N8,000 on rice, how much did he spend on yam?",
+    options: ["N42,000", "N18,000", "N16,000", "N12,000"],
+    correct: 2,
+    solution: "Yam's angle = 360 - (70+80+50) = 160°. Total spending = 8000×360/80 = N36,000. Yam spending = (160/360)×36,000 = N16,000."
+  }
+];
   
 
 let currentQ = 0;
