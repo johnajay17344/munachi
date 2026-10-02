@@ -195,7 +195,7 @@
 <body>
 
 <div class="card">
-
+ 
   <!-- START SCREEN -->
   <div id="start-screen">
     <h1>Learn with Jay</h1>
@@ -249,474 +249,1511 @@
 
 <script>
 const TOPICS = [
-  "Atomic Structure",
-  "Periodic Table & Periodicity",
-  "Chemical Bonding",
-  "Mole Concept & Stoichiometry",
-  "Gas Laws & States of Matter",
-  "Solutions & Solubility",
-  "Acids, Bases & Salts",
-  "Redox Reactions",
-  "Electrolysis",
-  "Energy Changes & Reaction Rates",
-  "Separation & Classification of Matter",
-  "Air, Water & Environment",
-  "Non-Metals & Their Compounds",
-  "Metals & Their Compounds",
-  "Qualitative Analysis",
-  "Hydrocarbons & Petroleum",
-  "Functional Groups & Reactions",
+  "ENGLISH",
+  "MATHEMATICS",
+  "PHYSICS",
+  "CHEMISTRY",
 ];
 
 const questions = [
-  // ===== 1: ATOMIC STRUCTURE (JAMB 2017 Q10) =====
+  // ===== 1: MATHEMATICS - COORDINATE GEOMETRY =====
   {
-    topic: "Atomic Structure",
-    q: "When cathode rays are deflected unto the electrode of an electrometer, the instrument becomes",
-    options: ["negatively charged", "positively charged", "neutral", "bipolar"],
-    correct: 0,
-    solution: "Cathode rays are streams of electrons, which carry negative charge. When they strike the electrode of an electrometer, it becomes negatively charged."
+    subject: "Mathematics",
+    topic: "Coordinate Geometry",
+    q: "Find the coordinate of the midpoint of x and y intercepts of the line 2y = 4x - 8",
+    options: ["(-1, -2)", "(1, 2)", "(2, 0)", "(1, -2)"],
+    correct: 3,
+    solution: "Write 2y = 4x − 8 as y = 2x − 4. x-intercept (y = 0): x = 2. y-intercept (x = 0): y = −4. Midpoint = ((2 + 0)/2, (0 − 4)/2) = (1, −2)."
   },
 
-  // ===== 2: METALS & THEIR COMPOUNDS (JAMB 2012 Q26) =====
+  // ===== 2: MATHEMATICS - PERCENTAGES & PROFIT/LOSS =====
   {
-    topic: "Metals & Their Compounds",
-    q: "A metal M displaces zinc from ZnCl₂ solution. This shows that",
-    options: ["electrons flow from zinc to M", "M is more electropositive than zinc", "M is more electronegative than zinc", "zinc is more electropositive than M"],
+    subject: "Mathematics",
+    topic: "Percentages & Profit/Loss",
+    q: "A car dealer bought a second-hand car for ₦250,000 and spent ₦70,000 refurbishing it. He then sold the car for ₦400,000. What is the percentage gain?",
+    options: ["20%", "25%", "32%", "60%"],
     correct: 1,
-    solution: "A metal can only displace another from its salt solution if it is higher in the reactivity (electrochemical) series, i.e. it loses electrons more readily. So M is more electropositive than zinc."
+    solution: "Cost price = 250,000 + 70,000 = ₦320,000. Gain = 400,000 − 320,000 = ₦80,000. % gain = 80,000/320,000 × 100 = 25%."
   },
 
-  // ===== 3: MOLE CONCEPT (JAMB 2018 Q20) =====
+  // ===== 3: MATHEMATICS - VARIATION =====
   {
-    topic: "Mole Concept & Stoichiometry",
-    q: "How many atoms are present in 6.0 g of magnesium? [Mg = 24, N_A = 6.02 × 10²³ mol⁻¹]",
-    options: ["1.20 × 10²²", "2.41 × 10²²", "1.51 × 10²³", "3.02 × 10²³"],
+    subject: "Mathematics",
+    topic: "Variation",
+    q: "If x varies inversely as the cube root of y and x = 1 when y = 8, find y when x = 3",
+    options: ["1/3", "2/3", "8/27", "4/9"],
     correct: 2,
-    solution: "Moles of Mg = 6.0/24 = 0.25 mol. Number of atoms = 0.25 × 6.02 × 10²³ = 1.505 × 10²³ ≈ 1.51 × 10²³."
+    solution: "x = k/∛y. With x = 1, y = 8: k = 1 × 2 = 2. Then 3 = 2/∛y, so ∛y = 2/3 and y = (2/3)³ = 8/27."
   },
 
-  // ===== 4: QUALITATIVE ANALYSIS (JAMB 2014 Q38) =====
+  // ===== 4: MATHEMATICS - PERMUTATION & COMBINATION =====
   {
-    topic: "Qualitative Analysis",
-    q: "A few drops of NaOH solution was added to an unknown salt forming a white precipitate which is insoluble in excess solution. The cation likely present is",
-    options: ["Zn²⁺", "Pb²⁺", "Ca²⁺", "Al³⁺"],
-    correct: 2,
-    solution: "Zn²⁺, Pb²⁺ and Al³⁺ all give white precipitates that dissolve in excess NaOH (their hydroxides are amphoteric). Ca(OH)₂ is not amphoteric, so the white precipitate does not dissolve in excess. The cation is Ca²⁺."
-  },
-
-  // ===== 5: CLASSIFICATION OF MATTER (JAMB 2018 Q27) =====
-  {
-    topic: "Separation & Classification of Matter",
-    q: "Which of the following are mixtures? i. Petroleum ii. Rubber latex iii. Vulcanizer's solution iv. Carbon(II) sulphide",
-    options: ["i, ii and iii", "i, ii and iv", "i and ii only", "i and iv"],
+    subject: "Mathematics",
+    topic: "Permutation & Combination",
+    q: "In how many ways can 2 students be selected from a group of 5 students in a debating competition?",
+    options: ["10 ways.", "15 ways.", "20 ways", "25 ways."],
     correct: 0,
-    solution: "Petroleum (a mixture of hydrocarbons), rubber latex (a colloid) and vulcanizer's solution (sulphur dissolved in a solvent) are mixtures. Carbon(II) sulphide is a single compound, so it is not a mixture."
+    solution: "Order does not matter, so use combinations: ⁵C₂ = (5 × 4)/(2 × 1) = 10 ways."
   },
 
-  // ===== 6: CHEMICAL BONDING (JAMB 2014 Q8) =====
+  // ===== 5: MATHEMATICS - FACTORISATION =====
   {
-    topic: "Chemical Bonding",
-    q: "If the difference in electronegativity of elements P and Q is 3.0, the bond that will be formed between them is",
-    options: ["metallic", "covalent", "co-ordinate", "ionic"],
-    correct: 3,
-    solution: "A large electronegativity difference (generally above about 1.7) leads to complete transfer of electrons from one atom to the other. A difference of 3.0 therefore gives an ionic bond."
-  },
-
-  // ===== 7: PERIODIC TABLE (JAMB 2015 Q11) =====
-  {
-    topic: "Periodic Table & Periodicity",
-    q: "What are the possible oxidation numbers for an element if its atomic number is 17?",
-    options: ["-1 and 7", "-1 and 6", "-3 and 5", "-2 and 6"],
-    correct: 0,
-    solution: "Atomic number 17 is chlorine (2,8,7), a Group VII halogen. It gains one electron to give an oxidation number of -1, and can lose or share all 7 outer electrons to show +7 (e.g. in HClO₄)."
-  },
-
-  // ===== 8: SOLUTIONS (JAMB 2015 Q29) =====
-  {
-    topic: "Solutions & Solubility",
-    q: "When a crystal was added to the clear solution of its salt, the crystal did not dissolve and the solution remained unchanged. This showed that the solution was",
-    options: ["supersaturated", "concentrated", "unsaturated", "saturated"],
-    correct: 3,
-    solution: "If the added crystal does not dissolve and nothing changes, the solution already holds all the solute it can at that temperature, so it is saturated. An unsaturated solution would dissolve it; a supersaturated one would deposit more crystals."
-  },
-
-  // ===== 9: WATER TREATMENT (JAMB 2022 Q12) =====
-  {
-    topic: "Air, Water & Environment",
-    q: "Addition of charcoal to the filter bed of sand during water treatment for township supply is to",
-    options: ["prevent goitre", "prevent tooth decay", "remove odour", "kill germs"],
+    subject: "Mathematics",
+    topic: "Factorisation",
+    q: "Factorise 6x² − 14x − 12",
+    options: ["2(x + 3)(3x − 2)", "6(x − 2)(x + 1)", "2(x − 3)(3x + 2)", "6(x + 2)(x − 1)"],
     correct: 2,
-    solution: "Charcoal is porous and adsorbs dissolved impurities, so it removes unpleasant odour and taste from the water. Germs are killed by chlorination, and tooth decay is prevented by fluoridation."
+    solution: "6x² − 14x − 12 = 2(3x² − 7x − 6). Factorise 3x² − 7x − 6 = (3x + 2)(x − 3). So the answer is 2(x − 3)(3x + 2)."
   },
 
-  // ===== 10: TITRATION (JAMB 2010 Q19) =====
+  // ===== 6: MATHEMATICS - STATISTICS (MEAN) =====
   {
-    topic: "Acids, Bases & Salts",
-    q: "Calculate the volume of 0.5 mol dm⁻³ H₂SO₄ that is neutralized by 25 cm³ of 0.1 mol dm⁻³ NaOH.",
-    options: ["5.0 cm³", "2.5 cm³", "0.4 cm³", "0.1 cm³"],
+    subject: "Mathematics",
+    topic: "Statistics (Mean)",
+    q: "Thirty boys and x girls sat for a test. The mean of the boys’ scores and that of the girls were 6 and 8 respectively. Find x if the total score was 468.",
+    options: ["38", "24", "36", "22"],
+    correct: 2,
+    solution: "Total of boys’ scores = 30 × 6 = 180. Girls’ total = 8x. 180 + 8x = 468, so 8x = 288 and x = 36."
+  },
+
+  // ===== 7: MATHEMATICS - CIRCLE GEOMETRY (ARC LENGTH) =====
+  {
+    subject: "Mathematics",
+    topic: "Circle Geometry (Arc Length)",
+    q: "The chord ST of a circle is equal to the radius, r of the circle. Find the length of arc ST.",
+    options: ["πr/2", "πr/3", "πr/6", "πr/12"],
     correct: 1,
-    solution: "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O, so n_A = 1 and n_B = 2. Using (C_A V_A)/(C_B V_B) = n_A/n_B: (0.5 × V_A)/(0.1 × 25) = 1/2, so V_A = 2.5 cm³."
+    solution: "Chord = radius makes an equilateral triangle with the two radii, so the angle at the centre is 60°. Arc = (60/360) × 2πr = πr/3."
   },
 
-  // ===== 11: MOLE CONCEPT (JAMB 2012 Q21) =====
+  // ===== 8: MATHEMATICS - STATISTICS (MEAN) =====
   {
-    topic: "Mole Concept & Stoichiometry",
-    q: "During a titration experiment, 0.05 moles of carbon(IV) oxide is liberated. What is the volume of gas liberated?",
-    options: ["22.40 dm³", "11.20 dm³", "2.24 dm³", "1.12 dm³"],
+    subject: "Mathematics",
+    topic: "Statistics (Mean)",
+    q: "In a family of 21 people, the average age is 14years. If the age of the grandfather is not counted, the average age drops to 12years. What is the age of the grandfather?",
+    options: ["35years", "40years", "42years", "54years"],
     correct: 3,
-    solution: "At s.t.p., 1 mole of any gas occupies 22.4 dm³. Volume = 0.05 × 22.4 = 1.12 dm³."
+    solution: "Total age of 21 people = 21 × 14 = 294. Total of the other 20 = 20 × 12 = 240. Grandfather’s age = 294 − 240 = 54 years."
   },
 
-  // ===== 12: GAS LAWS (JAMB 2016 Q38) =====
+  // ===== 9: MATHEMATICS - SEQUENCES & SERIES (G.P.) =====
   {
-    topic: "Gas Laws & States of Matter",
-    q: "If a gas occupies a container of volume 146 cm³ at 18°C and 0.971 atm, its volume in cm³ at s.t.p. is",
-    options: ["133", "146", "266", "292"],
-    correct: 0,
-    solution: "P₁V₁/T₁ = P₂V₂/T₂ with T₁ = 291 K, T₂ = 273 K and P₂ = 1 atm. V₂ = (0.971 × 146 × 273)/(291 × 1) ≈ 133 cm³."
-  },
-
-  // ===== 13: HARD WATER (JAMB 2022 Q40) =====
-  {
-    topic: "Air, Water & Environment",
-    q: "Hard water is water with high concentrations of dissolved ions, in particular calcium and",
-    options: ["magnesium ions", "nitrogen ions", "phosphorus ions", "helium ions"],
-    correct: 0,
-    solution: "Hardness is caused by dissolved calcium (Ca²⁺) and magnesium (Mg²⁺) salts, which prevent soap from lathering easily."
-  },
-
-  // ===== 14: QUALITATIVE ANALYSIS (JAMB 2011 Q33) =====
-  {
-    topic: "Qualitative Analysis",
-    q: "A few drops of concentrated HNO₃ is added to an unknown solution and boiled for a while. If this produces a brown solution, the cation present is likely to be",
-    options: ["Pb²⁺", "Cu²⁺", "Fe³⁺", "Fe²⁺"],
+    subject: "Mathematics",
+    topic: "Sequences & Series (G.P.)",
+    q: "Given that the first and fourth terms of a G.P. are 6 and 162 respectively, find the sum of the first three terms of the progression.",
+    options: ["8", "27", "48", "78"],
     correct: 3,
-    solution: "Concentrated HNO₃ is a strong oxidizing agent. Boiling oxidizes pale green Fe²⁺ to Fe³⁺, which gives a brown (yellow-brown) solution. Pb²⁺, Cu²⁺ and Fe³⁺ cannot be oxidized further, so there is no such colour change."
+    solution: "ar³ = 162 with a = 6, so r³ = 27 and r = 3. Terms: 6, 18, 54. Sum of first three = 6 + 18 + 54 = 78."
   },
 
-  // ===== 15: SALTS (JAMB 2010 Q14) =====
+  // ===== 10: MATHEMATICS - VARIATION =====
   {
-    topic: "Acids, Bases & Salts",
-    q: "Substances employed as drying agents are usually",
-    options: ["amphoteric", "hygroscopic", "efflorescent", "acidic"],
+    subject: "Mathematics",
+    topic: "Variation",
+    q: "If x varies directly as y³ and x = 2 when y = 1, find x when y = 5",
+    options: ["2", "10", "125", "250"],
+    correct: 3,
+    solution: "x = ky³. With x = 2, y = 1: k = 2. When y = 5: x = 2 × 5³ = 2 × 125 = 250."
+  },
+
+  // ===== 11: MATHEMATICS - BINARY OPERATIONS =====
+  {
+    subject: "Mathematics",
+    topic: "Binary Operations",
+    q: "If the binary operation * is defined by m * n = mn + m + n for any real numbers m and n, find the identity element under this operation.",
+    options: ["e = 1", "e = −1", "e = −2", "e = 0"],
+    correct: 3,
+    solution: "Identity e satisfies m * e = m. So me + m + e = m, which gives e(m + 1) = 0, so e = 0."
+  },
+
+  // ===== 12: MATHEMATICS - PERMUTATION & COMBINATION =====
+  {
+    subject: "Mathematics",
+    topic: "Permutation & Combination",
+    q: "If ⁶Cᵣ / ⁶Pᵣ = 1/6, find the value of r.",
+    options: ["1", "3", "5", "6"],
     correct: 1,
-    solution: "A drying agent must absorb moisture from its surroundings without dissolving in it. Substances that absorb water from the air are hygroscopic (for example anhydrous CaCl₂ and conc. H₂SO₄)."
+    solution: "ⁿCᵣ/ⁿPᵣ = 1/r!. So 1/r! = 1/6, which means r! = 6 and r = 3."
   },
 
-  // ===== 16: METALS (JAMB 2012 Q39) =====
+  // ===== 13: MATHEMATICS - BEARINGS & TRIGONOMETRY =====
   {
-    topic: "Metals & Their Compounds",
-    q: "Which of the following metals is the least reactive?",
-    options: ["Pb", "Sn", "Hg", "Au"],
-    correct: 3,
-    solution: "In the reactivity series the order is Sn > Pb > Hg > Au. Gold is at the bottom, so it is the least reactive."
-  },
-
-  // ===== 17: PERIODIC TABLE (JAMB 2017 Q20) =====
-  {
-    topic: "Periodic Table & Periodicity",
-    q: "The coloured nature of transition metal ions is associated with their partially filled",
-    options: ["f-orbital", "s-orbital", "p-orbital", "d-orbital"],
-    correct: 3,
-    solution: "Transition metal ions have partially filled d-orbitals. Electrons move between d-orbitals of slightly different energy by absorbing visible light, which produces the colour."
-  },
-
-  // ===== 18: GRAHAM'S LAW (JAMB 2016 Q2) =====
-  {
-    topic: "Gas Laws & States of Matter",
-    q: "200 cm³ of oxygen diffuse through a porous plug in 50 seconds. How long will 80 cm³ of methane (CH₄) take to diffuse through the same porous plug under the same conditions?",
-    options: ["40 sec", "20 sec", "14 sec", "7 sec"],
+    subject: "Mathematics",
+    topic: "Bearings & Trigonometry",
+    q: "From a point Z, 60 m north of X, a man walks 60√3 m eastwards to another point Y. Find the bearing of Y from X.",
+    options: ["030°", "045°", "060°", "090°"],
     correct: 2,
-    solution: "Rate of O₂ = 200/50 = 4 cm³/s. By Graham's law, rate of CH₄ = 4 × √(32/16) = 4 × 1.414 = 5.66 cm³/s. Time for 80 cm³ = 80/5.66 ≈ 14 s."
+    solution: "From X, Z is due north (60 m) and Y is 60√3 m east of Z. tan θ = 60√3/60 = √3, where θ is the angle from north. So θ = 60°, and the bearing is 060°."
   },
 
-  // ===== 19: ATOMIC STRUCTURE (JAMB 2011 Q8) =====
+  // ===== 14: MATHEMATICS - LCM & HCF =====
   {
-    topic: "Atomic Structure",
-    q: "An isotope has an atomic number of 15 and a mass number of 31. The number of protons it contains is",
-    options: ["16", "15", "46", "31"],
+    subject: "Mathematics",
+    topic: "LCM & HCF",
+    q: "Find the least length of a rod which can be cut into exactly equal strips, each of either 40 cm or 48 cm in length.",
+    options: ["120 cm", "240 cm", "360 cm", "480 cm"],
     correct: 1,
-    solution: "The atomic number equals the number of protons, so there are 15 protons. (Neutrons = 31 − 15 = 16.)"
+    solution: "The rod must be a common multiple of 40 and 48. LCM(40, 48) = 240 cm (40 = 2³ × 5, 48 = 2⁴ × 3)."
   },
 
-  // ===== 20: PERIODIC TABLE (JAMB 2010 Q10) =====
+  // ===== 15: MATHEMATICS - PROBABILITY =====
   {
-    topic: "Periodic Table & Periodicity",
-    q: "Elements in the same period in the periodic table have the same",
-    options: ["number of shells", "atomic number", "chemical properties", "physical properties"],
-    correct: 0,
-    solution: "Elements in a period have electrons filling the same number of energy shells. Atomic number, and therefore chemical and physical properties, change across a period."
-  },
-
-  // ===== 21: FORMULAE (JAMB 2016 Q40) =====
-  {
-    topic: "Mole Concept & Stoichiometry",
-    q: "The formula CH₂O for ethanoic acid is regarded as its",
-    options: ["molecular formula", "general formula", "empirical formula", "structural formula"],
-    correct: 2,
-    solution: "Ethanoic acid has molecular formula C₂H₄O₂. CH₂O is its simplest whole-number ratio of atoms, which is the empirical formula."
-  },
-
-  // ===== 22: ALLOYS (JAMB 2010 Q35) =====
-  {
-    topic: "Metals & Their Compounds",
-    q: "A constituent common to bronze and solder is",
-    options: ["lead", "silver", "copper", "tin"],
-    correct: 3,
-    solution: "Bronze is copper and tin. Solder is lead and tin. The metal common to both is tin."
-  },
-
-  // ===== 23: AIR (JAMB 2014 Q12) =====
-  {
-    topic: "Air, Water & Environment",
-    q: "The nitrogen obtained from air has a density higher than the one from nitrogen-containing compounds because the one from air is contaminated with",
-    options: ["water vapour", "oxygen", "rare gases", "carbon(IV) oxide"],
-    correct: 2,
-    solution: "Nitrogen from air still contains the denser noble gases, mainly argon (M = 40) compared with N₂ (M = 28). This makes atmospheric nitrogen slightly denser than chemically prepared nitrogen."
-  },
-
-  // ===== 24: STOICHIOMETRY (JAMB 2017 Q25) =====
-  {
-    topic: "Mole Concept & Stoichiometry",
-    q: "8.0 g of an element X reacted with an excess of copper(II) tetraoxosulphate(VI) solution to deposit 21.3 g of copper. The correct equation for the reaction is [Cu = 64]",
-    options: ["X(s) + CuSO₄(aq) → Cu(s) + XSO₄(aq)", "X(s) + 2CuSO₄(aq) → 2Cu(s) + X(SO₄)₂(aq)", "2X(s) + CuSO₄(aq) → Cu(s) + X₂SO₄(aq)", "2X(s) + 3CuSO₄(aq) → 3Cu(s) + X₂(SO₄)₃(aq)"],
-    correct: 0,
-    solution: "Moles of Cu = 21.3/64 = 0.333 mol. In the 1:1 equation (A), X also = 0.333 mol, so its molar mass = 8.0/0.333 = 24 g/mol, which is magnesium. Magnesium forms Mg²⁺ and displaces copper, so the equation X + CuSO₄ → Cu + XSO₄ fits."
-  },
-
-  // ===== 25: SOLUBILITY (JAMB 2010 Q15) =====
-  {
-    topic: "Solutions & Solubility",
-    q: "Calculate the solubility in mol dm⁻³ of 40 g of CuSO₄ dissolved in 100 g of water at 120°C. [Cu = 64, S = 32, O = 16]",
-    options: ["4.00", "2.50", "0.40", "0.25"],
+    subject: "Mathematics",
+    topic: "Probability",
+    q: "Two perfect dice are throw together. Determine the probability of obtaining a total score of 8",
+    options: ["1/12", "5/36", "1/8", "7/36"],
     correct: 1,
-    solution: "Molar mass of CuSO₄ = 64 + 32 + 64 = 160 g/mol. Moles in 100 g of water = 40/160 = 0.25 mol. Solubility is expressed per 1000 g (1 dm³) of water, so it is 0.25 × 10 = 2.50 mol dm⁻³."
+    solution: "Total outcomes = 36. Ways to get 8: (2,6), (3,5), (4,4), (5,3), (6,2) = 5. Probability = 5/36."
   },
 
-  // ===== 26: NOBLE GASES (JAMB 2011 Q16) =====
+  // ===== 16: MATHEMATICS - STATISTICS (MEDIAN & MODE) =====
   {
-    topic: "Air, Water & Environment",
-    q: "Which of the following noble gases is commonly found in the atmosphere?",
-    options: ["Xenon", "Neon", "Helium", "Argon"],
+    subject: "Mathematics",
+    topic: "Statistics (Median & Mode)",
+    q: "If M represents the median and D the mode of the measurements 5, 9, 3, 5, 8, then (M, D) is",
+    options: ["(6,5)", "(5,8)", "(5,7)", "(5,5)"],
     correct: 3,
-    solution: "Argon makes up about 0.93% of dry air, which is by far the most abundant noble gas in the atmosphere. Xenon, neon and helium are present only in trace amounts."
+    solution: "Arrange: 3, 5, 5, 8, 9. Median = middle value = 5. Mode = most frequent = 5. So (M, D) = (5, 5)."
   },
 
-  // ===== 27: REACTION RATES (JAMB 2013 Q28) =====
+  // ===== 17: MATHEMATICS - ALGEBRA (IDENTITIES) =====
   {
-    topic: "Energy Changes & Reaction Rates",
-    q: "The minimum amount of energy required for a reaction to take place is",
-    options: ["lattice energy", "ionization energy", "activation energy", "kinetic energy"],
-    correct: 2,
-    solution: "Activation energy is the minimum energy that colliding particles must have for the collision to result in a reaction."
-  },
-
-  // ===== 28: REDOX / ELECTRON TRANSFER (JAMB 2017 Q23) =====
-  {
-    topic: "Redox Reactions",
-    q: "In the reaction 3CuO + 2NH₃ → 3Cu + 3H₂O + N₂, how many electrons are transferred for each mole of copper produced?",
-    options: ["4.0 × 10⁻²³", "3.0 × 10⁻²³", "1.2 × 10²⁴", "6.0 × 10²⁴"],
-    correct: 2,
-    solution: "Cu²⁺ + 2e⁻ → Cu, so 2 moles of electrons are needed per mole of copper. Number of electrons = 2 × 6.02 × 10²³ = 1.2 × 10²⁴."
-  },
-
-  // ===== 29: NON-METALS (JAMB 2022 Q18) =====
-  {
-    topic: "Non-Metals & Their Compounds",
-    q: "A coloured gas that is known to be poisonous and can readily damage the mucous lining of the lungs is",
-    options: ["hydrogen sulphide", "carbon(II) oxide", "chlorine", "sulphur(IV) oxide"],
-    correct: 2,
-    solution: "Chlorine is a greenish-yellow, poisonous gas that attacks the mucous membranes of the respiratory tract. The other three gases are colourless."
-  },
-
-  // ===== 30: ISOMERISM (JAMB 2012 Q42) =====
-  {
-    topic: "Functional Groups & Reactions",
-    q: "The isomers of C₃H₈O are",
-    options: ["1-propanol and 2-propanol", "1-propanol and 1-propanol", "2-propanol and 2-propanone", "2-propanol and 1-propanol"],
+    subject: "Mathematics",
+    topic: "Algebra (Identities)",
+    q: "If a² + b² = 16 and 2ab = 7, find all the possible values of (a − b)",
+    options: ["3, −3", "2, −2", "1, −1", "3, −1"],
     correct: 0,
-    solution: "C₃H₈O can be CH₃CH₂CH₂OH (propan-1-ol) or CH₃CH(OH)CH₃ (propan-2-ol). Propanone (C₃H₆O) has a different formula, so it is not an isomer."
+    solution: "(a − b)² = a² + b² − 2ab = 16 − 7 = 9. So a − b = ±3."
   },
 
-  // ===== 31: COLLOIDS (JAMB 2017 Q13) =====
+  // ===== 18: MATHEMATICS - PERCENTAGES & PROFIT/LOSS =====
   {
-    topic: "Separation & Classification of Matter",
-    q: "Smoke consists of",
-    options: ["solid particles dispersed in liquid", "solid or liquid particles dispersed in gas", "gas or liquid particles dispersed in liquid", "liquid particles dispersed in liquid"],
+    subject: "Mathematics",
+    topic: "Percentages & Profit/Loss",
+    q: "A trader bought goats for ₦4,000 each. He sold them for ₦180,000 at a loss of 25%. How many goats did he buy?",
+    options: ["36", "45", "50", "60"],
+    correct: 3,
+    solution: "Selling at 25% loss means ₦180,000 = 75% of cost. Total cost = 180,000/0.75 = ₦240,000. Number of goats = 240,000/4,000 = 60."
+  },
+
+  // ===== 19: MATHEMATICS - DECIMALS & APPROXIMATION =====
+  {
+    subject: "Mathematics",
+    topic: "Decimals & Approximation",
+    q: "Evaluate [(1/0.03) ÷ (1/0.024)]⁻¹, correct to 2 decimal places",
+    options: ["3.76", "1.25", "0.94", "0.75"],
     correct: 1,
-    solution: "Smoke is an aerosol: tiny solid (and sometimes liquid) particles dispersed in a gas, namely air."
+    solution: "(1/0.03) ÷ (1/0.024) = 0.024/0.03 = 0.8. Then (0.8)⁻¹ = 1/0.8 = 1.25."
   },
 
-  // ===== 32: ETHANOL (JAMB 2015 Q38) =====
+  // ===== 20: MATHEMATICS - LCM & HCF =====
   {
-    topic: "Functional Groups & Reactions",
-    q: "The process of converting starch to ethanol is",
-    options: ["cracking", "distillation", "fermentation", "oxidation"],
-    correct: 2,
-    solution: "Enzymes in yeast (diastase and zymase) break starch down into glucose and then convert the glucose into ethanol and CO₂. This process is fermentation."
+    subject: "Mathematics",
+    topic: "LCM & HCF",
+    q: "Divide the L.C.M. of 48, 64 and 80 by their H.C.F",
+    options: ["20", "30", "48", "60"],
+    correct: 3,
+    solution: "48 = 2⁴ × 3, 64 = 2⁶, 80 = 2⁴ × 5. LCM = 2⁶ × 3 × 5 = 960. HCF = 2⁴ = 16. 960 ÷ 16 = 60."
   },
 
-  // ===== 33: NITROGEN (JAMB 2018 Q13) =====
+  // ===== 21: MATHEMATICS - ALGEBRAIC FRACTIONS =====
   {
-    topic: "Non-Metals & Their Compounds",
-    q: "Suitable reagents for the laboratory preparation of nitrogen are",
-    options: ["sodium dioxonitrate(III) and ammonium chloride", "sodium trioxonitrate(V) and ammonium chloride", "sodium chloride and ammonium trioxonitrate(V)", "sodium chloride and ammonium dioxonitrate(III)"],
+    subject: "Mathematics",
+    topic: "Algebraic Fractions",
+    q: "If y = x/(x − 3) + x/(x + 4), find y when x = −2",
+    options: ["−3/5", "3/5", "−7/5", "7/5"],
     correct: 0,
-    solution: "Nitrogen is prepared in the lab by warming a solution of sodium dioxonitrate(III) (sodium nitrite) with ammonium chloride: NaNO₂ + NH₄Cl → NaCl + 2H₂O + N₂."
+    solution: "At x = −2: x/(x − 3) = −2/−5 = 2/5, and x/(x + 4) = −2/2 = −1. y = 2/5 − 1 = −3/5."
   },
 
-  // ===== 34: GAY-LUSSAC'S LAW (JAMB 2022 Q23) =====
+  // ===== 22: MATHEMATICS - RATIO & PROPORTION =====
   {
-    topic: "Gas Laws & States of Matter",
-    q: "2H₂ + O₂ → 2H₂O. From the equation above, calculate the volume of unreacted oxygen gas if a mixture of 50 cm³ of hydrogen and 75 cm³ of oxygen are involved.",
-    options: ["85 cm³", "50 cm³", "125 cm³", "55 cm³"],
+    subject: "Mathematics",
+    topic: "Ratio & Proportion",
+    q: "Two sisters, Taiwo and Kehinde, own a store. The ratio of Taiwo’s share to Kehinde’s is 11:9. Later Kehinde sells 2/3 of her share to Taiwo for ₦720.00. Find the value of the store.",
+    options: ["₦1,080.00", "₦2,400.00", "₦3,000.00", "₦3,600.00"],
     correct: 1,
-    solution: "H₂ and O₂ react in the volume ratio 2:1. 50 cm³ of H₂ needs 25 cm³ of O₂. Unreacted O₂ = 75 − 25 = 50 cm³."
+    solution: "Kehinde’s 2/3 share sold for ₦720, so her share = 720 ÷ (2/3) = ₦1,080. That is 9 parts, so 1 part = ₦120. Total = 20 parts = ₦2,400."
   },
 
-  // ===== 35: INDICATORS (JAMB 2010 Q20) =====
+  // ===== 23: MATHEMATICS - SEQUENCES & SERIES (A.P.) =====
   {
-    topic: "Acids, Bases & Salts",
-    q: "The colour of methyl orange in alkaline medium is",
-    options: ["yellow", "pink", "orange", "red"],
-    correct: 0,
-    solution: "Methyl orange is red in acid, orange at neutral and yellow in alkaline medium."
-  },
-
-  // ===== 36: CATALYSIS (JAMB 2018 Q10) =====
-  {
-    topic: "Energy Changes & Reaction Rates",
-    q: "In the preparation of oxygen by heating KClO₃ in the presence of MnO₂, only moderate heat is needed because the catalyst acts by",
-    options: ["lowering the pressure of the reaction", "increasing the surface area of the reaction", "increasing the rate of the reaction", "lowering the energy barrier of the reaction"],
-    correct: 3,
-    solution: "A catalyst provides an alternative reaction path with a lower activation energy (a lower energy barrier). This is why only moderate heat is needed for the decomposition."
-  },
-
-  // ===== 37: COLLOIDS (JAMB 2022 Q30) =====
-  {
-    topic: "Separation & Classification of Matter",
-    q: "Which of the following best represents a solid-gas mixture?",
-    options: ["milk", "kerosene", "soil", "smoke"],
-    correct: 3,
-    solution: "Smoke has solid particles dispersed in a gas (air). Milk is a liquid-liquid emulsion, kerosene is a liquid, and soil is a solid mixture."
-  },
-
-  // ===== 38: REDOX (JAMB 2022 Q16) =====
-  {
-    topic: "Redox Reactions",
-    q: "Zn + 2HCl → ZnCl₂ + H₂. What happens to zinc in the above reaction?",
-    options: ["oxidized", "a reactant", "reduced", "a metal"],
-    correct: 0,
-    solution: "Zinc changes from oxidation number 0 to +2 in ZnCl₂. It loses electrons, so it is oxidized."
-  },
-
-  // ===== 39: ELECTROLYSIS (JAMB 2014 Q24) =====
-  {
-    topic: "Electrolysis",
-    q: "Calculate the quantity of electricity in coulombs required to liberate 10 g of copper from a copper compound. [Cu = 64, F = 96500 C mol⁻¹]",
-    options: ["32395.5", "30156.3", "60784.5", "15196.5"],
+    subject: "Mathematics",
+    topic: "Sequences & Series (A.P.)",
+    q: "Find the sum of the 20 terms of an arithmetic progression whose first term is 7 and last term is 117.",
+    options: ["2480", "1240", "620", "124"],
     correct: 1,
-    solution: "Cu²⁺ + 2e⁻ → Cu, so 64 g of Cu needs 2F = 193000 C. For 10 g: Q = (10/64) × 193000 = 30156.3 C."
+    solution: "Sₙ = (n/2)(a + l) = (20/2)(7 + 117) = 10 × 124 = 1240."
   },
 
-  // ===== 40: ALKANALS (JAMB 2011 Q48) =====
+  // ===== 24: MATHEMATICS - CIRCLE GEOMETRY (SECTOR) =====
   {
-    topic: "Functional Groups & Reactions",
-    q: "Two organic compounds K and L were treated with a few drops of Fehling's solution respectively. K formed a brick-red precipitate while L remained unaffected. The compound K is an",
-    options: ["alkanol", "alkane", "alkanal", "alkanone"],
-    correct: 2,
-    solution: "Fehling's solution is reduced to a brick-red precipitate of copper(I) oxide by aldehydes (alkanals). Alkanones, alkanols and alkanes do not react."
-  },
-
-  // ===== 41: NON-METALS (JAMB 2016 Q26) =====
-  {
-    topic: "Non-Metals & Their Compounds",
-    q: "The substance often used for vulcanization of rubber is",
-    options: ["chlorine", "hydrogen peroxide", "sulphur", "tetraoxosulphate(VI) acid"],
-    correct: 2,
-    solution: "Vulcanization is heating natural rubber with sulphur. The sulphur forms cross-links between polymer chains, making the rubber harder, stronger and more elastic."
-  },
-
-  // ===== 42: HARD WATER (JAMB 2011 Q14) =====
-  {
-    topic: "Air, Water & Environment",
-    q: "Hardness of water is mainly due to the presence of",
-    options: ["calcium hydroxide or magnesium hydroxide", "calcium trioxocarbonate(IV) or calcium tetraoxosulphate(VI)", "sodium hydroxide or magnesium hydroxide", "calcium chloride or sodium chloride salts"],
+    subject: "Mathematics",
+    topic: "Circle Geometry (Sector)",
+    q: "An arc of a circle of radius 6 cm is 8 cm long. Find the area of the sector.",
+    options: ["5⅓ cm²", "24 cm²", "36 cm²", "48 cm²"],
     correct: 1,
-    solution: "Hardness comes from dissolved calcium and magnesium salts such as their hydrogen trioxocarbonate(IV) (temporary hardness) and sulphates or chlorides (permanent hardness). Of the options, calcium trioxocarbonate(IV) or calcium tetraoxosulphate(VI) is the best answer."
+    solution: "Area of sector = ½ × r × arc length = ½ × 6 × 8 = 24 cm²."
   },
 
-  // ===== 43: BONDING (JAMB 2016 Q20) =====
+  // ===== 25: MATHEMATICS - SIMPLE INTEREST =====
   {
-    topic: "Chemical Bonding",
-    q: "Which of the following chlorides would exhibit the least ionic character?",
-    options: ["MgCl₂", "CaCl₂", "LiCl", "AlCl₃"],
+    subject: "Mathematics",
+    topic: "Simple Interest",
+    q: "A sum of money was invested at 8% per annum simple interest. If after 4 years the money amounts to ₦330.00, find the amount originally invested.",
+    options: ["₦180.00", "₦165.00", "₦150.00", "₦250.00"],
     correct: 3,
-    solution: "By Fajans' rules, a small, highly charged cation polarizes the chloride ion strongly and gives more covalent character. Al³⁺ has the highest charge and the smallest size here, so AlCl₃ is the most covalent, i.e. the least ionic."
+    solution: "Amount = P(1 + RT/100) = P(1 + 8 × 4/100) = 1.32P. So 1.32P = 330 and P = ₦250."
   },
 
-  // ===== 44: PETROLEUM (JAMB 2014 Q50) =====
+  // ===== 26: MATHEMATICS - PERMUTATION & COMBINATION =====
   {
-    topic: "Hydrocarbons & Petroleum",
-    q: "The petroleum fraction that is used in heating furnaces in industries is",
-    options: ["diesel oil", "gasoline", "kerosene", "lubricating oil"],
-    correct: 0,
-    solution: "Diesel oil (fuel oil) is used as fuel in diesel engines and industrial heating furnaces. Gasoline is for petrol engines, kerosene for lamps, stoves and jet engines, and lubricating oil for lubrication."
-  },
-
-  // ===== 45: HYDROCARBONS (JAMB 2011 Q40) =====
-  {
-    topic: "Hydrocarbons & Petroleum",
-    q: "The ability of carbon to form long chains is referred to as",
-    options: ["alkylation", "acylation", "catenation", "carbonation"],
+    subject: "Mathematics",
+    topic: "Permutation & Combination",
+    q: "How many three-digit numbers can be formed from the digits 3, 2, 5, 6, 4 without any digit being repeated?",
+    options: ["10", "20", "60", "120"],
     correct: 2,
-    solution: "Catenation is the ability of atoms of an element, especially carbon, to bond to one another and form long chains and rings."
+    solution: "Three-digit numbers from 5 distinct digits with no repetition: ⁵P₃ = 5 × 4 × 3 = 60."
   },
 
-  // ===== 46: PETROLEUM (JAMB 2010 Q39) =====
+  // ===== 27: MATHEMATICS - FACTORISATION =====
   {
-    topic: "Hydrocarbons & Petroleum",
-    q: "The residual solids from the fractional distillation of petroleum are used as",
-    options: ["coatings of pipes", "raw materials for the cracking process", "fuel for driving tractors", "fuel for jet engines"],
-    correct: 0,
-    solution: "The residue left at the bottom (bitumen, tar and wax) is used for road surfacing and as a waterproof coating of pipes."
+    subject: "Mathematics",
+    topic: "Factorisation",
+    q: "Factorize completely y³ − 4xy + xy³ − 4y",
+    options: ["(x + xy)(y + 2)(y - 2)", "(y + xy)(y + 2)(y - 2)", "y(1 + x)(y + 2)(y - 2)", "y(1 - x)(y + 2)(y - 2)"],
+    correct: 2,
+    solution: "y³ − 4xy + xy³ − 4y = y(y² − 4x + xy² − 4) = y[(y² − 4) + x(y² − 4)] = y(1 + x)(y² − 4) = y(1 + x)(y + 2)(y − 2)."
   },
 
-  // ===== 47: ISOMERISM (JAMB 2011 Q45) =====
+  // ===== 28: MATHEMATICS - CIRCLE GEOMETRY & TRIGONOMETRY =====
   {
-    topic: "Hydrocarbons & Petroleum",
-    q: "The number of isomers that can be obtained from C₄H₁₀ is",
-    options: ["3", "4", "1", "2"],
+    subject: "Mathematics",
+    topic: "Circle Geometry & Trigonometry",
+    q: "A point P moves such that it is equidistant from the points Q and R. Find QR when PR = 8 cm and ∠PRQ = 30°.",
+    options: ["4 cm", "4√3 cm", "8 cm", "8√3 cm"],
     correct: 3,
-    solution: "C₄H₁₀ has two isomers: n-butane (CH₃CH₂CH₂CH₃) and 2-methylpropane ((CH₃)₃CH)."
+    solution: "P is equidistant from Q and R, so PQ = PR = 8 and triangle PQR is isosceles with ∠Q = ∠R = 30°. Dropping a perpendicular from P to QR: QR = 2 × 8 × cos 30° = 8√3 cm."
   },
 
-  // ===== 48: MOLECULAR FORMULA (JAMB 2011 Q43) =====
+  // ===== 29: MATHEMATICS - TRIGONOMETRY (TRIANGLES) =====
   {
-    topic: "Mole Concept & Stoichiometry",
-    q: "An organic compound has an empirical formula CH₂O and vapour density of 45. What is the molecular formula? [C = 12, H = 1, O = 16]",
-    options: ["C₃H₇OH", "C₂H₅OH", "C₃H₆O₃", "C₂H₄O₂"],
+    subject: "Mathematics",
+    topic: "Trigonometry (Triangles)",
+    q: "In triangle XYZ, ∠Y = ∠Z = 30° and XZ = 3 cm. Find YZ.",
+    options: ["√3/2 cm", "3√3/2 cm", "3√3 cm", "2√3 cm"],
     correct: 2,
-    solution: "Molar mass = 2 × vapour density = 90. Empirical formula mass of CH₂O = 30. n = 90/30 = 3, so the molecular formula = (CH₂O)₃ = C₃H₆O₃."
+    solution: "∠Y = ∠Z = 30° means XY = XZ = 3 cm. Dropping a perpendicular from X to YZ: YZ = 2 × 3 × cos 30° = 3√3 cm."
   },
 
-  // ===== 49: FLAME TESTS (JAMB 2010 Q37) =====
+  // ===== 30: MATHEMATICS - NUMBER & NUMERATION (ORDERING) =====
   {
-    topic: "Qualitative Analysis",
-    q: "A compound gives an orange-red colour to a non-luminous flame. This compound is likely to contain",
-    options: ["Na⁺", "Ca²⁺", "Fe³⁺", "Fe²⁺"],
+    subject: "Mathematics",
+    topic: "Number & Numeration (Ordering)",
+    q: "Arrange the following numbers in ascending order of magnitude: 6/7, 13/15, 0.865",
+    options: ["6/7 < 0.865 < 13/15", "6/7 < 13/15 < 0.865", "13/15 < 6/7 < 0.865", "13/15 < 0.865 < 6/7"],
+    correct: 0,
+    solution: "Convert to decimals: 6/7 ≈ 0.857, 13/15 ≈ 0.867, and 0.865. Ascending order: 0.857 < 0.865 < 0.867, i.e. 6/7 < 0.865 < 13/15."
+  },
+
+  // ===== 31: MATHEMATICS - DIFFERENTIATION =====
+  {
+    subject: "Mathematics",
+    topic: "Differentiation",
+    q: "The expression ax² + bx + c equals 5 at x = 1. If its derivative is 2x + 1, what are the values of a, b, c respectively?",
+    options: ["1, 3, 1", "1, 2, 1", "2, 1, 1", "1, 1, 3"],
+    correct: 3,
+    solution: "Derivative of ax² + bx + c is 2ax + b = 2x + 1, so a = 1 and b = 1. At x = 1: a + b + c = 5, so 1 + 1 + c = 5 and c = 3. So (a, b, c) = (1, 1, 3)."
+  },
+
+  // ===== 32: MATHEMATICS - POLYNOMIALS =====
+  {
+    subject: "Mathematics",
+    topic: "Polynomials",
+    q: "If x = 1 is a root of the equation x³ − 2x² − 5x + 6 = 0, find the other roots.",
+    options: ["−3 and 2", "−2 and 2", "3 and −2", "1 and 3"],
+    correct: 2,
+    solution: "Since x = 1 is a root, (x − 1) is a factor. Dividing: x³ − 2x² − 5x + 6 = (x − 1)(x² − x − 6) = (x − 1)(x − 3)(x + 2). Other roots: 3 and −2."
+  },
+
+  // ===== 33: MATHEMATICS - NUMBER BASES =====
+  {
+    subject: "Mathematics",
+    topic: "Number Bases",
+    q: "The sum of four numbers is 1214 (base five). What is their average expressed in base five?",
+    options: ["411", "401", "141", "114"],
+    correct: 2,
+    solution: "1214₅ = 1×125 + 2×25 + 1×5 + 4 = 184. Average = 184/4 = 46. Convert to base 5: 46 = 1×25 + 4×5 + 1, so 141₅."
+  },
+
+  // ===== 34: MATHEMATICS - COORDINATE GEOMETRY (CIRCLE) =====
+  {
+    subject: "Mathematics",
+    topic: "Coordinate Geometry (Circle)",
+    q: "Find a positive value of a if the centre of the circle x² + y² − 2ax + 4y − a = 0 is (a, −2) and the radius is 4 units.",
+    options: ["1", "2", "3", "4"],
+    correct: 2,
+    solution: "Radius² = a² + 2² − (−a) = a² + 4 + a. Set equal to 16: a² + a − 12 = 0, so (a + 4)(a − 3) = 0. Positive value: a = 3."
+  },
+
+  // ===== 35: MATHEMATICS - PROBABILITY =====
+  {
+    subject: "Mathematics",
+    topic: "Probability",
+    q: "A number is selected at random from 0 to 20. What is the probability that the number is an odd prime?",
+    options: ["8/21", "1/3", "2/7", "5/21"],
     correct: 1,
-    solution: "Calcium salts give a brick (orange) red flame. Sodium gives golden yellow, and iron ions do not give a characteristic flame colour."
+    solution: "Odd primes from 0 to 20: 3, 5, 7, 11, 13, 17, 19 = 7 numbers. There are 21 numbers from 0 to 20. Probability = 7/21 = 1/3."
   },
 
-  // ===== 50: CONDENSATION (JAMB 2010 Q4) =====
+  // ===== 36: MATHEMATICS - PYTHAGORAS THEOREM =====
   {
-    topic: "Gas Laws & States of Matter",
-    q: "The droplets of water observed around a bottle of milk taken out of the refrigerator are due to the fact that the",
-    options: ["water vapour in the air around the bottle gains some energy from the bottle", "temperature of the milk drops as it loses heat into the surroundings", "saturated vapour pressure of the milk is equal to the atmospheric pressure", "water vapour in the air around the bottle loses some of its energy to the bottle"],
+    subject: "Mathematics",
+    topic: "Pythagoras Theorem",
+    q: "The lengths of the sides of a right-angled triangle are x cm, (3x − 1) cm and (3x + 1) cm. Find x.",
+    options: ["5", "7", "8", "12"],
     correct: 3,
-    solution: "The cold bottle absorbs energy from the water vapour in the surrounding air. The vapour cools, loses energy and condenses into liquid droplets on the bottle."
+    solution: "The hypotenuse is the longest side, 3x + 1. (3x + 1)² = (3x − 1)² + x², so 9x² + 6x + 1 = 9x² − 6x + 1 + x². This gives 12x = x², so x = 12."
+  },
+
+  // ===== 37: MATHEMATICS - SETS =====
+  {
+    subject: "Mathematics",
+    topic: "Sets",
+    q: "Given: U = {even numbers between 0 and 30}, P = {multiples of 6 between 0 and 30}, Q = {multiples of 4 between 0 and 30}. Find (P ∪ Q)′.",
+    options: ["{0, 2, 6, 22, 26}", "{2, 4, 14, 18, 26}", "{2, 10, 14, 22, 26}", "{0, 10, 14, 22, 26}"],
+    correct: 2,
+    solution: "U = {2, 4, 6, …, 28}. P = {6, 12, 18, 24}, Q = {4, 8, 12, 16, 20, 24, 28}. P ∪ Q = {4, 6, 8, 12, 16, 18, 20, 24, 28}. (P ∪ Q)′ = {2, 10, 14, 22, 26}."
+  },
+
+  // ===== 38: MATHEMATICS - RATIO & PROPORTION =====
+  {
+    subject: "Mathematics",
+    topic: "Ratio & Proportion",
+    q: "A basket contains green, black and blue balls in the ratio 5:2:1. If there are 10 blue balls, find the new ratio when 10 green and 10 black balls are removed from the basket.",
+    options: ["1:1:1", "4:2:1", "5:1:1", "4:1:1"],
+    correct: 3,
+    solution: "Blue = 10 balls, which is 1 part, so 1 part = 10. Green = 50, black = 20, blue = 10. After removing 10 green and 10 black: 40 : 10 : 10 = 4 : 1 : 1."
+  },
+
+  // ===== 39: MATHEMATICS - QUADRATIC EQUATIONS (ROOTS) =====
+  {
+    subject: "Mathematics",
+    topic: "Quadratic Equations (Roots)",
+    q: "If α and β are the roots of the equation 3x² + 5x − 2 = 0, find the value of 1/α + 1/β.",
+    options: ["−5/2", "−2/3", "1/2", "5/2"],
+    correct: 3,
+    solution: "For 3x² + 5x − 2 = 0: α + β = −5/3 and αβ = −2/3. 1/α + 1/β = (α + β)/αβ = (−5/3)/(−2/3) = 5/2."
+  },
+
+  // ===== 40: MATHEMATICS - PROBABILITY =====
+  {
+    subject: "Mathematics",
+    topic: "Probability",
+    q: "The letters of the word MATRICULATION are cut and put into a box. One letter is drawn at random. Find the probability of drawing a vowel.",
+    options: ["2/13", "5/13", "6/13", "8/13"],
+    correct: 2,
+    solution: "MATRICULATION has 13 letters. Vowels: A, I, U, A, I, O = 6. Probability = 6/13."
+  },
+
+  // ===== 41: MATHEMATICS - BINARY OPERATIONS =====
+  {
+    subject: "Mathematics",
+    topic: "Binary Operations",
+    q: "The binary operation * is defined on the set of integers p and q by p * q = pq + p + q. Find 2 * (3 * 4).",
+    options: ["19", "38", "59", "67"],
+    correct: 2,
+    solution: "3 * 4 = (3 × 4) + 3 + 4 = 19. Then 2 * 19 = (2 × 19) + 2 + 19 = 59."
+  },
+
+  // ===== 42: MATHEMATICS - SIMULTANEOUS EQUATIONS =====
+  {
+    subject: "Mathematics",
+    topic: "Simultaneous Equations",
+    q: "Solve the simultaneous equations 2/x − 3/y = 2 and 4/x + 3/y = 10",
+    options: ["x = 3/2, y = 1/2", "x = 1/2, y = 3/2", "x = −1/2, y = −3/2", "x = 1/2, y = −3/2"],
+    correct: 1,
+    solution: "Add the two equations: 6/x = 12, so x = 1/2. Substitute: 2/(1/2) − 3/y = 2, so 4 − 3/y = 2, giving 3/y = 2 and y = 3/2."
+  },
+
+  // ===== 43: MATHEMATICS - SEQUENCES & SERIES (A.P.) =====
+  {
+    subject: "Mathematics",
+    topic: "Sequences & Series (A.P.)",
+    q: "The sum of the first n terms of an arithmetic progression is 252. If the first term is −16 and the last term is 72, find the number of terms.",
+    options: ["7", "9", "6", "8"],
+    correct: 1,
+    solution: "Sₙ = (n/2)(a + l): 252 = (n/2)(−16 + 72) = 28n. So n = 9."
+  },
+
+  // ===== 44: MATHEMATICS - FUNCTIONS =====
+  {
+    subject: "Mathematics",
+    topic: "Functions",
+    q: "If the function f is defined by f(x + 2) = 2x² + 7x − 5, find f(−1).",
+    options: ["−10", "−8", "4", "10"],
+    correct: 1,
+    solution: "Let x + 2 = −1, so x = −3. f(−1) = 2(−3)² + 7(−3) − 5 = 18 − 21 − 5 = −8."
+  },
+
+  // ===== 45: MATHEMATICS - DIFFERENTIATION (RATES OF CHANGE) =====
+  {
+    subject: "Mathematics",
+    topic: "Differentiation (Rates of Change)",
+    q: "What is the rate of change of the volume V of a hemisphere with respect to its radius r when r = 2?",
+    options: ["2π", "4π", "8π", "16π/3"],
+    correct: 2,
+    solution: "Volume of a hemisphere V = (2/3)πr³. dV/dr = 2πr². At r = 2: 2π × 4 = 8π."
+  },
+
+  // ===== 46: MATHEMATICS - DIFFERENTIATION (MAXIMA & MINIMA) =====
+  {
+    subject: "Mathematics",
+    topic: "Differentiation (Maxima & Minima)",
+    q: "Find the value of x for which the function y = x³ − x has a minimum value.",
+    options: ["−√3", "−√3/2", "√3/3", "√3"],
+    correct: 2,
+    solution: "dy/dx = 3x² − 1 = 0, so x = ±1/√3 = ±√3/3. d²y/dx² = 6x is positive when x = √3/3, so that is the minimum."
+  },
+
+  // ===== 47: MATHEMATICS - SIMULTANEOUS EQUATIONS =====
+  {
+    subject: "Mathematics",
+    topic: "Simultaneous Equations",
+    q: "Solve the equations: m² + n² = 29; m + n = 7",
+    options: ["(5, 2) and (5, 3)", "(5, 3) and (3, 5)", "(2, 3) and (3, 5)", "(2, 5) and (5, 2)"],
+    correct: 3,
+    solution: "From m + n = 7, n = 7 − m. Then m² + (7 − m)² = 29, so 2m² − 14m + 20 = 0, i.e. m² − 7m + 10 = 0, giving m = 2 or 5. So (m, n) = (2, 5) or (5, 2)."
+  },
+
+  // ===== 48: MATHEMATICS - QUADRATIC EQUATIONS =====
+  {
+    subject: "Mathematics",
+    topic: "Quadratic Equations",
+    q: "What is the solution of the equation x² − x − 1 = 0?",
+    options: ["x = 1.6 and x = -0.6", "x = -1.6 and x = 0.6", "x = 1.6 and x = 0.6", "x = -1.6 and x = -0.6"],
+    correct: 0,
+    solution: "x = [1 ± √(1 + 4)]/2 = (1 ± 2.236)/2. So x ≈ 1.6 or x ≈ −0.6."
+  },
+
+  // ===== 49: MATHEMATICS - SEQUENCES & SERIES (G.P.) =====
+  {
+    subject: "Mathematics",
+    topic: "Sequences & Series (G.P.)",
+    q: "The first term of a geometric progression is twice its common ratio. Find the sum of the first two terms of the progression if its sum to infinity is 8.",
+    options: ["8/5", "8/3", "72/25", "56/9"],
+    correct: 2,
+    solution: "a = 2r. S∞ = a/(1 − r) = 8, so 2r = 8(1 − r), giving 10r = 8 and r = 0.8. a = 1.6. First two terms: 1.6 + 1.6(0.8) = 1.6 + 1.28 = 2.88 = 72/25."
+  },
+
+  // ===== 50: MATHEMATICS - CIRCLE GEOMETRY (POLYGONS) =====
+  {
+    subject: "Mathematics",
+    topic: "Circle Geometry (Polygons)",
+    q: "PQRSTV is a regular polygon of side 7 cm inscribed in a circle. Find the circumference of the circle. [π = 22/7]",
+    options: ["22 cm", "42 cm", "44 cm", "56 cm"],
+    correct: 2,
+    solution: "A regular hexagon (6 sides) inscribed in a circle has side = radius, so r = 7 cm. Circumference = 2πr = 2 × (22/7) × 7 = 44 cm."
+  },
+
+  // ===== 51: PHYSICS - GRAVITATIONAL FIELD =====
+  {
+    subject: "Physics",
+    topic: "Gravitational Field",
+    q: "Calculate the escape velocity of a satellite launched from the earth's surface if the radius of the earth is 6.4 × 10⁶ m. [g = 10 m/s²]",
+    options: ["25.3 km/s", "4.2 km/s", "4.0 km/s", "11.3 km/s"],
+    correct: 3,
+    solution: "Escape velocity v = √(2gR) = √(2 × 10 × 6.4 × 10⁶) = √(1.28 × 10⁸) ≈ 1.13 × 10⁴ m/s = 11.3 km/s."
+  },
+
+  // ===== 52: PHYSICS - SEMICONDUCTORS =====
+  {
+    subject: "Physics",
+    topic: "Semiconductors",
+    q: "The electrical properties of germination can be altered drastically by the addition of impurities. The process is referred to as",
+    options: ["doping", "saturation", "bonding", "amplification."],
+    correct: 0,
+    solution: "Adding small amounts of impurity atoms to a pure semiconductor to change its conductivity is called doping."
+  },
+
+  // ===== 53: PHYSICS - REFRACTION OF LIGHT =====
+  {
+    subject: "Physics",
+    topic: "Refraction of Light",
+    q: "The speed of light in air is 3.0 × 10⁸ m/s. Its speed in glass of refractive index 1.65 is",
+    options: ["1.82 × 10⁸ m/s", "3.00 × 10⁸ m/s", "4.95 × 10⁸ m/s", "1.65 × 10⁸ m/s"],
+    correct: 0,
+    solution: "n = c/v, so v = c/n = (3.0 × 10⁸)/1.65 = 1.82 × 10⁸ m/s."
+  },
+
+  // ===== 54: PHYSICS - OPTICAL INSTRUMENTS & DEFECTS OF VISION =====
+  {
+    subject: "Physics",
+    topic: "Optical Instruments & Defects of Vision",
+    q: "Which of the following is used for the correction of short- sightedness?",
+    options: ["Concave lens.", "Concave mirror.", "Convex mirror.", "Convex lens."],
+    correct: 0,
+    solution: "Short-sightedness (myopia) means the image forms in front of the retina. A diverging (concave) lens spreads the rays so they focus further back, on the retina."
+  },
+
+  // ===== 55: PHYSICS - SEMICONDUCTORS =====
+  {
+    subject: "Physics",
+    topic: "Semiconductors",
+    q: "Which of the following is a pure semiconductor?",
+    options: ["Silicon", "Phosphorus", "Transistor", "Carbon"],
+    correct: 0,
+    solution: "A pure (intrinsic) semiconductor has no added impurity. Silicon (and germanium) is a pure semiconductor. Phosphorus is a dopant, and a transistor is a device."
+  },
+
+  // ===== 56: PHYSICS - WAVES (VIBRATING STRINGS) =====
+  {
+    subject: "Physics",
+    topic: "Waves (Vibrating Strings)",
+    q: "A sonometer wire of length 100cm under a tension of 10N, has a frequency of 250Hz. Keeping the length of the wire constant, the tension is adjusted to produce a new frequency of 350HZ. The new tension is",
+    options: ["5.1N", "19.6N", "14.0N", "7.1N"],
+    correct: 1,
+    solution: "f ∝ √T at constant length. (f₂/f₁)² = T₂/T₁, so T₂ = 10 × (350/250)² = 10 × 1.96 = 19.6 N."
+  },
+
+  // ===== 57: PHYSICS - HEAT (SPECIFIC HEAT CAPACITY) =====
+  {
+    subject: "Physics",
+    topic: "Heat (Specific Heat Capacity)",
+    q: "A block of aluminium is heated electrically by a 30 W heater. If the temperature rises by 100˚C in 5 minutes, the heat capacity of the aluminium is",
+    options: ["200 JK-1", "900 JK-1", "90 JK-1", "100 JK-1"],
+    correct: 2,
+    solution: "Energy supplied = Pt = 30 × (5 × 60) = 9000 J. Heat capacity = Q/Δθ = 9000/100 = 90 J/K."
+  },
+
+  // ===== 58: PHYSICS - LIGHT (RECTILINEAR PROPAGATION) =====
+  {
+    subject: "Physics",
+    topic: "Light (Rectilinear Propagation)",
+    q: "Shadows and eclipses result from the",
+    options: ["refraction of light", "reflection of light.", "defraction of light", "rectilinear propagation of light"],
+    correct: 3,
+    solution: "Light travels in straight lines. When an opaque object blocks it, shadows and eclipses form. This is rectilinear propagation of light."
+  },
+
+  // ===== 59: PHYSICS - RADIOACTIVITY (HALF-LIFE) =====
+  {
+    subject: "Physics",
+    topic: "Radioactivity (Half-life)",
+    q: "A piece of radioactive material contains 1000 atoms. If its half- life is 20 seconds, the time taken for 125 atoms to remain is",
+    options: ["20 seconds", "40 seconds", "60 seconds", "80 seconds"],
+    correct: 2,
+    solution: "1000 → 500 → 250 → 125 takes 3 half-lives. Time = 3 × 20 = 60 seconds."
+  },
+
+  // ===== 60: PHYSICS - ELECTROMAGNETIC INDUCTION =====
+  {
+    subject: "Physics",
+    topic: "Electromagnetic Induction",
+    q: "A conductor of length 1m moves with a velocity of 50ms-1 at an angle of 30° to the direction of a uniform magnetic field of flux density 1.5 Wbm-2. What is the e.m.f. induced in the conductor?",
+    options: ["37.5V", "50.5V", "75.0V", "80.5V"],
+    correct: 0,
+    solution: "e.m.f. = Blv sin θ = 1.5 × 1 × 50 × sin 30° = 1.5 × 50 × 0.5 = 37.5 V."
+  },
+
+  // ===== 61: PHYSICS - SOUND WAVES =====
+  {
+    subject: "Physics",
+    topic: "Sound Waves",
+    q: "The sound of an electric bell dies down slowly when air is slowly pumped out from a bottle because",
+    options: ["sound cannot pass through the bottle", "sound can pass through a vacuum", "sound needs a material medium", "the wavelength of sound becomes greater in the bottle."],
+    correct: 2,
+    solution: "Sound is a mechanical wave and needs a material medium. As air is pumped out, less medium is left, so the sound fades."
+  },
+
+  // ===== 62: PHYSICS - MACHINES (EFFICIENCY & WORK) =====
+  {
+    subject: "Physics",
+    topic: "Machines (Efficiency & Work)",
+    q: "A machine is used to lift a load of 20 N through a height of 10m. if the efficiency of the machine is 40%, how much work is done?",
+    options: ["120 J", "80 J", "500 J", "300 J."],
+    correct: 2,
+    solution: "Useful work output = 20 × 10 = 200 J. Efficiency = output/input = 40%, so work input (work done) = 200/0.4 = 500 J."
+  },
+
+  // ===== 63: PHYSICS - QUANTUM PHYSICS (UNCERTAINTY PRINCIPLE) =====
+  {
+    subject: "Physics",
+    topic: "Quantum Physics (Uncertainty Principle)",
+    q: "If the uncertainty in the measurement of the position of a particle is 5 × 10⁻¹⁰ m, the uncertainty in the momentum of the particle is [h = 6.6 × 10⁻³⁴ Js]",
+    options: ["1.32 × 10⁻²⁴ Ns", "3.30 × 10⁻⁴⁴ Ns", "1.32 × 10⁻⁴⁴ Ns", "3.30 × 10⁻²⁴ Ns"],
+    correct: 0,
+    solution: "Δp ≈ h/Δx = (6.6 × 10⁻³⁴)/(5 × 10⁻¹⁰) = 1.32 × 10⁻²⁴ Ns."
+  },
+
+  // ===== 64: PHYSICS - NUCLEAR PHYSICS (FUSION) =====
+  {
+    subject: "Physics",
+    topic: "Nuclear Physics (Fusion)",
+    q: "Which of the following are produced after a nuclear fusion process? I. One heavy nucleus II. Neutrons III. Protons IV. Energy",
+    options: ["I and II", "II and III", "I and IV", "II and IV."],
+    correct: 3,
+    solution: "In fusion, light nuclei combine to form a heavier nucleus, releasing neutrons and a large amount of energy. So neutrons (II) and energy (IV) are produced."
+  },
+
+  // ===== 65: PHYSICS - WORK, ENERGY & POWER =====
+  {
+    subject: "Physics",
+    topic: "Work, Energy & Power",
+    q: "If a pump is capable of lifting 5000 kg of water through a vertical height of 60 m in 15 minutes, the power of the pump is [g = 10 m/s²]",
+    options: ["2.5 × 10⁵ W", "2.5 × 10⁴ W", "3.3 × 10³ W", "3.3 × 10² W"],
+    correct: 2,
+    solution: "Power = work/time = mgh/t = (5000 × 10 × 60)/(15 × 60) = 3,000,000/900 ≈ 3.3 × 10³ W (J/s)."
+  },
+
+  // ===== 66: PHYSICS - ELASTICITY =====
+  {
+    subject: "Physics",
+    topic: "Elasticity",
+    q: "A copper wire was subjected to a tensile stress of 7.7 × 10⁷ N/m². Calculate the tensile strain of the wire. [Young modulus = 1.1 × 10¹¹ N/m²]",
+    options: ["2.2 × 10⁻⁴", "2.0 × 10⁻⁵", "7.0 × 10⁻³", "7.0 × 10⁻⁴"],
+    correct: 3,
+    solution: "Young modulus = stress/strain, so strain = stress/E = (7.7 × 10⁷)/(1.1 × 10¹¹) = 7.0 × 10⁻⁴."
+  },
+
+  // ===== 67: PHYSICS - TRANSFORMERS =====
+  {
+    subject: "Physics",
+    topic: "Transformers",
+    q: "A transformer has 300 turns of wire in the primary coil and 30 turns in the secondary coil. If the input voltage is 100 volts, the output voltage is",
+    options: ["10 volts", "5 volts", "15 volts", "20 volts."],
+    correct: 0,
+    solution: "Vs/Vp = Ns/Np. Vs = 100 × (30/300) = 10 volts (a step-down transformer)."
+  },
+
+  // ===== 68: PHYSICS - SIMPLE HARMONIC MOTION =====
+  {
+    subject: "Physics",
+    topic: "Simple Harmonic Motion",
+    q: "Which of the following with respect to a body performing simple harmonic motion are in phase?",
+    options: ["Displacement and velocity of the body", "Displacement and force on the body", "Velocity and acceleration of the body", "Force acting on the body and the acceleration"],
+    correct: 3,
+    solution: "By Newton’s second law F = ma, force and acceleration are always in the same direction, so they are always in phase."
+  },
+
+  // ===== 69: PHYSICS - ELECTROSTATICS (CHARGE) =====
+  {
+    subject: "Physics",
+    topic: "Electrostatics (Charge)",
+    q: "Which of the following is true of an electrical charge?",
+    options: ["Positive charge means deficit electrons", "Negative charge means excess of electrons", "Electric current means movement of electrons", "All of the above"],
+    correct: 3,
+    solution: "Positive charge means a deficit of electrons, negative charge means an excess of electrons, and electric current is a flow of charge (electrons in a metal). All three statements are true."
+  },
+
+  // ===== 70: PHYSICS - CAPACITORS =====
+  {
+    subject: "Physics",
+    topic: "Capacitors",
+    q: "The capacitance of a parallel plate capacitor is 20 μF in air and 60 μF in the presence of a dielectric. What is the dielectric constant?",
+    options: ["2.0", "0.3", "6.0", "3.0."],
+    correct: 3,
+    solution: "Dielectric constant (relative permittivity) = C with dielectric / C in air = 60/20 = 3.0."
+  },
+
+  // ===== 71: PHYSICS - SEMICONDUCTORS (P-N JUNCTION) =====
+  {
+    subject: "Physics",
+    topic: "Semiconductors (p-n Junction)",
+    q: "If a reverse-biased voltage is applied across a p-n junction, the depletion layer width is",
+    options: ["Increased", "Decreased", "Constant", "halved"],
+    correct: 0,
+    solution: "Reverse bias pulls charge carriers away from the junction, so the depletion layer widens (increases)."
+  },
+
+  // ===== 72: PHYSICS - CURRENT ELECTRICITY (METERS) =====
+  {
+    subject: "Physics",
+    topic: "Current Electricity (Meters)",
+    q: "A galvanometer with full-scale deflection of 10mA is to be converted to a voltmeter with full- scale deflection of 5 V. If a series resistance of 498Ω is used for the conversion, the resistance of the galvanometer is",
+    options: ["2 Ω", "10 Ω", "5 Ω", "1 Ω"],
+    correct: 0,
+    solution: "Total resistance for a 5 V full-scale reading = V/I = 5/0.010 = 500 Ω. Galvanometer resistance = 500 − 498 = 2 Ω."
+  },
+
+  // ===== 73: PHYSICS - NUCLEAR PHYSICS (FUSION) =====
+  {
+    subject: "Physics",
+    topic: "Nuclear Physics (Fusion)",
+    q: "What type of reaction is represented by the scheme ²₁H + ²₁H → ³₂He + ¹₀n + energy?",
+    options: ["Fusion reaction", "Fission reaction", "Chain reaction", "Radioactive decay"],
+    correct: 0,
+    solution: "Two light nuclei (deuterium) combine to form a heavier nucleus (helium) and release energy. This is a fusion reaction."
+  },
+
+  // ===== 74: PHYSICS - WAVES (PROPERTIES) =====
+  {
+    subject: "Physics",
+    topic: "Waves (Properties)",
+    q: "Longitudinal waves do not exhibit",
+    options: ["refraction", "polarization", "diffraction", "reflection"],
+    correct: 1,
+    solution: "Polarization only occurs for transverse waves. Longitudinal waves can be reflected, refracted and diffracted, but not polarized."
+  },
+
+  // ===== 75: PHYSICS - LIGHT (DISPERSION) =====
+  {
+    subject: "Physics",
+    topic: "Light (Dispersion)",
+    q: "Dispersion occurs when white light passes through a glass prim because of the",
+    options: ["different speeds of the colours in the glass.", "high density of the glass.", "defects in the glass.", "different hidden colours in the glass."],
+    correct: 0,
+    solution: "Different colours of light travel at different speeds in glass, so they are refracted by different amounts. This splits white light into its colours."
+  },
+
+  // ===== 76: PHYSICS - SEMICONDUCTORS (DIODES) =====
+  {
+    subject: "Physics",
+    topic: "Semiconductors (Diodes)",
+    q: "The p-n junction diodes can act as rectifiers because they",
+    options: ["Conduct current when forward biased", "Conduct current when reverse- biased", "Block current when forward biased", "Conduct current in both directions"],
+    correct: 0,
+    solution: "A p-n junction conducts when forward biased and blocks when reverse biased. So it passes current in one direction only and can rectify a.c. into d.c."
+  },
+
+  // ===== 77: PHYSICS - LIGHT (MIRRORS) =====
+  {
+    subject: "Physics",
+    topic: "Light (Mirrors)",
+    q: "An object 4 cm high is placed 15 cm from a concave mirror of focal length 5 cm. The size of the image is",
+    options: ["3 cm", "5 cm", "4 cm", "2 cm"],
+    correct: 3,
+    solution: "Use 1/f = 1/u + 1/v: 1/v = 1/5 − 1/15 = 2/15, so v = 7.5 cm. Magnification = v/u = 7.5/15 = 0.5. Image size = 0.5 × 4 = 2 cm."
+  },
+
+  // ===== 78: PHYSICS - ELECTROMAGNETIC INDUCTION =====
+  {
+    subject: "Physics",
+    topic: "Electromagnetic Induction",
+    q: "A magnet is moved through a coil of wire. The e.m.f. produced in the wire depends on",
+    options: ["the number of turns in the coil", "the strength of magnet", "the speed at which the magnet is moved", "all of the above."],
+    correct: 3,
+    solution: "Faraday’s law: induced e.m.f. depends on the number of turns, the strength of the magnet and the rate of change of flux (speed of motion). So all of the above."
+  },
+
+  // ===== 79: PHYSICS - ELECTRICAL ENERGY =====
+  {
+    subject: "Physics",
+    topic: "Electrical Energy",
+    q: "A house has ten 40W and five 100W bulbs. How much will it cost the owner of the house to keep them lit for 10 hours if the cost of a unit is ₦5?",
+    options: ["₦90.", "₦50.", "₦45", "₦40."],
+    correct: 2,
+    solution: "Total power = (10 × 40) + (5 × 100) = 900 W = 0.9 kW. Energy = 0.9 × 10 = 9 kWh. Cost = 9 × ₦5 = ₦45."
+  },
+
+  // ===== 80: PHYSICS - CONDUCTION OF ELECTRICITY THROUGH GASES =====
+  {
+    subject: "Physics",
+    topic: "Conduction of Electricity through Gases",
+    q: "Under which of the following conditions do gasses conduct electricity?",
+    options: ["High pressure and high p.d", "Low pressure and low p.d", "low pressure and high p.d", "High pressure and low p.d"],
+    correct: 2,
+    solution: "Gases conduct electricity best at low pressure and high potential difference, as in a discharge tube, because ions travel further before colliding."
+  },
+
+  // ===== 81: PHYSICS - SOUND WAVES (MUSICAL NOTES) =====
+  {
+    subject: "Physics",
+    topic: "Sound Waves (Musical Notes)",
+    q: "A note is called an octave of another note when",
+    options: ["the notes have the same fundamental frequency", "its frequency is half of the first note.", "its frequency is twice that of the first note.", "its periodic time is twice that of the first note."],
+    correct: 2,
+    solution: "An octave is a note with twice the frequency of the original note."
+  },
+
+  // ===== 82: PHYSICS - LIGHT (ECLIPSES) =====
+  {
+    subject: "Physics",
+    topic: "Light (Eclipses)",
+    q: "The eclipse of the sun occurs when the",
+    options: ["moon’s umbra falls on some part of the earth", "moon is between the sun and the earth", "earth is between the sun and the moon", "moon is not completely hidden in the earth’s shadow."],
+    correct: 1,
+    solution: "A solar eclipse occurs when the moon lies between the sun and the earth, so the moon’s shadow falls on the earth. (A lunar eclipse is when the earth lies between the sun and moon.)"
+  },
+
+  // ===== 83: PHYSICS - ENERGY CONVERSION =====
+  {
+    subject: "Physics",
+    topic: "Energy Conversion",
+    q: "Which of the following best describes the energy changes which take place when a steam engine drives a generator which lights a lamp?",
+    options: ["Heat → Light → Sound→ Kinetic", "Heat→ Kinetic → Electricity→ Heat and Light", "Kinetic→ Light → Heat →Electricity", "Electricity →Kinetic→ Heat→ Light"],
+    correct: 1,
+    solution: "Heat energy of steam → kinetic energy of the engine → electrical energy in the generator → heat and light in the lamp."
+  },
+
+  // ===== 84: PHYSICS - QUANTUM PHYSICS (PHOTON ENERGY) =====
+  {
+    subject: "Physics",
+    topic: "Quantum Physics (Photon Energy)",
+    q: "The energy of a photon having a wavelength of 10⁻¹⁰ m is [h = 6.63 × 10⁻³⁴ Js, c = 3.0 × 10⁸ m/s]",
+    options: ["2.0 × 10⁻¹⁵ J", "1.7 × 10⁻¹³ J", "2.0 × 10⁻¹² J", "1.7 × 10⁻¹² J"],
+    correct: 0,
+    solution: "E = hc/λ = (6.63 × 10⁻³⁴ × 3.0 × 10⁸)/10⁻¹⁰ = 1.99 × 10⁻¹⁵ J ≈ 2.0 × 10⁻¹⁵ J."
+  },
+
+  // ===== 85: PHYSICS - ELECTROLYSIS (FARADAY’S LAWS) =====
+  {
+    subject: "Physics",
+    topic: "Electrolysis (Faraday’s Laws)",
+    q: "A charge of one coulomb liberated 0.0033g of copper in an electrolytic process. How long will it take a current of 2A to liberate 1.98g of copper in such a process?",
+    options: ["30 minutes", "5 minutes", "50 minutes", "60 minutes."],
+    correct: 1,
+    solution: "Charge needed = 1.98/0.0033 = 600 C. Time = Q/I = 600/2 = 300 s = 5 minutes."
+  },
+
+  // ===== 86: PHYSICS - HEAT (THERMAL EXPANSION) =====
+  {
+    subject: "Physics",
+    topic: "Heat (Thermal Expansion)",
+    q: "Two metals P and Q are heated through the same temperature difference. If the ratio of the linear expansivities of P to Q is 2:3 and the ratio of their lengths is 3:4 respectively, the ratio of the increase in lengths of P to Q is",
+    options: ["1:2", "2:1", "8:9", "9:8"],
+    correct: 0,
+    solution: "ΔL = αLΔθ, and Δθ is the same for both. ΔL_P/ΔL_Q = (α_P/α_Q) × (L_P/L_Q) = (2/3) × (3/4) = 1/2, i.e. 1 : 2."
+  },
+
+  // ===== 87: PHYSICS - HEAT (LATENT HEAT) =====
+  {
+    subject: "Physics",
+    topic: "Heat (Latent Heat)",
+    q: "Steam burn is more severe than that of boiling water because",
+    options: ["steam burn is dependent on relative humidity", "steam burn is independent of relative humidity", "steam possess greater heat energy per unit mass", "water boils at a higher temperature"],
+    correct: 2,
+    solution: "Steam releases its latent heat of vaporization when it condenses on the skin, in addition to the heat from cooling. So steam has more heat energy per unit mass than boiling water at the same temperature."
+  },
+
+  // ===== 88: PHYSICS - ELECTROLYSIS (FARADAY’S LAWS) =====
+  {
+    subject: "Physics",
+    topic: "Electrolysis (Faraday’s Laws)",
+    q: "The electrochemical equivalent of silver is 0.0012 g/C. If 36.0 g of silver is to be deposited by electrolysis on a surface by passing a steady current for 5.0 minutes, the current must be",
+    options: ["6000A", "100A", "10A", "1A"],
+    correct: 1,
+    solution: "m = zIt, so I = m/(zt) = 36.0/(0.0012 × 300) = 100 A (5 minutes = 300 s)."
+  },
+
+  // ===== 89: PHYSICS - SOUND WAVES (SPEED OF SOUND) =====
+  {
+    subject: "Physics",
+    topic: "Sound Waves (Speed of Sound)",
+    q: "Which of the following factors will affect the velocity of sound?",
+    options: ["An increase in the pitch of the sound", "An increase in the loudness of the sound", "Wind travelling in the same direction of the sound", "A change in the atmospheric pressure at constant temperature."],
+    correct: 2,
+    solution: "Wind in the direction of the sound adds to its speed. Pitch and loudness do not affect speed, and pressure at constant temperature has no effect."
+  },
+
+  // ===== 90: PHYSICS - HEAT (RADIATION) =====
+  {
+    subject: "Physics",
+    topic: "Heat (Radiation)",
+    q: "A perfect emitter or absorber of radiant energy is a",
+    options: ["red body", "conductor", "black body", "white body."],
+    correct: 2,
+    solution: "A black body is a perfect absorber and a perfect emitter of radiant energy."
+  },
+
+  // ===== 91: PHYSICS - HEAT (LATENT HEAT) =====
+  {
+    subject: "Physics",
+    topic: "Heat (Latent Heat)",
+    q: "The specific latent heat of vaporization of a substance is always",
+    options: ["less than its specific latent heat of fusion", "equal to its specific latent heat of fusion", "greater than its specific latent of fusion", "all of the above depending on the nature of the substance."],
+    correct: 2,
+    solution: "Vaporization needs much more energy than fusion, as molecules must be completely separated. So specific latent heat of vaporization is greater than that of fusion."
+  },
+
+  // ===== 92: PHYSICS - DENSITY =====
+  {
+    subject: "Physics",
+    topic: "Density",
+    q: "The density of 400 cm³ of palm oil was 0.9 g/cm³ before frying. If the density of the oil was 0.6 g/cm³ after frying, assuming no loss of oil to spilling, its new volume was",
+    options: ["360 cm³", "600 cm³", "240 cm³", "800 cm³"],
+    correct: 1,
+    solution: "Mass = density × volume = 0.9 × 400 = 360 g. Mass is unchanged, so new volume = 360/0.6 = 600 cm³."
+  },
+
+  // ===== 93: PHYSICS - LIGHT (MIRRORS & IMAGES) =====
+  {
+    subject: "Physics",
+    topic: "Light (Mirrors & Images)",
+    q: "Which of the following statements is applicable to a real image formed by a concave mirror? I. It can be observed on a screen II. It is always inverted and in front of the mirror III. It only seems to exist IV. It is formed by the actual converging of rays of light.",
+    options: ["I, II and III only", "I, II and IV only", "I and III only)", "I and II only."],
+    correct: 1,
+    solution: "A real image can be caught on a screen, is inverted, and is formed by actual convergence of rays. Statement III describes a virtual image, so the answer is I, II and IV only."
+  },
+
+  // ===== 94: PHYSICS - ELECTRIC DISCHARGE (CATHODE RAYS) =====
+  {
+    subject: "Physics",
+    topic: "Electric Discharge (Cathode Rays)",
+    q: "Which of the following statements correctly describe(s) cathode rays? I. They consist of tiny particles carrying negative electric charges II. They are deflected in a magnetic field but not in an electric filed. III. They consist of fast- moving neutrons and deflected in an electric filed.",
+    options: ["I only", "III only", "I and II only", "II and III only."],
+    correct: 0,
+    solution: "Cathode rays are streams of electrons (negatively charged particles). They are deflected by both electric and magnetic fields. Only statement I is correct."
+  },
+
+  // ===== 95: PHYSICS - EQUILIBRIUM OF FORCES (MOMENTS) =====
+  {
+    subject: "Physics",
+    topic: "Equilibrium of Forces (Moments)",
+    q: "A uniform metre rule weighing 0.5 N is to be pivoted on a knife-edge at the 30 cm mark. Where will a force of 2 N be placed from the pivot to balance the metre rule?",
+    options: ["95cm", "5cm", "20cm", "25cm"],
+    correct: 1,
+    solution: "The rule’s weight (0.5 N) acts at the 50 cm mark, 20 cm from the pivot. Moment = 0.5 × 20 = 10 N·cm. For balance: 2 × d = 10, so d = 5 cm on the opposite side."
+  },
+
+  // ===== 96: PHYSICS - MEASUREMENT =====
+  {
+    subject: "Physics",
+    topic: "Measurement",
+    q: "What is the least possible error encountered when taking measurement with a meter rule?",
+    options: ["0.1mm", "1.0mm", "0.5mm", "0.2mm"],
+    correct: 2,
+    solution: "The smallest division of a metre rule is 1 mm, so the least possible reading error is half of that, 0.5 mm."
+  },
+
+  // ===== 97: PHYSICS - REFRACTION OF LIGHT =====
+  {
+    subject: "Physics",
+    topic: "Refraction of Light",
+    q: "A glass plate 0.9 cm thick has a refractive index of 1.50. How long does it take for a pulse of light to pass through the plate? [c = 3.0 × 10⁸ m/s]",
+    options: ["3.0 × 10⁻¹⁰ s", "4.5 × 10⁻¹¹ s", "3.0 × 10⁻¹¹ s", "4.5 × 10⁻¹⁰ s"],
+    correct: 1,
+    solution: "Speed in glass = c/n = (3.0 × 10⁸)/1.5 = 2.0 × 10⁸ m/s. Time = distance/speed = 0.009/(2.0 × 10⁸) = 4.5 × 10⁻¹¹ s."
+  },
+
+  // ===== 98: PHYSICS - OPTICAL INSTRUMENTS =====
+  {
+    subject: "Physics",
+    topic: "Optical Instruments",
+    q: "In a compound microscope, the objective and the eye piece focal lengths are",
+    options: ["Long", "Short", "The same", "At infinity"],
+    correct: 1,
+    solution: "In a compound microscope both the objective and the eyepiece have short focal lengths. The objective’s is very short for high magnification."
+  },
+
+  // ===== 99: PHYSICS - ELECTROLYSIS (FARADAY’S LAWS) =====
+  {
+    subject: "Physics",
+    topic: "Electrolysis (Faraday’s Laws)",
+    q: "If a current of 2.5A flows through an electrolyte for 3 hours and 1.8g of a substance is deposited, what is the mass of the substance that will be deposited if a current of 4A flows through it for 4.8 hours?",
+    options: ["2.4g", "3.2g", "4.6g.", "4.8g."],
+    correct: 2,
+    solution: "m ∝ It. m₂ = 1.8 × (4 × 4.8)/(2.5 × 3) = 1.8 × 19.2/7.5 = 4.6 g (to 2 s.f. 4.608 g)."
+  },
+
+  // ===== 100: PHYSICS - FRICTION =====
+  {
+    subject: "Physics",
+    topic: "Friction",
+    q: "The coefficient of friction between two perfectly smooth surface is",
+    options: ["infinity.", "one", "half.", "zero."],
+    correct: 3,
+    solution: "Coefficient of friction μ = F/R. For perfectly smooth surfaces there is no friction, so μ = 0."
+  },
+
+  // ===== 101: ENGLISH - VOCABULARY & USAGE =====
+  {
+    subject: "English",
+    topic: "Vocabulary & Usage",
+    q: "The chief priest will … the men into the cult today",
+    options: ["indoctrinate", "usher", "convert", "initiate"],
+    correct: 3,
+    solution: "“Initiate” means to admit someone formally into a group or society, such as a cult."
+  },
+
+  // ===== 102: ENGLISH - PHRASAL VERBS & IDIOMS =====
+  {
+    subject: "English",
+    topic: "Phrasal Verbs & Idioms",
+    q: "The villages looked…their leader for good examples",
+    options: ["up to", "on to", "up at", "forward to"],
+    correct: 0,
+    solution: "“Look up to” means to respect or admire. The villages respect their leader as a model."
+  },
+
+  // ===== 103: ENGLISH - IDIOMS & EXPRESSIONS =====
+  {
+    subject: "English",
+    topic: "Idioms & Expressions",
+    q: "I do not intend to stay for long at the function. I only want to …",
+    options: ["put in an appearance", "put up appearance", "show up appearance", "keep up appearance"],
+    correct: 0,
+    solution: "“Put in an appearance” means to attend an event briefly."
+  },
+
+  // ===== 104: ENGLISH - VOCABULARY & USAGE =====
+  {
+    subject: "English",
+    topic: "Vocabulary & Usage",
+    q: "The situation has deteriorated sharply, and relations between the two countries may soon be…",
+    options: ["removed", "broken", "withdrawn", "eliminated"],
+    correct: 1,
+    solution: "Relations between countries that have deteriorated sharply may soon be “broken”, meaning cut off."
+  },
+
+  // ===== 105: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “takings” in: Mali stole the day’s takings from the bakery.",
+    options: ["receipts", "collections", "contributions", "offerings"],
+    correct: 0,
+    solution: "“Takings” means money received from sales, so “receipts” is closest in meaning."
+  },
+
+  // ===== 106: ENGLISH - LEXIS (PHRASAL VERBS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Phrasal Verbs)",
+    q: "Choose the option nearest in meaning to the word(s) “look out for” in: Olu promised to look out for her next time he is in town.",
+    options: ["watch for", "visit", "greet", "take care of"],
+    correct: 0,
+    solution: "“Look out for” here means to watch for her (to be on the lookout), so “watch for”."
+  },
+
+  // ===== 107: ENGLISH - PHRASAL VERBS =====
+  {
+    subject: "English",
+    topic: "Phrasal Verbs",
+    q: "The school will … for Easter in another six weeks",
+    options: ["break off", "break away", "break out", "break up"],
+    correct: 3,
+    solution: "“Break up” means to close for holidays, as schools do at the end of a term."
+  },
+
+  // ===== 108: ENGLISH - SENTENCE INTERPRETATION =====
+  {
+    subject: "English",
+    topic: "Sentence Interpretation",
+    q: "Jide is being forced to go to Lagos tomorrow. This means that Jide …",
+    options: ["will go to Lagos", "must go to Lagos", "wishes to go to Lagos", "is going to Lagos"],
+    correct: 1,
+    solution: "“Is being forced to go” means he has no choice. So “must go to Lagos”."
+  },
+
+  // ===== 109: ENGLISH - LEXIS (HOMOPHONES) =====
+  {
+    subject: "English",
+    topic: "Lexis (Homophones)",
+    q: "I was seriously disappointed when the… between the two teams ended in a goaless draw.",
+    options: ["march", "marsh", "match", "mash"],
+    correct: 2,
+    solution: "A “match” is a game between two teams. “March” is a walk or a month, and “marsh” is swampy land."
+  },
+
+  // ===== 110: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “apathy” in: The administrator’s apathy was soon noticed by all his subordinates.",
+    options: ["indifference", "kindness", "concern", "inefficiency"],
+    correct: 0,
+    solution: "“Apathy” means lack of interest or concern. “Indifference” is the closest."
+  },
+
+  // ===== 111: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “animated” in: The discussion became animated.",
+    options: ["specialized", "lively", "intellectual", "unruly"],
+    correct: 1,
+    solution: "“Animated” means full of life and energy, so “lively”."
+  },
+
+  // ===== 112: ENGLISH - LEXIS (ANTONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Antonyms)",
+    q: "Choose the option opposite in meaning to the word “densely” in: Coastal plains are often very densely populated.",
+    options: ["weakly", "badly", "rarely", "sparsely"],
+    correct: 3,
+    solution: "“Densely” means thickly populated. The opposite is “sparsely” (thinly populated)."
+  },
+
+  // ===== 113: ENGLISH - LEXIS (IDIOMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Idioms)",
+    q: "Choose the option nearest in meaning to the word(s) “smoke-screen” in: The advertisement served as a smoke-screen for the activities of the company.",
+    options: ["a camouflage", "a protection", "an enhancement", "an exchange"],
+    correct: 0,
+    solution: "A “smoke-screen” is something used to hide or disguise real activities. So “a camouflage”."
+  },
+
+  // ===== 114: ENGLISH - PREPOSITIONS =====
+  {
+    subject: "English",
+    topic: "Prepositions",
+    q: "John arrived at the airport on time but he could not get… the plane.",
+    options: ["into", "over", "in", "to enter"],
+    correct: 0,
+    solution: "“Get into” a plane means to board it. “Get in” would need an object after it, and the others are wrong."
+  },
+
+  // ===== 115: ENGLISH - IDIOMS & EXPRESSIONS =====
+  {
+    subject: "English",
+    topic: "Idioms & Expressions",
+    q: "The salesman tried to pull the wool over my eyes. This implies that the salesman tried to",
+    options: ["force me to buy his goods", "offer me cotton wool", "make me buy his wool", "dupe me"],
+    correct: 3,
+    solution: "“To pull the wool over someone’s eyes” means to deceive or dupe them."
+  },
+
+  // ===== 116: ENGLISH - COMPREHENSION (INTERPRETATION) =====
+  {
+    subject: "English",
+    topic: "Comprehension (Interpretation)",
+    q: "The expression “when man evolved a conscience” means when",
+    options: ["man developed an awareness of right and wrong", "man’s intellect improved tremendously", "man acquired new habits", "man became a critical creature"],
+    correct: 0,
+    solution: "“Evolved a conscience” means developed an awareness of right and wrong."
+  },
+
+  // ===== 117: ENGLISH - COMPARISON (GRAMMAR) =====
+  {
+    subject: "English",
+    topic: "Comparison (Grammar)",
+    q: "The boy thought that driving a car was not… dangerous than riding a bicyle.",
+    options: ["so very", "particularly", "very", "any more"],
+    correct: 3,
+    solution: "“Not any more dangerous than” is the correct comparative form after “not”. “So/very/particularly” cannot go before “…dangerous than”."
+  },
+
+  // ===== 118: ENGLISH - WORD FORM (VOCABULARY) =====
+  {
+    subject: "English",
+    topic: "Word Form (Vocabulary)",
+    q: "The suspect defrauded his … victims of large sums of money",
+    options: ["unsuspected", "unsuspecting", "unexpecting", "unexpected"],
+    correct: 1,
+    solution: "“Unsuspecting” describes people who do not suspect anything, so it fits “victims” who were defrauded."
+  },
+
+  // ===== 119: ENGLISH - PHRASAL VERBS =====
+  {
+    subject: "English",
+    topic: "Phrasal Verbs",
+    q: "Darling, do send the children to bed. I can’t … their noise any longer’, he said to his wife.",
+    options: ["make do with", "make up", "deal with", "put up with"],
+    correct: 3,
+    solution: "“Put up with” means to tolerate. He cannot tolerate the noise any longer."
+  },
+
+  // ===== 120: ENGLISH - LEXIS (IDIOMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Idioms)",
+    q: "Choose the option nearest in meaning to the word(s) “under a cloud” in: The preacher is under a cloud among the congregation.",
+    options: ["out of favour", "under observation", "under weather", "confused"],
+    correct: 0,
+    solution: "“Under a cloud” means in disgrace or out of favour."
+  },
+
+  // ===== 121: ENGLISH - CONCORD (SUBJECT–VERB AGREEMENT) =====
+  {
+    subject: "English",
+    topic: "Concord (Subject–Verb Agreement)",
+    q: "The present wanton display of riches… morals in our society.",
+    options: ["will be affecting", "are affecting", "is affecting", "was affecting"],
+    correct: 2,
+    solution: "The subject is the singular noun “display”, so the verb must be singular: “is affecting”."
+  },
+
+  // ===== 122: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “regrets” in: The president has sent his regrets. He is unable to attend the meeting.",
+    options: ["explanation", "anxieties", "unhappiness", "apologies"],
+    correct: 3,
+    solution: "“Sent his regrets” means he sent his apologies for not being able to attend."
+  },
+
+  // ===== 123: ENGLISH - COMPARISON (GRAMMAR) =====
+  {
+    subject: "English",
+    topic: "Comparison (Grammar)",
+    q: "The small girl is … than her elder sister",
+    options: ["more cleverer", "very cleverer", "much cleverer", "much more cleverer"],
+    correct: 2,
+    solution: "“Cleverer” is already a comparative, so it cannot take “more” or “very”. “Much cleverer” is correct."
+  },
+
+  // ===== 124: ENGLISH - STRUCTURE (GRAMMAR) =====
+  {
+    subject: "English",
+    topic: "Structure (Grammar)",
+    q: "Our Literature Master said that he would show us a film on Macbeth. The film will …",
+    options: ["worth seeing", "worth seeing it", "be worth to see", "be worth seeing"],
+    correct: 3,
+    solution: "The correct phrasing is “be worth seeing” (be + worth + -ing form), so “The film will be worth seeing”."
+  },
+
+  // ===== 125: ENGLISH - TENSES (GRAMMAR) =====
+  {
+    subject: "English",
+    topic: "Tenses (Grammar)",
+    q: "The Governor has... to the people on many occasions",
+    options: ["broadcast", "been broadcast", "broadcasted", "being broadcast"],
+    correct: 0,
+    solution: "Present perfect “has + past participle”. The past participle of “broadcast” is “broadcast”."
+  },
+
+  // ===== 126: ENGLISH - SEQUENCE OF TENSES =====
+  {
+    subject: "English",
+    topic: "Sequence of Tenses",
+    q: "It all depended on what…",
+    options: ["does he want", "he wants", "he does want", "he wanted"],
+    correct: 3,
+    solution: "“Depended” is past tense, so the clause after it stays in the past tense, in statement order: “what he wanted”. Question order (“did he want”) is wrong here."
+  },
+
+  // ===== 127: ENGLISH - PREPOSITIONS =====
+  {
+    subject: "English",
+    topic: "Prepositions",
+    q: "The dull student took a correspondence course as a means… his standard in the class.",
+    options: ["to improve", "for improving", "of improving", "by improving"],
+    correct: 2,
+    solution: "“A means of + -ing” is the correct pattern: “a means of improving his standard”."
+  },
+
+  // ===== 128: ENGLISH - LEXIS (ANTONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Antonyms)",
+    q: "Choose the option opposite in meaning to the word “evasive” in: Many untrustworthy students give evasive answers to questions which they fully understand.",
+    options: ["direct", "outspoken", "simple", "truthful"],
+    correct: 0,
+    solution: "“Evasive” means avoiding a direct answer. The opposite is “direct”."
+  },
+
+  // ===== 129: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “imminent” in: The deafening noise of the two jet planes which flew across our compound yesterday made people fear that an assault on the country might be imminent.",
+    options: ["impending", "ahead", "remote", "eminent"],
+    correct: 0,
+    solution: "“Imminent” means about to happen. “Impending” has the same meaning (not “eminent”, which means famous)."
+  },
+
+  // ===== 130: ENGLISH - LEXIS (HOMOPHONES) =====
+  {
+    subject: "English",
+    topic: "Lexis (Homophones)",
+    q: "Their high … was an advantage",
+    options: ["moral", "morality", "morale", "morals"],
+    correct: 2,
+    solution: "“Morale” means confidence and spirit of a group. “Moral” is an adjective or a lesson, and “morals” means principles of right and wrong."
+  },
+
+  // ===== 131: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “infuriates” in: Your extreme patience sometimes infuriates me.",
+    options: ["impresses", "annoys", "frustrates", "amuses"],
+    correct: 1,
+    solution: "“Infuriates” means makes very angry. “Annoys” is closest in meaning."
+  },
+
+  // ===== 132: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “imperceptible” in: The difference between the experimental procedures was imperceptible to me.",
+    options: ["negligible", "significant", "obvious", "obscure"],
+    correct: 0,
+    solution: "“Imperceptible” means too small to be noticed. “Negligible” is closest in meaning."
+  },
+
+  // ===== 133: ENGLISH - PREPOSITIONS =====
+  {
+    subject: "English",
+    topic: "Prepositions",
+    q: "Little children are usually afraid ... thunder",
+    options: ["about", "for", "of", "with"],
+    correct: 2,
+    solution: "“Afraid of” is the correct preposition after “afraid”."
+  },
+
+  // ===== 134: ENGLISH - TENSES (GRAMMAR) =====
+  {
+    subject: "English",
+    topic: "Tenses (Grammar)",
+    q: "Do not take my books out of this office unless you… my permission to do so.",
+    options: ["get", "have", "had got", "are having"],
+    correct: 1,
+    solution: "After “unless”, the present simple is used. “You have my permission” fits the meaning."
+  },
+
+  // ===== 135: ENGLISH - GRAMMAR (IDIOMATIC PHRASES) =====
+  {
+    subject: "English",
+    topic: "Grammar (Idiomatic Phrases)",
+    q: "… to your request, we have decided to provide the necessary information",
+    options: ["As regards", "With regards", "With regard", "Regarding"],
+    correct: 2,
+    solution: "The correct fixed phrase is “With regard to” (singular “regard”). “As regards” would not be followed by “to”, and “with regards” is incorrect."
+  },
+
+  // ===== 136: ENGLISH - CONCORD (SUBJECT–VERB AGREEMENT) =====
+  {
+    subject: "English",
+    topic: "Concord (Subject–Verb Agreement)",
+    q: "I was still sleeping when the national news … this morning",
+    options: ["were broadcast", "were broadcasted", "was broadcast", "was broadcasted"],
+    correct: 2,
+    solution: "“News” is an uncountable singular noun, so it takes “was”. “Broadcast” is the correct past form."
+  },
+
+  // ===== 137: ENGLISH - LEXIS (IDIOMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Idioms)",
+    q: "Choose the option nearest in meaning to the word(s) “go back on my word” in: Finally, I assured him that I would not go back on my word.",
+    options: ["return to a place", "return to a certain world which reading", "re-use my word", "fail to keep my promise"],
+    correct: 3,
+    solution: "“Go back on my word” means to fail to keep my promise."
+  },
+
+  // ===== 138: ENGLISH - IDIOMS & EXPRESSIONS =====
+  {
+    subject: "English",
+    topic: "Idioms & Expressions",
+    q: "The first graduation ceremony of the university was attended by men from all….of life.",
+    options: ["works", "areas", "walks", "parts"],
+    correct: 2,
+    solution: "The correct idiom is “from all walks of life”, meaning people of every background."
+  },
+
+  // ===== 139: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “hard-nosed” in: The retired General became a hard-nosed officer after fighting the war.",
+    options: ["tough", "weak", "indifferent", "bed-ridden"],
+    correct: 0,
+    solution: "“Hard-nosed” means tough, realistic and not easily swayed."
+  },
+
+  // ===== 140: ENGLISH - IDIOMS & EXPRESSIONS =====
+  {
+    subject: "English",
+    topic: "Idioms & Expressions",
+    q: "The Director is … pains to ensure the success of the programme.",
+    options: ["in", "at", "on", "having"],
+    correct: 1,
+    solution: "“To be at pains to do something” means to take great care to do it."
+  },
+
+  // ===== 141: ENGLISH - PREPOSITIONS =====
+  {
+    subject: "English",
+    topic: "Prepositions",
+    q: "There was a fire in the market last week which resulted… a terrible destruction of property.",
+    options: ["in", "to", "from", "into"],
+    correct: 0,
+    solution: "“Resulted in” is correct when it is followed by the effect. “Resulted from” introduces the cause."
+  },
+
+  // ===== 142: ENGLISH - LEXIS (IDIOMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Idioms)",
+    q: "Choose the option nearest in meaning to the word(s) “went on rampage” in: Some workers went on rampage at a trade-fair.",
+    options: ["turned violent", "robber", "were angry", "demonstrated"],
+    correct: 0,
+    solution: "“Went on rampage” means behaved wildly and violently, so “turned violent”."
+  },
+
+  // ===== 143: ENGLISH - GRAMMAR (ADVERBS) =====
+  {
+    subject: "English",
+    topic: "Grammar (Adverbs)",
+    q: "Roli failed because the examination was …difficult for her",
+    options: ["so", "very", "highly", "too"],
+    correct: 3,
+    solution: "“Too difficult for her” gives a negative result (she failed). “So/very/highly difficult” would not complete the meaning without “that” or “to”."
+  },
+
+  // ===== 144: ENGLISH - LEXIS (IDIOMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Idioms)",
+    q: "Choose the option nearest in meaning to the word(s) “wide off the mark” in: Most of his observations were wide off the mark.",
+    options: ["comprehensible", "irrelevant", "pertinent", "unacceptable"],
+    correct: 1,
+    solution: "“Wide off the mark” means inaccurate or not to the point, so “irrelevant”."
+  },
+
+  // ===== 145: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “make-belief” in: His has been a life of make-belief.",
+    options: ["faith", "fantasy", "grandeur", "religion"],
+    correct: 1,
+    solution: "“Make-believe” means imagination or pretence. “Fantasy” is closest in meaning."
+  },
+
+  // ===== 146: ENGLISH - LEXIS (SYNONYMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Synonyms)",
+    q: "Choose the option nearest in meaning to the word(s) “iota” in: After careful investigation, the police found no iota of truth in Ibrahim’s allegations.",
+    options: ["quota", "grain", "evidence", "statement"],
+    correct: 1,
+    solution: "An “iota” is a very small amount. “Grain” is closest (as in “not a grain of truth”)."
+  },
+
+  // ===== 147: ENGLISH - LEXIS (IDIOMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Idioms)",
+    q: "Choose the option nearest in meaning to the word(s) “met their Waterloo” in: The gallant soldiers met their Waterloo at Philippi.",
+    options: ["victory", "trouble", "defeat", "happiest period"],
+    correct: 2,
+    solution: "To “meet one’s Waterloo” means to suffer a decisive defeat."
+  },
+
+  // ===== 148: ENGLISH - LEXIS (IDIOMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Idioms)",
+    q: "‘To be in the red’ is to be",
+    options: ["in debt", "rich", "a socialist", "red"],
+    correct: 0,
+    solution: "“To be in the red” means to owe money, i.e. to be in debt."
+  },
+
+  // ===== 149: ENGLISH - LEXIS (IDIOMS) =====
+  {
+    subject: "English",
+    topic: "Lexis (Idioms)",
+    q: "Choose the option nearest in meaning to the word(s) “came to grief” in: The armed robbers who raided passengers on the Expressway came to grief when they had a shoot out with the police today.",
+    options: ["came to a bad end", "became grieved", "encountered grief", "came to a dead"],
+    correct: 0,
+    solution: "“Came to grief” means ended badly or suffered misfortune. “Came to a bad end” is closest."
+  },
+
+  // ===== 150: ENGLISH - VOCABULARY & USAGE =====
+  {
+    subject: "English",
+    topic: "Vocabulary & Usage",
+    q: "The child’s recent training has not been very effective, he is likely to … to his old habits.",
+    options: ["revert", "convert", "reverse", "revise"],
+    correct: 0,
+    solution: "“Revert to” means to return to a former habit or state."
   }
 ];
   
