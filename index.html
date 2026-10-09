@@ -1878,7 +1878,7 @@ function emailResults() {
   const dateStr = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
   const subject = encodeURIComponent(`Learn with Jay - Quiz Results (${r.pct}% - ${r.grade})`);
   const body = encodeURIComponent(
-`Munachi's JAMB Physics Practice Quiz Results
+`Munachi's JAMB Practice Quiz Results
 
 Score: ${r.pct}%
 Grade: ${r.grade}
@@ -1892,7 +1892,7 @@ ${TOPICS.map(t => '- ' + t).join('\n')}
 
 Keep up the great work!`
   );
-  window.location.href = `mailto:akinladejohn300@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:albertanushiem22@gmail.com?subject=${subject}&body=${body}`;
 }
 
 function restartQuiz() {
