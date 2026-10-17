@@ -254,1507 +254,507 @@ const TOPICS = [
   "PHYSICS",
   "CHEMISTRY",
 ];
-
 const questions = [
-  // ===== 1: MATHEMATICS - COORDINATE GEOMETRY =====
-  {
-    subject: "Mathematics",
-    topic: "Coordinate Geometry",
-    q: "Find the coordinate of the midpoint of x and y intercepts of the line 2y = 4x - 8",
-    options: ["(-1, -2)", "(1, 2)", "(2, 0)", "(1, -2)"],
-    correct: 3,
-    solution: "Write 2y = 4x − 8 as y = 2x − 4. x-intercept (y = 0): x = 2. y-intercept (x = 0): y = −4. Midpoint = ((2 + 0)/2, (0 − 4)/2) = (1, −2)."
-  },
-
-  // ===== 2: MATHEMATICS - PERCENTAGES & PROFIT/LOSS =====
-  {
-    subject: "Mathematics",
-    topic: "Percentages & Profit/Loss",
-    q: "A car dealer bought a second-hand car for ₦250,000 and spent ₦70,000 refurbishing it. He then sold the car for ₦400,000. What is the percentage gain?",
-    options: ["20%", "25%", "32%", "60%"],
-    correct: 1,
-    solution: "Cost price = 250,000 + 70,000 = ₦320,000. Gain = 400,000 − 320,000 = ₦80,000. % gain = 80,000/320,000 × 100 = 25%."
-  },
-
-  // ===== 3: MATHEMATICS - VARIATION =====
-  {
-    subject: "Mathematics",
-    topic: "Variation",
-    q: "If x varies inversely as the cube root of y and x = 1 when y = 8, find y when x = 3",
-    options: ["1/3", "2/3", "8/27", "4/9"],
-    correct: 2,
-    solution: "x = k/∛y. With x = 1, y = 8: k = 1 × 2 = 2. Then 3 = 2/∛y, so ∛y = 2/3 and y = (2/3)³ = 8/27."
-  },
-
-  // ===== 4: MATHEMATICS - PERMUTATION & COMBINATION =====
-  {
-    subject: "Mathematics",
-    topic: "Permutation & Combination",
-    q: "In how many ways can 2 students be selected from a group of 5 students in a debating competition?",
-    options: ["10 ways.", "15 ways.", "20 ways", "25 ways."],
-    correct: 0,
-    solution: "Order does not matter, so use combinations: ⁵C₂ = (5 × 4)/(2 × 1) = 10 ways."
-  },
-
-  // ===== 5: MATHEMATICS - FACTORISATION =====
-  {
-    subject: "Mathematics",
-    topic: "Factorisation",
-    q: "Factorise 6x² − 14x − 12",
-    options: ["2(x + 3)(3x − 2)", "6(x − 2)(x + 1)", "2(x − 3)(3x + 2)", "6(x + 2)(x − 1)"],
-    correct: 2,
-    solution: "6x² − 14x − 12 = 2(3x² − 7x − 6). Factorise 3x² − 7x − 6 = (3x + 2)(x − 3). So the answer is 2(x − 3)(3x + 2)."
-  },
-
-  // ===== 6: MATHEMATICS - STATISTICS (MEAN) =====
-  {
-    subject: "Mathematics",
-    topic: "Statistics (Mean)",
-    q: "Thirty boys and x girls sat for a test. The mean of the boys’ scores and that of the girls were 6 and 8 respectively. Find x if the total score was 468.",
-    options: ["38", "24", "36", "22"],
-    correct: 2,
-    solution: "Total of boys’ scores = 30 × 6 = 180. Girls’ total = 8x. 180 + 8x = 468, so 8x = 288 and x = 36."
-  },
-
-  // ===== 7: MATHEMATICS - CIRCLE GEOMETRY (ARC LENGTH) =====
-  {
-    subject: "Mathematics",
-    topic: "Circle Geometry (Arc Length)",
-    q: "The chord ST of a circle is equal to the radius, r of the circle. Find the length of arc ST.",
-    options: ["πr/2", "πr/3", "πr/6", "πr/12"],
-    correct: 1,
-    solution: "Chord = radius makes an equilateral triangle with the two radii, so the angle at the centre is 60°. Arc = (60/360) × 2πr = πr/3."
-  },
-
-  // ===== 8: MATHEMATICS - STATISTICS (MEAN) =====
-  {
-    subject: "Mathematics",
-    topic: "Statistics (Mean)",
-    q: "In a family of 21 people, the average age is 14years. If the age of the grandfather is not counted, the average age drops to 12years. What is the age of the grandfather?",
-    options: ["35years", "40years", "42years", "54years"],
-    correct: 3,
-    solution: "Total age of 21 people = 21 × 14 = 294. Total of the other 20 = 20 × 12 = 240. Grandfather’s age = 294 − 240 = 54 years."
-  },
-
-  // ===== 9: MATHEMATICS - SEQUENCES & SERIES (G.P.) =====
-  {
-    subject: "Mathematics",
-    topic: "Sequences & Series (G.P.)",
-    q: "Given that the first and fourth terms of a G.P. are 6 and 162 respectively, find the sum of the first three terms of the progression.",
-    options: ["8", "27", "48", "78"],
-    correct: 3,
-    solution: "ar³ = 162 with a = 6, so r³ = 27 and r = 3. Terms: 6, 18, 54. Sum of first three = 6 + 18 + 54 = 78."
-  },
-
-  // ===== 10: MATHEMATICS - VARIATION =====
-  {
-    subject: "Mathematics",
-    topic: "Variation",
-    q: "If x varies directly as y³ and x = 2 when y = 1, find x when y = 5",
-    options: ["2", "10", "125", "250"],
-    correct: 3,
-    solution: "x = ky³. With x = 2, y = 1: k = 2. When y = 5: x = 2 × 5³ = 2 × 125 = 250."
-  },
-
-  // ===== 11: MATHEMATICS - BINARY OPERATIONS =====
-  {
-    subject: "Mathematics",
-    topic: "Binary Operations",
-    q: "If the binary operation * is defined by m * n = mn + m + n for any real numbers m and n, find the identity element under this operation.",
-    options: ["e = 1", "e = −1", "e = −2", "e = 0"],
-    correct: 3,
-    solution: "Identity e satisfies m * e = m. So me + m + e = m, which gives e(m + 1) = 0, so e = 0."
-  },
-
-  // ===== 12: MATHEMATICS - PERMUTATION & COMBINATION =====
-  {
-    subject: "Mathematics",
-    topic: "Permutation & Combination",
-    q: "If ⁶Cᵣ / ⁶Pᵣ = 1/6, find the value of r.",
-    options: ["1", "3", "5", "6"],
-    correct: 1,
-    solution: "ⁿCᵣ/ⁿPᵣ = 1/r!. So 1/r! = 1/6, which means r! = 6 and r = 3."
-  },
-
-  // ===== 13: MATHEMATICS - BEARINGS & TRIGONOMETRY =====
-  {
-    subject: "Mathematics",
-    topic: "Bearings & Trigonometry",
-    q: "From a point Z, 60 m north of X, a man walks 60√3 m eastwards to another point Y. Find the bearing of Y from X.",
-    options: ["030°", "045°", "060°", "090°"],
-    correct: 2,
-    solution: "From X, Z is due north (60 m) and Y is 60√3 m east of Z. tan θ = 60√3/60 = √3, where θ is the angle from north. So θ = 60°, and the bearing is 060°."
-  },
-
-  // ===== 14: MATHEMATICS - LCM & HCF =====
-  {
-    subject: "Mathematics",
-    topic: "LCM & HCF",
-    q: "Find the least length of a rod which can be cut into exactly equal strips, each of either 40 cm or 48 cm in length.",
-    options: ["120 cm", "240 cm", "360 cm", "480 cm"],
-    correct: 1,
-    solution: "The rod must be a common multiple of 40 and 48. LCM(40, 48) = 240 cm (40 = 2³ × 5, 48 = 2⁴ × 3)."
-  },
-
-  // ===== 15: MATHEMATICS - PROBABILITY =====
-  {
-    subject: "Mathematics",
-    topic: "Probability",
-    q: "Two perfect dice are throw together. Determine the probability of obtaining a total score of 8",
-    options: ["1/12", "5/36", "1/8", "7/36"],
-    correct: 1,
-    solution: "Total outcomes = 36. Ways to get 8: (2,6), (3,5), (4,4), (5,3), (6,2) = 5. Probability = 5/36."
-  },
-
-  // ===== 16: MATHEMATICS - STATISTICS (MEDIAN & MODE) =====
-  {
-    subject: "Mathematics",
-    topic: "Statistics (Median & Mode)",
-    q: "If M represents the median and D the mode of the measurements 5, 9, 3, 5, 8, then (M, D) is",
-    options: ["(6,5)", "(5,8)", "(5,7)", "(5,5)"],
-    correct: 3,
-    solution: "Arrange: 3, 5, 5, 8, 9. Median = middle value = 5. Mode = most frequent = 5. So (M, D) = (5, 5)."
-  },
-
-  // ===== 17: MATHEMATICS - ALGEBRA (IDENTITIES) =====
-  {
-    subject: "Mathematics",
-    topic: "Algebra (Identities)",
-    q: "If a² + b² = 16 and 2ab = 7, find all the possible values of (a − b)",
-    options: ["3, −3", "2, −2", "1, −1", "3, −1"],
-    correct: 0,
-    solution: "(a − b)² = a² + b² − 2ab = 16 − 7 = 9. So a − b = ±3."
-  },
-
-  // ===== 18: MATHEMATICS - PERCENTAGES & PROFIT/LOSS =====
-  {
-    subject: "Mathematics",
-    topic: "Percentages & Profit/Loss",
-    q: "A trader bought goats for ₦4,000 each. He sold them for ₦180,000 at a loss of 25%. How many goats did he buy?",
-    options: ["36", "45", "50", "60"],
-    correct: 3,
-    solution: "Selling at 25% loss means ₦180,000 = 75% of cost. Total cost = 180,000/0.75 = ₦240,000. Number of goats = 240,000/4,000 = 60."
-  },
-
-  // ===== 19: MATHEMATICS - DECIMALS & APPROXIMATION =====
-  {
-    subject: "Mathematics",
-    topic: "Decimals & Approximation",
-    q: "Evaluate [(1/0.03) ÷ (1/0.024)]⁻¹, correct to 2 decimal places",
-    options: ["3.76", "1.25", "0.94", "0.75"],
-    correct: 1,
-    solution: "(1/0.03) ÷ (1/0.024) = 0.024/0.03 = 0.8. Then (0.8)⁻¹ = 1/0.8 = 1.25."
-  },
-
-  // ===== 20: MATHEMATICS - LCM & HCF =====
-  {
-    subject: "Mathematics",
-    topic: "LCM & HCF",
-    q: "Divide the L.C.M. of 48, 64 and 80 by their H.C.F",
-    options: ["20", "30", "48", "60"],
-    correct: 3,
-    solution: "48 = 2⁴ × 3, 64 = 2⁶, 80 = 2⁴ × 5. LCM = 2⁶ × 3 × 5 = 960. HCF = 2⁴ = 16. 960 ÷ 16 = 60."
-  },
-
-  // ===== 21: MATHEMATICS - ALGEBRAIC FRACTIONS =====
-  {
-    subject: "Mathematics",
-    topic: "Algebraic Fractions",
-    q: "If y = x/(x − 3) + x/(x + 4), find y when x = −2",
-    options: ["−3/5", "3/5", "−7/5", "7/5"],
-    correct: 0,
-    solution: "At x = −2: x/(x − 3) = −2/−5 = 2/5, and x/(x + 4) = −2/2 = −1. y = 2/5 − 1 = −3/5."
-  },
-
-  // ===== 22: MATHEMATICS - RATIO & PROPORTION =====
-  {
-    subject: "Mathematics",
-    topic: "Ratio & Proportion",
-    q: "Two sisters, Taiwo and Kehinde, own a store. The ratio of Taiwo’s share to Kehinde’s is 11:9. Later Kehinde sells 2/3 of her share to Taiwo for ₦720.00. Find the value of the store.",
-    options: ["₦1,080.00", "₦2,400.00", "₦3,000.00", "₦3,600.00"],
-    correct: 1,
-    solution: "Kehinde’s 2/3 share sold for ₦720, so her share = 720 ÷ (2/3) = ₦1,080. That is 9 parts, so 1 part = ₦120. Total = 20 parts = ₦2,400."
-  },
-
-  // ===== 23: MATHEMATICS - SEQUENCES & SERIES (A.P.) =====
-  {
-    subject: "Mathematics",
-    topic: "Sequences & Series (A.P.)",
-    q: "Find the sum of the 20 terms of an arithmetic progression whose first term is 7 and last term is 117.",
-    options: ["2480", "1240", "620", "124"],
-    correct: 1,
-    solution: "Sₙ = (n/2)(a + l) = (20/2)(7 + 117) = 10 × 124 = 1240."
-  },
-
-  // ===== 24: MATHEMATICS - CIRCLE GEOMETRY (SECTOR) =====
-  {
-    subject: "Mathematics",
-    topic: "Circle Geometry (Sector)",
-    q: "An arc of a circle of radius 6 cm is 8 cm long. Find the area of the sector.",
-    options: ["5⅓ cm²", "24 cm²", "36 cm²", "48 cm²"],
-    correct: 1,
-    solution: "Area of sector = ½ × r × arc length = ½ × 6 × 8 = 24 cm²."
-  },
-
-  // ===== 25: MATHEMATICS - SIMPLE INTEREST =====
-  {
-    subject: "Mathematics",
-    topic: "Simple Interest",
-    q: "A sum of money was invested at 8% per annum simple interest. If after 4 years the money amounts to ₦330.00, find the amount originally invested.",
-    options: ["₦180.00", "₦165.00", "₦150.00", "₦250.00"],
-    correct: 3,
-    solution: "Amount = P(1 + RT/100) = P(1 + 8 × 4/100) = 1.32P. So 1.32P = 330 and P = ₦250."
-  },
-
-  // ===== 26: MATHEMATICS - PERMUTATION & COMBINATION =====
-  {
-    subject: "Mathematics",
-    topic: "Permutation & Combination",
-    q: "How many three-digit numbers can be formed from the digits 3, 2, 5, 6, 4 without any digit being repeated?",
-    options: ["10", "20", "60", "120"],
-    correct: 2,
-    solution: "Three-digit numbers from 5 distinct digits with no repetition: ⁵P₃ = 5 × 4 × 3 = 60."
-  },
-
-  // ===== 27: MATHEMATICS - FACTORISATION =====
-  {
-    subject: "Mathematics",
-    topic: "Factorisation",
-    q: "Factorize completely y³ − 4xy + xy³ − 4y",
-    options: ["(x + xy)(y + 2)(y - 2)", "(y + xy)(y + 2)(y - 2)", "y(1 + x)(y + 2)(y - 2)", "y(1 - x)(y + 2)(y - 2)"],
-    correct: 2,
-    solution: "y³ − 4xy + xy³ − 4y = y(y² − 4x + xy² − 4) = y[(y² − 4) + x(y² − 4)] = y(1 + x)(y² − 4) = y(1 + x)(y + 2)(y − 2)."
-  },
-
-  // ===== 28: MATHEMATICS - CIRCLE GEOMETRY & TRIGONOMETRY =====
-  {
-    subject: "Mathematics",
-    topic: "Circle Geometry & Trigonometry",
-    q: "A point P moves such that it is equidistant from the points Q and R. Find QR when PR = 8 cm and ∠PRQ = 30°.",
-    options: ["4 cm", "4√3 cm", "8 cm", "8√3 cm"],
-    correct: 3,
-    solution: "P is equidistant from Q and R, so PQ = PR = 8 and triangle PQR is isosceles with ∠Q = ∠R = 30°. Dropping a perpendicular from P to QR: QR = 2 × 8 × cos 30° = 8√3 cm."
-  },
-
-  // ===== 29: MATHEMATICS - TRIGONOMETRY (TRIANGLES) =====
-  {
-    subject: "Mathematics",
-    topic: "Trigonometry (Triangles)",
-    q: "In triangle XYZ, ∠Y = ∠Z = 30° and XZ = 3 cm. Find YZ.",
-    options: ["√3/2 cm", "3√3/2 cm", "3√3 cm", "2√3 cm"],
-    correct: 2,
-    solution: "∠Y = ∠Z = 30° means XY = XZ = 3 cm. Dropping a perpendicular from X to YZ: YZ = 2 × 3 × cos 30° = 3√3 cm."
-  },
-
-  // ===== 30: MATHEMATICS - NUMBER & NUMERATION (ORDERING) =====
-  {
-    subject: "Mathematics",
-    topic: "Number & Numeration (Ordering)",
-    q: "Arrange the following numbers in ascending order of magnitude: 6/7, 13/15, 0.865",
-    options: ["6/7 < 0.865 < 13/15", "6/7 < 13/15 < 0.865", "13/15 < 6/7 < 0.865", "13/15 < 0.865 < 6/7"],
-    correct: 0,
-    solution: "Convert to decimals: 6/7 ≈ 0.857, 13/15 ≈ 0.867, and 0.865. Ascending order: 0.857 < 0.865 < 0.867, i.e. 6/7 < 0.865 < 13/15."
-  },
-
-  // ===== 31: MATHEMATICS - DIFFERENTIATION =====
+  // ===== 1: MATHEMATICS - DIFFERENTIATION =====
   {
     subject: "Mathematics",
     topic: "Differentiation",
-    q: "The expression ax² + bx + c equals 5 at x = 1. If its derivative is 2x + 1, what are the values of a, b, c respectively?",
-    options: ["1, 3, 1", "1, 2, 1", "2, 1, 1", "1, 1, 3"],
+    q: "Differentiate (6x³ − 5x² + 1)/(3x²)",
+    options: ["2 + 2/(3x³)", "2 + 1/(6x)", "2 − 2/(3x³)", "2 − 1/(6x)"],
+    correct: 2,
+    solution: "Simplify: (6x³ − 5x² + 1)/(3x²) = 2x − 5/3 + (1/3)x⁻². Derivative = 2 − (2/3)x⁻³ = 2 − 2/(3x³)."
+  },
+
+  // ===== 2: MATHEMATICS - LOGARITHMS =====
+  {
+    subject: "Mathematics",
+    topic: "Logarithms",
+    q: "Simplify 3log₆9 + log₆12 + log₆64 − log₆72",
+    options: ["5", "7776", "log₆31", "(7776)⁶"],
+    correct: 0,
+    solution: "3log₆9 = log₆729. Combine: log₆(729 × 12 × 64/72) = log₆(7776) = log₆(6⁵) = 5."
+  },
+
+  // ===== 3: MATHEMATICS - STATISTICS (PIE CHART) =====
+  {
+    subject: "Mathematics",
+    topic: "Statistics (Pie Chart)",
+    q: "Quantities in the proportions 1, 4, 6, 7 are to be represented in a pie chart. Calculate the angle of the sector with proportion 7",
+    options: ["20°", "80°", "120°", "140°"],
     correct: 3,
-    solution: "Derivative of ax² + bx + c is 2ax + b = 2x + 1, so a = 1 and b = 1. At x = 1: a + b + c = 5, so 1 + 1 + c = 5 and c = 3. So (a, b, c) = (1, 1, 3)."
+    solution: "Total = 1 + 4 + 6 + 7 = 18. Angle = (7/18) × 360° = 140°."
   },
 
-  // ===== 32: MATHEMATICS - POLYNOMIALS =====
+  // ===== 4: MATHEMATICS - STANDARD FORM =====
   {
     subject: "Mathematics",
-    topic: "Polynomials",
-    q: "If x = 1 is a root of the equation x³ − 2x² − 5x + 6 = 0, find the other roots.",
-    options: ["−3 and 2", "−2 and 2", "3 and −2", "1 and 3"],
+    topic: "Standard Form",
+    q: "Simplify and express in standard form: (0.00275 × 0.00640)/(0.025 × 0.08)",
+    options: ["8.8 × 10⁻¹", "8.8 × 10²", "8.8 × 10⁻³", "8.8 × 10³"],
     correct: 2,
-    solution: "Since x = 1 is a root, (x − 1) is a factor. Dividing: x³ − 2x² − 5x + 6 = (x − 1)(x² − x − 6) = (x − 1)(x − 3)(x + 2). Other roots: 3 and −2."
+    solution: "Numerator = 2.75 × 10⁻³ × 6.4 × 10⁻³ = 17.6 × 10⁻⁶. Denominator = 2.5 × 10⁻² × 8 × 10⁻² = 20 × 10⁻⁴. Ratio = 0.88 × 10⁻² = 8.8 × 10⁻³."
   },
 
-  // ===== 33: MATHEMATICS - NUMBER BASES =====
+  // ===== 5: MATHEMATICS - DECIMALS & APPROXIMATION =====
   {
     subject: "Mathematics",
-    topic: "Number Bases",
-    q: "The sum of four numbers is 1214 (base five). What is their average expressed in base five?",
-    options: ["411", "401", "141", "114"],
-    correct: 2,
-    solution: "1214₅ = 1×125 + 2×25 + 1×5 + 4 = 184. Average = 184/4 = 46. Convert to base 5: 46 = 1×25 + 4×5 + 1, so 141₅."
-  },
-
-  // ===== 34: MATHEMATICS - COORDINATE GEOMETRY (CIRCLE) =====
-  {
-    subject: "Mathematics",
-    topic: "Coordinate Geometry (Circle)",
-    q: "Find a positive value of a if the centre of the circle x² + y² − 2ax + 4y − a = 0 is (a, −2) and the radius is 4 units.",
-    options: ["1", "2", "3", "4"],
-    correct: 2,
-    solution: "Radius² = a² + 2² − (−a) = a² + 4 + a. Set equal to 16: a² + a − 12 = 0, so (a + 4)(a − 3) = 0. Positive value: a = 3."
-  },
-
-  // ===== 35: MATHEMATICS - PROBABILITY =====
-  {
-    subject: "Mathematics",
-    topic: "Probability",
-    q: "A number is selected at random from 0 to 20. What is the probability that the number is an odd prime?",
-    options: ["8/21", "1/3", "2/7", "5/21"],
-    correct: 1,
-    solution: "Odd primes from 0 to 20: 3, 5, 7, 11, 13, 17, 19 = 7 numbers. There are 21 numbers from 0 to 20. Probability = 7/21 = 1/3."
-  },
-
-  // ===== 36: MATHEMATICS - PYTHAGORAS THEOREM =====
-  {
-    subject: "Mathematics",
-    topic: "Pythagoras Theorem",
-    q: "The lengths of the sides of a right-angled triangle are x cm, (3x − 1) cm and (3x + 1) cm. Find x.",
-    options: ["5", "7", "8", "12"],
+    topic: "Decimals & Approximation",
+    q: "Correct 241.34 × (3 × 10⁻³)² to 4 significant figures",
+    options: ["0.0014", "0.001448", "0.0022", "0.002172"],
     correct: 3,
-    solution: "The hypotenuse is the longest side, 3x + 1. (3x + 1)² = (3x − 1)² + x², so 9x² + 6x + 1 = 9x² − 6x + 1 + x². This gives 12x = x², so x = 12."
+    solution: "(3 × 10⁻³)² = 9 × 10⁻⁶. 241.34 × 9 × 10⁻⁶ = 0.00217206, which is 0.002172 to 4 significant figures."
   },
 
-  // ===== 37: MATHEMATICS - SETS =====
+  // ===== 6: MATHEMATICS - COORDINATE GEOMETRY (INTERSECTION) =====
   {
     subject: "Mathematics",
-    topic: "Sets",
-    q: "Given: U = {even numbers between 0 and 30}, P = {multiples of 6 between 0 and 30}, Q = {multiples of 4 between 0 and 30}. Find (P ∪ Q)′.",
-    options: ["{0, 2, 6, 22, 26}", "{2, 4, 14, 18, 26}", "{2, 10, 14, 22, 26}", "{0, 10, 14, 22, 26}"],
+    topic: "Coordinate Geometry (Intersection)",
+    q: "At what points does the straight line y = 2x + 1 intersect the curve y = 2x² + 5x − 1?",
+    options: ["(−2, −3) and (1/2, 2)", "(−1/2, 0) and (2, 5)", "(1/2, 2) and (1, 3)", "(1, 3) and (2, 5)"],
+    correct: 0,
+    solution: "Set 2x² + 5x − 1 = 2x + 1, so 2x² + 3x − 2 = 0, i.e. (2x − 1)(x + 2) = 0. x = 1/2 gives y = 2, and x = −2 gives y = −3. Points: (−2, −3) and (1/2, 2)."
+  },
+
+  // ===== 7: MATHEMATICS - FRACTIONS =====
+  {
+    subject: "Mathematics",
+    topic: "Fractions",
+    q: "Three children shared a basket of mangoes in such a way that the first child took 1/4 of the mangoes and the second 3/4 of the remainder. What fraction of the mangoes did the third child take?",
+    options: ["3/16", "7/16", "9/16", "13/16"],
+    correct: 0,
+    solution: "Remainder after the first child = 3/4. Second child takes 3/4 × 3/4 = 9/16. Third child = 3/4 − 9/16 = 12/16 − 9/16 = 3/16."
+  },
+
+  // ===== 8: MATHEMATICS - STATISTICS (STANDARD DEVIATION) =====
+  {
+    subject: "Mathematics",
+    topic: "Statistics (Standard Deviation)",
+    q: "Find the standard deviation of the following data: −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5",
+    options: ["2", "3", "√10", "√11"],
     correct: 2,
-    solution: "U = {2, 4, 6, …, 28}. P = {6, 12, 18, 24}, Q = {4, 8, 12, 16, 20, 24, 28}. P ∪ Q = {4, 6, 8, 12, 16, 18, 20, 24, 28}. (P ∪ Q)′ = {2, 10, 14, 22, 26}."
+    solution: "Mean = 0, n = 11. Σx² = 2(1 + 4 + 9 + 16 + 25) = 110. Variance = 110/11 = 10, so standard deviation = √10."
   },
 
-  // ===== 38: MATHEMATICS - RATIO & PROPORTION =====
+  // ===== 9: MATHEMATICS - STATISTICS (FREQUENCY) =====
   {
     subject: "Mathematics",
-    topic: "Ratio & Proportion",
-    q: "A basket contains green, black and blue balls in the ratio 5:2:1. If there are 10 blue balls, find the new ratio when 10 green and 10 black balls are removed from the basket.",
-    options: ["1:1:1", "4:2:1", "5:1:1", "4:1:1"],
+    topic: "Statistics (Frequency)",
+    q: "The following marks were obtained by twenty students in an examination: 53, 30, 70, 84, 59, 43, 90, 20, 78, 48, 44, 60, 81, 73, 50, 37, 67, 68, 64, 52. Find the number of students who scored at least 50 marks.",
+    options: ["6", "10", "13", "14"],
     correct: 3,
-    solution: "Blue = 10 balls, which is 1 part, so 1 part = 10. Green = 50, black = 20, blue = 10. After removing 10 green and 10 black: 40 : 10 : 10 = 4 : 1 : 1."
+    solution: "Scores below 50: 30, 43, 20, 48, 44, 37, which is 6 students. So at least 50 marks: 20 − 6 = 14 students."
   },
 
-  // ===== 39: MATHEMATICS - QUADRATIC EQUATIONS (ROOTS) =====
+  // ===== 10: MATHEMATICS - QUADRATIC EQUATIONS (DISCRIMINANT) =====
   {
     subject: "Mathematics",
-    topic: "Quadratic Equations (Roots)",
-    q: "If α and β are the roots of the equation 3x² + 5x − 2 = 0, find the value of 1/α + 1/β.",
-    options: ["−5/2", "−2/3", "1/2", "5/2"],
-    correct: 3,
-    solution: "For 3x² + 5x − 2 = 0: α + β = −5/3 and αβ = −2/3. 1/α + 1/β = (α + β)/αβ = (−5/3)/(−2/3) = 5/2."
+    topic: "Quadratic Equations (Discriminant)",
+    q: "Find the values of p for which the equation x² − (p − 2)x + 2p + 1 = 0 has equal roots",
+    options: ["(0, 12)", "(1, 2)", "(21, 0)", "(4, 5)", "(3, 4)"],
+    correct: 0,
+    solution: "Equal roots need b² − 4ac = 0: (p − 2)² − 4(2p + 1) = 0. So p² − 4p + 4 − 8p − 4 = 0, i.e. p² − 12p = 0, giving p = 0 or p = 12."
   },
 
-  // ===== 40: MATHEMATICS - PROBABILITY =====
+  // ===== 11: MATHEMATICS - LONGITUDE & LATITUDE =====
   {
     subject: "Mathematics",
-    topic: "Probability",
-    q: "The letters of the word MATRICULATION are cut and put into a box. One letter is drawn at random. Find the probability of drawing a vowel.",
-    options: ["2/13", "5/13", "6/13", "8/13"],
+    topic: "Longitude & Latitude",
+    q: "The angle between latitudes 30°S and 13°N is",
+    options: ["17°", "33°", "43°", "53°"],
     correct: 2,
-    solution: "MATRICULATION has 13 letters. Vowels: A, I, U, A, I, O = 6. Probability = 6/13."
+    solution: "The latitudes are on opposite sides of the equator, so add them: 30° + 13° = 43°."
   },
 
-  // ===== 41: MATHEMATICS - BINARY OPERATIONS =====
-  {
-    subject: "Mathematics",
-    topic: "Binary Operations",
-    q: "The binary operation * is defined on the set of integers p and q by p * q = pq + p + q. Find 2 * (3 * 4).",
-    options: ["19", "38", "59", "67"],
-    correct: 2,
-    solution: "3 * 4 = (3 × 4) + 3 + 4 = 19. Then 2 * 19 = (2 × 19) + 2 + 19 = 59."
-  },
-
-  // ===== 42: MATHEMATICS - SIMULTANEOUS EQUATIONS =====
-  {
-    subject: "Mathematics",
-    topic: "Simultaneous Equations",
-    q: "Solve the simultaneous equations 2/x − 3/y = 2 and 4/x + 3/y = 10",
-    options: ["x = 3/2, y = 1/2", "x = 1/2, y = 3/2", "x = −1/2, y = −3/2", "x = 1/2, y = −3/2"],
-    correct: 1,
-    solution: "Add the two equations: 6/x = 12, so x = 1/2. Substitute: 2/(1/2) − 3/y = 2, so 4 − 3/y = 2, giving 3/y = 2 and y = 3/2."
-  },
-
-  // ===== 43: MATHEMATICS - SEQUENCES & SERIES (A.P.) =====
-  {
-    subject: "Mathematics",
-    topic: "Sequences & Series (A.P.)",
-    q: "The sum of the first n terms of an arithmetic progression is 252. If the first term is −16 and the last term is 72, find the number of terms.",
-    options: ["7", "9", "6", "8"],
-    correct: 1,
-    solution: "Sₙ = (n/2)(a + l): 252 = (n/2)(−16 + 72) = 28n. So n = 9."
-  },
-
-  // ===== 44: MATHEMATICS - FUNCTIONS =====
+  // ===== 12: MATHEMATICS - FUNCTIONS =====
   {
     subject: "Mathematics",
     topic: "Functions",
-    q: "If the function f is defined by f(x + 2) = 2x² + 7x − 5, find f(−1).",
-    options: ["−10", "−8", "4", "10"],
-    correct: 1,
-    solution: "Let x + 2 = −1, so x = −3. f(−1) = 2(−3)² + 7(−3) − 5 = 18 − 21 − 5 = −8."
+    q: "If f(x − 4) = x² + 2x + 3, find f(2)",
+    options: ["6", "11", "27", "51"],
+    correct: 3,
+    solution: "Let x − 4 = 2, so x = 6. f(2) = 6² + 2(6) + 3 = 36 + 12 + 3 = 51."
   },
 
-  // ===== 45: MATHEMATICS - DIFFERENTIATION (RATES OF CHANGE) =====
+  // ===== 13: MATHEMATICS - LOGARITHMS =====
   {
     subject: "Mathematics",
-    topic: "Differentiation (Rates of Change)",
-    q: "What is the rate of change of the volume V of a hemisphere with respect to its radius r when r = 2?",
-    options: ["2π", "4π", "8π", "16π/3"],
-    correct: 2,
-    solution: "Volume of a hemisphere V = (2/3)πr³. dV/dr = 2πr². At r = 2: 2π × 4 = 8π."
+    topic: "Logarithms",
+    q: "Without using tables, evaluate log₂4 + log₄2 − log₂₅5",
+    options: ["1/2", "1/5", "0", "5", "2"],
+    correct: 4,
+    solution: "log₂4 = 2, log₄2 = 1/2 (since 4^(1/2) = 2), and log₂₅5 = 1/2. So 2 + 1/2 − 1/2 = 2."
   },
 
-  // ===== 46: MATHEMATICS - DIFFERENTIATION (MAXIMA & MINIMA) =====
+  // ===== 14: MATHEMATICS - STATISTICS (RANGE & MODE) =====
   {
     subject: "Mathematics",
-    topic: "Differentiation (Maxima & Minima)",
-    q: "Find the value of x for which the function y = x³ − x has a minimum value.",
-    options: ["−√3", "−√3/2", "√3/3", "√3"],
-    correct: 2,
-    solution: "dy/dx = 3x² − 1 = 0, so x = ±1/√3 = ±√3/3. d²y/dx² = 6x is positive when x = √3/3, so that is the minimum."
+    topic: "Statistics (Range & Mode)",
+    q: "Find the sum of the range and the mode of the set of numbers 10, 5, 10, 9, 8, 7, 7, 10, 8, 10, 8, 4, 6, 9, 10, 9, 10, 9, 7, 10, 6, 5",
+    options: ["16", "14", "12", "10"],
+    correct: 0,
+    solution: "Range = 10 − 4 = 6. The number 10 appears most often (7 times), so the mode is 10. Sum = 6 + 10 = 16."
   },
 
-  // ===== 47: MATHEMATICS - SIMULTANEOUS EQUATIONS =====
+  // ===== 15: MATHEMATICS - FRACTIONS (WORD PROBLEMS) =====
   {
     subject: "Mathematics",
-    topic: "Simultaneous Equations",
-    q: "Solve the equations: m² + n² = 29; m + n = 7",
-    options: ["(5, 2) and (5, 3)", "(5, 3) and (3, 5)", "(2, 3) and (3, 5)", "(2, 5) and (5, 2)"],
-    correct: 3,
-    solution: "From m + n = 7, n = 7 − m. Then m² + (7 − m)² = 29, so 2m² − 14m + 20 = 0, i.e. m² − 7m + 10 = 0, giving m = 2 or 5. So (m, n) = (2, 5) or (5, 2)."
+    topic: "Fractions (Word Problems)",
+    q: "Three brothers in a business deal share the profit at the end of the contract. The first received 1/3 of the profit and the second 2/3 of the remainder. If the third received the remaining ₦12,000.00, how much profit did they share?",
+    options: ["₦60,000.00", "₦54,000.00", "₦48,000.00", "₦42,000.00"],
+    correct: 1,
+    solution: "Remainder after the first = 2/3. Second takes 2/3 × 2/3 = 4/9. Third gets 1 − 1/3 − 4/9 = 2/9. So 2/9 of profit = 12,000, and profit = 12,000 × 9/2 = ₦54,000."
   },
 
-  // ===== 48: MATHEMATICS - QUADRATIC EQUATIONS =====
+  // ===== 16: MATHEMATICS - ALGEBRA (WORD PROBLEMS) =====
   {
     subject: "Mathematics",
-    topic: "Quadratic Equations",
-    q: "What is the solution of the equation x² − x − 1 = 0?",
-    options: ["x = 1.6 and x = -0.6", "x = -1.6 and x = 0.6", "x = 1.6 and x = 0.6", "x = -1.6 and x = -0.6"],
+    topic: "Algebra (Word Problems)",
+    q: "John gives one third of his money to Janet who has ₦105.00. He then finds that his money is reduced to one-fourth of what Janet now has. Find how much money John had at first.",
+    options: ["₦45.00", "₦48.00", "₦52.00", "₦58.00", "₦60.00"],
     correct: 0,
-    solution: "x = [1 ± √(1 + 4)]/2 = (1 ± 2.236)/2. So x ≈ 1.6 or x ≈ −0.6."
+    solution: "Let John have x. Janet now has 105 + x/3. John is left with 2x/3 = (1/4)(105 + x/3). Multiply by 12: 8x = 315 + x, so 7x = 315 and x = ₦45."
   },
 
-  // ===== 49: MATHEMATICS - SEQUENCES & SERIES (G.P.) =====
+  // ===== 17: MATHEMATICS - STATISTICS (PERCENTAGE OF FREQUENCY) =====
   {
     subject: "Mathematics",
-    topic: "Sequences & Series (G.P.)",
-    q: "The first term of a geometric progression is twice its common ratio. Find the sum of the first two terms of the progression if its sum to infinity is 8.",
-    options: ["8/5", "8/3", "72/25", "56/9"],
+    topic: "Statistics (Percentage of Frequency)",
+    q: "The table shows the frequency distribution of the ages (in years) of pupils in a certain secondary school. Interval: 10–12, 13–15, 16–18, 19–20, 21–23 with number of pupils 6, 14, 15, 10, 5 respectively. What percentage of the total number of pupils is over 15 years but less than 21 years?",
+    options: ["35%", "45%", "50%", "60%"],
     correct: 2,
-    solution: "a = 2r. S∞ = a/(1 − r) = 8, so 2r = 8(1 − r), giving 10r = 8 and r = 0.8. a = 1.6. First two terms: 1.6 + 1.6(0.8) = 1.6 + 1.28 = 2.88 = 72/25."
+    solution: "Total pupils = 6 + 14 + 15 + 10 + 5 = 50. Over 15 but under 21 means the 16–18 and 19–20 classes: 15 + 10 = 25. Percentage = 25/50 × 100 = 50%."
   },
 
-  // ===== 50: MATHEMATICS - CIRCLE GEOMETRY (POLYGONS) =====
+  // ===== 18: MATHEMATICS - ALGEBRA (SUBSTITUTION) =====
   {
     subject: "Mathematics",
-    topic: "Circle Geometry (Polygons)",
-    q: "PQRSTV is a regular polygon of side 7 cm inscribed in a circle. Find the circumference of the circle. [π = 22/7]",
-    options: ["22 cm", "42 cm", "44 cm", "56 cm"],
-    correct: 2,
-    solution: "A regular hexagon (6 sides) inscribed in a circle has side = radius, so r = 7 cm. Circumference = 2πr = 2 × (22/7) × 7 = 44 cm."
-  },
-
-  // ===== 51: PHYSICS - GRAVITATIONAL FIELD =====
-  {
-    subject: "Physics",
-    topic: "Gravitational Field",
-    q: "Calculate the escape velocity of a satellite launched from the earth's surface if the radius of the earth is 6.4 × 10⁶ m. [g = 10 m/s²]",
-    options: ["25.3 km/s", "4.2 km/s", "4.0 km/s", "11.3 km/s"],
+    topic: "Algebra (Substitution)",
+    q: "If a = 2, b = −2 and c = −1/2, evaluate (ab² − bc²)(a²c − abc)",
+    options: ["0", "−28", "−30", "−34"],
     correct: 3,
-    solution: "Escape velocity v = √(2gR) = √(2 × 10 × 6.4 × 10⁶) = √(1.28 × 10⁸) ≈ 1.13 × 10⁴ m/s = 11.3 km/s."
+    solution: "ab² = 2(4) = 8 and bc² = (−2)(1/4) = −1/2, so ab² − bc² = 8.5. a²c = 4(−1/2) = −2 and abc = 2(−2)(−1/2) = 2, so a²c − abc = −4. Product = 8.5 × (−4) = −34."
   },
 
-  // ===== 52: PHYSICS - SEMICONDUCTORS =====
+  // ===== 19: MATHEMATICS - INDICES =====
   {
-    subject: "Physics",
-    topic: "Semiconductors",
-    q: "The electrical properties of germination can be altered drastically by the addition of impurities. The process is referred to as",
-    options: ["doping", "saturation", "bonding", "amplification."],
-    correct: 0,
-    solution: "Adding small amounts of impurity atoms to a pure semiconductor to change its conductivity is called doping."
-  },
-
-  // ===== 53: PHYSICS - REFRACTION OF LIGHT =====
-  {
-    subject: "Physics",
-    topic: "Refraction of Light",
-    q: "The speed of light in air is 3.0 × 10⁸ m/s. Its speed in glass of refractive index 1.65 is",
-    options: ["1.82 × 10⁸ m/s", "3.00 × 10⁸ m/s", "4.95 × 10⁸ m/s", "1.65 × 10⁸ m/s"],
-    correct: 0,
-    solution: "n = c/v, so v = c/n = (3.0 × 10⁸)/1.65 = 1.82 × 10⁸ m/s."
-  },
-
-  // ===== 54: PHYSICS - OPTICAL INSTRUMENTS & DEFECTS OF VISION =====
-  {
-    subject: "Physics",
-    topic: "Optical Instruments & Defects of Vision",
-    q: "Which of the following is used for the correction of short- sightedness?",
-    options: ["Concave lens.", "Concave mirror.", "Convex mirror.", "Convex lens."],
-    correct: 0,
-    solution: "Short-sightedness (myopia) means the image forms in front of the retina. A diverging (concave) lens spreads the rays so they focus further back, on the retina."
-  },
-
-  // ===== 55: PHYSICS - SEMICONDUCTORS =====
-  {
-    subject: "Physics",
-    topic: "Semiconductors",
-    q: "Which of the following is a pure semiconductor?",
-    options: ["Silicon", "Phosphorus", "Transistor", "Carbon"],
-    correct: 0,
-    solution: "A pure (intrinsic) semiconductor has no added impurity. Silicon (and germanium) is a pure semiconductor. Phosphorus is a dopant, and a transistor is a device."
-  },
-
-  // ===== 56: PHYSICS - WAVES (VIBRATING STRINGS) =====
-  {
-    subject: "Physics",
-    topic: "Waves (Vibrating Strings)",
-    q: "A sonometer wire of length 100cm under a tension of 10N, has a frequency of 250Hz. Keeping the length of the wire constant, the tension is adjusted to produce a new frequency of 350HZ. The new tension is",
-    options: ["5.1N", "19.6N", "14.0N", "7.1N"],
+    subject: "Mathematics",
+    topic: "Indices",
+    q: "If 5^(x + 2y) = 5 and 4^(x + 3y) = 16, find 3^(x + y)",
+    options: ["0", "1", "3", "27"],
     correct: 1,
-    solution: "f ∝ √T at constant length. (f₂/f₁)² = T₂/T₁, so T₂ = 10 × (350/250)² = 10 × 1.96 = 19.6 N."
+    solution: "x + 2y = 1 and x + 3y = 2. Subtracting: y = 1, so x = −1. Then x + y = 0 and 3⁰ = 1."
   },
 
-  // ===== 57: PHYSICS - HEAT (SPECIFIC HEAT CAPACITY) =====
+  // ===== 20: MATHEMATICS - ALGEBRA (WORD PROBLEMS) =====
   {
-    subject: "Physics",
-    topic: "Heat (Specific Heat Capacity)",
-    q: "A block of aluminium is heated electrically by a 30 W heater. If the temperature rises by 100˚C in 5 minutes, the heat capacity of the aluminium is",
-    options: ["200 JK-1", "900 JK-1", "90 JK-1", "100 JK-1"],
-    correct: 2,
-    solution: "Energy supplied = Pt = 30 × (5 × 60) = 9000 J. Heat capacity = Q/Δθ = 9000/100 = 90 J/K."
+    subject: "Mathematics",
+    topic: "Algebra (Word Problems)",
+    q: "In 1984, Ike was 24 years old and his father was 45 years old. In what year was Ike exactly half his father's age?",
+    options: ["1982", "1981", "1979", "1978"],
+    correct: 1,
+    solution: "Let t be the number of years after 1984. 24 + t = (45 + t)/2, so 48 + 2t = 45 + t and t = −3. So the year was 1984 − 3 = 1981 (Ike 21, father 42)."
   },
 
-  // ===== 58: PHYSICS - LIGHT (RECTILINEAR PROPAGATION) =====
+  // ===== 21: MATHEMATICS - FACTORISATION =====
   {
-    subject: "Physics",
-    topic: "Light (Rectilinear Propagation)",
-    q: "Shadows and eclipses result from the",
-    options: ["refraction of light", "reflection of light.", "defraction of light", "rectilinear propagation of light"],
+    subject: "Mathematics",
+    topic: "Factorisation",
+    q: "Factorise x² + 2a + ax + 2x",
+    options: ["(x + 2a)(x + 1)", "(x + 2a)(x − 1)", "(x² − 1)(x + a)", "(x + 2)(x + a)"],
     correct: 3,
-    solution: "Light travels in straight lines. When an opaque object blocks it, shadows and eclipses form. This is rectilinear propagation of light."
+    solution: "Group the terms: x² + ax + 2x + 2a = x(x + a) + 2(x + a) = (x + 2)(x + a)."
   },
 
-  // ===== 59: PHYSICS - RADIOACTIVITY (HALF-LIFE) =====
+  // ===== 22: MATHEMATICS - PROBABILITY =====
   {
-    subject: "Physics",
-    topic: "Radioactivity (Half-life)",
-    q: "A piece of radioactive material contains 1000 atoms. If its half- life is 20 seconds, the time taken for 125 atoms to remain is",
-    options: ["20 seconds", "40 seconds", "60 seconds", "80 seconds"],
-    correct: 2,
-    solution: "1000 → 500 → 250 → 125 takes 3 half-lives. Time = 3 × 20 = 60 seconds."
-  },
-
-  // ===== 60: PHYSICS - ELECTROMAGNETIC INDUCTION =====
-  {
-    subject: "Physics",
-    topic: "Electromagnetic Induction",
-    q: "A conductor of length 1m moves with a velocity of 50ms-1 at an angle of 30° to the direction of a uniform magnetic field of flux density 1.5 Wbm-2. What is the e.m.f. induced in the conductor?",
-    options: ["37.5V", "50.5V", "75.0V", "80.5V"],
+    subject: "Mathematics",
+    topic: "Probability",
+    q: "If U = {x : x is an integer and 1 ≤ x ≤ 20}, E₁ = {x : x is a multiple of 3} and E₂ = {x : x is a multiple of 4}, and an integer is picked at random from U, find the probability that it is not in E₂.",
+    options: ["3/4", "3/10", "1/4", "1/20"],
     correct: 0,
-    solution: "e.m.f. = Blv sin θ = 1.5 × 1 × 50 × sin 30° = 1.5 × 50 × 0.5 = 37.5 V."
+    solution: "Multiples of 4 in U: 4, 8, 12, 16, 20, which is 5 numbers. P(in E₂) = 5/20 = 1/4, so P(not in E₂) = 1 − 1/4 = 3/4."
   },
 
-  // ===== 61: PHYSICS - SOUND WAVES =====
+  // ===== 23: MATHEMATICS - FACTORISATION =====
   {
-    subject: "Physics",
-    topic: "Sound Waves",
-    q: "The sound of an electric bell dies down slowly when air is slowly pumped out from a bottle because",
-    options: ["sound cannot pass through the bottle", "sound can pass through a vacuum", "sound needs a material medium", "the wavelength of sound becomes greater in the bottle."],
+    subject: "Mathematics",
+    topic: "Factorisation",
+    q: "Factorise (4a + 3)² − (3a − 2)²",
+    options: ["(a + 1)(a + 5)", "(a − 5)(7a − 1)", "(a + 5)(7a + 1)", "a(7a + 1)"],
     correct: 2,
-    solution: "Sound is a mechanical wave and needs a material medium. As air is pumped out, less medium is left, so the sound fades."
+    solution: "Difference of two squares: [(4a + 3) − (3a − 2)][(4a + 3) + (3a − 2)] = (a + 5)(7a + 1)."
   },
 
-  // ===== 62: PHYSICS - MACHINES (EFFICIENCY & WORK) =====
+  // ===== 24: MATHEMATICS - MENSURATION (SPHERE) =====
   {
-    subject: "Physics",
-    topic: "Machines (Efficiency & Work)",
-    q: "A machine is used to lift a load of 20 N through a height of 10m. if the efficiency of the machine is 40%, how much work is done?",
-    options: ["120 J", "80 J", "500 J", "300 J."],
-    correct: 2,
-    solution: "Useful work output = 20 × 10 = 200 J. Efficiency = output/input = 40%, so work input (work done) = 200/0.4 = 500 J."
+    subject: "Mathematics",
+    topic: "Mensuration (Sphere)",
+    q: "Find the radius of a sphere whose surface area is 154 cm². [π = 22/7]",
+    options: ["7.00 cm", "3.50 cm", "3.00 cm", "1.75 cm"],
+    correct: 1,
+    solution: "Surface area = 4πr² = 154. So r² = (154 × 7)/(4 × 22) = 12.25 and r = 3.5 cm."
   },
 
-  // ===== 63: PHYSICS - QUANTUM PHYSICS (UNCERTAINTY PRINCIPLE) =====
+  // ===== 25: MATHEMATICS - COORDINATE GEOMETRY (LOCUS) =====
   {
-    subject: "Physics",
-    topic: "Quantum Physics (Uncertainty Principle)",
-    q: "If the uncertainty in the measurement of the position of a particle is 5 × 10⁻¹⁰ m, the uncertainty in the momentum of the particle is [h = 6.6 × 10⁻³⁴ Js]",
-    options: ["1.32 × 10⁻²⁴ Ns", "3.30 × 10⁻⁴⁴ Ns", "1.32 × 10⁻⁴⁴ Ns", "3.30 × 10⁻²⁴ Ns"],
-    correct: 0,
-    solution: "Δp ≈ h/Δx = (6.6 × 10⁻³⁴)/(5 × 10⁻¹⁰) = 1.32 × 10⁻²⁴ Ns."
-  },
-
-  // ===== 64: PHYSICS - NUCLEAR PHYSICS (FUSION) =====
-  {
-    subject: "Physics",
-    topic: "Nuclear Physics (Fusion)",
-    q: "Which of the following are produced after a nuclear fusion process? I. One heavy nucleus II. Neutrons III. Protons IV. Energy",
-    options: ["I and II", "II and III", "I and IV", "II and IV."],
+    subject: "Mathematics",
+    topic: "Coordinate Geometry (Locus)",
+    q: "A point P moves so that it is equidistant from points L and M. If LM is 16 cm, find the distance of P from LM when P is 10 cm from L.",
+    options: ["12 cm", "10 cm", "8 cm", "6 cm"],
     correct: 3,
-    solution: "In fusion, light nuclei combine to form a heavier nucleus, releasing neutrons and a large amount of energy. So neutrons (II) and energy (IV) are produced."
+    solution: "P lies on the perpendicular bisector of LM. The foot of the perpendicular from P is the midpoint of LM, 8 cm from L. Distance = √(10² − 8²) = √36 = 6 cm."
   },
 
-  // ===== 65: PHYSICS - WORK, ENERGY & POWER =====
+  // ===== 26: MATHEMATICS - INDICES & SURDS =====
   {
-    subject: "Physics",
-    topic: "Work, Energy & Power",
-    q: "If a pump is capable of lifting 5000 kg of water through a vertical height of 60 m in 15 minutes, the power of the pump is [g = 10 m/s²]",
-    options: ["2.5 × 10⁵ W", "2.5 × 10⁴ W", "3.3 × 10³ W", "3.3 × 10² W"],
+    subject: "Mathematics",
+    topic: "Indices & Surds",
+    q: "Find the solution of the equation x − 8√x + 15 = 0",
+    options: ["3, 5", "−3, −5", "9, 25", "−9, 25"],
     correct: 2,
-    solution: "Power = work/time = mgh/t = (5000 × 10 × 60)/(15 × 60) = 3,000,000/900 ≈ 3.3 × 10³ W (J/s)."
+    solution: "Let t = √x. Then t² − 8t + 15 = 0, so (t − 3)(t − 5) = 0, giving t = 3 or 5. So x = 9 or x = 25."
   },
 
-  // ===== 66: PHYSICS - ELASTICITY =====
+  // ===== 27: MATHEMATICS - CIRCLE GEOMETRY (CONE FROM SECTOR) =====
   {
-    subject: "Physics",
-    topic: "Elasticity",
-    q: "A copper wire was subjected to a tensile stress of 7.7 × 10⁷ N/m². Calculate the tensile strain of the wire. [Young modulus = 1.1 × 10¹¹ N/m²]",
-    options: ["2.2 × 10⁻⁴", "2.0 × 10⁻⁵", "7.0 × 10⁻³", "7.0 × 10⁻⁴"],
+    subject: "Mathematics",
+    topic: "Circle Geometry (Cone from Sector)",
+    q: "A cone with the sector angle of 45° is cut out of a circle of radius r cm. Find the base radius of the cone.",
+    options: ["r/16 cm", "r/8 cm", "r/4 cm", "r/2 cm"],
+    correct: 1,
+    solution: "Arc length of the sector = (45/360) × 2πr = πr/4. This becomes the base circumference of the cone: 2πR = πr/4, so R = r/8."
+  },
+
+  // ===== 28: MATHEMATICS - STATISTICS (PIE CHART) =====
+  {
+    subject: "Mathematics",
+    topic: "Statistics (Pie Chart)",
+    q: "A dice is rolled 240 times and the results are: 1 → 30 times, 2 → 43, 3 → 54, 4 → 40, 5 → 41, 6 → 32. If a pie chart is constructed to represent the data, the angle corresponding to 4 is",
+    options: ["10°", "16°", "40°", "60°"],
     correct: 3,
-    solution: "Young modulus = stress/strain, so strain = stress/E = (7.7 × 10⁷)/(1.1 × 10¹¹) = 7.0 × 10⁻⁴."
+    solution: "Angle = (40/240) × 360° = 60°."
   },
 
-  // ===== 67: PHYSICS - TRANSFORMERS =====
+  // ===== 29: MATHEMATICS - LOGARITHMS =====
   {
-    subject: "Physics",
-    topic: "Transformers",
-    q: "A transformer has 300 turns of wire in the primary coil and 30 turns in the secondary coil. If the input voltage is 100 volts, the output voltage is",
-    options: ["10 volts", "5 volts", "15 volts", "20 volts."],
-    correct: 0,
-    solution: "Vs/Vp = Ns/Np. Vs = 100 × (30/300) = 10 volts (a step-down transformer)."
+    subject: "Mathematics",
+    topic: "Logarithms",
+    q: "Find x if log₉x = 1.5",
+    options: ["72.0", "27.0", "36.0", "3.5", "24.5"],
+    correct: 1,
+    solution: "log₉x = 1.5 means x = 9^1.5 = (√9)³ = 3³ = 27."
   },
 
-  // ===== 68: PHYSICS - SIMPLE HARMONIC MOTION =====
+  // ===== 30: MATHEMATICS - STATISTICS (VARIANCE) =====
   {
-    subject: "Physics",
-    topic: "Simple Harmonic Motion",
-    q: "Which of the following with respect to a body performing simple harmonic motion are in phase?",
-    options: ["Displacement and velocity of the body", "Displacement and force on the body", "Velocity and acceleration of the body", "Force acting on the body and the acceleration"],
+    subject: "Mathematics",
+    topic: "Statistics (Variance)",
+    q: "The variance of x, 2x, 3x, 4x and 5x is",
+    options: ["x√2", "2x²", "x²", "3x"],
+    correct: 1,
+    solution: "Mean = 3x. Deviations: −2x, −x, 0, x, 2x. Sum of squares = 4x² + x² + 0 + x² + 4x² = 10x². Variance = 10x²/5 = 2x²."
+  },
+
+  // ===== 31: MATHEMATICS - COORDINATE GEOMETRY (CURVES) =====
+  {
+    subject: "Mathematics",
+    topic: "Coordinate Geometry (Curves)",
+    q: "The curve y = −x² + 3x + 4 intersects the coordinate axes at",
+    options: ["(4, 0), (0, 0), (−1, 0)", "(−4, 0), (0, 4), (1, 1)", "(0, 0), (0, 1), (1, 0)", "(0, 4), (4, 0), (−1, 0)"],
     correct: 3,
-    solution: "By Newton’s second law F = ma, force and acceleration are always in the same direction, so they are always in phase."
+    solution: "y-axis (x = 0): y = 4, so (0, 4). x-axis (y = 0): x² − 3x − 4 = 0, so (x − 4)(x + 1) = 0, giving (4, 0) and (−1, 0)."
   },
 
-  // ===== 69: PHYSICS - ELECTROSTATICS (CHARGE) =====
+  // ===== 32: MATHEMATICS - DECIMALS & APPROXIMATION =====
   {
-    subject: "Physics",
-    topic: "Electrostatics (Charge)",
-    q: "Which of the following is true of an electrical charge?",
-    options: ["Positive charge means deficit electrons", "Negative charge means excess of electrons", "Electric current means movement of electrons", "All of the above"],
+    subject: "Mathematics",
+    topic: "Decimals & Approximation",
+    q: "Evaluate 21.05347 − 1.6324 × 0.43, to 3 decimal places.",
+    options: ["20.351", "20.352", "20.980", "20.981"],
+    correct: 1,
+    solution: "1.6324 × 0.43 = 0.701932. 21.05347 − 0.701932 = 20.351538, which is 20.352 to 3 decimal places."
+  },
+
+  // ===== 33: MATHEMATICS - SIMPLE INTEREST =====
+  {
+    subject: "Mathematics",
+    topic: "Simple Interest",
+    q: "Udoh deposited ₦150.00 in the bank. At the end of 5 years the simple interest on the principal was ₦55.00. At what rate per annum was the interest paid?",
+    options: ["11%", "7⅓%", "5%", "3½%"],
+    correct: 1,
+    solution: "I = PRT/100, so R = (100 × 55)/(150 × 5) = 5500/750 = 7⅓%."
+  },
+
+  // ===== 34: MATHEMATICS - DECIMALS & APPROXIMATION =====
+  {
+    subject: "Mathematics",
+    topic: "Decimals & Approximation",
+    q: "Find, correct to two decimal places: 100 + 1/100 + 3/1000 + 27/10000",
+    options: ["100.02", "1000.02", "100.22", "100.01", "100.51"],
+    correct: 0,
+    solution: "1/100 = 0.01, 3/1000 = 0.003, 27/10000 = 0.0027. Sum = 100 + 0.01 + 0.003 + 0.0027 = 100.0157, which is 100.02 to 2 decimal places."
+  },
+
+  // ===== 35: MATHEMATICS - SIMPLE INTEREST =====
+  {
+    subject: "Mathematics",
+    topic: "Simple Interest",
+    q: "At what rate would a sum of ₦100.00 deposited for 5 years raise an interest of ₦7.50?",
+    options: ["1½%", "2½%", "15%", "25%"],
+    correct: 0,
+    solution: "R = (100 × I)/(P × T) = (100 × 7.50)/(100 × 5) = 1.5%."
+  },
+
+  // ===== 36: MATHEMATICS - TRIGONOMETRY (EQUATIONS) =====
+  {
+    subject: "Mathematics",
+    topic: "Trigonometry (Equations)",
+    q: "If sin θ = cos θ, find θ between 0° and 360°",
+    options: ["45°, 225°", "135°, 315°", "45°, 315°", "135°, 225°"],
+    correct: 0,
+    solution: "sin θ = cos θ gives tan θ = 1. tan is positive in the first and third quadrants, so θ = 45° or 180° + 45° = 225°."
+  },
+
+  // ===== 37: MATHEMATICS - STATISTICS (MODE) =====
+  {
+    subject: "Mathematics",
+    topic: "Statistics (Mode)",
+    q: "Estimate the mode of the frequency distribution below. Weight (g): 0–10, 10–20, 20–30, 30–40, 40–50 with number of coconuts 10, 27, 19, 6, 2 respectively.",
+    options: ["13.2 g", "15.0 g", "16.8 g", "17.5 g"],
+    correct: 2,
+    solution: "Modal class is 10–20 (frequency 27). Mode = L + [f₁ − f₀]/[2f₁ − f₀ − f₂] × c = 10 + (27 − 10)/(54 − 10 − 19) × 10 = 10 + (17/25) × 10 = 16.8 g."
+  },
+
+  // ===== 38: MATHEMATICS - INTEGRATION (DEFINITE) =====
+  {
+    subject: "Mathematics",
+    topic: "Integration (Definite)",
+    q: "If y = x(x⁴ + x² + 1), evaluate ∫ y dx from x = −1 to x = 1",
+    options: ["11/12", "11/16", "5/6", "0"],
     correct: 3,
-    solution: "Positive charge means a deficit of electrons, negative charge means an excess of electrons, and electric current is a flow of charge (electrons in a metal). All three statements are true."
+    solution: "y = x⁵ + x³ + x is an odd function, so its integral over the symmetric interval [−1, 1] is 0. Check: [x⁶/6 + x⁴/4 + x²/2] from −1 to 1 = 0."
   },
 
-  // ===== 70: PHYSICS - CAPACITORS =====
+  // ===== 39: MATHEMATICS - COORDINATE GEOMETRY (DISTANCE) =====
   {
-    subject: "Physics",
-    topic: "Capacitors",
-    q: "The capacitance of a parallel plate capacitor is 20 μF in air and 60 μF in the presence of a dielectric. What is the dielectric constant?",
-    options: ["2.0", "0.3", "6.0", "3.0."],
+    subject: "Mathematics",
+    topic: "Coordinate Geometry (Distance)",
+    q: "Find the distance between the point Q(4, 3) and the point common to the lines 2x − y = 4 and x + y = 2",
+    options: ["3√10", "3√5", "√26", "√13"],
     correct: 3,
-    solution: "Dielectric constant (relative permittivity) = C with dielectric / C in air = 60/20 = 3.0."
+    solution: "Add the equations: 3x = 6, so x = 2 and y = 0. The common point is (2, 0). Distance = √[(4 − 2)² + (3 − 0)²] = √13."
   },
 
-  // ===== 71: PHYSICS - SEMICONDUCTORS (P-N JUNCTION) =====
+  // ===== 40: MATHEMATICS - CIRCLE GEOMETRY (SECTOR) =====
   {
-    subject: "Physics",
-    topic: "Semiconductors (p-n Junction)",
-    q: "If a reverse-biased voltage is applied across a p-n junction, the depletion layer width is",
-    options: ["Increased", "Decreased", "Constant", "halved"],
-    correct: 0,
-    solution: "Reverse bias pulls charge carriers away from the junction, so the depletion layer widens (increases)."
+    subject: "Mathematics",
+    topic: "Circle Geometry (Sector)",
+    q: "Find the area of the sector of a circle with radius 3 m, if the angle of the sector is 60°",
+    options: ["4.0 m²", "4.1 m²", "4.7 m²", "5.0 m²"],
+    correct: 2,
+    solution: "Area = (60/360) × πr² = (1/6) × π × 9 = 1.5π ≈ 4.7 m²."
   },
 
-  // ===== 72: PHYSICS - CURRENT ELECTRICITY (METERS) =====
+  // ===== 41: MATHEMATICS - COORDINATE GEOMETRY (STRAIGHT LINE) =====
   {
-    subject: "Physics",
-    topic: "Current Electricity (Meters)",
-    q: "A galvanometer with full-scale deflection of 10mA is to be converted to a voltmeter with full- scale deflection of 5 V. If a series resistance of 498Ω is used for the conversion, the resistance of the galvanometer is",
-    options: ["2 Ω", "10 Ω", "5 Ω", "1 Ω"],
-    correct: 0,
-    solution: "Total resistance for a 5 V full-scale reading = V/I = 5/0.010 = 500 Ω. Galvanometer resistance = 500 − 498 = 2 Ω."
+    subject: "Mathematics",
+    topic: "Coordinate Geometry (Straight Line)",
+    q: "The angle between the positive horizontal axis and a given line is 135°. Find the equation of the line if it passes through the point (2, 3).",
+    options: ["x − y = 1", "x + y = 1", "x + y = 5", "x − y = 5"],
+    correct: 2,
+    solution: "Gradient = tan 135° = −1. Equation: y − 3 = −1(x − 2), so y − 3 = −x + 2 and x + y = 5."
   },
 
-  // ===== 73: PHYSICS - NUCLEAR PHYSICS (FUSION) =====
+  // ===== 42: MATHEMATICS - INTEGRATION =====
   {
-    subject: "Physics",
-    topic: "Nuclear Physics (Fusion)",
-    q: "What type of reaction is represented by the scheme ²₁H + ²₁H → ³₂He + ¹₀n + energy?",
-    options: ["Fusion reaction", "Fission reaction", "Chain reaction", "Radioactive decay"],
-    correct: 0,
-    solution: "Two light nuclei (deuterium) combine to form a heavier nucleus (helium) and release energy. This is a fusion reaction."
-  },
-
-  // ===== 74: PHYSICS - WAVES (PROPERTIES) =====
-  {
-    subject: "Physics",
-    topic: "Waves (Properties)",
-    q: "Longitudinal waves do not exhibit",
-    options: ["refraction", "polarization", "diffraction", "reflection"],
+    subject: "Mathematics",
+    topic: "Integration",
+    q: "Integrate 1/x + cos x with respect to x",
+    options: ["−1/x² + sin x + k", "ln x + sin x + k", "ln x − sin x + k", "−1/x² − sin x + k"],
     correct: 1,
-    solution: "Polarization only occurs for transverse waves. Longitudinal waves can be reflected, refracted and diffracted, but not polarized."
+    solution: "∫(1/x)dx = ln x and ∫cos x dx = sin x. So the result is ln x + sin x + k."
   },
 
-  // ===== 75: PHYSICS - LIGHT (DISPERSION) =====
+  // ===== 43: MATHEMATICS - DIFFERENTIATION (GRADIENT) =====
   {
-    subject: "Physics",
-    topic: "Light (Dispersion)",
-    q: "Dispersion occurs when white light passes through a glass prim because of the",
-    options: ["different speeds of the colours in the glass.", "high density of the glass.", "defects in the glass.", "different hidden colours in the glass."],
+    subject: "Mathematics",
+    topic: "Differentiation (Gradient)",
+    q: "Find the gradient of the curve y = 2√x − 1/x at the point x = 1",
+    options: ["0", "1", "2", "3"],
+    correct: 2,
+    solution: "y = 2x^(1/2) − x⁻¹, so dy/dx = x^(−1/2) + x⁻² = 1/√x + 1/x². At x = 1: 1 + 1 = 2."
+  },
+
+  // ===== 44: MATHEMATICS - POLYGONS =====
+  {
+    subject: "Mathematics",
+    topic: "Polygons",
+    q: "A regular polygon of n sides has 160° as the size of each interior angle. Find n.",
+    options: ["18", "16", "14", "12"],
     correct: 0,
-    solution: "Different colours of light travel at different speeds in glass, so they are refracted by different amounts. This splits white light into its colours."
+    solution: "Each exterior angle = 180° − 160° = 20°. n = 360°/20° = 18."
   },
 
-  // ===== 76: PHYSICS - SEMICONDUCTORS (DIODES) =====
+  // ===== 45: MATHEMATICS - RATIO & PROPORTION =====
   {
-    subject: "Physics",
-    topic: "Semiconductors (Diodes)",
-    q: "The p-n junction diodes can act as rectifiers because they",
-    options: ["Conduct current when forward biased", "Conduct current when reverse- biased", "Block current when forward biased", "Conduct current in both directions"],
-    correct: 0,
-    solution: "A p-n junction conducts when forward biased and blocks when reverse biased. So it passes current in one direction only and can rectify a.c. into d.c."
+    subject: "Mathematics",
+    topic: "Ratio & Proportion",
+    q: "A number of pencils were shared out among Bisi, Sola and Tunde in the ratio 2:3:5 respectively. If Bisi got 5, how many were shared out?",
+    options: ["15", "25", "30", "50"],
+    correct: 1,
+    solution: "Bisi's 2 parts = 5, so 1 part = 2.5. Total parts = 2 + 3 + 5 = 10, so total pencils = 10 × 2.5 = 25."
   },
 
-  // ===== 77: PHYSICS - LIGHT (MIRRORS) =====
+  // ===== 46: MATHEMATICS - STATISTICS (MEDIAN) =====
   {
-    subject: "Physics",
-    topic: "Light (Mirrors)",
-    q: "An object 4 cm high is placed 15 cm from a concave mirror of focal length 5 cm. The size of the image is",
-    options: ["3 cm", "5 cm", "4 cm", "2 cm"],
+    subject: "Mathematics",
+    topic: "Statistics (Median)",
+    q: "Find the median age of the frequency distribution below. Age: 20, 25, 30, 35, 40, 45 with number of students 3, 5, 1, 1, 2, 3 respectively.",
+    options: ["20", "25", "30", "35"],
+    correct: 1,
+    solution: "Total = 3 + 5 + 1 + 1 + 2 + 3 = 15 students. The median is the 8th value. Cumulative frequencies: 3 (age 20), 8 (age 25). So the 8th value is 25."
+  },
+
+  // ===== 47: MATHEMATICS - PERMUTATION & COMBINATION =====
+  {
+    subject: "Mathematics",
+    topic: "Permutation & Combination",
+    q: "In how many ways can a delegation of 3 be chosen from among 5 men and 3 women, if at least one man and at least one woman must be included?",
+    options: ["15", "28", "30", "45"],
     correct: 3,
-    solution: "Use 1/f = 1/u + 1/v: 1/v = 1/5 − 1/15 = 2/15, so v = 7.5 cm. Magnification = v/u = 7.5/15 = 0.5. Image size = 0.5 × 4 = 2 cm."
+    solution: "Total ways = ⁸C₃ = 56. All men: ⁵C₃ = 10. All women: ³C₃ = 1. Required = 56 − 10 − 1 = 45."
   },
 
-  // ===== 78: PHYSICS - ELECTROMAGNETIC INDUCTION =====
+  // ===== 48: MATHEMATICS - STATISTICS (MEAN) =====
   {
-    subject: "Physics",
-    topic: "Electromagnetic Induction",
-    q: "A magnet is moved through a coil of wire. The e.m.f. produced in the wire depends on",
-    options: ["the number of turns in the coil", "the strength of magnet", "the speed at which the magnet is moved", "all of the above."],
+    subject: "Mathematics",
+    topic: "Statistics (Mean)",
+    q: "The mean of the ages of ten secondary school pupils is 16 but when the age of their teacher is added to it, the mean becomes 19. Find the age of the teacher.",
+    options: ["27", "35", "38", "49"],
     correct: 3,
-    solution: "Faraday’s law: induced e.m.f. depends on the number of turns, the strength of the magnet and the rate of change of flux (speed of motion). So all of the above."
+    solution: "Sum of ten ages = 10 × 16 = 160. With the teacher: 11 × 19 = 209. Teacher's age = 209 − 160 = 49."
   },
 
-  // ===== 79: PHYSICS - ELECTRICAL ENERGY =====
+  // ===== 49: MATHEMATICS - FACTORISATION =====
   {
-    subject: "Physics",
-    topic: "Electrical Energy",
-    q: "A house has ten 40W and five 100W bulbs. How much will it cost the owner of the house to keep them lit for 10 hours if the cost of a unit is ₦5?",
-    options: ["₦90.", "₦50.", "₦45", "₦40."],
+    subject: "Mathematics",
+    topic: "Factorisation",
+    q: "Factorise 9(x + y)² − 4(x − y)²",
+    options: ["(x + y)(5x + y)", "(x + y)²", "(x + 5y)(5x + y)", "5(x + y)²"],
     correct: 2,
-    solution: "Total power = (10 × 40) + (5 × 100) = 900 W = 0.9 kW. Energy = 0.9 × 10 = 9 kWh. Cost = 9 × ₦5 = ₦45."
+    solution: "Difference of two squares: [3(x + y) − 2(x − y)][3(x + y) + 2(x − y)] = (x + 5y)(5x + y)."
   },
 
-  // ===== 80: PHYSICS - CONDUCTION OF ELECTRICITY THROUGH GASES =====
+  // ===== 50: MATHEMATICS - QUADRATIC EQUATIONS (WORD PROBLEMS) =====
   {
-    subject: "Physics",
-    topic: "Conduction of Electricity through Gases",
-    q: "Under which of the following conditions do gasses conduct electricity?",
-    options: ["High pressure and high p.d", "Low pressure and low p.d", "low pressure and high p.d", "High pressure and low p.d"],
+    subject: "Mathematics",
+    topic: "Quadratic Equations (Word Problems)",
+    q: "The ages of Tosan and Isa differ by 6 and the product of their ages is 187. Write their ages in the form (x, y), where x > y",
+    options: ["(12, 9)", "(23, 17)", "(17, 11)", "(18, 12)"],
     correct: 2,
-    solution: "Gases conduct electricity best at low pressure and high potential difference, as in a discharge tube, because ions travel further before colliding."
-  },
-
-  // ===== 81: PHYSICS - SOUND WAVES (MUSICAL NOTES) =====
-  {
-    subject: "Physics",
-    topic: "Sound Waves (Musical Notes)",
-    q: "A note is called an octave of another note when",
-    options: ["the notes have the same fundamental frequency", "its frequency is half of the first note.", "its frequency is twice that of the first note.", "its periodic time is twice that of the first note."],
-    correct: 2,
-    solution: "An octave is a note with twice the frequency of the original note."
-  },
-
-  // ===== 82: PHYSICS - LIGHT (ECLIPSES) =====
-  {
-    subject: "Physics",
-    topic: "Light (Eclipses)",
-    q: "The eclipse of the sun occurs when the",
-    options: ["moon’s umbra falls on some part of the earth", "moon is between the sun and the earth", "earth is between the sun and the moon", "moon is not completely hidden in the earth’s shadow."],
-    correct: 1,
-    solution: "A solar eclipse occurs when the moon lies between the sun and the earth, so the moon’s shadow falls on the earth. (A lunar eclipse is when the earth lies between the sun and moon.)"
-  },
-
-  // ===== 83: PHYSICS - ENERGY CONVERSION =====
-  {
-    subject: "Physics",
-    topic: "Energy Conversion",
-    q: "Which of the following best describes the energy changes which take place when a steam engine drives a generator which lights a lamp?",
-    options: ["Heat → Light → Sound→ Kinetic", "Heat→ Kinetic → Electricity→ Heat and Light", "Kinetic→ Light → Heat →Electricity", "Electricity →Kinetic→ Heat→ Light"],
-    correct: 1,
-    solution: "Heat energy of steam → kinetic energy of the engine → electrical energy in the generator → heat and light in the lamp."
-  },
-
-  // ===== 84: PHYSICS - QUANTUM PHYSICS (PHOTON ENERGY) =====
-  {
-    subject: "Physics",
-    topic: "Quantum Physics (Photon Energy)",
-    q: "The energy of a photon having a wavelength of 10⁻¹⁰ m is [h = 6.63 × 10⁻³⁴ Js, c = 3.0 × 10⁸ m/s]",
-    options: ["2.0 × 10⁻¹⁵ J", "1.7 × 10⁻¹³ J", "2.0 × 10⁻¹² J", "1.7 × 10⁻¹² J"],
-    correct: 0,
-    solution: "E = hc/λ = (6.63 × 10⁻³⁴ × 3.0 × 10⁸)/10⁻¹⁰ = 1.99 × 10⁻¹⁵ J ≈ 2.0 × 10⁻¹⁵ J."
-  },
-
-  // ===== 85: PHYSICS - ELECTROLYSIS (FARADAY’S LAWS) =====
-  {
-    subject: "Physics",
-    topic: "Electrolysis (Faraday’s Laws)",
-    q: "A charge of one coulomb liberated 0.0033g of copper in an electrolytic process. How long will it take a current of 2A to liberate 1.98g of copper in such a process?",
-    options: ["30 minutes", "5 minutes", "50 minutes", "60 minutes."],
-    correct: 1,
-    solution: "Charge needed = 1.98/0.0033 = 600 C. Time = Q/I = 600/2 = 300 s = 5 minutes."
-  },
-
-  // ===== 86: PHYSICS - HEAT (THERMAL EXPANSION) =====
-  {
-    subject: "Physics",
-    topic: "Heat (Thermal Expansion)",
-    q: "Two metals P and Q are heated through the same temperature difference. If the ratio of the linear expansivities of P to Q is 2:3 and the ratio of their lengths is 3:4 respectively, the ratio of the increase in lengths of P to Q is",
-    options: ["1:2", "2:1", "8:9", "9:8"],
-    correct: 0,
-    solution: "ΔL = αLΔθ, and Δθ is the same for both. ΔL_P/ΔL_Q = (α_P/α_Q) × (L_P/L_Q) = (2/3) × (3/4) = 1/2, i.e. 1 : 2."
-  },
-
-  // ===== 87: PHYSICS - HEAT (LATENT HEAT) =====
-  {
-    subject: "Physics",
-    topic: "Heat (Latent Heat)",
-    q: "Steam burn is more severe than that of boiling water because",
-    options: ["steam burn is dependent on relative humidity", "steam burn is independent of relative humidity", "steam possess greater heat energy per unit mass", "water boils at a higher temperature"],
-    correct: 2,
-    solution: "Steam releases its latent heat of vaporization when it condenses on the skin, in addition to the heat from cooling. So steam has more heat energy per unit mass than boiling water at the same temperature."
-  },
-
-  // ===== 88: PHYSICS - ELECTROLYSIS (FARADAY’S LAWS) =====
-  {
-    subject: "Physics",
-    topic: "Electrolysis (Faraday’s Laws)",
-    q: "The electrochemical equivalent of silver is 0.0012 g/C. If 36.0 g of silver is to be deposited by electrolysis on a surface by passing a steady current for 5.0 minutes, the current must be",
-    options: ["6000A", "100A", "10A", "1A"],
-    correct: 1,
-    solution: "m = zIt, so I = m/(zt) = 36.0/(0.0012 × 300) = 100 A (5 minutes = 300 s)."
-  },
-
-  // ===== 89: PHYSICS - SOUND WAVES (SPEED OF SOUND) =====
-  {
-    subject: "Physics",
-    topic: "Sound Waves (Speed of Sound)",
-    q: "Which of the following factors will affect the velocity of sound?",
-    options: ["An increase in the pitch of the sound", "An increase in the loudness of the sound", "Wind travelling in the same direction of the sound", "A change in the atmospheric pressure at constant temperature."],
-    correct: 2,
-    solution: "Wind in the direction of the sound adds to its speed. Pitch and loudness do not affect speed, and pressure at constant temperature has no effect."
-  },
-
-  // ===== 90: PHYSICS - HEAT (RADIATION) =====
-  {
-    subject: "Physics",
-    topic: "Heat (Radiation)",
-    q: "A perfect emitter or absorber of radiant energy is a",
-    options: ["red body", "conductor", "black body", "white body."],
-    correct: 2,
-    solution: "A black body is a perfect absorber and a perfect emitter of radiant energy."
-  },
-
-  // ===== 91: PHYSICS - HEAT (LATENT HEAT) =====
-  {
-    subject: "Physics",
-    topic: "Heat (Latent Heat)",
-    q: "The specific latent heat of vaporization of a substance is always",
-    options: ["less than its specific latent heat of fusion", "equal to its specific latent heat of fusion", "greater than its specific latent of fusion", "all of the above depending on the nature of the substance."],
-    correct: 2,
-    solution: "Vaporization needs much more energy than fusion, as molecules must be completely separated. So specific latent heat of vaporization is greater than that of fusion."
-  },
-
-  // ===== 92: PHYSICS - DENSITY =====
-  {
-    subject: "Physics",
-    topic: "Density",
-    q: "The density of 400 cm³ of palm oil was 0.9 g/cm³ before frying. If the density of the oil was 0.6 g/cm³ after frying, assuming no loss of oil to spilling, its new volume was",
-    options: ["360 cm³", "600 cm³", "240 cm³", "800 cm³"],
-    correct: 1,
-    solution: "Mass = density × volume = 0.9 × 400 = 360 g. Mass is unchanged, so new volume = 360/0.6 = 600 cm³."
-  },
-
-  // ===== 93: PHYSICS - LIGHT (MIRRORS & IMAGES) =====
-  {
-    subject: "Physics",
-    topic: "Light (Mirrors & Images)",
-    q: "Which of the following statements is applicable to a real image formed by a concave mirror? I. It can be observed on a screen II. It is always inverted and in front of the mirror III. It only seems to exist IV. It is formed by the actual converging of rays of light.",
-    options: ["I, II and III only", "I, II and IV only", "I and III only)", "I and II only."],
-    correct: 1,
-    solution: "A real image can be caught on a screen, is inverted, and is formed by actual convergence of rays. Statement III describes a virtual image, so the answer is I, II and IV only."
-  },
-
-  // ===== 94: PHYSICS - ELECTRIC DISCHARGE (CATHODE RAYS) =====
-  {
-    subject: "Physics",
-    topic: "Electric Discharge (Cathode Rays)",
-    q: "Which of the following statements correctly describe(s) cathode rays? I. They consist of tiny particles carrying negative electric charges II. They are deflected in a magnetic field but not in an electric filed. III. They consist of fast- moving neutrons and deflected in an electric filed.",
-    options: ["I only", "III only", "I and II only", "II and III only."],
-    correct: 0,
-    solution: "Cathode rays are streams of electrons (negatively charged particles). They are deflected by both electric and magnetic fields. Only statement I is correct."
-  },
-
-  // ===== 95: PHYSICS - EQUILIBRIUM OF FORCES (MOMENTS) =====
-  {
-    subject: "Physics",
-    topic: "Equilibrium of Forces (Moments)",
-    q: "A uniform metre rule weighing 0.5 N is to be pivoted on a knife-edge at the 30 cm mark. Where will a force of 2 N be placed from the pivot to balance the metre rule?",
-    options: ["95cm", "5cm", "20cm", "25cm"],
-    correct: 1,
-    solution: "The rule’s weight (0.5 N) acts at the 50 cm mark, 20 cm from the pivot. Moment = 0.5 × 20 = 10 N·cm. For balance: 2 × d = 10, so d = 5 cm on the opposite side."
-  },
-
-  // ===== 96: PHYSICS - MEASUREMENT =====
-  {
-    subject: "Physics",
-    topic: "Measurement",
-    q: "What is the least possible error encountered when taking measurement with a meter rule?",
-    options: ["0.1mm", "1.0mm", "0.5mm", "0.2mm"],
-    correct: 2,
-    solution: "The smallest division of a metre rule is 1 mm, so the least possible reading error is half of that, 0.5 mm."
-  },
-
-  // ===== 97: PHYSICS - REFRACTION OF LIGHT =====
-  {
-    subject: "Physics",
-    topic: "Refraction of Light",
-    q: "A glass plate 0.9 cm thick has a refractive index of 1.50. How long does it take for a pulse of light to pass through the plate? [c = 3.0 × 10⁸ m/s]",
-    options: ["3.0 × 10⁻¹⁰ s", "4.5 × 10⁻¹¹ s", "3.0 × 10⁻¹¹ s", "4.5 × 10⁻¹⁰ s"],
-    correct: 1,
-    solution: "Speed in glass = c/n = (3.0 × 10⁸)/1.5 = 2.0 × 10⁸ m/s. Time = distance/speed = 0.009/(2.0 × 10⁸) = 4.5 × 10⁻¹¹ s."
-  },
-
-  // ===== 98: PHYSICS - OPTICAL INSTRUMENTS =====
-  {
-    subject: "Physics",
-    topic: "Optical Instruments",
-    q: "In a compound microscope, the objective and the eye piece focal lengths are",
-    options: ["Long", "Short", "The same", "At infinity"],
-    correct: 1,
-    solution: "In a compound microscope both the objective and the eyepiece have short focal lengths. The objective’s is very short for high magnification."
-  },
-
-  // ===== 99: PHYSICS - ELECTROLYSIS (FARADAY’S LAWS) =====
-  {
-    subject: "Physics",
-    topic: "Electrolysis (Faraday’s Laws)",
-    q: "If a current of 2.5A flows through an electrolyte for 3 hours and 1.8g of a substance is deposited, what is the mass of the substance that will be deposited if a current of 4A flows through it for 4.8 hours?",
-    options: ["2.4g", "3.2g", "4.6g.", "4.8g."],
-    correct: 2,
-    solution: "m ∝ It. m₂ = 1.8 × (4 × 4.8)/(2.5 × 3) = 1.8 × 19.2/7.5 = 4.6 g (to 2 s.f. 4.608 g)."
-  },
-
-  // ===== 100: PHYSICS - FRICTION =====
-  {
-    subject: "Physics",
-    topic: "Friction",
-    q: "The coefficient of friction between two perfectly smooth surface is",
-    options: ["infinity.", "one", "half.", "zero."],
-    correct: 3,
-    solution: "Coefficient of friction μ = F/R. For perfectly smooth surfaces there is no friction, so μ = 0."
-  },
-
-  // ===== 101: ENGLISH - VOCABULARY & USAGE =====
-  {
-    subject: "English",
-    topic: "Vocabulary & Usage",
-    q: "The chief priest will … the men into the cult today",
-    options: ["indoctrinate", "usher", "convert", "initiate"],
-    correct: 3,
-    solution: "“Initiate” means to admit someone formally into a group or society, such as a cult."
-  },
-
-  // ===== 102: ENGLISH - PHRASAL VERBS & IDIOMS =====
-  {
-    subject: "English",
-    topic: "Phrasal Verbs & Idioms",
-    q: "The villages looked…their leader for good examples",
-    options: ["up to", "on to", "up at", "forward to"],
-    correct: 0,
-    solution: "“Look up to” means to respect or admire. The villages respect their leader as a model."
-  },
-
-  // ===== 103: ENGLISH - IDIOMS & EXPRESSIONS =====
-  {
-    subject: "English",
-    topic: "Idioms & Expressions",
-    q: "I do not intend to stay for long at the function. I only want to …",
-    options: ["put in an appearance", "put up appearance", "show up appearance", "keep up appearance"],
-    correct: 0,
-    solution: "“Put in an appearance” means to attend an event briefly."
-  },
-
-  // ===== 104: ENGLISH - VOCABULARY & USAGE =====
-  {
-    subject: "English",
-    topic: "Vocabulary & Usage",
-    q: "The situation has deteriorated sharply, and relations between the two countries may soon be…",
-    options: ["removed", "broken", "withdrawn", "eliminated"],
-    correct: 1,
-    solution: "Relations between countries that have deteriorated sharply may soon be “broken”, meaning cut off."
-  },
-
-  // ===== 105: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “takings” in: Mali stole the day’s takings from the bakery.",
-    options: ["receipts", "collections", "contributions", "offerings"],
-    correct: 0,
-    solution: "“Takings” means money received from sales, so “receipts” is closest in meaning."
-  },
-
-  // ===== 106: ENGLISH - LEXIS (PHRASAL VERBS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Phrasal Verbs)",
-    q: "Choose the option nearest in meaning to the word(s) “look out for” in: Olu promised to look out for her next time he is in town.",
-    options: ["watch for", "visit", "greet", "take care of"],
-    correct: 0,
-    solution: "“Look out for” here means to watch for her (to be on the lookout), so “watch for”."
-  },
-
-  // ===== 107: ENGLISH - PHRASAL VERBS =====
-  {
-    subject: "English",
-    topic: "Phrasal Verbs",
-    q: "The school will … for Easter in another six weeks",
-    options: ["break off", "break away", "break out", "break up"],
-    correct: 3,
-    solution: "“Break up” means to close for holidays, as schools do at the end of a term."
-  },
-
-  // ===== 108: ENGLISH - SENTENCE INTERPRETATION =====
-  {
-    subject: "English",
-    topic: "Sentence Interpretation",
-    q: "Jide is being forced to go to Lagos tomorrow. This means that Jide …",
-    options: ["will go to Lagos", "must go to Lagos", "wishes to go to Lagos", "is going to Lagos"],
-    correct: 1,
-    solution: "“Is being forced to go” means he has no choice. So “must go to Lagos”."
-  },
-
-  // ===== 109: ENGLISH - LEXIS (HOMOPHONES) =====
-  {
-    subject: "English",
-    topic: "Lexis (Homophones)",
-    q: "I was seriously disappointed when the… between the two teams ended in a goaless draw.",
-    options: ["march", "marsh", "match", "mash"],
-    correct: 2,
-    solution: "A “match” is a game between two teams. “March” is a walk or a month, and “marsh” is swampy land."
-  },
-
-  // ===== 110: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “apathy” in: The administrator’s apathy was soon noticed by all his subordinates.",
-    options: ["indifference", "kindness", "concern", "inefficiency"],
-    correct: 0,
-    solution: "“Apathy” means lack of interest or concern. “Indifference” is the closest."
-  },
-
-  // ===== 111: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “animated” in: The discussion became animated.",
-    options: ["specialized", "lively", "intellectual", "unruly"],
-    correct: 1,
-    solution: "“Animated” means full of life and energy, so “lively”."
-  },
-
-  // ===== 112: ENGLISH - LEXIS (ANTONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Antonyms)",
-    q: "Choose the option opposite in meaning to the word “densely” in: Coastal plains are often very densely populated.",
-    options: ["weakly", "badly", "rarely", "sparsely"],
-    correct: 3,
-    solution: "“Densely” means thickly populated. The opposite is “sparsely” (thinly populated)."
-  },
-
-  // ===== 113: ENGLISH - LEXIS (IDIOMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Idioms)",
-    q: "Choose the option nearest in meaning to the word(s) “smoke-screen” in: The advertisement served as a smoke-screen for the activities of the company.",
-    options: ["a camouflage", "a protection", "an enhancement", "an exchange"],
-    correct: 0,
-    solution: "A “smoke-screen” is something used to hide or disguise real activities. So “a camouflage”."
-  },
-
-  // ===== 114: ENGLISH - PREPOSITIONS =====
-  {
-    subject: "English",
-    topic: "Prepositions",
-    q: "John arrived at the airport on time but he could not get… the plane.",
-    options: ["into", "over", "in", "to enter"],
-    correct: 0,
-    solution: "“Get into” a plane means to board it. “Get in” would need an object after it, and the others are wrong."
-  },
-
-  // ===== 115: ENGLISH - IDIOMS & EXPRESSIONS =====
-  {
-    subject: "English",
-    topic: "Idioms & Expressions",
-    q: "The salesman tried to pull the wool over my eyes. This implies that the salesman tried to",
-    options: ["force me to buy his goods", "offer me cotton wool", "make me buy his wool", "dupe me"],
-    correct: 3,
-    solution: "“To pull the wool over someone’s eyes” means to deceive or dupe them."
-  },
-
-  // ===== 116: ENGLISH - COMPREHENSION (INTERPRETATION) =====
-  {
-    subject: "English",
-    topic: "Comprehension (Interpretation)",
-    q: "The expression “when man evolved a conscience” means when",
-    options: ["man developed an awareness of right and wrong", "man’s intellect improved tremendously", "man acquired new habits", "man became a critical creature"],
-    correct: 0,
-    solution: "“Evolved a conscience” means developed an awareness of right and wrong."
-  },
-
-  // ===== 117: ENGLISH - COMPARISON (GRAMMAR) =====
-  {
-    subject: "English",
-    topic: "Comparison (Grammar)",
-    q: "The boy thought that driving a car was not… dangerous than riding a bicyle.",
-    options: ["so very", "particularly", "very", "any more"],
-    correct: 3,
-    solution: "“Not any more dangerous than” is the correct comparative form after “not”. “So/very/particularly” cannot go before “…dangerous than”."
-  },
-
-  // ===== 118: ENGLISH - WORD FORM (VOCABULARY) =====
-  {
-    subject: "English",
-    topic: "Word Form (Vocabulary)",
-    q: "The suspect defrauded his … victims of large sums of money",
-    options: ["unsuspected", "unsuspecting", "unexpecting", "unexpected"],
-    correct: 1,
-    solution: "“Unsuspecting” describes people who do not suspect anything, so it fits “victims” who were defrauded."
-  },
-
-  // ===== 119: ENGLISH - PHRASAL VERBS =====
-  {
-    subject: "English",
-    topic: "Phrasal Verbs",
-    q: "Darling, do send the children to bed. I can’t … their noise any longer’, he said to his wife.",
-    options: ["make do with", "make up", "deal with", "put up with"],
-    correct: 3,
-    solution: "“Put up with” means to tolerate. He cannot tolerate the noise any longer."
-  },
-
-  // ===== 120: ENGLISH - LEXIS (IDIOMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Idioms)",
-    q: "Choose the option nearest in meaning to the word(s) “under a cloud” in: The preacher is under a cloud among the congregation.",
-    options: ["out of favour", "under observation", "under weather", "confused"],
-    correct: 0,
-    solution: "“Under a cloud” means in disgrace or out of favour."
-  },
-
-  // ===== 121: ENGLISH - CONCORD (SUBJECT–VERB AGREEMENT) =====
-  {
-    subject: "English",
-    topic: "Concord (Subject–Verb Agreement)",
-    q: "The present wanton display of riches… morals in our society.",
-    options: ["will be affecting", "are affecting", "is affecting", "was affecting"],
-    correct: 2,
-    solution: "The subject is the singular noun “display”, so the verb must be singular: “is affecting”."
-  },
-
-  // ===== 122: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “regrets” in: The president has sent his regrets. He is unable to attend the meeting.",
-    options: ["explanation", "anxieties", "unhappiness", "apologies"],
-    correct: 3,
-    solution: "“Sent his regrets” means he sent his apologies for not being able to attend."
-  },
-
-  // ===== 123: ENGLISH - COMPARISON (GRAMMAR) =====
-  {
-    subject: "English",
-    topic: "Comparison (Grammar)",
-    q: "The small girl is … than her elder sister",
-    options: ["more cleverer", "very cleverer", "much cleverer", "much more cleverer"],
-    correct: 2,
-    solution: "“Cleverer” is already a comparative, so it cannot take “more” or “very”. “Much cleverer” is correct."
-  },
-
-  // ===== 124: ENGLISH - STRUCTURE (GRAMMAR) =====
-  {
-    subject: "English",
-    topic: "Structure (Grammar)",
-    q: "Our Literature Master said that he would show us a film on Macbeth. The film will …",
-    options: ["worth seeing", "worth seeing it", "be worth to see", "be worth seeing"],
-    correct: 3,
-    solution: "The correct phrasing is “be worth seeing” (be + worth + -ing form), so “The film will be worth seeing”."
-  },
-
-  // ===== 125: ENGLISH - TENSES (GRAMMAR) =====
-  {
-    subject: "English",
-    topic: "Tenses (Grammar)",
-    q: "The Governor has... to the people on many occasions",
-    options: ["broadcast", "been broadcast", "broadcasted", "being broadcast"],
-    correct: 0,
-    solution: "Present perfect “has + past participle”. The past participle of “broadcast” is “broadcast”."
-  },
-
-  // ===== 126: ENGLISH - SEQUENCE OF TENSES =====
-  {
-    subject: "English",
-    topic: "Sequence of Tenses",
-    q: "It all depended on what…",
-    options: ["does he want", "he wants", "he does want", "he wanted"],
-    correct: 3,
-    solution: "“Depended” is past tense, so the clause after it stays in the past tense, in statement order: “what he wanted”. Question order (“did he want”) is wrong here."
-  },
-
-  // ===== 127: ENGLISH - PREPOSITIONS =====
-  {
-    subject: "English",
-    topic: "Prepositions",
-    q: "The dull student took a correspondence course as a means… his standard in the class.",
-    options: ["to improve", "for improving", "of improving", "by improving"],
-    correct: 2,
-    solution: "“A means of + -ing” is the correct pattern: “a means of improving his standard”."
-  },
-
-  // ===== 128: ENGLISH - LEXIS (ANTONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Antonyms)",
-    q: "Choose the option opposite in meaning to the word “evasive” in: Many untrustworthy students give evasive answers to questions which they fully understand.",
-    options: ["direct", "outspoken", "simple", "truthful"],
-    correct: 0,
-    solution: "“Evasive” means avoiding a direct answer. The opposite is “direct”."
-  },
-
-  // ===== 129: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “imminent” in: The deafening noise of the two jet planes which flew across our compound yesterday made people fear that an assault on the country might be imminent.",
-    options: ["impending", "ahead", "remote", "eminent"],
-    correct: 0,
-    solution: "“Imminent” means about to happen. “Impending” has the same meaning (not “eminent”, which means famous)."
-  },
-
-  // ===== 130: ENGLISH - LEXIS (HOMOPHONES) =====
-  {
-    subject: "English",
-    topic: "Lexis (Homophones)",
-    q: "Their high … was an advantage",
-    options: ["moral", "morality", "morale", "morals"],
-    correct: 2,
-    solution: "“Morale” means confidence and spirit of a group. “Moral” is an adjective or a lesson, and “morals” means principles of right and wrong."
-  },
-
-  // ===== 131: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “infuriates” in: Your extreme patience sometimes infuriates me.",
-    options: ["impresses", "annoys", "frustrates", "amuses"],
-    correct: 1,
-    solution: "“Infuriates” means makes very angry. “Annoys” is closest in meaning."
-  },
-
-  // ===== 132: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “imperceptible” in: The difference between the experimental procedures was imperceptible to me.",
-    options: ["negligible", "significant", "obvious", "obscure"],
-    correct: 0,
-    solution: "“Imperceptible” means too small to be noticed. “Negligible” is closest in meaning."
-  },
-
-  // ===== 133: ENGLISH - PREPOSITIONS =====
-  {
-    subject: "English",
-    topic: "Prepositions",
-    q: "Little children are usually afraid ... thunder",
-    options: ["about", "for", "of", "with"],
-    correct: 2,
-    solution: "“Afraid of” is the correct preposition after “afraid”."
-  },
-
-  // ===== 134: ENGLISH - TENSES (GRAMMAR) =====
-  {
-    subject: "English",
-    topic: "Tenses (Grammar)",
-    q: "Do not take my books out of this office unless you… my permission to do so.",
-    options: ["get", "have", "had got", "are having"],
-    correct: 1,
-    solution: "After “unless”, the present simple is used. “You have my permission” fits the meaning."
-  },
-
-  // ===== 135: ENGLISH - GRAMMAR (IDIOMATIC PHRASES) =====
-  {
-    subject: "English",
-    topic: "Grammar (Idiomatic Phrases)",
-    q: "… to your request, we have decided to provide the necessary information",
-    options: ["As regards", "With regards", "With regard", "Regarding"],
-    correct: 2,
-    solution: "The correct fixed phrase is “With regard to” (singular “regard”). “As regards” would not be followed by “to”, and “with regards” is incorrect."
-  },
-
-  // ===== 136: ENGLISH - CONCORD (SUBJECT–VERB AGREEMENT) =====
-  {
-    subject: "English",
-    topic: "Concord (Subject–Verb Agreement)",
-    q: "I was still sleeping when the national news … this morning",
-    options: ["were broadcast", "were broadcasted", "was broadcast", "was broadcasted"],
-    correct: 2,
-    solution: "“News” is an uncountable singular noun, so it takes “was”. “Broadcast” is the correct past form."
-  },
-
-  // ===== 137: ENGLISH - LEXIS (IDIOMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Idioms)",
-    q: "Choose the option nearest in meaning to the word(s) “go back on my word” in: Finally, I assured him that I would not go back on my word.",
-    options: ["return to a place", "return to a certain world which reading", "re-use my word", "fail to keep my promise"],
-    correct: 3,
-    solution: "“Go back on my word” means to fail to keep my promise."
-  },
-
-  // ===== 138: ENGLISH - IDIOMS & EXPRESSIONS =====
-  {
-    subject: "English",
-    topic: "Idioms & Expressions",
-    q: "The first graduation ceremony of the university was attended by men from all….of life.",
-    options: ["works", "areas", "walks", "parts"],
-    correct: 2,
-    solution: "The correct idiom is “from all walks of life”, meaning people of every background."
-  },
-
-  // ===== 139: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “hard-nosed” in: The retired General became a hard-nosed officer after fighting the war.",
-    options: ["tough", "weak", "indifferent", "bed-ridden"],
-    correct: 0,
-    solution: "“Hard-nosed” means tough, realistic and not easily swayed."
-  },
-
-  // ===== 140: ENGLISH - IDIOMS & EXPRESSIONS =====
-  {
-    subject: "English",
-    topic: "Idioms & Expressions",
-    q: "The Director is … pains to ensure the success of the programme.",
-    options: ["in", "at", "on", "having"],
-    correct: 1,
-    solution: "“To be at pains to do something” means to take great care to do it."
-  },
-
-  // ===== 141: ENGLISH - PREPOSITIONS =====
-  {
-    subject: "English",
-    topic: "Prepositions",
-    q: "There was a fire in the market last week which resulted… a terrible destruction of property.",
-    options: ["in", "to", "from", "into"],
-    correct: 0,
-    solution: "“Resulted in” is correct when it is followed by the effect. “Resulted from” introduces the cause."
-  },
-
-  // ===== 142: ENGLISH - LEXIS (IDIOMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Idioms)",
-    q: "Choose the option nearest in meaning to the word(s) “went on rampage” in: Some workers went on rampage at a trade-fair.",
-    options: ["turned violent", "robber", "were angry", "demonstrated"],
-    correct: 0,
-    solution: "“Went on rampage” means behaved wildly and violently, so “turned violent”."
-  },
-
-  // ===== 143: ENGLISH - GRAMMAR (ADVERBS) =====
-  {
-    subject: "English",
-    topic: "Grammar (Adverbs)",
-    q: "Roli failed because the examination was …difficult for her",
-    options: ["so", "very", "highly", "too"],
-    correct: 3,
-    solution: "“Too difficult for her” gives a negative result (she failed). “So/very/highly difficult” would not complete the meaning without “that” or “to”."
-  },
-
-  // ===== 144: ENGLISH - LEXIS (IDIOMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Idioms)",
-    q: "Choose the option nearest in meaning to the word(s) “wide off the mark” in: Most of his observations were wide off the mark.",
-    options: ["comprehensible", "irrelevant", "pertinent", "unacceptable"],
-    correct: 1,
-    solution: "“Wide off the mark” means inaccurate or not to the point, so “irrelevant”."
-  },
-
-  // ===== 145: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “make-belief” in: His has been a life of make-belief.",
-    options: ["faith", "fantasy", "grandeur", "religion"],
-    correct: 1,
-    solution: "“Make-believe” means imagination or pretence. “Fantasy” is closest in meaning."
-  },
-
-  // ===== 146: ENGLISH - LEXIS (SYNONYMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Synonyms)",
-    q: "Choose the option nearest in meaning to the word(s) “iota” in: After careful investigation, the police found no iota of truth in Ibrahim’s allegations.",
-    options: ["quota", "grain", "evidence", "statement"],
-    correct: 1,
-    solution: "An “iota” is a very small amount. “Grain” is closest (as in “not a grain of truth”)."
-  },
-
-  // ===== 147: ENGLISH - LEXIS (IDIOMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Idioms)",
-    q: "Choose the option nearest in meaning to the word(s) “met their Waterloo” in: The gallant soldiers met their Waterloo at Philippi.",
-    options: ["victory", "trouble", "defeat", "happiest period"],
-    correct: 2,
-    solution: "To “meet one’s Waterloo” means to suffer a decisive defeat."
-  },
-
-  // ===== 148: ENGLISH - LEXIS (IDIOMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Idioms)",
-    q: "‘To be in the red’ is to be",
-    options: ["in debt", "rich", "a socialist", "red"],
-    correct: 0,
-    solution: "“To be in the red” means to owe money, i.e. to be in debt."
-  },
-
-  // ===== 149: ENGLISH - LEXIS (IDIOMS) =====
-  {
-    subject: "English",
-    topic: "Lexis (Idioms)",
-    q: "Choose the option nearest in meaning to the word(s) “came to grief” in: The armed robbers who raided passengers on the Expressway came to grief when they had a shoot out with the police today.",
-    options: ["came to a bad end", "became grieved", "encountered grief", "came to a dead"],
-    correct: 0,
-    solution: "“Came to grief” means ended badly or suffered misfortune. “Came to a bad end” is closest."
-  },
-
-  // ===== 150: ENGLISH - VOCABULARY & USAGE =====
-  {
-    subject: "English",
-    topic: "Vocabulary & Usage",
-    q: "The child’s recent training has not been very effective, he is likely to … to his old habits.",
-    options: ["revert", "convert", "reverse", "revise"],
-    correct: 0,
-    solution: "“Revert to” means to return to a former habit or state."
+    solution: "Let x − y = 6 and xy = 187. Then y(y + 6) = 187, so y² + 6y − 187 = 0, i.e. (y + 17)(y − 11) = 0, giving y = 11 and x = 17. Ages: (17, 11)."
   }
+
 ];
   
 
