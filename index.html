@@ -254,507 +254,571 @@ const TOPICS = [
   "PHYSICS",
   "CHEMISTRY",
 ];
-const questions = [
-  // ===== 1: MATHEMATICS - DIFFERENTIATION =====
+const questions= [
+  // ===== 1: CHEMISTRY - INTRODUCTION =====
   {
-    subject: "Mathematics",
-    topic: "Differentiation",
-    q: "Differentiate (6x³ − 5x² + 1)/(3x²)",
-    options: ["2 + 2/(3x³)", "2 + 1/(6x)", "2 − 2/(3x³)", "2 − 1/(6x)"],
-    correct: 2,
-    solution: "Simplify: (6x³ − 5x² + 1)/(3x²) = 2x − 5/3 + (1/3)x⁻². Derivative = 2 − (2/3)x⁻³ = 2 − 2/(3x³)."
-  },
-
-  // ===== 2: MATHEMATICS - LOGARITHMS =====
-  {
-    subject: "Mathematics",
-    topic: "Logarithms",
-    q: "Simplify 3log₆9 + log₆12 + log₆64 − log₆72",
-    options: ["5", "7776", "log₆31", "(7776)⁶"],
+    subject: "Chemistry",
+    topic: "Introduction",
+    q: "Which chemistry paper type is given to you?",
+    options: ["Type A", "Type B", "Type C", "Type D"],
     correct: 0,
-    solution: "3log₆9 = log₆729. Combine: log₆(729 × 12 × 64/72) = log₆(7776) = log₆(6⁵) = 5."
+    solution: "The 2010 paper is Paper Type A."
   },
 
-  // ===== 3: MATHEMATICS - STATISTICS (PIE CHART) =====
+  // ===== 2: CHEMISTRY - SEPARATION OF MIXTURES =====
   {
-    subject: "Mathematics",
-    topic: "Statistics (Pie Chart)",
-    q: "Quantities in the proportions 1, 4, 6, 7 are to be represented in a pie chart. Calculate the angle of the sector with proportion 7",
-    options: ["20°", "80°", "120°", "140°"],
-    correct: 3,
-    solution: "Total = 1 + 4 + 6 + 7 = 18. Angle = (7/18) × 360° = 140°."
+    subject: "Chemistry",
+    topic: "Separation of Mixtures",
+    q: "Which of the following is an example of a mixture?",
+    options: ["Common salt", "Blood", "Sand", "Washing soda"],
+    correct: 1,
+    solution: "Blood is a mixture of plasma, cells and other substances. Common salt and washing soda are pure compounds. (Sand is also a mixture, but the printed key gives B.)"
   },
 
-  // ===== 4: MATHEMATICS - STANDARD FORM =====
+  // ===== 3: CHEMISTRY - CHEMICAL COMBINATION =====
   {
-    subject: "Mathematics",
-    topic: "Standard Form",
-    q: "Simplify and express in standard form: (0.00275 × 0.00640)/(0.025 × 0.08)",
-    options: ["8.8 × 10⁻¹", "8.8 × 10²", "8.8 × 10⁻³", "8.8 × 10³"],
+    subject: "Chemistry",
+    topic: "Stoichiometry",
+    q: "Calculate the percentage by mass of nitrogen in calcium trioxonitrate (V). [Ca = 40, N = 14, O = 16]",
+    options: ["8.5%", "13.1%", "17.1%", "27.6%"],
     correct: 2,
-    solution: "Numerator = 2.75 × 10⁻³ × 6.4 × 10⁻³ = 17.6 × 10⁻⁶. Denominator = 2.5 × 10⁻² × 8 × 10⁻² = 20 × 10⁻⁴. Ratio = 0.88 × 10⁻² = 8.8 × 10⁻³."
+    solution: "Ca(NO₃)₂ = 40 + 2(14) + 6(16) = 164. % N = (28/164) × 100 = 17.1%."
   },
 
-  // ===== 5: MATHEMATICS - DECIMALS & APPROXIMATION =====
+  // ===== 4: CHEMISTRY - KINETIC THEORY =====
   {
-    subject: "Mathematics",
-    topic: "Decimals & Approximation",
-    q: "Correct 241.34 × (3 × 10⁻³)² to 4 significant figures",
-    options: ["0.0014", "0.001448", "0.0022", "0.002172"],
+    subject: "Chemistry",
+    topic: "Kinetic Theory of Matter",
+    q: "The droplets of water observed around a bottle of milk taken out of the refrigerator is due to the fact that the",
+    options: [
+      "water vapour in the air around the bottle gains some energy from the bottle",
+      "temperature of the milk drops as it loses heat into the surroundings",
+      "saturated vapour pressure of the milk is equal to the atmospheric pressure",
+      "water vapour in the air around the bottle loses some of its energy to the bottle"
+    ],
     correct: 3,
-    solution: "(3 × 10⁻³)² = 9 × 10⁻⁶. 241.34 × 9 × 10⁻⁶ = 0.00217206, which is 0.002172 to 4 significant figures."
+    solution: "The cold bottle absorbs energy from the water vapour in the surrounding air. The vapour loses energy and condenses into droplets."
   },
 
-  // ===== 6: MATHEMATICS - COORDINATE GEOMETRY (INTERSECTION) =====
+  // ===== 5: CHEMISTRY - GAS LAWS =====
   {
-    subject: "Mathematics",
-    topic: "Coordinate Geometry (Intersection)",
-    q: "At what points does the straight line y = 2x + 1 intersect the curve y = 2x² + 5x − 1?",
-    options: ["(−2, −3) and (1/2, 2)", "(−1/2, 0) and (2, 5)", "(1/2, 2) and (1, 3)", "(1, 3) and (2, 5)"],
+    subject: "Chemistry",
+    topic: "Gas Laws",
+    q: "The volume of a given gas is V cm³ at P mm Hg. What is the new volume of the gas if the pressure is reduced to half at constant temperature?",
+    options: ["4V cm³", "2V cm³", "V/2 cm³", "V cm³"],
+    correct: 1,
+    solution: "Boyle's law: P₁V₁ = P₂V₂. P × V = (P/2) × V₂, so V₂ = 2V cm³."
+  },
+
+  // ===== 6: CHEMISTRY - PERIODICITY =====
+  {
+    subject: "Chemistry",
+    topic: "Periodic Table",
+    q: "Moving from left to right across a period, the general rise in the first ionization energy can be attributed to the",
+    options: ["decrease in nuclear charge", "increase in nuclear charge", "decrease in screening effect", "increase in screening effect"],
+    correct: 1,
+    solution: "Across a period, nuclear charge increases while the number of shells stays the same. The outer electrons are held more strongly, so ionization energy rises."
+  },
+
+  // ===== 7: CHEMISTRY - ATOMIC STRUCTURE =====
+  {
+    subject: "Chemistry",
+    topic: "Atomic Structure",
+    q: "How many unpaired electron(s) are there in the nitrogen sub-levels?",
+    options: ["3", "2", "1", "none"],
     correct: 0,
-    solution: "Set 2x² + 5x − 1 = 2x + 1, so 2x² + 3x − 2 = 0, i.e. (2x − 1)(x + 2) = 0. x = 1/2 gives y = 2, and x = −2 gives y = −3. Points: (−2, −3) and (1/2, 2)."
+    solution: "Nitrogen: 1s² 2s² 2p³. By Hund's rule the three 2p electrons occupy separate orbitals, giving 3 unpaired electrons."
   },
 
-  // ===== 7: MATHEMATICS - FRACTIONS =====
+  // ===== 8: CHEMISTRY - NOBLE GASES =====
   {
-    subject: "Mathematics",
-    topic: "Fractions",
-    q: "Three children shared a basket of mangoes in such a way that the first child took 1/4 of the mangoes and the second 3/4 of the remainder. What fraction of the mangoes did the third child take?",
-    options: ["3/16", "7/16", "9/16", "13/16"],
+    subject: "Chemistry",
+    topic: "Chemical Bonding",
+    q: "The stability of the noble gases is due to the fact that they",
+    options: [
+      "have no electron in their outermost shells",
+      "have duplet or octet electron configurations",
+      "belong to group zero of the periodic table",
+      "are volatile in nature"
+    ],
+    correct: 1,
+    solution: "Noble gases have complete outer shells: a duplet (helium) or an octet (the others). This makes them stable."
+  },
+
+  // ===== 9: CHEMISTRY - ATOMIC STRUCTURE =====
+  {
+    subject: "Chemistry",
+    topic: "Atomic Structure",
+    q: "The maximum number of electrons in the L shell of an atom is",
+    options: ["2", "8", "18", "32"],
+    correct: 1,
+    solution: "The L shell is n = 2. Maximum electrons = 2n² = 2(2)² = 8."
+  },
+
+  // ===== 10: CHEMISTRY - PERIODIC TABLE =====
+  {
+    subject: "Chemistry",
+    topic: "Periodic Table",
+    q: "Elements in the same period in the periodic table have the same",
+    options: ["number of shells", "atomic number", "chemical properties", "physical properties"],
     correct: 0,
-    solution: "Remainder after the first child = 3/4. Second child takes 3/4 × 3/4 = 9/16. Third child = 3/4 − 9/16 = 12/16 − 9/16 = 3/16."
+    solution: "Elements in the same period have the same number of electron shells. Atomic number and properties change across a period."
   },
 
-  // ===== 8: MATHEMATICS - STATISTICS (STANDARD DEVIATION) =====
+  // ===== 11: CHEMISTRY - NUCLEAR CHEMISTRY =====
   {
-    subject: "Mathematics",
-    topic: "Statistics (Standard Deviation)",
-    q: "Find the standard deviation of the following data: −5, −4, −3, −2, −1, 0, 1, 2, 3, 4, 5",
-    options: ["2", "3", "√10", "√11"],
+    subject: "Chemistry",
+    topic: "Nuclear Chemistry",
+    q: "²₁D + ³₁T → ⁴₂He + ¹₀n + energy. The reaction above illustrates",
+    options: ["alpha decay", "artificial transmutation", "nuclear fusion", "nuclear fission"],
     correct: 2,
-    solution: "Mean = 0, n = 11. Σx² = 2(1 + 4 + 9 + 16 + 25) = 110. Variance = 110/11 = 10, so standard deviation = √10."
+    solution: "Two light nuclei (deuterium and tritium) join to form a heavier nucleus (helium) and release energy. This is nuclear fusion."
   },
 
-  // ===== 9: MATHEMATICS - STATISTICS (FREQUENCY) =====
+  // ===== 12: CHEMISTRY - NOBLE GASES =====
   {
-    subject: "Mathematics",
-    topic: "Statistics (Frequency)",
-    q: "The following marks were obtained by twenty students in an examination: 53, 30, 70, 84, 59, 43, 90, 20, 78, 48, 44, 60, 81, 73, 50, 37, 67, 68, 64, 52. Find the number of students who scored at least 50 marks.",
-    options: ["6", "10", "13", "14"],
+    subject: "Chemistry",
+    topic: "Noble Gases",
+    q: "A noble gas with a high power of fog penetration used in aerodrome beacons is",
+    options: ["krypton", "argon", "helium", "neon"],
     correct: 3,
-    solution: "Scores below 50: 30, 43, 20, 48, 44, 37, which is 6 students. So at least 50 marks: 20 − 6 = 14 students."
+    solution: "Neon gives an orange-red glow that penetrates fog well, so it is used in aerodrome beacons. (The printed key says A; neon is D, so please double-check.)"
   },
 
-  // ===== 10: MATHEMATICS - QUADRATIC EQUATIONS (DISCRIMINANT) =====
+  // ===== 13: CHEMISTRY - WATER =====
   {
-    subject: "Mathematics",
-    topic: "Quadratic Equations (Discriminant)",
-    q: "Find the values of p for which the equation x² − (p − 2)x + 2p + 1 = 0 has equal roots",
-    options: ["(0, 12)", "(1, 2)", "(21, 0)", "(4, 5)", "(3, 4)"],
+    subject: "Chemistry",
+    topic: "Water",
+    q: "Permanent hardness of water can be removed by",
+    options: ["filtration", "adding slaked lime", "adding caustic soda", "boiling"],
+    correct: 2,
+    solution: "Permanent hardness (Ca²⁺ and Mg²⁺ chlorides and sulphates) is not removed by boiling or filtration. Per the printed key, adding caustic soda removes it by precipitating the ions."
+  },
+
+  // ===== 14: CHEMISTRY - WATER =====
+  {
+    subject: "Chemistry",
+    topic: "Water",
+    q: "Substances employed as drying agents are usually",
+    options: ["amphoteric", "hygroscopic", "efflorescent", "acidic"],
+    correct: 1,
+    solution: "Hygroscopic substances absorb moisture from the air or from other substances, so they work as drying agents."
+  },
+
+  // ===== 15: CHEMISTRY - SOLUBILITY =====
+  {
+    subject: "Chemistry",
+    topic: "Solubility",
+    q: "Calculate the solubility in mol dm⁻³ of 40 g of CuSO₄ dissolved in 100 g of water at 120 °C. [Cu = 64, S = 32, O = 16]",
+    options: ["4.00", "2.50", "0.40", "0.25"],
+    correct: 1,
+    solution: "Molar mass of CuSO₄ = 64 + 32 + 64 = 160. Moles in 40 g = 40/160 = 0.25 mol per 100 g water. Per 1000 g (1 dm³) water: 0.25 × 10 = 2.50 mol dm⁻³."
+  },
+
+  // ===== 16: CHEMISTRY - CLEANING AGENTS =====
+  {
+    subject: "Chemistry",
+    topic: "Cleaning Agents",
+    q: "Coffee stains can best be removed by",
+    options: ["kerosene", "turpentine", "a solution of borax in water", "ammonia solution"],
+    correct: 3,
+    solution: "Per the printed key, ammonia solution (a mild alkali) is the best remover of coffee stains."
+  },
+
+  // ===== 17: CHEMISTRY - AIR POLLUTION =====
+  {
+    subject: "Chemistry",
+    topic: "Environmental Pollution",
+    q: "Carbon (II) oxide is considered dangerous if inhaled mainly because it",
+    options: [
+      "can cause injury to the nervous system",
+      "competes with oxygen in the blood",
+      "competes with carbon (IV) oxide in the blood",
+      "can cause lung cancer"
+    ],
+    correct: 1,
+    solution: "CO binds to haemoglobin much more strongly than oxygen does, forming carboxyhaemoglobin. This reduces the oxygen carried in the blood."
+  },
+
+  // ===== 18: CHEMISTRY - ACIDS =====
+  {
+    subject: "Chemistry",
+    topic: "Acids, Bases and Salts",
+    q: "The acid that is used to remove rust is",
+    options: ["boric", "hydrochloric", "trioxonitrate (V)", "tetraoxosulphate (VI)"],
+    correct: 1,
+    solution: "Hydrochloric acid reacts with iron (III) oxide (rust) to form soluble iron chloride, so it is used to remove rust."
+  },
+
+  // ===== 19: CHEMISTRY - TITRATION =====
+  {
+    subject: "Chemistry",
+    topic: "Acid-Base Titration",
+    q: "Calculate the volume of 0.5 mol dm⁻³ H₂SO₄ that is neutralized by 25 cm³ of 0.1 mol dm⁻³ NaOH.",
+    options: ["5.0 cm³", "2.5 cm³", "0.4 cm³", "0.1 cm³"],
+    correct: 1,
+    solution: "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. Moles NaOH = 0.1 × 25/1000 = 0.0025 mol. Moles H₂SO₄ = 0.00125 mol. Volume = 0.00125/0.5 = 0.0025 dm³ = 2.5 cm³."
+  },
+
+  // ===== 20: CHEMISTRY - INDICATORS =====
+  {
+    subject: "Chemistry",
+    topic: "Indicators",
+    q: "The colour of methyl orange in alkaline medium is",
+    options: ["yellow", "pink", "orange", "red"],
     correct: 0,
-    solution: "Equal roots need b² − 4ac = 0: (p − 2)² − 4(2p + 1) = 0. So p² − 4p + 4 − 8p − 4 = 0, i.e. p² − 12p = 0, giving p = 0 or p = 12."
+    solution: "Methyl orange is red in acid, orange at the end point and yellow in alkaline medium."
   },
 
-  // ===== 11: MATHEMATICS - LONGITUDE & LATITUDE =====
+  // ===== 21: CHEMISTRY - SALTS =====
   {
-    subject: "Mathematics",
-    topic: "Longitude & Latitude",
-    q: "The angle between latitudes 30°S and 13°N is",
-    options: ["17°", "33°", "43°", "53°"],
+    subject: "Chemistry",
+    topic: "Acids, Bases and Salts",
+    q: "Which of the following salts is slightly soluble in water?",
+    options: ["AgCl", "CaSO₄", "Na₂CO₃", "PbCl₂"],
+    correct: 1,
+    solution: "CaSO₄ is only slightly soluble. AgCl is insoluble, Na₂CO₃ is soluble, and PbCl₂ is soluble only in hot water."
+  },
+
+  // ===== 22: CHEMISTRY - REDOX =====
+  {
+    subject: "Chemistry",
+    topic: "Oxidation and Reduction",
+    q: "6AgNO₃(aq) + PH₃(g) + 3H₂O(l) → 6Ag(s) + H₃PO₃(aq) + 6HNO₃(aq). In the above reaction, the reducing agent is",
+    options: ["HNO₃(aq)", "H₂O(l)", "PH₃(g)", "AgNO₃(aq)"],
     correct: 2,
-    solution: "The latitudes are on opposite sides of the equator, so add them: 30° + 13° = 43°."
+    solution: "Phosphorus goes from −3 in PH₃ to +3 in H₃PO₃, so PH₃ is oxidized. The substance that is oxidized is the reducing agent."
   },
 
-  // ===== 12: MATHEMATICS - FUNCTIONS =====
+  // ===== 23: CHEMISTRY - NOMENCLATURE =====
   {
-    subject: "Mathematics",
-    topic: "Functions",
-    q: "If f(x − 4) = x² + 2x + 3, find f(2)",
-    options: ["6", "11", "27", "51"],
-    correct: 3,
-    solution: "Let x − 4 = 2, so x = 6. f(2) = 6² + 2(6) + 3 = 36 + 12 + 3 = 51."
-  },
-
-  // ===== 13: MATHEMATICS - LOGARITHMS =====
-  {
-    subject: "Mathematics",
-    topic: "Logarithms",
-    q: "Without using tables, evaluate log₂4 + log₄2 − log₂₅5",
-    options: ["1/2", "1/5", "0", "5", "2"],
-    correct: 4,
-    solution: "log₂4 = 2, log₄2 = 1/2 (since 4^(1/2) = 2), and log₂₅5 = 1/2. So 2 + 1/2 − 1/2 = 2."
-  },
-
-  // ===== 14: MATHEMATICS - STATISTICS (RANGE & MODE) =====
-  {
-    subject: "Mathematics",
-    topic: "Statistics (Range & Mode)",
-    q: "Find the sum of the range and the mode of the set of numbers 10, 5, 10, 9, 8, 7, 7, 10, 8, 10, 8, 4, 6, 9, 10, 9, 10, 9, 7, 10, 6, 5",
-    options: ["16", "14", "12", "10"],
+    subject: "Chemistry",
+    topic: "Nomenclature",
+    q: "The IUPAC nomenclature of the compound LiAlH₄ is",
+    options: [
+      "lithium tetrahydridoaluminate (III)",
+      "aluminium tetrahydrido lithium",
+      "tetrahydrido lithium aluminate (III)",
+      "lithium aluminium hydride"
+    ],
     correct: 0,
-    solution: "Range = 10 − 4 = 6. The number 10 appears most often (7 times), so the mode is 10. Sum = 6 + 10 = 16."
+    solution: "The cation (lithium) is named first. The complex anion [AlH₄]⁻ is tetrahydridoaluminate (III). So the name is lithium tetrahydridoaluminate (III)."
   },
 
-  // ===== 15: MATHEMATICS - FRACTIONS (WORD PROBLEMS) =====
+  // ===== 24: CHEMISTRY - CORROSION =====
   {
-    subject: "Mathematics",
-    topic: "Fractions (Word Problems)",
-    q: "Three brothers in a business deal share the profit at the end of the contract. The first received 1/3 of the profit and the second 2/3 of the remainder. If the third received the remaining ₦12,000.00, how much profit did they share?",
-    options: ["₦60,000.00", "₦54,000.00", "₦48,000.00", "₦42,000.00"],
+    subject: "Chemistry",
+    topic: "Electrochemistry",
+    q: "Iron can be protected from corrosion by coating the surface with",
+    options: ["gold", "silver", "copper", "zinc"],
+    correct: 3,
+    solution: "Zinc is more reactive than iron, so it corrodes first and protects the iron (galvanizing)."
+  },
+
+  // ===== 25: CHEMISTRY - ELECTROLYSIS =====
+  {
+    subject: "Chemistry",
+    topic: "Electrolysis",
+    q: "What quantity of aluminium is deposited when a current of 10 A is passed through a solution of an aluminium salt for 1930 s? [Al = 27, F = 96500 C mol⁻¹]",
+    options: ["0.2 g", "1.8 g", "5.4 g", "14.2 g"],
     correct: 1,
-    solution: "Remainder after the first = 2/3. Second takes 2/3 × 2/3 = 4/9. Third gets 1 − 1/3 − 4/9 = 2/9. So 2/9 of profit = 12,000, and profit = 12,000 × 9/2 = ₦54,000."
+    solution: "Q = It = 10 × 1930 = 19300 C. Al³⁺ + 3e⁻ → Al, so 3 × 96500 C deposits 27 g. Mass = (19300 × 27)/(3 × 96500) = 1.8 g."
   },
 
-  // ===== 16: MATHEMATICS - ALGEBRA (WORD PROBLEMS) =====
+  // ===== 26: CHEMISTRY - ENERGETICS =====
   {
-    subject: "Mathematics",
-    topic: "Algebra (Word Problems)",
-    q: "John gives one third of his money to Janet who has ₦105.00. He then finds that his money is reduced to one-fourth of what Janet now has. Find how much money John had at first.",
-    options: ["₦45.00", "₦48.00", "₦52.00", "₦58.00", "₦60.00"],
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "In which of the following is the entropy change positive?",
+    options: [
+      "Thermal dissociation of ammonium chloride",
+      "Reaction between an acid and a base",
+      "Addition of concentrated acid to water",
+      "Dissolution of sodium metal in water"
+    ],
     correct: 0,
-    solution: "Let John have x. Janet now has 105 + x/3. John is left with 2x/3 = (1/4)(105 + x/3). Multiply by 12: 8x = 315 + x, so 7x = 315 and x = ₦45."
+    solution: "NH₄Cl(s) → NH₃(g) + HCl(g) turns a solid into gases, so disorder increases and ΔS is positive."
   },
 
-  // ===== 17: MATHEMATICS - STATISTICS (PERCENTAGE OF FREQUENCY) =====
+  // ===== 27: CHEMISTRY - ENERGETICS =====
   {
-    subject: "Mathematics",
-    topic: "Statistics (Percentage of Frequency)",
-    q: "The table shows the frequency distribution of the ages (in years) of pupils in a certain secondary school. Interval: 10–12, 13–15, 16–18, 19–20, 21–23 with number of pupils 6, 14, 15, 10, 5 respectively. What percentage of the total number of pupils is over 15 years but less than 21 years?",
-    options: ["35%", "45%", "50%", "60%"],
-    correct: 2,
-    solution: "Total pupils = 6 + 14 + 15 + 10 + 5 = 50. Over 15 but under 21 means the 16–18 and 19–20 classes: 15 + 10 = 25. Percentage = 25/50 × 100 = 50%."
-  },
-
-  // ===== 18: MATHEMATICS - ALGEBRA (SUBSTITUTION) =====
-  {
-    subject: "Mathematics",
-    topic: "Algebra (Substitution)",
-    q: "If a = 2, b = −2 and c = −1/2, evaluate (ab² − bc²)(a²c − abc)",
-    options: ["0", "−28", "−30", "−34"],
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "If a reaction is exothermic and there is a great disorder, it means that",
+    options: [
+      "the reaction is static",
+      "the reaction is in a state of equilibrium",
+      "there will be a large increase in free energy",
+      "there will be a large decrease in free energy"
+    ],
     correct: 3,
-    solution: "ab² = 2(4) = 8 and bc² = (−2)(1/4) = −1/2, so ab² − bc² = 8.5. a²c = 4(−1/2) = −2 and abc = 2(−2)(−1/2) = 2, so a²c − abc = −4. Product = 8.5 × (−4) = −34."
+    solution: "ΔG = ΔH − TΔS. Exothermic means ΔH is negative and great disorder means ΔS is large and positive, so ΔG is large and negative: a large decrease in free energy. (The printed key says C, which is incorrect.)"
   },
 
-  // ===== 19: MATHEMATICS - INDICES =====
+  // ===== 28: CHEMISTRY - RATES OF REACTION =====
   {
-    subject: "Mathematics",
-    topic: "Indices",
-    q: "If 5^(x + 2y) = 5 and 4^(x + 3y) = 16, find 3^(x + y)",
-    options: ["0", "1", "3", "27"],
-    correct: 1,
-    solution: "x + 2y = 1 and x + 3y = 2. Subtracting: y = 1, so x = −1. Then x + y = 0 and 3⁰ = 1."
-  },
-
-  // ===== 20: MATHEMATICS - ALGEBRA (WORD PROBLEMS) =====
-  {
-    subject: "Mathematics",
-    topic: "Algebra (Word Problems)",
-    q: "In 1984, Ike was 24 years old and his father was 45 years old. In what year was Ike exactly half his father's age?",
-    options: ["1982", "1981", "1979", "1978"],
-    correct: 1,
-    solution: "Let t be the number of years after 1984. 24 + t = (45 + t)/2, so 48 + 2t = 45 + t and t = −3. So the year was 1984 − 3 = 1981 (Ike 21, father 42)."
-  },
-
-  // ===== 21: MATHEMATICS - FACTORISATION =====
-  {
-    subject: "Mathematics",
-    topic: "Factorisation",
-    q: "Factorise x² + 2a + ax + 2x",
-    options: ["(x + 2a)(x + 1)", "(x + 2a)(x − 1)", "(x² − 1)(x + a)", "(x + 2)(x + a)"],
+    subject: "Chemistry",
+    topic: "Rates of Reaction",
+    q: "In the preparation of oxygen by heating KClO₃ in the presence of MnO₂, only moderate heat is needed because the catalyst acts by",
+    options: [
+      "lowering the pressure of the reaction",
+      "increasing the surface area of the reactant",
+      "increasing the rate of the reaction",
+      "lowering the energy barrier of the reaction"
+    ],
     correct: 3,
-    solution: "Group the terms: x² + ax + 2x + 2a = x(x + a) + 2(x + a) = (x + 2)(x + a)."
+    solution: "A catalyst provides an alternative path with lower activation energy. This is why only moderate heat is needed."
   },
 
-  // ===== 22: MATHEMATICS - PROBABILITY =====
+  // ===== 29: CHEMISTRY - RATES OF REACTION =====
   {
-    subject: "Mathematics",
-    topic: "Probability",
-    q: "If U = {x : x is an integer and 1 ≤ x ≤ 20}, E₁ = {x : x is a multiple of 3} and E₂ = {x : x is a multiple of 4}, and an integer is picked at random from U, find the probability that it is not in E₂.",
-    options: ["3/4", "3/10", "1/4", "1/20"],
+    subject: "Chemistry",
+    topic: "Rates of Reaction",
+    q: "Graph: mass of CO₂ produced (g) against time (min) for two curves, 'powdered marble' and 'marble chips'. The powdered marble curve is steeper and reaches its end point at t₁; the marble chips curve reaches the same end point later, at t₂. The graph above demonstrates the effect of",
+    options: [
+      "surface area on the rate of reaction",
+      "catalyst on the rate of reaction",
+      "pressure on the rate of reaction",
+      "concentration on the rate of reaction"
+    ],
     correct: 0,
-    solution: "Multiples of 4 in U: 4, 8, 12, 16, 20, which is 5 numbers. P(in E₂) = 5/20 = 1/4, so P(not in E₂) = 1 − 1/4 = 3/4."
+    solution: "Powdered marble has a larger surface area than chips, so it reacts faster. Both give the same final mass of CO₂."
   },
 
-  // ===== 23: MATHEMATICS - FACTORISATION =====
+  // ===== 30: CHEMISTRY - CHEMICAL EQUILIBRIUM =====
   {
-    subject: "Mathematics",
-    topic: "Factorisation",
-    q: "Factorise (4a + 3)² − (3a − 2)²",
-    options: ["(a + 1)(a + 5)", "(a − 5)(7a − 1)", "(a + 5)(7a + 1)", "a(7a + 1)"],
+    subject: "Chemistry",
+    topic: "Chemical Equilibrium",
+    q: "2H₂(g) + O₂(g) ⇌ 2H₂O(g), ΔH = −ve. What happens to the equilibrium constant of the reaction above if the temperature is increased?",
+    options: ["it is unaffected", "it becomes zero", "it decreases", "it increases"],
     correct: 2,
-    solution: "Difference of two squares: [(4a + 3) − (3a − 2)][(4a + 3) + (3a − 2)] = (a + 5)(7a + 1)."
+    solution: "The forward reaction is exothermic. Raising the temperature shifts equilibrium to the left, so the products fall and K decreases."
   },
 
-  // ===== 24: MATHEMATICS - MENSURATION (SPHERE) =====
+  // ===== 31: CHEMISTRY - QUALITATIVE ANALYSIS =====
   {
-    subject: "Mathematics",
-    topic: "Mensuration (Sphere)",
-    q: "Find the radius of a sphere whose surface area is 154 cm². [π = 22/7]",
-    options: ["7.00 cm", "3.50 cm", "3.00 cm", "1.75 cm"],
-    correct: 1,
-    solution: "Surface area = 4πr² = 154. So r² = (154 × 7)/(4 × 22) = 12.25 and r = 3.5 cm."
-  },
-
-  // ===== 25: MATHEMATICS - COORDINATE GEOMETRY (LOCUS) =====
-  {
-    subject: "Mathematics",
-    topic: "Coordinate Geometry (Locus)",
-    q: "A point P moves so that it is equidistant from points L and M. If LM is 16 cm, find the distance of P from LM when P is 10 cm from L.",
-    options: ["12 cm", "10 cm", "8 cm", "6 cm"],
+    subject: "Chemistry",
+    topic: "Qualitative Analysis",
+    q: "To a solution of an unknown compound, a little dilute tetraoxosulphate (VI) acid was added with some freshly prepared iron (II) tetraoxosulphate (VI) solution. The brown ring observed after the addition of a stream of concentrated tetraoxosulphate (VI) acid confirmed the presence of",
+    options: ["CO₃²⁻", "Cl⁻", "SO₄²⁻", "NO₃⁻"],
     correct: 3,
-    solution: "P lies on the perpendicular bisector of LM. The foot of the perpendicular from P is the midpoint of LM, 8 cm from L. Distance = √(10² − 8²) = √36 = 6 cm."
+    solution: "This is the brown ring test for nitrates (NO₃⁻)."
   },
 
-  // ===== 26: MATHEMATICS - INDICES & SURDS =====
+  // ===== 32: CHEMISTRY - NITROGEN COMPOUNDS =====
   {
-    subject: "Mathematics",
-    topic: "Indices & Surds",
-    q: "Find the solution of the equation x − 8√x + 15 = 0",
-    options: ["3, 5", "−3, −5", "9, 25", "−9, 25"],
-    correct: 2,
-    solution: "Let t = √x. Then t² − 8t + 15 = 0, so (t − 3)(t − 5) = 0, giving t = 3 or 5. So x = 9 or x = 25."
-  },
-
-  // ===== 27: MATHEMATICS - CIRCLE GEOMETRY (CONE FROM SECTOR) =====
-  {
-    subject: "Mathematics",
-    topic: "Circle Geometry (Cone from Sector)",
-    q: "A cone with the sector angle of 45° is cut out of a circle of radius r cm. Find the base radius of the cone.",
-    options: ["r/16 cm", "r/8 cm", "r/4 cm", "r/2 cm"],
-    correct: 1,
-    solution: "Arc length of the sector = (45/360) × 2πr = πr/4. This becomes the base circumference of the cone: 2πR = πr/4, so R = r/8."
-  },
-
-  // ===== 28: MATHEMATICS - STATISTICS (PIE CHART) =====
-  {
-    subject: "Mathematics",
-    topic: "Statistics (Pie Chart)",
-    q: "A dice is rolled 240 times and the results are: 1 → 30 times, 2 → 43, 3 → 54, 4 → 40, 5 → 41, 6 → 32. If a pie chart is constructed to represent the data, the angle corresponding to 4 is",
-    options: ["10°", "16°", "40°", "60°"],
-    correct: 3,
-    solution: "Angle = (40/240) × 360° = 60°."
-  },
-
-  // ===== 29: MATHEMATICS - LOGARITHMS =====
-  {
-    subject: "Mathematics",
-    topic: "Logarithms",
-    q: "Find x if log₉x = 1.5",
-    options: ["72.0", "27.0", "36.0", "3.5", "24.5"],
-    correct: 1,
-    solution: "log₉x = 1.5 means x = 9^1.5 = (√9)³ = 3³ = 27."
-  },
-
-  // ===== 30: MATHEMATICS - STATISTICS (VARIANCE) =====
-  {
-    subject: "Mathematics",
-    topic: "Statistics (Variance)",
-    q: "The variance of x, 2x, 3x, 4x and 5x is",
-    options: ["x√2", "2x²", "x²", "3x"],
-    correct: 1,
-    solution: "Mean = 3x. Deviations: −2x, −x, 0, x, 2x. Sum of squares = 4x² + x² + 0 + x² + 4x² = 10x². Variance = 10x²/5 = 2x²."
-  },
-
-  // ===== 31: MATHEMATICS - COORDINATE GEOMETRY (CURVES) =====
-  {
-    subject: "Mathematics",
-    topic: "Coordinate Geometry (Curves)",
-    q: "The curve y = −x² + 3x + 4 intersects the coordinate axes at",
-    options: ["(4, 0), (0, 0), (−1, 0)", "(−4, 0), (0, 4), (1, 1)", "(0, 0), (0, 1), (1, 0)", "(0, 4), (4, 0), (−1, 0)"],
-    correct: 3,
-    solution: "y-axis (x = 0): y = 4, so (0, 4). x-axis (y = 0): x² − 3x − 4 = 0, so (x − 4)(x + 1) = 0, giving (4, 0) and (−1, 0)."
-  },
-
-  // ===== 32: MATHEMATICS - DECIMALS & APPROXIMATION =====
-  {
-    subject: "Mathematics",
-    topic: "Decimals & Approximation",
-    q: "Evaluate 21.05347 − 1.6324 × 0.43, to 3 decimal places.",
-    options: ["20.351", "20.352", "20.980", "20.981"],
-    correct: 1,
-    solution: "1.6324 × 0.43 = 0.701932. 21.05347 − 0.701932 = 20.351538, which is 20.352 to 3 decimal places."
-  },
-
-  // ===== 33: MATHEMATICS - SIMPLE INTEREST =====
-  {
-    subject: "Mathematics",
-    topic: "Simple Interest",
-    q: "Udoh deposited ₦150.00 in the bank. At the end of 5 years the simple interest on the principal was ₦55.00. At what rate per annum was the interest paid?",
-    options: ["11%", "7⅓%", "5%", "3½%"],
-    correct: 1,
-    solution: "I = PRT/100, so R = (100 × 55)/(150 × 5) = 5500/750 = 7⅓%."
-  },
-
-  // ===== 34: MATHEMATICS - DECIMALS & APPROXIMATION =====
-  {
-    subject: "Mathematics",
-    topic: "Decimals & Approximation",
-    q: "Find, correct to two decimal places: 100 + 1/100 + 3/1000 + 27/10000",
-    options: ["100.02", "1000.02", "100.22", "100.01", "100.51"],
+    subject: "Chemistry",
+    topic: "Nitrogen and its Compounds",
+    q: "Diagram: a flask containing copper turnings, with 50% trioxonitrate (V) acid added from a funnel above. The gas given off is delivered through a tube and collected over water in an inverted gas jar. In the diagram above, the gas produced is",
+    options: ["NO", "NO₂", "N₂O", "N₂O₄"],
     correct: 0,
-    solution: "1/100 = 0.01, 3/1000 = 0.003, 27/10000 = 0.0027. Sum = 100 + 0.01 + 0.003 + 0.0027 = 100.0157, which is 100.02 to 2 decimal places."
+    solution: "Copper with dilute (50%) HNO₃ gives nitrogen (II) oxide, NO, which is insoluble in water and so is collected over water."
   },
 
-  // ===== 35: MATHEMATICS - SIMPLE INTEREST =====
+  // ===== 33: CHEMISTRY - NITROGEN COMPOUNDS =====
   {
-    subject: "Mathematics",
-    topic: "Simple Interest",
-    q: "At what rate would a sum of ₦100.00 deposited for 5 years raise an interest of ₦7.50?",
-    options: ["1½%", "2½%", "15%", "25%"],
+    subject: "Chemistry",
+    topic: "Nitrogen and its Compounds",
+    q: "Which of the following is used in rocket fuels?",
+    options: ["HNO₃", "CH₃COOH", "H₂SO₄", "HCl"],
     correct: 0,
-    solution: "R = (100 × I)/(P × T) = (100 × 7.50)/(100 × 5) = 1.5%."
+    solution: "Trioxonitrate (V) acid (HNO₃) is a strong oxidizing agent and is used as an oxidizer in rocket fuels."
   },
 
-  // ===== 36: MATHEMATICS - TRIGONOMETRY (EQUATIONS) =====
+  // ===== 34: CHEMISTRY - SULPHUR =====
   {
-    subject: "Mathematics",
-    topic: "Trigonometry (Equations)",
-    q: "If sin θ = cos θ, find θ between 0° and 360°",
-    options: ["45°, 225°", "135°, 315°", "45°, 315°", "135°, 225°"],
+    subject: "Chemistry",
+    topic: "Sulphur and its Compounds",
+    q: "Diagram: sulphur (IV) oxide and oxygen are passed through concentrated H₂SO₄, then through a tube containing platinized asbestos heated strongly. The product, sulphur (VI) oxide, is collected in a tube cooled by a freezing mixture. In the diagram above, the purpose of the asbestos is to",
+    options: ["absorb impurities", "catalyse the reaction", "solidify the gas", "dry the gas"],
+    correct: 1,
+    solution: "Platinized asbestos is the catalyst in the contact process. The asbestos is only a support for the platinum."
+  },
+
+  // ===== 35: CHEMISTRY - METALS AND ALLOYS =====
+  {
+    subject: "Chemistry",
+    topic: "Metals and Alloys",
+    q: "A constituent common to bronze and solder is",
+    options: ["lead", "silver", "copper", "tin"],
+    correct: 3,
+    solution: "Bronze = copper + tin. Solder = tin + lead. The common constituent is tin."
+  },
+
+  // ===== 36: CHEMISTRY - CORROSION =====
+  {
+    subject: "Chemistry",
+    topic: "Metals and Alloys",
+    q: "When iron is exposed to moist air, it gradually rusts. This is due to the formation of",
+    options: [
+      "hydrated iron (III) oxide",
+      "anhydrous iron (III) oxide",
+      "anhydrous iron (II) oxide",
+      "hydrated iron (II) oxide"
+    ],
     correct: 0,
-    solution: "sin θ = cos θ gives tan θ = 1. tan is positive in the first and third quadrants, so θ = 45° or 180° + 45° = 225°."
+    solution: "Rust is hydrated iron (III) oxide, Fe₂O₃·xH₂O, formed when iron reacts with oxygen and water."
   },
 
-  // ===== 37: MATHEMATICS - STATISTICS (MODE) =====
+  // ===== 37: CHEMISTRY - FLAME TESTS =====
   {
-    subject: "Mathematics",
-    topic: "Statistics (Mode)",
-    q: "Estimate the mode of the frequency distribution below. Weight (g): 0–10, 10–20, 20–30, 30–40, 40–50 with number of coconuts 10, 27, 19, 6, 2 respectively.",
-    options: ["13.2 g", "15.0 g", "16.8 g", "17.5 g"],
-    correct: 2,
-    solution: "Modal class is 10–20 (frequency 27). Mode = L + [f₁ − f₀]/[2f₁ − f₀ − f₂] × c = 10 + (27 − 10)/(54 − 10 − 19) × 10 = 10 + (17/25) × 10 = 16.8 g."
-  },
-
-  // ===== 38: MATHEMATICS - INTEGRATION (DEFINITE) =====
-  {
-    subject: "Mathematics",
-    topic: "Integration (Definite)",
-    q: "If y = x(x⁴ + x² + 1), evaluate ∫ y dx from x = −1 to x = 1",
-    options: ["11/12", "11/16", "5/6", "0"],
-    correct: 3,
-    solution: "y = x⁵ + x³ + x is an odd function, so its integral over the symmetric interval [−1, 1] is 0. Check: [x⁶/6 + x⁴/4 + x²/2] from −1 to 1 = 0."
-  },
-
-  // ===== 39: MATHEMATICS - COORDINATE GEOMETRY (DISTANCE) =====
-  {
-    subject: "Mathematics",
-    topic: "Coordinate Geometry (Distance)",
-    q: "Find the distance between the point Q(4, 3) and the point common to the lines 2x − y = 4 and x + y = 2",
-    options: ["3√10", "3√5", "√26", "√13"],
-    correct: 3,
-    solution: "Add the equations: 3x = 6, so x = 2 and y = 0. The common point is (2, 0). Distance = √[(4 − 2)² + (3 − 0)²] = √13."
-  },
-
-  // ===== 40: MATHEMATICS - CIRCLE GEOMETRY (SECTOR) =====
-  {
-    subject: "Mathematics",
-    topic: "Circle Geometry (Sector)",
-    q: "Find the area of the sector of a circle with radius 3 m, if the angle of the sector is 60°",
-    options: ["4.0 m²", "4.1 m²", "4.7 m²", "5.0 m²"],
-    correct: 2,
-    solution: "Area = (60/360) × πr² = (1/6) × π × 9 = 1.5π ≈ 4.7 m²."
-  },
-
-  // ===== 41: MATHEMATICS - COORDINATE GEOMETRY (STRAIGHT LINE) =====
-  {
-    subject: "Mathematics",
-    topic: "Coordinate Geometry (Straight Line)",
-    q: "The angle between the positive horizontal axis and a given line is 135°. Find the equation of the line if it passes through the point (2, 3).",
-    options: ["x − y = 1", "x + y = 1", "x + y = 5", "x − y = 5"],
-    correct: 2,
-    solution: "Gradient = tan 135° = −1. Equation: y − 3 = −1(x − 2), so y − 3 = −x + 2 and x + y = 5."
-  },
-
-  // ===== 42: MATHEMATICS - INTEGRATION =====
-  {
-    subject: "Mathematics",
-    topic: "Integration",
-    q: "Integrate 1/x + cos x with respect to x",
-    options: ["−1/x² + sin x + k", "ln x + sin x + k", "ln x − sin x + k", "−1/x² − sin x + k"],
+    subject: "Chemistry",
+    topic: "Qualitative Analysis",
+    q: "A compound gives an orange-red colour to a non-luminous flame. This compound is likely to contain",
+    options: ["Na⁺", "Ca²⁺", "Fe³⁺", "Fe²⁺"],
     correct: 1,
-    solution: "∫(1/x)dx = ln x and ∫cos x dx = sin x. So the result is ln x + sin x + k."
+    solution: "Calcium ions give an orange-red (brick-red) flame. Sodium gives golden yellow."
   },
 
-  // ===== 43: MATHEMATICS - DIFFERENTIATION (GRADIENT) =====
+  // ===== 38: CHEMISTRY - ALLOYS =====
   {
-    subject: "Mathematics",
-    topic: "Differentiation (Gradient)",
-    q: "Find the gradient of the curve y = 2√x − 1/x at the point x = 1",
-    options: ["0", "1", "2", "3"],
+    subject: "Chemistry",
+    topic: "Metals and Alloys",
+    q: "Stainless steel is used for making",
+    options: ["magnets", "tools", "coins and medals", "moving parts of clocks"],
     correct: 2,
-    solution: "y = 2x^(1/2) − x⁻¹, so dy/dx = x^(−1/2) + x⁻² = 1/√x + 1/x². At x = 1: 1 + 1 = 2."
+    solution: "Per the printed key, stainless steel (iron with chromium and nickel) is used for coins and medals because it resists corrosion."
   },
 
-  // ===== 44: MATHEMATICS - POLYGONS =====
+  // ===== 39: CHEMISTRY - PETROLEUM =====
   {
-    subject: "Mathematics",
-    topic: "Polygons",
-    q: "A regular polygon of n sides has 160° as the size of each interior angle. Find n.",
-    options: ["18", "16", "14", "12"],
+    subject: "Chemistry",
+    topic: "Petroleum",
+    q: "The residual solids from the fractional distillation of petroleum are used as",
+    options: [
+      "coatings of pipes",
+      "raw materials for the cracking process",
+      "fuel for driving tractors",
+      "fuel for jet engines"
+    ],
     correct: 0,
-    solution: "Each exterior angle = 180° − 160° = 20°. n = 360°/20° = 18."
+    solution: "The residue (bitumen or tar) is used for coating pipes and for road surfacing."
   },
 
-  // ===== 45: MATHEMATICS - RATIO & PROPORTION =====
+  // ===== 40: CHEMISTRY - ORGANIC NOMENCLATURE =====
   {
-    subject: "Mathematics",
-    topic: "Ratio & Proportion",
-    q: "A number of pencils were shared out among Bisi, Sola and Tunde in the ratio 2:3:5 respectively. If Bisi got 5, how many were shared out?",
-    options: ["15", "25", "30", "50"],
+    subject: "Chemistry",
+    topic: "Organic Nomenclature",
+    q: "Structure: CH₃(CH₂)₃–CH(C₂H₅)–, with a C₃H₇ group attached to the same CH carbon as a branch. The IUPAC nomenclature of the compound above is",
+    options: ["4-ethyloctane", "5-ethyloctane", "5-propylheptane", "3-propylheptane"],
+    correct: 0,
+    solution: "The longest chain through the branch carbon is 4 + 1 + 3 = 8 carbons (octane). The ethyl group is on carbon 4 when numbered from the propyl end, so it is 4-ethyloctane. (The printed key says D, which does not fit the longest-chain rule.)"
+  },
+
+  // ===== 41: CHEMISTRY - ALKYNES =====
+  {
+    subject: "Chemistry",
+    topic: "Alkynes",
+    q: "Which of the following is used as fuel in miners' lamp?",
+    options: ["Ethanal", "Ethyne", "Ethene", "Ethane"],
     correct: 1,
-    solution: "Bisi's 2 parts = 5, so 1 part = 2.5. Total parts = 2 + 3 + 5 = 10, so total pencils = 10 × 2.5 = 25."
+    solution: "Ethyne (acetylene) burns with a bright flame, so it is used as fuel in miners' lamps."
   },
 
-  // ===== 46: MATHEMATICS - STATISTICS (MEDIAN) =====
+  // ===== 42: CHEMISTRY - CARBOXYLIC ACIDS =====
   {
-    subject: "Mathematics",
-    topic: "Statistics (Median)",
-    q: "Find the median age of the frequency distribution below. Age: 20, 25, 30, 35, 40, 45 with number of students 3, 5, 1, 1, 2, 3 respectively.",
-    options: ["20", "25", "30", "35"],
+    subject: "Chemistry",
+    topic: "Carboxylic Acids",
+    q: "Which of the following organic compounds is very soluble in water?",
+    options: ["CH₃COOH", "C₂H₂", "C₂H₄", "CH₃COOC₂H₅"],
+    correct: 0,
+    solution: "Ethanoic acid forms hydrogen bonds with water and is very soluble. The hydrocarbons and the ester are poorly soluble."
+  },
+
+  // ===== 43: CHEMISTRY - AROMATIC HYDROCARBONS =====
+  {
+    subject: "Chemistry",
+    topic: "Aromatic Hydrocarbons",
+    q: "Benzene reacts with hydrogen in the presence of nickel catalyst at 180 °C to give",
+    options: ["xylene", "toluene", "cyclopentane", "cyclohexane"],
+    correct: 3,
+    solution: "Catalytic hydrogenation adds 3 H₂ to benzene: C₆H₆ + 3H₂ → C₆H₁₂ (cyclohexane)."
+  },
+
+  // ===== 44: CHEMISTRY - ALKENES =====
+  {
+    subject: "Chemistry",
+    topic: "Alkenes",
+    q: "Which of the following is used to hasten the ripening of fruit?",
+    options: ["Ethene", "Ethanol", "Ethyne", "Ethane"],
+    correct: 0,
+    solution: "Ethene is a plant hormone that speeds up fruit ripening."
+  },
+
+  // ===== 45: CHEMISTRY - ALKANES =====
+  {
+    subject: "Chemistry",
+    topic: "Alkanes",
+    q: "The final products of the reaction between methane and chlorine in the presence of ultraviolet light are hydrogen chloride and",
+    options: ["trichloromethane", "dichloromethane", "tetrachloromethane", "chloromethane"],
+    correct: 2,
+    solution: "Substitution continues step by step until all four hydrogens are replaced: CH₄ + 4Cl₂ → CCl₄ + 4HCl. The final product is tetrachloromethane."
+  },
+
+  // ===== 46: CHEMISTRY - BOILING POINTS =====
+  {
+    subject: "Chemistry",
+    topic: "Alkanols and Alkanes",
+    q: "The correct order of increasing boiling points of the following compounds C₃H₇OH, C₇H₁₆ and C₄H₁₀ is",
+    options: [
+      "C₃H₇OH → C₄H₁₀ → C₇H₁₆",
+      "C₄H₁₀ → C₇H₁₆ → C₃H₇OH",
+      "C₇H₁₆ → C₃H₇OH → C₄H₁₀",
+      "C₄H₁₀ → C₃H₇OH → C₇H₁₆"
+    ],
+    correct: 3,
+    solution: "Butane is smallest, so it has the lowest boiling point. Propanol has hydrogen bonding, and heptane has a larger molecular mass. Per the printed key, the order is C₄H₁₀ < C₃H₇OH < C₇H₁₆."
+  },
+
+  // ===== 47: CHEMISTRY - ALKANES =====
+  {
+    subject: "Chemistry",
+    topic: "Alkanes",
+    q: "One of the major uses of alkanes is",
+    options: [
+      "as domestic and industrial fuel",
+      "in the hydrogenation of oils",
+      "in the textile industries",
+      "in the production of plastics"
+    ],
+    correct: 0,
+    solution: "Alkanes such as methane, propane and butane are mainly used as domestic and industrial fuels."
+  },
+
+  // ===== 48: CHEMISTRY - HALOALKANES =====
+  {
+    subject: "Chemistry",
+    topic: "Haloalkanes",
+    q: "The haloalkanes used in dry-cleaning industries are",
+    options: [
+      "trichloromethane and tetrachloromethane",
+      "chloroethene and dichloroethene",
+      "trichloroethene and tetrachloroethene",
+      "chloroethane and dichloroethane"
+    ],
+    correct: 2,
+    solution: "Trichloroethene and tetrachloroethene are the usual dry-cleaning solvents. (The printed key says A, but C is the usual answer, so please double-check.)"
+  },
+
+  // ===== 49: CHEMISTRY - HYDROCARBON TESTS =====
+  {
+    subject: "Chemistry",
+    topic: "Hydrocarbons",
+    q: "Two hydrocarbons X and Y were treated with bromine water. X decolorized the solution and Y did not. Which class of compound does Y belong to?",
+    options: ["Benzene", "Alkynes", "Alkenes", "Alkanes"],
+    correct: 3,
+    solution: "Unsaturated hydrocarbons (alkenes and alkynes) decolorize bromine water. Per the printed key, Y is an alkane, which is saturated and does not react."
+  },
+
+  // ===== 50: CHEMISTRY - HALOALKANES =====
+  {
+    subject: "Chemistry",
+    topic: "Haloalkanes",
+    q: "The compound that is used as an anaesthetic is",
+    options: ["CCl₄", "CHCl₃", "CH₂Cl₂", "CH₃Cl"],
     correct: 1,
-    solution: "Total = 3 + 5 + 1 + 1 + 2 + 3 = 15 students. The median is the 8th value. Cumulative frequencies: 3 (age 20), 8 (age 25). So the 8th value is 25."
-  },
-
-  // ===== 47: MATHEMATICS - PERMUTATION & COMBINATION =====
-  {
-    subject: "Mathematics",
-    topic: "Permutation & Combination",
-    q: "In how many ways can a delegation of 3 be chosen from among 5 men and 3 women, if at least one man and at least one woman must be included?",
-    options: ["15", "28", "30", "45"],
-    correct: 3,
-    solution: "Total ways = ⁸C₃ = 56. All men: ⁵C₃ = 10. All women: ³C₃ = 1. Required = 56 − 10 − 1 = 45."
-  },
-
-  // ===== 48: MATHEMATICS - STATISTICS (MEAN) =====
-  {
-    subject: "Mathematics",
-    topic: "Statistics (Mean)",
-    q: "The mean of the ages of ten secondary school pupils is 16 but when the age of their teacher is added to it, the mean becomes 19. Find the age of the teacher.",
-    options: ["27", "35", "38", "49"],
-    correct: 3,
-    solution: "Sum of ten ages = 10 × 16 = 160. With the teacher: 11 × 19 = 209. Teacher's age = 209 − 160 = 49."
-  },
-
-  // ===== 49: MATHEMATICS - FACTORISATION =====
-  {
-    subject: "Mathematics",
-    topic: "Factorisation",
-    q: "Factorise 9(x + y)² − 4(x − y)²",
-    options: ["(x + y)(5x + y)", "(x + y)²", "(x + 5y)(5x + y)", "5(x + y)²"],
-    correct: 2,
-    solution: "Difference of two squares: [3(x + y) − 2(x − y)][3(x + y) + 2(x − y)] = (x + 5y)(5x + y)."
-  },
-
-  // ===== 50: MATHEMATICS - QUADRATIC EQUATIONS (WORD PROBLEMS) =====
-  {
-    subject: "Mathematics",
-    topic: "Quadratic Equations (Word Problems)",
-    q: "The ages of Tosan and Isa differ by 6 and the product of their ages is 187. Write their ages in the form (x, y), where x > y",
-    options: ["(12, 9)", "(23, 17)", "(17, 11)", "(18, 12)"],
-    correct: 2,
-    solution: "Let x − y = 6 and xy = 187. Then y(y + 6) = 187, so y² + 6y − 187 = 0, i.e. (y + 17)(y − 11) = 0, giving y = 11 and x = 17. Ages: (17, 11)."
+    solution: "Trichloromethane (chloroform), CHCl₃, was used as an anaesthetic."
   }
-
 ];
   
 
