@@ -168,6 +168,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  
   .grade-box {
     background: linear-gradient(135deg, #6a3093, #a044ff);
     color: #fff;
@@ -254,28 +256,9 @@ const TOPICS = [
   "PHYSICS",
   "CHEMISTRY",
 ];
-const questions= [
-  // ===== 1: CHEMISTRY - INTRODUCTION =====
-  {
-    subject: "Chemistry",
-    topic: "Introduction",
-    q: "Which chemistry paper type is given to you?",
-    options: ["Type A", "Type B", "Type C", "Type D"],
-    correct: 0,
-    solution: "The 2010 paper is Paper Type A."
-  },
 
-  // ===== 2: CHEMISTRY - SEPARATION OF MIXTURES =====
-  {
-    subject: "Chemistry",
-    topic: "Separation of Mixtures",
-    q: "Which of the following is an example of a mixture?",
-    options: ["Common salt", "Blood", "Sand", "Washing soda"],
-    correct: 1,
-    solution: "Blood is a mixture of plasma, cells and other substances. Common salt and washing soda are pure compounds. (Sand is also a mixture, but the printed key gives B.)"
-  },
-
-  // ===== 3: CHEMISTRY - CHEMICAL COMBINATION =====
+const questions = [
+  // ===== 1 =====
   {
     subject: "Chemistry",
     topic: "Stoichiometry",
@@ -285,127 +268,7 @@ const questions= [
     solution: "Ca(NO₃)₂ = 40 + 2(14) + 6(16) = 164. % N = (28/164) × 100 = 17.1%."
   },
 
-  // ===== 4: CHEMISTRY - KINETIC THEORY =====
-  {
-    subject: "Chemistry",
-    topic: "Kinetic Theory of Matter",
-    q: "The droplets of water observed around a bottle of milk taken out of the refrigerator is due to the fact that the",
-    options: [
-      "water vapour in the air around the bottle gains some energy from the bottle",
-      "temperature of the milk drops as it loses heat into the surroundings",
-      "saturated vapour pressure of the milk is equal to the atmospheric pressure",
-      "water vapour in the air around the bottle loses some of its energy to the bottle"
-    ],
-    correct: 3,
-    solution: "The cold bottle absorbs energy from the water vapour in the surrounding air. The vapour loses energy and condenses into droplets."
-  },
-
-  // ===== 5: CHEMISTRY - GAS LAWS =====
-  {
-    subject: "Chemistry",
-    topic: "Gas Laws",
-    q: "The volume of a given gas is V cm³ at P mm Hg. What is the new volume of the gas if the pressure is reduced to half at constant temperature?",
-    options: ["4V cm³", "2V cm³", "V/2 cm³", "V cm³"],
-    correct: 1,
-    solution: "Boyle's law: P₁V₁ = P₂V₂. P × V = (P/2) × V₂, so V₂ = 2V cm³."
-  },
-
-  // ===== 6: CHEMISTRY - PERIODICITY =====
-  {
-    subject: "Chemistry",
-    topic: "Periodic Table",
-    q: "Moving from left to right across a period, the general rise in the first ionization energy can be attributed to the",
-    options: ["decrease in nuclear charge", "increase in nuclear charge", "decrease in screening effect", "increase in screening effect"],
-    correct: 1,
-    solution: "Across a period, nuclear charge increases while the number of shells stays the same. The outer electrons are held more strongly, so ionization energy rises."
-  },
-
-  // ===== 7: CHEMISTRY - ATOMIC STRUCTURE =====
-  {
-    subject: "Chemistry",
-    topic: "Atomic Structure",
-    q: "How many unpaired electron(s) are there in the nitrogen sub-levels?",
-    options: ["3", "2", "1", "none"],
-    correct: 0,
-    solution: "Nitrogen: 1s² 2s² 2p³. By Hund's rule the three 2p electrons occupy separate orbitals, giving 3 unpaired electrons."
-  },
-
-  // ===== 8: CHEMISTRY - NOBLE GASES =====
-  {
-    subject: "Chemistry",
-    topic: "Chemical Bonding",
-    q: "The stability of the noble gases is due to the fact that they",
-    options: [
-      "have no electron in their outermost shells",
-      "have duplet or octet electron configurations",
-      "belong to group zero of the periodic table",
-      "are volatile in nature"
-    ],
-    correct: 1,
-    solution: "Noble gases have complete outer shells: a duplet (helium) or an octet (the others). This makes them stable."
-  },
-
-  // ===== 9: CHEMISTRY - ATOMIC STRUCTURE =====
-  {
-    subject: "Chemistry",
-    topic: "Atomic Structure",
-    q: "The maximum number of electrons in the L shell of an atom is",
-    options: ["2", "8", "18", "32"],
-    correct: 1,
-    solution: "The L shell is n = 2. Maximum electrons = 2n² = 2(2)² = 8."
-  },
-
-  // ===== 10: CHEMISTRY - PERIODIC TABLE =====
-  {
-    subject: "Chemistry",
-    topic: "Periodic Table",
-    q: "Elements in the same period in the periodic table have the same",
-    options: ["number of shells", "atomic number", "chemical properties", "physical properties"],
-    correct: 0,
-    solution: "Elements in the same period have the same number of electron shells. Atomic number and properties change across a period."
-  },
-
-  // ===== 11: CHEMISTRY - NUCLEAR CHEMISTRY =====
-  {
-    subject: "Chemistry",
-    topic: "Nuclear Chemistry",
-    q: "²₁D + ³₁T → ⁴₂He + ¹₀n + energy. The reaction above illustrates",
-    options: ["alpha decay", "artificial transmutation", "nuclear fusion", "nuclear fission"],
-    correct: 2,
-    solution: "Two light nuclei (deuterium and tritium) join to form a heavier nucleus (helium) and release energy. This is nuclear fusion."
-  },
-
-  // ===== 12: CHEMISTRY - NOBLE GASES =====
-  {
-    subject: "Chemistry",
-    topic: "Noble Gases",
-    q: "A noble gas with a high power of fog penetration used in aerodrome beacons is",
-    options: ["krypton", "argon", "helium", "neon"],
-    correct: 3,
-    solution: "Neon gives an orange-red glow that penetrates fog well, so it is used in aerodrome beacons. (The printed key says A; neon is D, so please double-check.)"
-  },
-
-  // ===== 13: CHEMISTRY - WATER =====
-  {
-    subject: "Chemistry",
-    topic: "Water",
-    q: "Permanent hardness of water can be removed by",
-    options: ["filtration", "adding slaked lime", "adding caustic soda", "boiling"],
-    correct: 2,
-    solution: "Permanent hardness (Ca²⁺ and Mg²⁺ chlorides and sulphates) is not removed by boiling or filtration. Per the printed key, adding caustic soda removes it by precipitating the ions."
-  },
-
-  // ===== 14: CHEMISTRY - WATER =====
-  {
-    subject: "Chemistry",
-    topic: "Water",
-    q: "Substances employed as drying agents are usually",
-    options: ["amphoteric", "hygroscopic", "efflorescent", "acidic"],
-    correct: 1,
-    solution: "Hygroscopic substances absorb moisture from the air or from other substances, so they work as drying agents."
-  },
-
-  // ===== 15: CHEMISTRY - SOLUBILITY =====
+  // ===== 2 =====
   {
     subject: "Chemistry",
     topic: "Solubility",
@@ -415,107 +278,7 @@ const questions= [
     solution: "Molar mass of CuSO₄ = 64 + 32 + 64 = 160. Moles in 40 g = 40/160 = 0.25 mol per 100 g water. Per 1000 g (1 dm³) water: 0.25 × 10 = 2.50 mol dm⁻³."
   },
 
-  // ===== 16: CHEMISTRY - CLEANING AGENTS =====
-  {
-    subject: "Chemistry",
-    topic: "Cleaning Agents",
-    q: "Coffee stains can best be removed by",
-    options: ["kerosene", "turpentine", "a solution of borax in water", "ammonia solution"],
-    correct: 3,
-    solution: "Per the printed key, ammonia solution (a mild alkali) is the best remover of coffee stains."
-  },
-
-  // ===== 17: CHEMISTRY - AIR POLLUTION =====
-  {
-    subject: "Chemistry",
-    topic: "Environmental Pollution",
-    q: "Carbon (II) oxide is considered dangerous if inhaled mainly because it",
-    options: [
-      "can cause injury to the nervous system",
-      "competes with oxygen in the blood",
-      "competes with carbon (IV) oxide in the blood",
-      "can cause lung cancer"
-    ],
-    correct: 1,
-    solution: "CO binds to haemoglobin much more strongly than oxygen does, forming carboxyhaemoglobin. This reduces the oxygen carried in the blood."
-  },
-
-  // ===== 18: CHEMISTRY - ACIDS =====
-  {
-    subject: "Chemistry",
-    topic: "Acids, Bases and Salts",
-    q: "The acid that is used to remove rust is",
-    options: ["boric", "hydrochloric", "trioxonitrate (V)", "tetraoxosulphate (VI)"],
-    correct: 1,
-    solution: "Hydrochloric acid reacts with iron (III) oxide (rust) to form soluble iron chloride, so it is used to remove rust."
-  },
-
-  // ===== 19: CHEMISTRY - TITRATION =====
-  {
-    subject: "Chemistry",
-    topic: "Acid-Base Titration",
-    q: "Calculate the volume of 0.5 mol dm⁻³ H₂SO₄ that is neutralized by 25 cm³ of 0.1 mol dm⁻³ NaOH.",
-    options: ["5.0 cm³", "2.5 cm³", "0.4 cm³", "0.1 cm³"],
-    correct: 1,
-    solution: "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. Moles NaOH = 0.1 × 25/1000 = 0.0025 mol. Moles H₂SO₄ = 0.00125 mol. Volume = 0.00125/0.5 = 0.0025 dm³ = 2.5 cm³."
-  },
-
-  // ===== 20: CHEMISTRY - INDICATORS =====
-  {
-    subject: "Chemistry",
-    topic: "Indicators",
-    q: "The colour of methyl orange in alkaline medium is",
-    options: ["yellow", "pink", "orange", "red"],
-    correct: 0,
-    solution: "Methyl orange is red in acid, orange at the end point and yellow in alkaline medium."
-  },
-
-  // ===== 21: CHEMISTRY - SALTS =====
-  {
-    subject: "Chemistry",
-    topic: "Acids, Bases and Salts",
-    q: "Which of the following salts is slightly soluble in water?",
-    options: ["AgCl", "CaSO₄", "Na₂CO₃", "PbCl₂"],
-    correct: 1,
-    solution: "CaSO₄ is only slightly soluble. AgCl is insoluble, Na₂CO₃ is soluble, and PbCl₂ is soluble only in hot water."
-  },
-
-  // ===== 22: CHEMISTRY - REDOX =====
-  {
-    subject: "Chemistry",
-    topic: "Oxidation and Reduction",
-    q: "6AgNO₃(aq) + PH₃(g) + 3H₂O(l) → 6Ag(s) + H₃PO₃(aq) + 6HNO₃(aq). In the above reaction, the reducing agent is",
-    options: ["HNO₃(aq)", "H₂O(l)", "PH₃(g)", "AgNO₃(aq)"],
-    correct: 2,
-    solution: "Phosphorus goes from −3 in PH₃ to +3 in H₃PO₃, so PH₃ is oxidized. The substance that is oxidized is the reducing agent."
-  },
-
-  // ===== 23: CHEMISTRY - NOMENCLATURE =====
-  {
-    subject: "Chemistry",
-    topic: "Nomenclature",
-    q: "The IUPAC nomenclature of the compound LiAlH₄ is",
-    options: [
-      "lithium tetrahydridoaluminate (III)",
-      "aluminium tetrahydrido lithium",
-      "tetrahydrido lithium aluminate (III)",
-      "lithium aluminium hydride"
-    ],
-    correct: 0,
-    solution: "The cation (lithium) is named first. The complex anion [AlH₄]⁻ is tetrahydridoaluminate (III). So the name is lithium tetrahydridoaluminate (III)."
-  },
-
-  // ===== 24: CHEMISTRY - CORROSION =====
-  {
-    subject: "Chemistry",
-    topic: "Electrochemistry",
-    q: "Iron can be protected from corrosion by coating the surface with",
-    options: ["gold", "silver", "copper", "zinc"],
-    correct: 3,
-    solution: "Zinc is more reactive than iron, so it corrodes first and protects the iron (galvanizing)."
-  },
-
-  // ===== 25: CHEMISTRY - ELECTROLYSIS =====
+  // ===== 3 =====
   {
     subject: "Chemistry",
     topic: "Electrolysis",
@@ -525,7 +288,7 @@ const questions= [
     solution: "Q = It = 10 × 1930 = 19300 C. Al³⁺ + 3e⁻ → Al, so 3 × 96500 C deposits 27 g. Mass = (19300 × 27)/(3 × 96500) = 1.8 g."
   },
 
-  // ===== 26: CHEMISTRY - ENERGETICS =====
+  // ===== 4 =====
   {
     subject: "Chemistry",
     topic: "Energy Changes",
@@ -540,7 +303,7 @@ const questions= [
     solution: "NH₄Cl(s) → NH₃(g) + HCl(g) turns a solid into gases, so disorder increases and ΔS is positive."
   },
 
-  // ===== 27: CHEMISTRY - ENERGETICS =====
+  // ===== 5 =====
   {
     subject: "Chemistry",
     topic: "Energy Changes",
@@ -555,7 +318,7 @@ const questions= [
     solution: "ΔG = ΔH − TΔS. Exothermic means ΔH is negative and great disorder means ΔS is large and positive, so ΔG is large and negative: a large decrease in free energy. (The printed key says C, which is incorrect.)"
   },
 
-  // ===== 28: CHEMISTRY - RATES OF REACTION =====
+  // ===== 6 =====
   {
     subject: "Chemistry",
     topic: "Rates of Reaction",
@@ -570,7 +333,7 @@ const questions= [
     solution: "A catalyst provides an alternative path with lower activation energy. This is why only moderate heat is needed."
   },
 
-  // ===== 29: CHEMISTRY - RATES OF REACTION =====
+  // ===== 7 =====
   {
     subject: "Chemistry",
     topic: "Rates of Reaction",
@@ -585,7 +348,7 @@ const questions= [
     solution: "Powdered marble has a larger surface area than chips, so it reacts faster. Both give the same final mass of CO₂."
   },
 
-  // ===== 30: CHEMISTRY - CHEMICAL EQUILIBRIUM =====
+  // ===== 8 =====
   {
     subject: "Chemistry",
     topic: "Chemical Equilibrium",
@@ -595,232 +358,493 @@ const questions= [
     solution: "The forward reaction is exothermic. Raising the temperature shifts equilibrium to the left, so the products fall and K decreases."
   },
 
-  // ===== 31: CHEMISTRY - QUALITATIVE ANALYSIS =====
+  // ===== 9 =====
   {
     subject: "Chemistry",
-    topic: "Qualitative Analysis",
-    q: "To a solution of an unknown compound, a little dilute tetraoxosulphate (VI) acid was added with some freshly prepared iron (II) tetraoxosulphate (VI) solution. The brown ring observed after the addition of a stream of concentrated tetraoxosulphate (VI) acid confirmed the presence of",
-    options: ["CO₃²⁻", "Cl⁻", "SO₄²⁻", "NO₃⁻"],
-    correct: 3,
-    solution: "This is the brown ring test for nitrates (NO₃⁻)."
-  },
-
-  // ===== 32: CHEMISTRY - NITROGEN COMPOUNDS =====
-  {
-    subject: "Chemistry",
-    topic: "Nitrogen and its Compounds",
-    q: "Diagram: a flask containing copper turnings, with 50% trioxonitrate (V) acid added from a funnel above. The gas given off is delivered through a tube and collected over water in an inverted gas jar. In the diagram above, the gas produced is",
-    options: ["NO", "NO₂", "N₂O", "N₂O₄"],
-    correct: 0,
-    solution: "Copper with dilute (50%) HNO₃ gives nitrogen (II) oxide, NO, which is insoluble in water and so is collected over water."
-  },
-
-  // ===== 33: CHEMISTRY - NITROGEN COMPOUNDS =====
-  {
-    subject: "Chemistry",
-    topic: "Nitrogen and its Compounds",
-    q: "Which of the following is used in rocket fuels?",
-    options: ["HNO₃", "CH₃COOH", "H₂SO₄", "HCl"],
-    correct: 0,
-    solution: "Trioxonitrate (V) acid (HNO₃) is a strong oxidizing agent and is used as an oxidizer in rocket fuels."
-  },
-
-  // ===== 34: CHEMISTRY - SULPHUR =====
-  {
-    subject: "Chemistry",
-    topic: "Sulphur and its Compounds",
-    q: "Diagram: sulphur (IV) oxide and oxygen are passed through concentrated H₂SO₄, then through a tube containing platinized asbestos heated strongly. The product, sulphur (VI) oxide, is collected in a tube cooled by a freezing mixture. In the diagram above, the purpose of the asbestos is to",
-    options: ["absorb impurities", "catalyse the reaction", "solidify the gas", "dry the gas"],
+    topic: "Stoichiometry",
+    q: "What is the concentration of a solution containing 2 g of NaOH in 100 cm³ of solution? [Na = 23, O = 16, H = 1]",
+    options: ["0.40 mol dm⁻³", "0.50 mol dm⁻³", "0.05 mol dm⁻³", "0.30 mol dm⁻³"],
     correct: 1,
-    solution: "Platinized asbestos is the catalyst in the contact process. The asbestos is only a support for the platinum."
+    solution: "Molar mass of NaOH = 23 + 16 + 1 = 40. Moles = 2/40 = 0.05 mol. Concentration = 0.05/0.1 dm³ = 0.50 mol dm⁻³."
   },
 
-  // ===== 35: CHEMISTRY - METALS AND ALLOYS =====
+  // ===== 10 =====
   {
     subject: "Chemistry",
-    topic: "Metals and Alloys",
-    q: "A constituent common to bronze and solder is",
-    options: ["lead", "silver", "copper", "tin"],
-    correct: 3,
-    solution: "Bronze = copper + tin. Solder = tin + lead. The common constituent is tin."
-  },
-
-  // ===== 36: CHEMISTRY - CORROSION =====
-  {
-    subject: "Chemistry",
-    topic: "Metals and Alloys",
-    q: "When iron is exposed to moist air, it gradually rusts. This is due to the formation of",
+    topic: "Chemical Equilibrium",
+    q: "N₂O₄(g) ⇌ 2NO₂(g), ΔH = +ve. In the reaction above, an increase in temperature will",
     options: [
-      "hydrated iron (III) oxide",
-      "anhydrous iron (III) oxide",
-      "anhydrous iron (II) oxide",
-      "hydrated iron (II) oxide"
+      "increase the value of the equilibrium constant",
+      "decrease the value of the equilibrium constant",
+      "increase the reactant production",
+      "shift the equilibrium to the left"
     ],
     correct: 0,
-    solution: "Rust is hydrated iron (III) oxide, Fe₂O₃·xH₂O, formed when iron reacts with oxygen and water."
+    solution: "The forward reaction is endothermic. Raising the temperature shifts equilibrium to the right, so more NO₂ forms and K increases."
   },
 
-  // ===== 37: CHEMISTRY - FLAME TESTS =====
+  // ===== 11 =====
   {
     subject: "Chemistry",
-    topic: "Qualitative Analysis",
-    q: "A compound gives an orange-red colour to a non-luminous flame. This compound is likely to contain",
-    options: ["Na⁺", "Ca²⁺", "Fe³⁺", "Fe²⁺"],
-    correct: 1,
-    solution: "Calcium ions give an orange-red (brick-red) flame. Sodium gives golden yellow."
-  },
-
-  // ===== 38: CHEMISTRY - ALLOYS =====
-  {
-    subject: "Chemistry",
-    topic: "Metals and Alloys",
-    q: "Stainless steel is used for making",
-    options: ["magnets", "tools", "coins and medals", "moving parts of clocks"],
+    topic: "Energy Changes",
+    q: "A chemical reaction in which the hydration energy is greater than the lattice energy is referred to as",
+    options: ["a spontaneous reaction", "an endothermic reaction", "an exothermic reaction", "a reversible reaction"],
     correct: 2,
-    solution: "Per the printed key, stainless steel (iron with chromium and nickel) is used for coins and medals because it resists corrosion."
+    solution: "More energy is released on hydration than is needed to break the lattice, so there is a net release of heat. The reaction is exothermic."
   },
 
-  // ===== 39: CHEMISTRY - PETROLEUM =====
+  // ===== 12 =====
   {
     subject: "Chemistry",
-    topic: "Petroleum",
-    q: "The residual solids from the fractional distillation of petroleum are used as",
-    options: [
-      "coatings of pipes",
-      "raw materials for the cracking process",
-      "fuel for driving tractors",
-      "fuel for jet engines"
-    ],
-    correct: 0,
-    solution: "The residue (bitumen or tar) is used for coating pipes and for road surfacing."
-  },
-
-  // ===== 40: CHEMISTRY - ORGANIC NOMENCLATURE =====
-  {
-    subject: "Chemistry",
-    topic: "Organic Nomenclature",
-    q: "Structure: CH₃(CH₂)₃–CH(C₂H₅)–, with a C₃H₇ group attached to the same CH carbon as a branch. The IUPAC nomenclature of the compound above is",
-    options: ["4-ethyloctane", "5-ethyloctane", "5-propylheptane", "3-propylheptane"],
-    correct: 0,
-    solution: "The longest chain through the branch carbon is 4 + 1 + 3 = 8 carbons (octane). The ethyl group is on carbon 4 when numbered from the propyl end, so it is 4-ethyloctane. (The printed key says D, which does not fit the longest-chain rule.)"
-  },
-
-  // ===== 41: CHEMISTRY - ALKYNES =====
-  {
-    subject: "Chemistry",
-    topic: "Alkynes",
-    q: "Which of the following is used as fuel in miners' lamp?",
-    options: ["Ethanal", "Ethyne", "Ethene", "Ethane"],
-    correct: 1,
-    solution: "Ethyne (acetylene) burns with a bright flame, so it is used as fuel in miners' lamps."
-  },
-
-  // ===== 42: CHEMISTRY - CARBOXYLIC ACIDS =====
-  {
-    subject: "Chemistry",
-    topic: "Carboxylic Acids",
-    q: "Which of the following organic compounds is very soluble in water?",
-    options: ["CH₃COOH", "C₂H₂", "C₂H₄", "CH₃COOC₂H₅"],
-    correct: 0,
-    solution: "Ethanoic acid forms hydrogen bonds with water and is very soluble. The hydrocarbons and the ester are poorly soluble."
-  },
-
-  // ===== 43: CHEMISTRY - AROMATIC HYDROCARBONS =====
-  {
-    subject: "Chemistry",
-    topic: "Aromatic Hydrocarbons",
-    q: "Benzene reacts with hydrogen in the presence of nickel catalyst at 180 °C to give",
-    options: ["xylene", "toluene", "cyclopentane", "cyclohexane"],
+    topic: "Rates of Reaction",
+    q: "CH₄(g) + Cl₂(g) → CH₃Cl(s) + HCl(g). The major factor that influences the rate of the reaction above is",
+    options: ["catalyst", "temperature", "concentration", "light"],
     correct: 3,
-    solution: "Catalytic hydrogenation adds 3 H₂ to benzene: C₆H₆ + 3H₂ → C₆H₁₂ (cyclohexane)."
+    solution: "The chlorination of methane is a free-radical reaction started by ultraviolet light, which splits Cl₂ into chlorine atoms."
   },
 
-  // ===== 44: CHEMISTRY - ALKENES =====
+  // ===== 13 =====
   {
     subject: "Chemistry",
-    topic: "Alkenes",
-    q: "Which of the following is used to hasten the ripening of fruit?",
-    options: ["Ethene", "Ethanol", "Ethyne", "Ethane"],
-    correct: 0,
-    solution: "Ethene is a plant hormone that speeds up fruit ripening."
-  },
-
-  // ===== 45: CHEMISTRY - ALKANES =====
-  {
-    subject: "Chemistry",
-    topic: "Alkanes",
-    q: "The final products of the reaction between methane and chlorine in the presence of ultraviolet light are hydrogen chloride and",
-    options: ["trichloromethane", "dichloromethane", "tetrachloromethane", "chloromethane"],
+    topic: "Empirical and Molecular Formulae",
+    q: "An organic compound has an empirical formula CH₂O and a vapour density of 45. What is the molecular formula? [C = 12, H = 1, O = 16]",
+    options: ["C₃H₇OH", "C₂H₅OH", "C₃H₆O₃", "C₂H₄O₂"],
     correct: 2,
-    solution: "Substitution continues step by step until all four hydrogens are replaced: CH₄ + 4Cl₂ → CCl₄ + 4HCl. The final product is tetrachloromethane."
+    solution: "Molar mass = 2 × V.D. = 90. Empirical formula mass (CH₂O) = 30. n = 90/30 = 3, so the molecular formula is C₃H₆O₃."
   },
 
-  // ===== 46: CHEMISTRY - BOILING POINTS =====
+  // ===== 14 =====
   {
     subject: "Chemistry",
-    topic: "Alkanols and Alkanes",
-    q: "The correct order of increasing boiling points of the following compounds C₃H₇OH, C₇H₁₆ and C₄H₁₀ is",
+    topic: "Mole Concept",
+    q: "How many atoms are present in 6.0 g of magnesium? [Mg = 24, NA = 6.02 × 10²³ mol⁻¹]",
+    options: ["1.20 × 10²²", "2.41 × 10²²", "1.51 × 10²³", "3.02 × 10²³"],
+    correct: 2,
+    solution: "Moles = 6.0/24 = 0.25 mol. Atoms = 0.25 × 6.02 × 10²³ = 1.51 × 10²³."
+  },
+
+  // ===== 15 =====
+  {
+    subject: "Chemistry",
+    topic: "Rates of Reaction",
+    q: "An increase in the pressure exerted on a gas at constant temperature results in",
     options: [
-      "C₃H₇OH → C₄H₁₀ → C₇H₁₆",
-      "C₄H₁₀ → C₇H₁₆ → C₃H₇OH",
-      "C₇H₁₆ → C₃H₇OH → C₄H₁₀",
-      "C₄H₁₀ → C₃H₇OH → C₇H₁₆"
+      "a decrease in the number of effective collisions",
+      "a decrease in volume",
+      "an increase in the average intermolecular distance",
+      "an increase in volume"
     ],
-    correct: 3,
-    solution: "Butane is smallest, so it has the lowest boiling point. Propanol has hydrogen bonding, and heptane has a larger molecular mass. Per the printed key, the order is C₄H₁₀ < C₃H₇OH < C₇H₁₆."
+    correct: 1,
+    solution: "By Boyle's law, volume falls when pressure rises at constant temperature. The molecules are closer together, so effective collisions increase, not decrease."
   },
 
-  // ===== 47: CHEMISTRY - ALKANES =====
+  // ===== 16 =====
   {
     subject: "Chemistry",
-    topic: "Alkanes",
-    q: "One of the major uses of alkanes is",
+    topic: "Solubility",
+    q: "Potassium trioxochlorate (V) has a solubility of 1.5 mol dm⁻³ at 45 °C. On cooling this solution to 20 °C, the solubility was found to be 0.5 mol dm⁻³. What mass of KClO₃ was crystallized out? [K = 39, Cl = 35.5, O = 16]",
+    options: ["1.00 g", "10.00 g", "12.25 g", "122.50 g"],
+    correct: 3,
+    solution: "Moles crystallized per dm³ = 1.5 − 0.5 = 1.0 mol. Molar mass of KClO₃ = 39 + 35.5 + 48 = 122.5 g mol⁻¹. Mass = 1.0 × 122.5 = 122.50 g."
+  },
+
+  // ===== 17 =====
+  {
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "An increase in entropy can best be illustrated by",
     options: [
-      "as domestic and industrial fuel",
-      "in the hydrogenation of oils",
-      "in the textile industries",
-      "in the production of plastics"
+      "mixing of gases",
+      "freezing of water",
+      "the condensation of vapour",
+      "solidifying candle wax"
     ],
     correct: 0,
-    solution: "Alkanes such as methane, propane and butane are mainly used as domestic and industrial fuels."
+    solution: "Entropy measures disorder. Gases mixing become more random, so entropy increases. Freezing, condensing and solidifying all increase order."
   },
 
-  // ===== 48: CHEMISTRY - HALOALKANES =====
+  // ===== 18 =====
   {
     subject: "Chemistry",
-    topic: "Haloalkanes",
-    q: "The haloalkanes used in dry-cleaning industries are",
+    topic: "Rates of Reaction",
+    q: "The highest rate of production of carbon (IV) oxide can be achieved using",
     options: [
-      "trichloromethane and tetrachloromethane",
-      "chloroethene and dichloroethene",
-      "trichloroethene and tetrachloroethene",
-      "chloroethane and dichloroethane"
+      "0.05 mol dm⁻³ HCl and 5 g powdered CaCO₃",
+      "0.05 mol dm⁻³ HCl and 5 g lump CaCO₃",
+      "0.10 mol dm⁻³ HCl and 5 g powdered CaCO₃",
+      "0.025 mol dm⁻³ HCl and 5 g powdered CaCO₃"
     ],
     correct: 2,
-    solution: "Trichloroethene and tetrachloroethene are the usual dry-cleaning solvents. (The printed key says A, but C is the usual answer, so please double-check.)"
+    solution: "The rate is highest with the highest concentration of acid (0.10 mol dm⁻³) and the largest surface area of solid (powder)."
   },
 
-  // ===== 49: CHEMISTRY - HYDROCARBON TESTS =====
+  // ===== 19 =====
   {
     subject: "Chemistry",
-    topic: "Hydrocarbons",
-    q: "Two hydrocarbons X and Y were treated with bromine water. X decolorized the solution and Y did not. Which class of compound does Y belong to?",
-    options: ["Benzene", "Alkynes", "Alkenes", "Alkanes"],
+    topic: "Empirical and Molecular Formulae",
+    q: "A compound contains 40.0% C, 6.7% H and 53.3% O. If the molecular mass of the compound is 180, its molecular formula is [C = 12, H = 1, O = 16]",
+    options: ["CH₂O", "C₃H₆O₃", "C₆H₆O₃", "C₆H₁₂O₆"],
     correct: 3,
-    solution: "Unsaturated hydrocarbons (alkenes and alkynes) decolorize bromine water. Per the printed key, Y is an alkane, which is saturated and does not react."
+    solution: "Moles: C = 40/12 = 3.33; H = 6.7/1 = 6.7; O = 53.3/16 = 3.33. Ratio 1 : 2 : 1, so the empirical formula is CH₂O (mass 30). n = 180/30 = 6, so the molecular formula is C₆H₁₂O₆."
   },
 
-  // ===== 50: CHEMISTRY - HALOALKANES =====
+  // ===== 20 =====
   {
     subject: "Chemistry",
-    topic: "Haloalkanes",
-    q: "The compound that is used as an anaesthetic is",
-    options: ["CCl₄", "CHCl₃", "CH₂Cl₂", "CH₃Cl"],
+    topic: "Energy Changes",
+    q: "In an endothermic reaction, if there is a loss in entropy the reaction will",
+    options: ["be indeterminate", "be spontaneous", "not be spontaneous", "be at equilibrium"],
+    correct: 2,
+    solution: "Endothermic means ΔH is positive, and a loss in entropy means ΔS is negative. ΔG = ΔH − TΔS is therefore always positive, so the reaction is not spontaneous."
+  },
+
+  // ===== 21 =====
+  {
+    subject: "Chemistry",
+    topic: "Chemical Equilibrium",
+    q: "2SO₂(g) + O₂(g) ⇌ 2SO₃(g), ΔH = −395.7 kJ mol⁻¹. In the reaction above, the concentration of SO₃(g) can be increased by",
+    options: [
+      "decreasing the pressure",
+      "decreasing the temperature",
+      "increasing the temperature",
+      "the addition of catalyst"
+    ],
     correct: 1,
-    solution: "Trichloromethane (chloroform), CHCl₃, was used as an anaesthetic."
+    solution: "The forward reaction is exothermic, so lowering the temperature shifts the equilibrium to the right and increases SO₃. Lowering the pressure favours the side with more moles (the left), and a catalyst does not change the position of equilibrium."
+  },
+
+  // ===== 22 =====
+  {
+    subject: "Chemistry",
+    topic: "Rates of Reaction",
+    q: "The minimum amount of energy required for a reaction to take place is",
+    options: ["lattice energy", "ionization energy", "activation energy", "kinetic energy"],
+    correct: 2,
+    solution: "Activation energy is the minimum energy colliding particles must have for a reaction to occur."
+  },
+
+  // ===== 23 =====
+  {
+    subject: "Chemistry",
+    topic: "Empirical and Molecular Formulae",
+    q: "An organic compound contains 60% carbon, 13.3% hydrogen and 26.7% oxygen. Calculate the empirical formula. (C = 12, H = 1, O = 16)",
+    options: ["C₅H₁₂O", "C₃H₈O", "C₆H₁₃O₂", "C₄H₉O"],
+    correct: 1,
+    solution: "Moles: C = 60/12 = 5; H = 13.3/1 = 13.3; O = 26.7/16 = 1.67. Divide by 1.67: C = 3, H = 8, O = 1. Empirical formula = C₃H₈O."
+  },
+
+  // ===== 24 =====
+  {
+    subject: "Chemistry",
+    topic: "Percentage Composition",
+    q: "What is the percentage of sulphur in sulphur (IV) oxide?",
+    options: ["66%", "25%", "40%", "50%"],
+    correct: 3,
+    solution: "SO₂ = 32 + 32 = 64. % S = (32/64) × 100 = 50%."
+  },
+
+  // ===== 25 =====
+  {
+    subject: "Chemistry",
+    topic: "Gas Laws",
+    q: "A gas X diffuses twice as fast as gas Y. If the relative molecular mass of X is 32, calculate the relative molecular mass of Y.",
+    options: ["128", "8", "16", "64"],
+    correct: 0,
+    solution: "Graham's law: rate X / rate Y = √(M_Y / M_X) = 2. So M_Y / M_X = 4 and M_Y = 4 × 32 = 128."
+  },
+
+  // ===== 26 =====
+  {
+    subject: "Chemistry",
+    topic: "Atomic Structure",
+    q: "A silicon-containing ore has 92% ²⁸Si, 5% ²⁹Si and 3% ³⁰Si. Calculate the relative atomic mass of the silicon.",
+    options: ["14.00", "29.00", "28.11", "28.00"],
+    correct: 2,
+    solution: "R.A.M. = (92 × 28 + 5 × 29 + 3 × 30)/100 = (2576 + 145 + 90)/100 = 28.11. (The printed key says D, which does not match the calculation.)"
+  },
+
+  // ===== 27 =====
+  {
+    subject: "Chemistry",
+    topic: "Electrolysis",
+    q: "Calculate the quantity of electricity in coulombs required to liberate 10 g of copper from a copper compound. [Cu = 64, F = 96500 C mol⁻¹]",
+    options: ["32395.5", "30156.3", "60784.5", "15196.5"],
+    correct: 1,
+    solution: "Cu²⁺ + 2e⁻ → Cu, so 2 × 96500 = 193000 C deposits 64 g. Q = (10 × 193000)/64 = 30156.3 C."
+  },
+
+  // ===== 28 =====
+  {
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "If the change in free energy of a system is −899 J mol⁻¹ and the entropy change is 10 J mol⁻¹ K⁻¹ at 25 °C, calculate the enthalpy change.",
+    options: ["+2081 J mol⁻¹", "−2081 J mol⁻¹", "−649 J mol⁻¹", "+649 J mol⁻¹"],
+    correct: 0,
+    solution: "ΔG = ΔH − TΔS, with T = 25 + 273 = 298 K. ΔH = ΔG + TΔS = −899 + (298 × 10) = −899 + 2980 = +2081 J mol⁻¹."
+  },
+
+  // ===== 29 =====
+  {
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "In an equilibrium reaction, which of the following conditions indicates that maximum yield of the product will be obtained?",
+    options: [
+      "Equilibrium constant is very large",
+      "ΔH − TΔS = 0",
+      "ΔH > TΔS",
+      "Equilibrium constant is less than zero"
+    ],
+    correct: 0,
+    solution: "A very large K means the equilibrium lies far to the right, so most of the reactants are converted to products. K can never be less than zero."
+  },
+
+  // ===== 30 =====
+  {
+    subject: "Chemistry",
+    topic: "Rates of Reaction",
+    q: "In a chemical reaction, the change in concentration of a reactant with time is",
+    options: ["entropy of reaction", "enthalpy of reaction", "rate of reaction", "order of reaction"],
+    correct: 2,
+    solution: "Rate of reaction is the change in concentration of a reactant (or product) per unit time."
+  },
+
+  // ===== 31 =====
+  {
+    subject: "Chemistry",
+    topic: "Rates of Reaction",
+    q: "CH₃COOC₂H₅(l) + H₂O(l) ⇌ CH₃COOH(aq) + C₂H₅OH(aq). The purpose of H⁺ in the reaction above is to",
+    options: [
+      "increase the yield of products",
+      "maintain the solution at a constant pH",
+      "increase the rate of the hydrolysis",
+      "decrease the rate of the reverse reaction"
+    ],
+    correct: 2,
+    solution: "H⁺ acts as a catalyst. It speeds up the hydrolysis of the ester but does not change the position of equilibrium."
+  },
+
+  // ===== 32 =====
+  {
+    subject: "Chemistry",
+    topic: "Empirical and Molecular Formulae",
+    q: "A hydrocarbon has an empirical formula CH and a vapour density of 39. Determine its molecular formula. [C = 12, H = 1]",
+    options: ["C₂H₆", "C₃H₈", "C₃H₄", "C₆H₆"],
+    correct: 3,
+    solution: "Molar mass = 2 × 39 = 78. Empirical formula mass (CH) = 13. n = 78/13 = 6, so the molecular formula is C₆H₆."
+  },
+
+  // ===== 33 =====
+  {
+    subject: "Chemistry",
+    topic: "Stoichiometry",
+    q: "Some copper (II) sulphate pentahydrate (CuSO₄·5H₂O) was heated at 120 °C with the following results: Wt of crucible = 10.00 g; Wt of crucible + CuSO₄·5H₂O = 14.98 g; Wt of crucible + residue = 13.54 g. How many molecules of water of crystallization were lost? [H = 1, Cu = 63.5, O = 16, S = 32]",
+    options: ["1", "2", "3", "4"],
+    correct: 3,
+    solution: "Mass of hydrated salt = 4.98 g. Mass of water lost = 14.98 − 13.54 = 1.44 g = 0.08 mol. Molar mass of CuSO₄·5H₂O = 249.5, so moles of salt = 4.98/249.5 = 0.02 mol. Water lost per formula unit = 0.08/0.02 = 4."
+  },
+
+  // ===== 34 =====
+  {
+    subject: "Chemistry",
+    topic: "Atomic Structure",
+    q: "An element Z contained 90% of ¹⁶₈Z and 10% of ¹⁸₈Z. Its relative atomic mass is",
+    options: ["16.0", "16.2", "17.0", "17.8"],
+    correct: 1,
+    solution: "R.A.M. = (90 × 16 + 10 × 18)/100 = (1440 + 180)/100 = 16.2."
+  },
+
+  // ===== 35 =====
+  {
+    subject: "Chemistry",
+    topic: "Stoichiometry",
+    q: "4.0 g of sodium hydroxide in 250 cm³ of solution contains [Na = 23, O = 16, H = 1]",
+    options: ["0.40 moles per dm³", "0.10 moles per dm³", "0.04 moles per dm³", "0.02 moles per dm³"],
+    correct: 0,
+    solution: "Moles of NaOH = 4.0/40 = 0.1 mol. Concentration = 0.1/0.25 dm³ = 0.40 mol dm⁻³."
+  },
+
+  // ===== 36 =====
+  {
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "In general, an increase in temperature increases the solubility of a solute in water because",
+    options: [
+      "more solute molecules collide with each other",
+      "most solutes dissolve with the evolution of heat",
+      "more solute molecules dissociate at higher temperatures",
+      "most solutes dissolve with absorption of heat"
+    ],
+    correct: 3,
+    solution: "Most solutes dissolve endothermically. By Le Chatelier's principle, raising the temperature favours the endothermic dissolving process, so solubility rises. (The printed key says C, but D is the better answer.)"
+  },
+
+  // ===== 37 =====
+  {
+    subject: "Chemistry",
+    topic: "Stoichiometry",
+    q: "What volume of 0.1 mol dm⁻³ solution of tetraoxosulphate (VI) acid would be needed to dissolve 2.86 g of sodium trioxocarbonate (IV) decahydrate crystals? [H = 1, C = 12, O = 16, S = 32, Na = 23]",
+    options: ["20 cm³", "40 cm³", "80 cm³", "100 cm³"],
+    correct: 3,
+    solution: "Molar mass of Na₂CO₃·10H₂O = 106 + 180 = 286. Moles = 2.86/286 = 0.01 mol. Na₂CO₃ + H₂SO₄ → Na₂SO₄ + H₂O + CO₂, so 0.01 mol of acid is needed. Volume = 0.01/0.1 = 0.1 dm³ = 100 cm³."
+  },
+
+  // ===== 38 =====
+  {
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "2CO(g) + O₂(g) → 2CO₂(g). Given that ΔH[CO] is −110.4 kJ mol⁻¹ and ΔH[CO₂] is −393.0 kJ mol⁻¹, the energy change for the reaction above is",
+    options: ["−503.7 kJ", "−282.6 kJ", "+282.6 kJ", "+503.7 kJ"],
+    correct: 1,
+    solution: "ΔH = ΣΔHf(products) − ΣΔHf(reactants). Per mole of CO: −393.0 − (−110.4) = −282.6 kJ. (For the equation exactly as written, with 2 mol of CO, the value would be −565.2 kJ, which is not among the options. The printed key gives B.)"
+  },
+
+  // ===== 39 =====
+  {
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "An endothermic reaction is one during which heat is ____ and can be represented by the symbol ____. Which of the following combinations can be used accurately to complete the above definition?",
+    options: ["liberated, −ΔH", "liberated, +ΔH", "absorbed, −ΔH", "absorbed, +ΔH"],
+    correct: 3,
+    solution: "In an endothermic reaction heat is absorbed from the surroundings, so the enthalpy change is positive (+ΔH)."
+  },
+
+  // ===== 40 =====
+  {
+    subject: "Chemistry",
+    topic: "Chemical Equilibrium",
+    q: "Consider the following exothermic reaction: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g). If the temperature of the reaction is reduced from 800 °C to 500 °C, and no other change takes place, then",
+    options: [
+      "the reaction rate increases",
+      "concentration of SO₂ decreases",
+      "concentration of SO₂ increases",
+      "SO₂ gas becomes unreactive"
+    ],
+    correct: 1,
+    solution: "Lowering the temperature favours the exothermic forward reaction, so more SO₃ forms and the concentration of SO₂ decreases. The rate actually falls at lower temperature. (The printed key says C, which does not match Le Chatelier's principle.)"
+  },
+
+  // ===== 41 =====
+  {
+    subject: "Chemistry",
+    topic: "Atomic Structure",
+    q: "An element X has two isotopes ²⁰₁₀X and ²²₁₀X present in the ratio 1:3. The relative atomic mass of X would be",
+    options: ["20.5", "21.0", "21.5", "22.0"],
+    correct: 2,
+    solution: "R.A.M. = (1 × 20 + 3 × 22)/4 = 86/4 = 21.5."
+  },
+
+  // ===== 42 =====
+  {
+    subject: "Chemistry",
+    topic: "Mole Concept",
+    q: "The Avogadro number of 24 g of magnesium is the same as that of",
+    options: [
+      "1 g of hydrogen molecules",
+      "16 g of oxygen molecules",
+      "32 g of oxygen molecules",
+      "35.5 g of chlorine molecules"
+    ],
+    correct: 2,
+    solution: "24 g of Mg is 1 mol. 32 g of O₂ is also 1 mol (O₂ = 32). 1 g of H₂ is 0.5 mol, 16 g of O₂ is 0.5 mol and 35.5 g of Cl₂ is 0.5 mol."
+  },
+
+  // ===== 43 =====
+  {
+    subject: "Chemistry",
+    topic: "Rates of Reaction",
+    q: "A catalyst increases the rate of a chemical reaction by providing a path that",
+    options: [
+      "raises the activation energy",
+      "increases the temperature",
+      "lowers the activation energy",
+      "increases the concentration"
+    ],
+    correct: 2,
+    solution: "A catalyst provides an alternative pathway with a lower activation energy, so more colliding particles have enough energy to react."
+  },
+
+  // ===== 44 =====
+  {
+    subject: "Chemistry",
+    topic: "Empirical and Molecular Formulae",
+    q: "The formula CH₂O for ethanoic acid is regarded as its",
+    options: ["molecular formula", "general formula", "empirical formula", "structural formula"],
+    correct: 2,
+    solution: "Ethanoic acid is C₂H₄O₂. CH₂O is its simplest whole-number ratio of atoms, which is the empirical formula."
+  },
+
+  // ===== 45 =====
+  {
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "Tetraoxosulphate (VI) acid is prepared using the chemical reaction SO₃(g) + H₂O(l) → H₂SO₄(l). Given the heats of formation for SO₃(g), H₂O(l) and H₂SO₄(l) as −395 kJ mol⁻¹, −286 kJ mol⁻¹ and −811 kJ mol⁻¹ respectively, the enthalpy change accompanying this reaction is",
+    options: ["−1032 kJ", "−130 kJ", "+130 kJ", "+1032 kJ"],
+    correct: 1,
+    solution: "ΔH = ΣΔHf(products) − ΣΔHf(reactants) = −811 − (−395 − 286) = −811 + 681 = −130 kJ."
+  },
+
+  // ===== 46 =====
+  {
+    subject: "Chemistry",
+    topic: "Chemical Equilibrium",
+    q: "P(g) + Q(g) ⇌ 3R(s) + S(g), ΔH is negative. Which of the following will increase the yield of R?",
+    options: [
+      "using a larger closed vessel",
+      "increasing the temperature",
+      "removing some S",
+      "adding a positive catalyst"
+    ],
+    correct: 2,
+    solution: "Removing S makes the equilibrium shift right to replace it, giving more R. A larger vessel lowers the pressure and favours the side with more gas moles (the left). Raising the temperature favours the reverse (endothermic) reaction because ΔH is negative, and a catalyst does not shift the equilibrium."
+  },
+
+  // ===== 47 =====
+  {
+    subject: "Chemistry",
+    topic: "Energy Changes",
+    q: "CO(g) + H₂O(g) → CO₂(g) + H₂(g). From the reaction above, calculate the standard heat change if the standard enthalpies of formation of CO₂(g), H₂O(g) and CO(g) in kJ mol⁻¹ are −394, −242 and −110 respectively.",
+    options: ["−282 kJ mol⁻¹", "−42 kJ mol⁻¹", "+42 kJ mol⁻¹", "+262 kJ mol⁻¹"],
+    correct: 1,
+    solution: "ΔH = ΣΔHf(products) − ΣΔHf(reactants) = (−394 + 0) − (−110 − 242) = −394 + 352 = −42 kJ mol⁻¹."
+  },
+
+  // ===== 48 =====
+  {
+    subject: "Chemistry",
+    topic: "Rates of Reaction",
+    q: "Na₂S₂O₃(aq) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + SO₂(g) + S(s). Which of the following would introduce the greatest increase in the rate of the chemical reaction above?",
+    options: [
+      "An increase in temperature and a decrease in the concentration of the reactants.",
+      "A decrease in volume and an increase in the pressure of the reactants.",
+      "A decrease in temperature and an increase in the concentration of the reactants.",
+      "An increase in temperature and an increase in the concentration of the reactants."
+    ],
+    correct: 3,
+    solution: "Both a higher temperature and a higher concentration increase the rate, because particles collide more often and more of them have enough energy to react. Pressure has little effect since the reactants are in solution."
+  },
+
+  // ===== 49 =====
+  {
+    subject: "Chemistry",
+    topic: "Gas Laws",
+    q: "Which of the following substances has the lowest vapour density? [O = 16, Cl = 35.5, H = 1, C = 12]",
+    options: ["Ethanoic acid", "Propanol", "Dichloromethane", "Ethanal"],
+    correct: 3,
+    solution: "Vapour density = M/2. Ethanoic acid (C₂H₄O₂) = 60, propanol (C₃H₈O) = 60, dichloromethane (CH₂Cl₂) = 85, ethanal (C₂H₄O) = 44. Ethanal has the lowest molar mass, so the lowest vapour density (22)."
+  },
+
+  // ===== 50 =====
+  {
+    subject: "Chemistry",
+    topic: "Electrolysis",
+    q: "A quantity of electricity liberates 3.6 g of silver from its salt. What mass of aluminium will be liberated from its salt by the same quantity of electricity? [Al = 27, Ag = 108]",
+    options: ["2.7 g", "1.2 g", "0.9 g", "0.3 g"],
+    correct: 3,
+    solution: "Moles of Ag = 3.6/108 = 1/30 mol, which is 1/30 faraday (Ag⁺ + e⁻ → Ag). Al³⁺ needs 3 faradays per mole, so moles of Al = (1/30)/3 = 1/90 mol. Mass = (1/90) × 27 = 0.3 g."
   }
 ];
-  
+
+
 
 let currentQ = 0;
 let score = 0;
