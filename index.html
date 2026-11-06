@@ -256,595 +256,557 @@ const TOPICS = [
   "PHYSICS",
   "CHEMISTRY",
 ];
-
 const questions = [
   // ===== 1 =====
   {
-    subject: "Chemistry",
-    topic: "Stoichiometry",
-    q: "Calculate the percentage by mass of nitrogen in calcium trioxonitrate (V). [Ca = 40, N = 14, O = 16]",
-    options: ["8.5%", "13.1%", "17.1%", "27.6%"],
+    subject: "Physics",
+    topic: "Thermal Expansion",
+    q: "A glass bottle of initial volume 2 × 10⁴ cm³ is heated from 20 °C to 50 °C. If the linear expansivity of glass is 9 × 10⁻⁶ K⁻¹, the volume of the bottle at 50 °C is",
+    options: ["20 008.1 cm³", "20 013.5 cm³", "20 016.2 cm³", "20 005.4 cm³"],
     correct: 2,
-    solution: "Ca(NO₃)₂ = 40 + 2(14) + 6(16) = 164. % N = (28/164) × 100 = 17.1%."
+    solution: "Volume expansivity γ = 3α = 3 × 9 × 10⁻⁶ = 2.7 × 10⁻⁵ K⁻¹. ΔV = V₀γΔθ = 2 × 10⁴ × 2.7 × 10⁻⁵ × 30 = 16.2 cm³. New volume = 20 000 + 16.2 = 20 016.2 cm³."
   },
 
   // ===== 2 =====
   {
-    subject: "Chemistry",
-    topic: "Solubility",
-    q: "Calculate the solubility in mol dm⁻³ of 40 g of CuSO₄ dissolved in 100 g of water at 120 °C. [Cu = 64, S = 32, O = 16]",
-    options: ["4.00", "2.50", "0.40", "0.25"],
-    correct: 1,
-    solution: "Molar mass of CuSO₄ = 64 + 32 + 64 = 160. Moles in 40 g = 40/160 = 0.25 mol per 100 g water. Per 1000 g (1 dm³) water: 0.25 × 10 = 2.50 mol dm⁻³."
+    subject: "Physics",
+    topic: "Gas Laws",
+    q: "The equation PᵃVᵇTᶜ = constant reduces to Charles’ law if",
+    options: [
+      "a = 1, b = 1 and c = 0",
+      "a = 1, b = 0 and c = −1",
+      "a = 0, b = 1 and c = 1",
+      "a = 0, b = 1 and c = −1"
+    ],
+    correct: 3,
+    solution: "Charles’ law states V/T = constant at constant pressure. That is P⁰V¹T⁻¹ = constant, so a = 0, b = 1 and c = −1."
   },
 
   // ===== 3 =====
   {
-    subject: "Chemistry",
-    topic: "Electrolysis",
-    q: "What quantity of aluminium is deposited when a current of 10 A is passed through a solution of an aluminium salt for 1930 s? [Al = 27, F = 96500 C mol⁻¹]",
-    options: ["0.2 g", "1.8 g", "5.4 g", "14.2 g"],
-    correct: 1,
-    solution: "Q = It = 10 × 1930 = 19300 C. Al³⁺ + 3e⁻ → Al, so 3 × 96500 C deposits 27 g. Mass = (19300 × 27)/(3 × 96500) = 1.8 g."
+    subject: "Physics",
+    topic: "Heat Capacity",
+    q: "The quantity of heat needed to raise the temperature of a body by 1 K is the body’s",
+    options: ["heat capacity", "internal energy", "specific heat capacity", "latent heat of fusion"],
+    correct: 0,
+    solution: "Heat capacity is the heat needed to raise the temperature of a whole body by 1 K. Specific heat capacity refers to 1 kg of the substance."
   },
 
   // ===== 4 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "In which of the following is the entropy change positive?",
-    options: [
-      "Thermal dissociation of ammonium chloride",
-      "Reaction between an acid and a base",
-      "Addition of concentrated acid to water",
-      "Dissolution of sodium metal in water"
-    ],
-    correct: 0,
-    solution: "NH₄Cl(s) → NH₃(g) + HCl(g) turns a solid into gases, so disorder increases and ΔS is positive."
+    subject: "Physics",
+    topic: "Change of State",
+    q: "The melting point of a substance is equivalent to its",
+    options: ["vapour pressure", "solidification temperature", "liquidification temperature", "solidification pressures"],
+    correct: 1,
+    solution: "A pure substance melts and freezes at the same temperature, so its melting point equals its solidification (freezing) temperature."
   },
 
   // ===== 5 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "If a reaction is exothermic and there is a great disorder, it means that",
-    options: [
-      "the reaction is static",
-      "the reaction is in a state of equilibrium",
-      "there will be a large increase in free energy",
-      "there will be a large decrease in free energy"
-    ],
+    subject: "Physics",
+    topic: "Humidity",
+    q: "The temperature at which the water vapour present in the air is just sufficient to saturate the air is",
+    options: ["boiling point", "ice point", "saturation point", "dew point"],
     correct: 3,
-    solution: "ΔG = ΔH − TΔS. Exothermic means ΔH is negative and great disorder means ΔS is large and positive, so ΔG is large and negative: a large decrease in free energy. (The printed key says C, which is incorrect.)"
+    solution: "The temperature at which the water vapour in air is just enough to saturate it is the dew point. Cooling below it makes dew form."
   },
 
   // ===== 6 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "In the preparation of oxygen by heating KClO₃ in the presence of MnO₂, only moderate heat is needed because the catalyst acts by",
+    subject: "Physics",
+    topic: "Heat Transfer",
+    q: "Heat transfer by convection in a liquid is due to the",
     options: [
-      "lowering the pressure of the reaction",
-      "increasing the surface area of the reactant",
-      "increasing the rate of the reaction",
-      "lowering the energy barrier of the reaction"
+      "latent heat of vaporisation of the liquid",
+      "increased vibration of the molecules of the liquid about their mean position",
+      "variation of density of the liquid",
+      "expansion of the liquid as it is heated"
     ],
-    correct: 3,
-    solution: "A catalyst provides an alternative path with lower activation energy. This is why only moderate heat is needed."
+    correct: 2,
+    solution: "Heated liquid expands and becomes less dense, so it rises. Cooler, denser liquid sinks to replace it. This variation in density sets up the convection currents."
   },
 
   // ===== 7 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "Graph: mass of CO₂ produced (g) against time (min) for two curves, 'powdered marble' and 'marble chips'. The powdered marble curve is steeper and reaches its end point at t₁; the marble chips curve reaches the same end point later, at t₂. The graph above demonstrates the effect of",
-    options: [
-      "surface area on the rate of reaction",
-      "catalyst on the rate of reaction",
-      "pressure on the rate of reaction",
-      "concentration on the rate of reaction"
-    ],
-    correct: 0,
-    solution: "Powdered marble has a larger surface area than chips, so it reacts faster. Both give the same final mass of CO₂."
+    subject: "Physics",
+    topic: "Sound Waves",
+    q: "A boy receives the echo of his clap reflected by a nearby hill 0.8 s later. How far is he from the hill? [speed of sound in air = 340 m s⁻¹]",
+    options: ["528 m", "66 m", "136 m", "264 m"],
+    correct: 2,
+    solution: "The sound travels to the hill and back, so 2d = vt. d = (340 × 0.8)/2 = 136 m."
   },
 
   // ===== 8 =====
   {
-    subject: "Chemistry",
-    topic: "Chemical Equilibrium",
-    q: "2H₂(g) + O₂(g) ⇌ 2H₂O(g), ΔH = −ve. What happens to the equilibrium constant of the reaction above if the temperature is increased?",
-    options: ["it is unaffected", "it becomes zero", "it decreases", "it increases"],
-    correct: 2,
-    solution: "The forward reaction is exothermic. Raising the temperature shifts equilibrium to the left, so the products fall and K decreases."
+    subject: "Physics",
+    topic: "Pinhole Camera",
+    q: "An object is placed 10 m from a pinhole camera of length 25 cm. Calculate the linear magnification.",
+    options: ["2.5 × 10²", "2.5 × 10⁻²", "2.5 × 10⁻¹", "2.5 × 10¹"],
+    correct: 1,
+    solution: "Magnification = image distance/object distance = 0.25 m / 10 m = 2.5 × 10⁻²."
   },
 
   // ===== 9 =====
   {
-    subject: "Chemistry",
-    topic: "Stoichiometry",
-    q: "What is the concentration of a solution containing 2 g of NaOH in 100 cm³ of solution? [Na = 23, O = 16, H = 1]",
-    options: ["0.40 mol dm⁻³", "0.50 mol dm⁻³", "0.05 mol dm⁻³", "0.30 mol dm⁻³"],
-    correct: 1,
-    solution: "Molar mass of NaOH = 23 + 16 + 1 = 40. Moles = 2/40 = 0.05 mol. Concentration = 0.05/0.1 dm³ = 0.50 mol dm⁻³."
+    subject: "Physics",
+    topic: "Mirrors",
+    q: "The focal length of a concave mirror is 2.0 cm. If an object is placed 8.0 cm from it, the image is at",
+    options: ["2.7 cm", "2.0 cm", "2.3 cm", "2.5 cm"],
+    correct: 0,
+    solution: "1/v = 1/f − 1/u = 1/2 − 1/8 = 3/8, so v = 8/3 = 2.7 cm. (The printed options show “m”, which is a typo for cm.)"
   },
 
   // ===== 10 =====
   {
-    subject: "Chemistry",
-    topic: "Chemical Equilibrium",
-    q: "N₂O₄(g) ⇌ 2NO₂(g), ΔH = +ve. In the reaction above, an increase in temperature will",
-    options: [
-      "increase the value of the equilibrium constant",
-      "decrease the value of the equilibrium constant",
-      "increase the reactant production",
-      "shift the equilibrium to the left"
-    ],
+    subject: "Physics",
+    topic: "Optical Instruments",
+    q: "When a telescope is in normal use, the final image is at",
+    options: ["infinity", "the focus", "the radius of curvature", "the near point"],
     correct: 0,
-    solution: "The forward reaction is endothermic. Raising the temperature shifts equilibrium to the right, so more NO₂ forms and K increases."
+    solution: "In normal adjustment, the final image of an astronomical telescope is formed at infinity. This is the most comfortable position for the eye."
   },
 
   // ===== 11 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "A chemical reaction in which the hydration energy is greater than the lattice energy is referred to as",
-    options: ["a spontaneous reaction", "an endothermic reaction", "an exothermic reaction", "a reversible reaction"],
-    correct: 2,
-    solution: "More energy is released on hydration than is needed to break the lattice, so there is a net release of heat. The reaction is exothermic."
+    subject: "Physics",
+    topic: "Capacitors",
+    q: "What charge is stored in a 0.1 F capacitor when a 10 V supply is connected across it?",
+    options: ["1 C", "5 C", "4 C", "2 C"],
+    correct: 0,
+    solution: "Q = CV = 0.1 × 10 = 1 C."
   },
 
   // ===== 12 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "CH₄(g) + Cl₂(g) → CH₃Cl(s) + HCl(g). The major factor that influences the rate of the reaction above is",
-    options: ["catalyst", "temperature", "concentration", "light"],
-    correct: 3,
-    solution: "The chlorination of methane is a free-radical reaction started by ultraviolet light, which splits Cl₂ into chlorine atoms."
+    subject: "Physics",
+    topic: "Current Electricity",
+    q: "The maximum power transfer occurs in a cell when the external resistance is",
+    options: [
+      "twice the internal resistance of the cell",
+      "the same as the internal resistance of the cell",
+      "greater than the internal resistance of the cell",
+      "less than the internal resistance of the cell"
+    ],
+    correct: 1,
+    solution: "Maximum power is delivered to the load when the external resistance equals the internal resistance of the cell (R = r)."
   },
 
   // ===== 13 =====
   {
-    subject: "Chemistry",
-    topic: "Empirical and Molecular Formulae",
-    q: "An organic compound has an empirical formula CH₂O and a vapour density of 45. What is the molecular formula? [C = 12, H = 1, O = 16]",
-    options: ["C₃H₇OH", "C₂H₅OH", "C₃H₆O₃", "C₂H₄O₂"],
+    subject: "Physics",
+    topic: "Resistivity",
+    q: "If a metal wire 4 m long and cross-sectional area 0.8 mm² has a resistance of 6 Ω, find the resistivity of the wire.",
+    options: ["5.3 × 10⁻⁷ Ω m", "3.0 × 10⁻⁵ Ω m", "1.2 × 10⁻⁶ Ω m", "3.2 × 10⁻⁶ Ω m"],
     correct: 2,
-    solution: "Molar mass = 2 × V.D. = 90. Empirical formula mass (CH₂O) = 30. n = 90/30 = 3, so the molecular formula is C₃H₆O₃."
+    solution: "R = ρL/A, so ρ = RA/L = (6 × 0.8 × 10⁻⁶)/4 = 1.2 × 10⁻⁶ Ω m."
   },
 
   // ===== 14 =====
   {
-    subject: "Chemistry",
-    topic: "Mole Concept",
-    q: "How many atoms are present in 6.0 g of magnesium? [Mg = 24, NA = 6.02 × 10²³ mol⁻¹]",
-    options: ["1.20 × 10²²", "2.41 × 10²²", "1.51 × 10²³", "3.02 × 10²³"],
-    correct: 2,
-    solution: "Moles = 6.0/24 = 0.25 mol. Atoms = 0.25 × 6.02 × 10²³ = 1.51 × 10²³."
+    subject: "Physics",
+    topic: "Current Electricity",
+    q: "A circuit has a resistance of 200 Ω. The resistance of the circuit can be reduced to 120 Ω when",
+    options: [
+      "a 300 Ω resistor is connected to it in parallel",
+      "an 80 Ω resistor is connected to it in series",
+      "a 150 Ω resistor is connected to it in parallel",
+      "a 240 Ω resistor is connected to it in series"
+    ],
+    correct: 0,
+    solution: "Adding a resistor in series increases the resistance, so B and D are out. Parallel with 300 Ω: (200 × 300)/(200 + 300) = 120 Ω."
   },
 
   // ===== 15 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "An increase in the pressure exerted on a gas at constant temperature results in",
-    options: [
-      "a decrease in the number of effective collisions",
-      "a decrease in volume",
-      "an increase in the average intermolecular distance",
-      "an increase in volume"
-    ],
+    subject: "Physics",
+    topic: "Electrical Energy",
+    q: "PHCN measures its electrical energy in",
+    options: ["W", "kWh", "Wh", "J"],
     correct: 1,
-    solution: "By Boyle's law, volume falls when pressure rises at constant temperature. The molecules are closer together, so effective collisions increase, not decrease."
+    solution: "Electricity companies bill using the kilowatt-hour (kWh), the commercial unit of electrical energy."
   },
 
   // ===== 16 =====
   {
-    subject: "Chemistry",
-    topic: "Solubility",
-    q: "Potassium trioxochlorate (V) has a solubility of 1.5 mol dm⁻³ at 45 °C. On cooling this solution to 20 °C, the solubility was found to be 0.5 mol dm⁻³. What mass of KClO₃ was crystallized out? [K = 39, Cl = 35.5, O = 16]",
-    options: ["1.00 g", "10.00 g", "12.25 g", "122.50 g"],
-    correct: 3,
-    solution: "Moles crystallized per dm³ = 1.5 − 0.5 = 1.0 mol. Molar mass of KClO₃ = 39 + 35.5 + 48 = 122.5 g mol⁻¹. Mass = 1.0 × 122.5 = 122.50 g."
+    subject: "Physics",
+    topic: "Magnetism",
+    q: "The magnitude of the angle of dip at the equator is",
+    options: ["360°", "0°", "90°", "180°"],
+    correct: 1,
+    solution: "At the magnetic equator the earth’s field is horizontal, so the dip needle lies flat and the angle of dip is 0°."
   },
 
   // ===== 17 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "An increase in entropy can best be illustrated by",
-    options: [
-      "mixing of gases",
-      "freezing of water",
-      "the condensation of vapour",
-      "solidifying candle wax"
-    ],
-    correct: 0,
-    solution: "Entropy measures disorder. Gases mixing become more random, so entropy increases. Freezing, condensing and solidifying all increase order."
+    subject: "Physics",
+    topic: "Nuclear Physics",
+    q: "What type of reaction is represented by the equation ²X + ²X → ³Y + ¹n + energy?",
+    options: ["Ionisation", "Fusion", "Fission", "Chain"],
+    correct: 1,
+    solution: "Two light nuclei combine to form a heavier nucleus and release energy. This is nuclear fusion."
   },
 
   // ===== 18 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "The highest rate of production of carbon (IV) oxide can be achieved using",
-    options: [
-      "0.05 mol dm⁻³ HCl and 5 g powdered CaCO₃",
-      "0.05 mol dm⁻³ HCl and 5 g lump CaCO₃",
-      "0.10 mol dm⁻³ HCl and 5 g powdered CaCO₃",
-      "0.025 mol dm⁻³ HCl and 5 g powdered CaCO₃"
-    ],
+    subject: "Physics",
+    topic: "Radioactivity",
+    q: "When an atom undergoes a beta decay, the atomic number of the nucleus",
+    options: ["remains unchanged", "decreases by one", "increases by one", "becomes zero"],
     correct: 2,
-    solution: "The rate is highest with the highest concentration of acid (0.10 mol dm⁻³) and the largest surface area of solid (powder)."
+    solution: "In beta decay a neutron changes into a proton and an electron is emitted. The proton number therefore increases by one."
   },
 
   // ===== 19 =====
   {
-    subject: "Chemistry",
-    topic: "Empirical and Molecular Formulae",
-    q: "A compound contains 40.0% C, 6.7% H and 53.3% O. If the molecular mass of the compound is 180, its molecular formula is [C = 12, H = 1, O = 16]",
-    options: ["CH₂O", "C₃H₆O₃", "C₆H₆O₃", "C₆H₁₂O₆"],
-    correct: 3,
-    solution: "Moles: C = 40/12 = 3.33; H = 6.7/1 = 6.7; O = 53.3/16 = 3.33. Ratio 1 : 2 : 1, so the empirical formula is CH₂O (mass 30). n = 180/30 = 6, so the molecular formula is C₆H₁₂O₆."
+    subject: "Physics",
+    topic: "Electrolysis",
+    q: "Calculate the mass of copper deposited during electrolysis of a copper salt for 2 hours when a current of 4 A passes through it. [e.c.e of copper z = 3.3 × 10⁻⁷ kg C⁻¹]",
+    options: ["2.9 × 10⁵ kg", "9.5 × 10⁻⁷ kg", "9.5 × 10⁻³ kg", "2.9 × 10⁴ kg"],
+    correct: 2,
+    solution: "t = 2 × 3600 = 7200 s. m = zIt = 3.3 × 10⁻⁷ × 4 × 7200 = 9.5 × 10⁻³ kg."
   },
 
   // ===== 20 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "In an endothermic reaction, if there is a loss in entropy the reaction will",
-    options: ["be indeterminate", "be spontaneous", "not be spontaneous", "be at equilibrium"],
-    correct: 2,
-    solution: "Endothermic means ΔH is positive, and a loss in entropy means ΔS is negative. ΔG = ΔH − TΔS is therefore always positive, so the reaction is not spontaneous."
+    subject: "Physics",
+    topic: "Gas Discharge",
+    q: "Which gas produces a pink coloured light in a discharge tube?",
+    options: ["Mercury", "Argon", "Air", "Neon"],
+    correct: 3,
+    solution: "Neon in a discharge tube gives a pinkish-red glow. This is why it is used in neon signs."
   },
 
   // ===== 21 =====
   {
-    subject: "Chemistry",
-    topic: "Chemical Equilibrium",
-    q: "2SO₂(g) + O₂(g) ⇌ 2SO₃(g), ΔH = −395.7 kJ mol⁻¹. In the reaction above, the concentration of SO₃(g) can be increased by",
-    options: [
-      "decreasing the pressure",
-      "decreasing the temperature",
-      "increasing the temperature",
-      "the addition of catalyst"
-    ],
+    subject: "Physics",
+    topic: "Equilibrium of Forces",
+    q: "One of the conditions necessary for an object acted upon by a number of parallel forces to be in equilibrium is that the vector sum of the forces is",
+    options: ["average", "zero", "negative", "positive"],
     correct: 1,
-    solution: "The forward reaction is exothermic, so lowering the temperature shifts the equilibrium to the right and increases SO₃. Lowering the pressure favours the side with more moles (the left), and a catalyst does not change the position of equilibrium."
+    solution: "For translational equilibrium the resultant (vector sum) of the forces must be zero."
   },
 
   // ===== 22 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "The minimum amount of energy required for a reaction to take place is",
-    options: ["lattice energy", "ionization energy", "activation energy", "kinetic energy"],
-    correct: 2,
-    solution: "Activation energy is the minimum energy colliding particles must have for a reaction to occur."
+    subject: "Physics",
+    topic: "Equilibrium of Forces",
+    q: "What happens when three coplanar non-parallel forces are in equilibrium?",
+    options: [
+      "Their lines of action are parallel.",
+      "They are represented in magnitude only.",
+      "They are represented in direction only.",
+      "Their lines of action meet at a point."
+    ],
+    correct: 3,
+    solution: "Three coplanar non-parallel forces in equilibrium must act through one point (they are concurrent). Their vector triangle also closes."
   },
 
   // ===== 23 =====
   {
-    subject: "Chemistry",
-    topic: "Empirical and Molecular Formulae",
-    q: "An organic compound contains 60% carbon, 13.3% hydrogen and 26.7% oxygen. Calculate the empirical formula. (C = 12, H = 1, O = 16)",
-    options: ["C₅H₁₂O", "C₃H₈O", "C₆H₁₃O₂", "C₄H₉O"],
-    correct: 1,
-    solution: "Moles: C = 60/12 = 5; H = 13.3/1 = 13.3; O = 26.7/16 = 1.67. Divide by 1.67: C = 3, H = 8, O = 1. Empirical formula = C₃H₈O."
+    subject: "Physics",
+    topic: "Energy",
+    q: "An object of mass 20 kg is released from a height of 10 m above the ground level. The kinetic energy of the object just before it hits the ground is [g = 10 m s⁻²]",
+    options: ["200 J", "4000 J", "2000 J", "500 J"],
+    correct: 2,
+    solution: "By conservation of energy, KE just before impact = PE lost = mgh = 20 × 10 × 10 = 2000 J."
   },
 
   // ===== 24 =====
   {
-    subject: "Chemistry",
-    topic: "Percentage Composition",
-    q: "What is the percentage of sulphur in sulphur (IV) oxide?",
-    options: ["66%", "25%", "40%", "50%"],
-    correct: 3,
-    solution: "SO₂ = 32 + 32 = 64. % S = (32/64) × 100 = 50%."
+    subject: "Physics",
+    topic: "Energy",
+    q: "The energy in the nucleus of atoms produces heat which can be used to generate",
+    options: ["kinetic energy", "mechanical energy", "electrical energy", "potential energy"],
+    correct: 2,
+    solution: "Nuclear energy released as heat is used to produce steam, which drives turbines in nuclear power stations to generate electrical energy."
   },
 
   // ===== 25 =====
   {
-    subject: "Chemistry",
-    topic: "Gas Laws",
-    q: "A gas X diffuses twice as fast as gas Y. If the relative molecular mass of X is 32, calculate the relative molecular mass of Y.",
-    options: ["128", "8", "16", "64"],
-    correct: 0,
-    solution: "Graham's law: rate X / rate Y = √(M_Y / M_X) = 2. So M_Y / M_X = 4 and M_Y = 4 × 32 = 128."
+    subject: "Physics",
+    topic: "Simple Machines",
+    q: "A machine whose efficiency is 75% is used to lift a load of 1000 N. Calculate the effort put into the machine if it has a velocity ratio of 4.",
+    options: ["343.32 N", "233.33 N", "333.33 N", "334.33 N"],
+    correct: 2,
+    solution: "Efficiency = M.A./V.R. So M.A. = 0.75 × 4 = 3. Effort = load/M.A. = 1000/3 = 333.33 N."
   },
 
   // ===== 26 =====
   {
-    subject: "Chemistry",
-    topic: "Atomic Structure",
-    q: "A silicon-containing ore has 92% ²⁸Si, 5% ²⁹Si and 3% ³⁰Si. Calculate the relative atomic mass of the silicon.",
-    options: ["14.00", "29.00", "28.11", "28.00"],
-    correct: 2,
-    solution: "R.A.M. = (92 × 28 + 5 × 29 + 3 × 30)/100 = (2576 + 145 + 90)/100 = 28.11. (The printed key says D, which does not match the calculation.)"
+    subject: "Physics",
+    topic: "Simple Machines",
+    q: "A wheel and axle is used to raise a load whose weight is 800 N when an effort of 250 N is applied. If the radii of the wheel and axle are 800 mm and 200 mm respectively, the efficiency of the machine is",
+    options: ["90%", "80%", "85%", "87%"],
+    correct: 1,
+    solution: "M.A. = 800/250 = 3.2. V.R. = 800/200 = 4. Efficiency = (3.2/4) × 100 = 80%."
   },
 
   // ===== 27 =====
   {
-    subject: "Chemistry",
-    topic: "Electrolysis",
-    q: "Calculate the quantity of electricity in coulombs required to liberate 10 g of copper from a copper compound. [Cu = 64, F = 96500 C mol⁻¹]",
-    options: ["32395.5", "30156.3", "60784.5", "15196.5"],
+    subject: "Physics",
+    topic: "Current Electricity",
+    q: "A cell of emf 12 V and internal resistance 4 Ω is connected to an external resistor of resistance 2 Ω. Find the current flow.",
+    options: ["4 A", "2 A", "3 A", "5 A"],
     correct: 1,
-    solution: "Cu²⁺ + 2e⁻ → Cu, so 2 × 96500 = 193000 C deposits 64 g. Q = (10 × 193000)/64 = 30156.3 C."
+    solution: "I = E/(R + r) = 12/(2 + 4) = 2 A."
   },
 
   // ===== 28 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "If the change in free energy of a system is −899 J mol⁻¹ and the entropy change is 10 J mol⁻¹ K⁻¹ at 25 °C, calculate the enthalpy change.",
-    options: ["+2081 J mol⁻¹", "−2081 J mol⁻¹", "−649 J mol⁻¹", "+649 J mol⁻¹"],
+    subject: "Physics",
+    topic: "Current Electricity",
+    q: "Three 4 Ω resistors connected in parallel have a potential difference of 16 V applied across them. What is the total current in the circuit?",
+    options: ["12 A", "8 A", "10 A", "14 A"],
     correct: 0,
-    solution: "ΔG = ΔH − TΔS, with T = 25 + 273 = 298 K. ΔH = ΔG + TΔS = −899 + (298 × 10) = −899 + 2980 = +2081 J mol⁻¹."
+    solution: "Each resistor carries 16/4 = 4 A. Total current = 3 × 4 = 12 A. (Equivalent resistance = 4/3 Ω, so I = 16/(4/3) = 12 A.)"
   },
 
   // ===== 29 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "In an equilibrium reaction, which of the following conditions indicates that maximum yield of the product will be obtained?",
-    options: [
-      "Equilibrium constant is very large",
-      "ΔH − TΔS = 0",
-      "ΔH > TΔS",
-      "Equilibrium constant is less than zero"
-    ],
+    subject: "Physics",
+    topic: "Electrical Energy",
+    q: "A 200 W bulb is lit by a 240 V a.c. mains supply. If 1 kWh is sold at ₦40, the cost of keeping the bulb lighted for a day is",
+    options: ["₦192.00", "₦1.92", "₦19.20", "₦1920.00"],
     correct: 0,
-    solution: "A very large K means the equilibrium lies far to the right, so most of the reactants are converted to products. K can never be less than zero."
+    solution: "Energy = 0.2 kW × 24 h = 4.8 kWh. Cost = 4.8 × ₦40 = ₦192.00."
   },
 
   // ===== 30 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "In a chemical reaction, the change in concentration of a reactant with time is",
-    options: ["entropy of reaction", "enthalpy of reaction", "rate of reaction", "order of reaction"],
-    correct: 2,
-    solution: "Rate of reaction is the change in concentration of a reactant (or product) per unit time."
+    subject: "Physics",
+    topic: "Electrical Measuring Instruments",
+    q: "A galvanometer with full-scale deflection of 10 mA is to be converted to a voltmeter with full-scale deflection of 5 V. If a series resistance of 498 Ω is used for the conversion, the resistance of the galvanometer is",
+    options: ["2 Ω", "10 Ω", "5 Ω", "1 Ω"],
+    correct: 0,
+    solution: "Total resistance = V/I = 5/0.01 = 500 Ω. Galvanometer resistance = 500 − 498 = 2 Ω."
   },
 
   // ===== 31 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "CH₃COOC₂H₅(l) + H₂O(l) ⇌ CH₃COOH(aq) + C₂H₅OH(aq). The purpose of H⁺ in the reaction above is to",
+    subject: "Physics",
+    topic: "Electronics",
+    q: "Transistors are used for the",
     options: [
-      "increase the yield of products",
-      "maintain the solution at a constant pH",
-      "increase the rate of the hydrolysis",
-      "decrease the rate of the reverse reaction"
+      "conversion of a.c. to d.c.",
+      "conversion of d.c. to a.c.",
+      "amplification of signals",
+      "rectification of signals"
     ],
     correct: 2,
-    solution: "H⁺ acts as a catalyst. It speeds up the hydrolysis of the ester but does not change the position of equilibrium."
+    solution: "A transistor can amplify weak signals and act as a switch. Rectification (a.c. to d.c.) is done by diodes."
   },
 
   // ===== 32 =====
   {
-    subject: "Chemistry",
-    topic: "Empirical and Molecular Formulae",
-    q: "A hydrocarbon has an empirical formula CH and a vapour density of 39. Determine its molecular formula. [C = 12, H = 1]",
-    options: ["C₂H₆", "C₃H₈", "C₃H₄", "C₆H₆"],
-    correct: 3,
-    solution: "Molar mass = 2 × 39 = 78. Empirical formula mass (CH) = 13. n = 78/13 = 6, so the molecular formula is C₆H₆."
+    subject: "Physics",
+    topic: "Semiconductors",
+    q: "Which of the following is a pure semiconductor?",
+    options: ["Silicon", "Phosphorus", "Transistor", "Carbon"],
+    correct: 0,
+    solution: "Silicon (like germanium) is an intrinsic semiconductor. Phosphorus is a dopant, a transistor is a device, and carbon (as diamond) is an insulator."
   },
 
   // ===== 33 =====
   {
-    subject: "Chemistry",
-    topic: "Stoichiometry",
-    q: "Some copper (II) sulphate pentahydrate (CuSO₄·5H₂O) was heated at 120 °C with the following results: Wt of crucible = 10.00 g; Wt of crucible + CuSO₄·5H₂O = 14.98 g; Wt of crucible + residue = 13.54 g. How many molecules of water of crystallization were lost? [H = 1, Cu = 63.5, O = 16, S = 32]",
-    options: ["1", "2", "3", "4"],
-    correct: 3,
-    solution: "Mass of hydrated salt = 4.98 g. Mass of water lost = 14.98 − 13.54 = 1.44 g = 0.08 mol. Molar mass of CuSO₄·5H₂O = 249.5, so moles of salt = 4.98/249.5 = 0.02 mol. Water lost per formula unit = 0.08/0.02 = 4."
+    subject: "Physics",
+    topic: "Mirrors",
+    q: "Where can a man place his face to get an enlarged image when using a concave mirror and the principal focus?",
+    options: [
+      "Between the centre of curvature and the principal focus",
+      "At the principal focus",
+      "Between the principal focus and the pole",
+      "At the centre of curvature"
+    ],
+    correct: 2,
+    solution: "When an object is between the principal focus and the pole of a concave mirror, the image is virtual, upright and magnified. This is how a shaving mirror works."
   },
 
   // ===== 34 =====
   {
-    subject: "Chemistry",
-    topic: "Atomic Structure",
-    q: "An element Z contained 90% of ¹⁶₈Z and 10% of ¹⁸₈Z. Its relative atomic mass is",
-    options: ["16.0", "16.2", "17.0", "17.8"],
-    correct: 1,
-    solution: "R.A.M. = (90 × 16 + 10 × 18)/100 = (1440 + 180)/100 = 16.2."
+    subject: "Physics",
+    topic: "Pinhole Camera",
+    q: "A pinhole camera is placed 300 m in front of a building so that the image is formed on a screen 5 cm from the pinhole. If the image is 2.5 cm high, the height of the building will be",
+    options: ["25 m", "50 m", "100 m", "150 m"],
+    correct: 3,
+    solution: "Object height/image height = object distance/image distance. h = 2.5 cm × (300 m / 0.05 m) = 15 000 cm = 150 m."
   },
 
   // ===== 35 =====
   {
-    subject: "Chemistry",
-    topic: "Stoichiometry",
-    q: "4.0 g of sodium hydroxide in 250 cm³ of solution contains [Na = 23, O = 16, H = 1]",
-    options: ["0.40 moles per dm³", "0.10 moles per dm³", "0.04 moles per dm³", "0.02 moles per dm³"],
-    correct: 0,
-    solution: "Moles of NaOH = 4.0/40 = 0.1 mol. Concentration = 0.1/0.25 dm³ = 0.40 mol dm⁻³."
+    subject: "Physics",
+    topic: "Plane Mirrors",
+    q: "The magnification of an object 2 cm tall when placed 10 cm in front of a plane mirror is",
+    options: ["6.0", "1.0", "0.7", "0.6"],
+    correct: 1,
+    solution: "A plane mirror forms an image the same size as the object, at the same distance behind the mirror. Magnification = 10/10 = 1.0."
   },
 
   // ===== 36 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "In general, an increase in temperature increases the solubility of a solute in water because",
+    subject: "Physics",
+    topic: "Mirrors",
+    q: "After reflection from the concave mirror, rays of light from the sun converge",
     options: [
-      "more solute molecules collide with each other",
-      "most solutes dissolve with the evolution of heat",
-      "more solute molecules dissociate at higher temperatures",
-      "most solutes dissolve with absorption of heat"
+      "at the radius of curvature",
+      "at the focus",
+      "beyond the radius of curvature",
+      "between the focus and radius of curvature"
     ],
-    correct: 3,
-    solution: "Most solutes dissolve endothermically. By Le Chatelier's principle, raising the temperature favours the endothermic dissolving process, so solubility rises. (The printed key says C, but D is the better answer.)"
+    correct: 1,
+    solution: "Rays from the sun are essentially parallel. A concave mirror brings parallel rays to a point at the principal focus."
   },
 
   // ===== 37 =====
   {
-    subject: "Chemistry",
-    topic: "Stoichiometry",
-    q: "What volume of 0.1 mol dm⁻³ solution of tetraoxosulphate (VI) acid would be needed to dissolve 2.86 g of sodium trioxocarbonate (IV) decahydrate crystals? [H = 1, C = 12, O = 16, S = 32, Na = 23]",
-    options: ["20 cm³", "40 cm³", "80 cm³", "100 cm³"],
-    correct: 3,
-    solution: "Molar mass of Na₂CO₃·10H₂O = 106 + 180 = 286. Moles = 2.86/286 = 0.01 mol. Na₂CO₃ + H₂SO₄ → Na₂SO₄ + H₂O + CO₂, so 0.01 mol of acid is needed. Volume = 0.01/0.1 = 0.1 dm³ = 100 cm³."
+    subject: "Physics",
+    topic: "Refraction of Light",
+    q: "I. Rays of light travel from a less dense medium to a denser medium. II. The angle of incidence is greater than the critical angle. III. Rays of light travel from a denser medium to a less dense medium. Which of the statements above are conditions for total internal reflection to occur?",
+    options: ["I and II only", "I and III only", "II and III only", "II only"],
+    correct: 2,
+    solution: "Total internal reflection needs light travelling from a denser to a less dense medium (III) and an angle of incidence greater than the critical angle (II). Statement I is wrong."
   },
 
   // ===== 38 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "2CO(g) + O₂(g) → 2CO₂(g). Given that ΔH[CO] is −110.4 kJ mol⁻¹ and ΔH[CO₂] is −393.0 kJ mol⁻¹, the energy change for the reaction above is",
-    options: ["−503.7 kJ", "−282.6 kJ", "+282.6 kJ", "+503.7 kJ"],
-    correct: 1,
-    solution: "ΔH = ΣΔHf(products) − ΣΔHf(reactants). Per mole of CO: −393.0 − (−110.4) = −282.6 kJ. (For the equation exactly as written, with 2 mol of CO, the value would be −565.2 kJ, which is not among the options. The printed key gives B.)"
+    subject: "Physics",
+    topic: "Optical Instruments",
+    q: "The use of lenses is NOT applicable in the",
+    options: ["projector", "human eye", "periscope", "telescope"],
+    correct: 2,
+    solution: "A simple periscope uses plane mirrors (or prisms) to change the direction of light. Projectors, the eye and telescopes all use lenses."
   },
 
   // ===== 39 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "An endothermic reaction is one during which heat is ____ and can be represented by the symbol ____. Which of the following combinations can be used accurately to complete the above definition?",
-    options: ["liberated, −ΔH", "liberated, +ΔH", "absorbed, −ΔH", "absorbed, +ΔH"],
+    subject: "Physics",
+    topic: "Dispersion of Light",
+    q: "Dispersion of white light is the ability of white light to",
+    options: [
+      "penetrate air, water and glass",
+      "move in a straight line",
+      "move around corners",
+      "separate into its component colours"
+    ],
     correct: 3,
-    solution: "In an endothermic reaction heat is absorbed from the surroundings, so the enthalpy change is positive (+ΔH)."
+    solution: "Dispersion is the splitting of white light into its component colours, because each colour is refracted by a different amount."
   },
 
   // ===== 40 =====
   {
-    subject: "Chemistry",
-    topic: "Chemical Equilibrium",
-    q: "Consider the following exothermic reaction: 2SO₂(g) + O₂(g) ⇌ 2SO₃(g). If the temperature of the reaction is reduced from 800 °C to 500 °C, and no other change takes place, then",
-    options: [
-      "the reaction rate increases",
-      "concentration of SO₂ decreases",
-      "concentration of SO₂ increases",
-      "SO₂ gas becomes unreactive"
-    ],
-    correct: 1,
-    solution: "Lowering the temperature favours the exothermic forward reaction, so more SO₃ forms and the concentration of SO₂ decreases. The rate actually falls at lower temperature. (The printed key says C, which does not match Le Chatelier's principle.)"
+    subject: "Physics",
+    topic: "Cells and Batteries",
+    q: "Six identical cells, each of e.m.f. 2 V, are connected in series. The effective e.m.f. of the cells is",
+    options: ["0 V", "4 V", "6 V", "12 V"],
+    correct: 3,
+    solution: "For cells in series with the same polarity, the e.m.f.s add: 6 × 2 V = 12 V."
   },
 
   // ===== 41 =====
   {
-    subject: "Chemistry",
-    topic: "Atomic Structure",
-    q: "An element X has two isotopes ²⁰₁₀X and ²²₁₀X present in the ratio 1:3. The relative atomic mass of X would be",
-    options: ["20.5", "21.0", "21.5", "22.0"],
+    subject: "Physics",
+    topic: "Domestic Wiring",
+    q: "The fuse in an electric device is always connected to the",
+    options: [
+      "neutral side of an electric supply",
+      "earth side of an electric supply",
+      "live side of an electric supply",
+      "terminal side of an electric supply"
+    ],
     correct: 2,
-    solution: "R.A.M. = (1 × 20 + 3 × 22)/4 = 86/4 = 21.5."
+    solution: "The fuse is placed on the live wire so that when it blows the device is disconnected from the live supply and made safe."
   },
 
   // ===== 42 =====
   {
-    subject: "Chemistry",
-    topic: "Mole Concept",
-    q: "The Avogadro number of 24 g of magnesium is the same as that of",
-    options: [
-      "1 g of hydrogen molecules",
-      "16 g of oxygen molecules",
-      "32 g of oxygen molecules",
-      "35.5 g of chlorine molecules"
-    ],
-    correct: 2,
-    solution: "24 g of Mg is 1 mol. 32 g of O₂ is also 1 mol (O₂ = 32). 1 g of H₂ is 0.5 mol, 16 g of O₂ is 0.5 mol and 35.5 g of Cl₂ is 0.5 mol."
+    subject: "Physics",
+    topic: "Alternating Current",
+    q: "The current output form of an a.c. source is given as I = 10 sin ωt. The d.c. equivalent of the current is",
+    options: ["5.0 A", "7.1 A", "10.0 A", "14.1 A"],
+    correct: 1,
+    solution: "The d.c. equivalent is the r.m.s. value: I_rms = I₀/√2 = 10/1.414 = 7.1 A."
   },
 
   // ===== 43 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "A catalyst increases the rate of a chemical reaction by providing a path that",
-    options: [
-      "raises the activation energy",
-      "increases the temperature",
-      "lowers the activation energy",
-      "increases the concentration"
-    ],
-    correct: 2,
-    solution: "A catalyst provides an alternative pathway with a lower activation energy, so more colliding particles have enough energy to react."
+    subject: "Physics",
+    topic: "Electromagnetic Induction",
+    q: "A conductor of length 1 m moves with a velocity of 50 m s⁻¹ at an angle of 30° to the direction of a uniform magnetic field of flux density 1.5 Wb m⁻². What is the e.m.f. induced in the conductor?",
+    options: ["37.5 V", "50.5 V", "75.0 V", "80.5 V"],
+    correct: 0,
+    solution: "E = BLv sin θ = 1.5 × 1 × 50 × sin 30° = 1.5 × 1 × 50 × 0.5 = 37.5 V."
   },
 
   // ===== 44 =====
   {
-    subject: "Chemistry",
-    topic: "Empirical and Molecular Formulae",
-    q: "The formula CH₂O for ethanoic acid is regarded as its",
-    options: ["molecular formula", "general formula", "empirical formula", "structural formula"],
-    correct: 2,
-    solution: "Ethanoic acid is C₂H₄O₂. CH₂O is its simplest whole-number ratio of atoms, which is the empirical formula."
+    subject: "Physics",
+    topic: "X-rays",
+    q: "The process of detecting a pin mistakenly swallowed by a child is x-ray",
+    options: ["diagnosis", "therapy", "crystallography", "mammography"],
+    correct: 0,
+    solution: "Using x-rays to find a foreign object inside the body is medical x-ray diagnosis (radiography)."
   },
 
   // ===== 45 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "Tetraoxosulphate (VI) acid is prepared using the chemical reaction SO₃(g) + H₂O(l) → H₂SO₄(l). Given the heats of formation for SO₃(g), H₂O(l) and H₂SO₄(l) as −395 kJ mol⁻¹, −286 kJ mol⁻¹ and −811 kJ mol⁻¹ respectively, the enthalpy change accompanying this reaction is",
-    options: ["−1032 kJ", "−130 kJ", "+130 kJ", "+1032 kJ"],
-    correct: 1,
-    solution: "ΔH = ΣΔHf(products) − ΣΔHf(reactants) = −811 − (−395 − 286) = −811 + 681 = −130 kJ."
+    subject: "Physics",
+    topic: "Radiations",
+    q: "Which of the following particles CANNOT be deflected by both electric and magnetic fields?",
+    options: ["Gamma rays", "Alpha particles", "Wave particles", "Beta particles"],
+    correct: 0,
+    solution: "Gamma rays carry no charge, so neither electric nor magnetic fields deflect them. Alpha and beta particles are charged and are deflected."
   },
 
   // ===== 46 =====
   {
-    subject: "Chemistry",
-    topic: "Chemical Equilibrium",
-    q: "P(g) + Q(g) ⇌ 3R(s) + S(g), ΔH is negative. Which of the following will increase the yield of R?",
-    options: [
-      "using a larger closed vessel",
-      "increasing the temperature",
-      "removing some S",
-      "adding a positive catalyst"
-    ],
-    correct: 2,
-    solution: "Removing S makes the equilibrium shift right to replace it, giving more R. A larger vessel lowers the pressure and favours the side with more gas moles (the left). Raising the temperature favours the reverse (endothermic) reaction because ΔH is negative, and a catalyst does not shift the equilibrium."
+    subject: "Physics",
+    topic: "Semiconductors",
+    q: "If a reverse-biased voltage is applied across a p-n junction, the depletion layer width is",
+    options: ["increased", "decreased", "constant", "halved"],
+    correct: 0,
+    solution: "Reverse bias pulls charge carriers away from the junction, so the depletion layer widens and almost no current flows."
   },
 
   // ===== 47 =====
   {
-    subject: "Chemistry",
-    topic: "Energy Changes",
-    q: "CO(g) + H₂O(g) → CO₂(g) + H₂(g). From the reaction above, calculate the standard heat change if the standard enthalpies of formation of CO₂(g), H₂O(g) and CO(g) in kJ mol⁻¹ are −394, −242 and −110 respectively.",
-    options: ["−282 kJ mol⁻¹", "−42 kJ mol⁻¹", "+42 kJ mol⁻¹", "+262 kJ mol⁻¹"],
-    correct: 1,
-    solution: "ΔH = ΣΔHf(products) − ΣΔHf(reactants) = (−394 + 0) − (−110 − 242) = −394 + 352 = −42 kJ mol⁻¹."
+    subject: "Physics",
+    topic: "Sound Waves",
+    q: "The velocity of sound in air at 16 °C is 340 m s⁻¹. What will it be when the pressure is doubled and its temperature raised to 127 °C?",
+    options: ["4,000 m s⁻¹", "160,000 m s⁻¹", "8,000 m s⁻¹", "400 m s⁻¹"],
+    correct: 3,
+    solution: "Speed of sound is proportional to √T and independent of pressure. T₁ = 289 K and T₂ = 400 K. v₂ = 340 × √(400/289) = 340 × 20/17 = 400 m s⁻¹."
   },
 
   // ===== 48 =====
   {
-    subject: "Chemistry",
-    topic: "Rates of Reaction",
-    q: "Na₂S₂O₃(aq) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + SO₂(g) + S(s). Which of the following would introduce the greatest increase in the rate of the chemical reaction above?",
-    options: [
-      "An increase in temperature and a decrease in the concentration of the reactants.",
-      "A decrease in volume and an increase in the pressure of the reactants.",
-      "A decrease in temperature and an increase in the concentration of the reactants.",
-      "An increase in temperature and an increase in the concentration of the reactants."
-    ],
+    subject: "Physics",
+    topic: "Mirrors",
+    q: "An object 4 cm high is placed 15 cm from a concave mirror of focal length 5 cm. The size of the image is",
+    options: ["3 cm", "5 cm", "4 cm", "2 cm"],
     correct: 3,
-    solution: "Both a higher temperature and a higher concentration increase the rate, because particles collide more often and more of them have enough energy to react. Pressure has little effect since the reactants are in solution."
+    solution: "1/v = 1/f − 1/u = 1/5 − 1/15 = 2/15, so v = 7.5 cm. Magnification = v/u = 7.5/15 = 0.5. Image size = 0.5 × 4 = 2 cm."
   },
 
   // ===== 49 =====
   {
-    subject: "Chemistry",
-    topic: "Gas Laws",
-    q: "Which of the following substances has the lowest vapour density? [O = 16, Cl = 35.5, H = 1, C = 12]",
-    options: ["Ethanoic acid", "Propanol", "Dichloromethane", "Ethanal"],
-    correct: 3,
-    solution: "Vapour density = M/2. Ethanoic acid (C₂H₄O₂) = 60, propanol (C₃H₈O) = 60, dichloromethane (CH₂Cl₂) = 85, ethanal (C₂H₄O) = 44. Ethanal has the lowest molar mass, so the lowest vapour density (22)."
+    subject: "Physics",
+    topic: "Refraction of Light",
+    q: "An object is embedded in a block of ice 10 cm below the plane surface. If the refractive index of the ice is 1.50, the apparent depth of the object below the surface is",
+    options: ["6.67 cm", "7.63 cm", "7.50 cm", "2.50 cm"],
+    correct: 0,
+    solution: "Apparent depth = real depth/refractive index = 10/1.50 = 6.67 cm."
   },
 
   // ===== 50 =====
   {
-    subject: "Chemistry",
-    topic: "Electrolysis",
-    q: "A quantity of electricity liberates 3.6 g of silver from its salt. What mass of aluminium will be liberated from its salt by the same quantity of electricity? [Al = 27, Ag = 108]",
-    options: ["2.7 g", "1.2 g", "0.9 g", "0.3 g"],
-    correct: 3,
-    solution: "Moles of Ag = 3.6/108 = 1/30 mol, which is 1/30 faraday (Ag⁺ + e⁻ → Ag). Al³⁺ needs 3 faradays per mole, so moles of Al = (1/30)/3 = 1/90 mol. Mass = (1/90) × 27 = 0.3 g."
+    subject: "Physics",
+    topic: "Defects of Vision",
+    q: "Which of the following is used for the correction of short-sightedness?",
+    options: ["Concave lens", "Concave mirror", "Convex lens", "Convex mirror"],
+    correct: 0,
+    solution: "In short-sightedness the image forms in front of the retina. A diverging (concave) lens spreads the rays slightly so the image forms on the retina."
   }
 ];
-
-
 
 let currentQ = 0;
 let score = 0;
